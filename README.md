@@ -1,3 +1,3 @@
 # APPSClone
 
-## APPSClone is a clone of the APPS.
+## APPSClone is an online GNSS data processing tool clone for Portugal ISP usage.
