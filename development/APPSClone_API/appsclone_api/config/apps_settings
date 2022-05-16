@@ -1,0 +1,9 @@
+{
+    "portal": "https://pppx.gdgps.net/",
+    "label": "pppx",
+    "api_path": "api/user",
+    "key": "d4d8a3cc-d523-11ec-9aeb-e0db55037ce6",
+    "secret": "Z2tRNy1ENXEwdXk1d0ldfGpzeEVBbkVuYAtcOnEhOgw=",
+    "is_staff": false,
+    "is_superuser": false
+}
