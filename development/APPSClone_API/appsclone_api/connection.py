@@ -6,4 +6,4 @@ class Connection_APPS:
     self.apps=APPS(settings_file=settingsFile,download_directory=downloadDirectory)
 
   def testConnection(self):
-    return False
+    return self.apps.ping()[0]
