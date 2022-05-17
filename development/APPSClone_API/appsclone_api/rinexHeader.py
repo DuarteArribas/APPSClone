@@ -22,7 +22,8 @@ class RinexHeader:
     "ANT # / TYPE"        : "2A20",
     "APPROX POSITION XYZ" : "3F14.4",
     "ANTENNA: DELTA H/E/N": "3F14.4",
-    "TIME OF FIRST OBS"   : "5I6,1F13.7,5X,1A3"
+    "TIME OF FIRST OBS"   : "5I6,1F13.7,5X,1A3",
+    "END OF HEADER"       : "60X"
   }
   # == Methods ==
   def __init__(self):
@@ -51,5 +52,5 @@ class RinexHeader:
           self.header          += "\n"
 
   def isValidHeader(self):
-    pass
+    return self.numberOfHeaders == len(list(RinexHeader.MANDATORY_RINEX_HEADERS.keys()))
     
