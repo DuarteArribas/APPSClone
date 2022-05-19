@@ -34,7 +34,7 @@ class RinexHeader:
   # == Methods ==
   def __init__(self):
     """
-    Initializes the header to the empty string, so that header lines can be appended and
+    Initialize the header to the empty string, so that header lines can be appended and
     resets the number of headers to zero.
     """
     self.header          = ""
@@ -42,7 +42,7 @@ class RinexHeader:
     self.version         = None
 
   def readMandatoryHeader(self,rinexFile):
-    """Reads a rinex file's mandatory header lines and counts their number.
+    """Read a rinex file's mandatory header lines and counts their number.
 
     Parameters
     ----------
@@ -70,7 +70,7 @@ class RinexHeader:
         
 
   def isValidHeader(self):
-    """Checks if a RINEX header is valid.
+    """Check if a RINEX header is valid.
 
     Returns
     ----------
@@ -94,14 +94,18 @@ class RinexHeader:
     pass
 
   def __parseFormat(self,line,headerFormat):
-    """Parses a RINEX header format to read the respective columns of the header line.
+    """Parse a RINEX header format to read the respective columns of the header line.
 
     Parameters
     ----------
     line         : str
       The header line to parse
     headerFormat : str
-      The format to parse the header line
+      The format to parse the header line. It's a string containing one format or mutiple formats separated
+      by commas. If there are multiple formats, they should be applied in order. Each format is constituted by
+      three parts, as: RTC, where R is the number of times it should be repeated, T is the type of data it'll
+      contain (A -> String, I -> Integer, X -> Space, F -> Float) and C is the number of columns to read. E.G.:
+      the format 3I10 will read 10 columns of integers 3 times.
 
     Returns
     ----------
