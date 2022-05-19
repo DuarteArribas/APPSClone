@@ -22,15 +22,14 @@ class RinexHeader:
     "ANT # / TYPE"        : "2A20",
     "APPROX POSITION XYZ" : "3F14.4",
     "ANTENNA: DELTA H/E/N": "3F14.4",
+    "TIME OF FIRST OBS"   : "5I6,F13.7,5X,A3",
     "END OF HEADER"       : "60X"
   }
-  RINEX211_VERSION_HEADER   = {
-    "RINEX VERSION / TYPE": "I6,14X,A1,19X,A1,19X",
-    "TIME OF FIRST OBS"   : "5I6,F12.6,6X,A3",
+  RINEX_VERSION_HEADER_FULL = {
+    "RINEX VERSION / TYPE": "F9.2,11X,A20,A20"
   }
-  RINEX302_VERSION_HEADER   = {
-    "RINEX VERSION / TYPE": "F9.2,11X,A1,19X,A1,19X",
-    "TIME OF FIRST OBS"   : "5I6,F13.7,5X,A3",
+  RINEX_VERSION_HEADER_ABBR = {
+    "RINEX VERSION / TYPE": "F9.2,11X,A1,19X,A1,19X"
   }
   # == Methods ==
   def __init__(self):
@@ -63,7 +62,7 @@ class RinexHeader:
           self.numberOfHeaders += 1
           self.header          += line.strip()
           self.header          += "\n"
-        elif line[RinexHeader.HEADER_START:RinexHeader.HEADER_END].strip() == "RINEX VERSION / TYPE" or line[RinexHeader.HEADER_START:RinexHeader.HEADER_END].strip() == "TIME OF FIRST OBS":
+        elif line[RinexHeader.HEADER_START:RinexHeader.HEADER_END].strip() == "RINEX VERSION / TYPE":
           self.numberOfHeaders += 1
           self.header          += line.strip()
           self.header          += "\n"
@@ -93,28 +92,38 @@ class RinexHeader:
   def __isValidAntenna(self):
     pass
 
-  def __parseFormat(self,line,format):
+  def __parseFormat(self,line,columnFormat):
     output          = []
     columnsRead     = 0
     numberOfColumns = 0
-    if "," in format:
-      for f in format.split(","):
-        timesToLoop = self.__extractIntUntilString(f)
+    if "," in columnFormat:
+      for f in columnFormat.split(","):
+        timesToLoop,numberOfDigitsInBeggining = self.__extractIntUntilString(f)
         for i in range(timesToLoop):
-          if f[1] in "AIX":
-            numberOfColumns = 1 if not f[-1].isdigit() else int(f[2:])
-          elif f[1] == "F":
-            floatingSplit   = f[2:].split(".")
+          if f[numberOfDigitsInBeggining] in "AI":
+            numberOfColumns = 1 if not f[-1].isdigit() else int(f[numberOfDigitsInBeggining+1:])
+          elif f[numberOfDigitsInBeggining] == "X":
+            numberOfColumns = timesToLoop
+            output.append(line[columnsRead:columnsRead+numberOfColumns].strip())
+            columnsRead += numberOfColumns
+            break
+          elif f[numberOfDigitsInBeggining] == "F":
+            floatingSplit   = f[numberOfDigitsInBeggining+1:].split(".")
             numberOfColumns = int(floatingSplit[0])
           output.append(line[columnsRead:columnsRead+numberOfColumns].strip())
           columnsRead += numberOfColumns
     else:
-      timesToLoop = self.__extractIntUntilString(format)
+      timesToLoop,numberOfDigitsInBeggining = self.__extractIntUntilString(columnFormat)
       for i in range(timesToLoop):
-          if format[1] in "AIX":
-            numberOfColumns = 1 if not format[-1].isdigit() else int(format[2:])
-          elif format[1] == "F":
-            floatingSplit   = format[2:].split(".")
+          if columnFormat[numberOfDigitsInBeggining] in "AI":
+            numberOfColumns = 1 if not columnFormat[-1].isdigit() else int(columnFormat[numberOfDigitsInBeggining+1:])
+          elif columnFormat[numberOfDigitsInBeggining] == "X":
+            numberOfColumns = timesToLoop
+            output.append(line[columnsRead:columnsRead+numberOfColumns].strip())
+            columnsRead += numberOfColumns
+            break
+          elif columnFormat[numberOfDigitsInBeggining] == "F":
+            floatingSplit   = columnFormat[numberOfDigitsInBeggining+1:].split(".")
             numberOfColumns = int(floatingSplit[0])
           output.append(line[columnsRead:columnsRead+numberOfColumns].strip())
           columnsRead += numberOfColumns
@@ -122,13 +131,13 @@ class RinexHeader:
 
   def __extractIntUntilString(self,string):
     if string == "":
-      return 0
+      return 0,0
     elif not any(char.isdigit() for char in string):
-      return 1
+      return 1,0
     numberString = ""
     for i in range(len(string)):
       if not string[i].isdigit():
         break
       else:
         numberString += string[i]
-    return int(numberString) if numberString != "" else 1
+    return (int(numberString) if numberString != "" else 1),(len(numberString))
