@@ -34,6 +34,7 @@ class RinexHeader:
     self.header          = ""
     self.numberOfHeaders = 0
     self.receiver        = (None,None,None)
+
   def readMandatoryHeader(self,rinexFile):
     """Reads a rinex file's mandatory header lines and counts their number
 
@@ -78,18 +79,22 @@ class RinexHeader:
     pass
 
   def parseFormat(self,line,format):
-    output = []
+    output          = []
+    numberOfColumns = 0
     if "," in format:
       for f in format.split(","):
-        for i in range(int(f[0])):
+        timesToLoop = __extractIntUntilString(f)
+        for i in range(timesToLoop):
           if f[1] in "AIX":
+            print(f[2:])
             numberOfColumns = int(f[2:])
           elif f[1] == "F":
             floatingSplit   = f[2:].split(".")
             numberOfColumns = int(floatingSplit[0])
           output.append(line[i*numberOfColumns:i*numberOfColumns+numberOfColumns].strip())
     else:
-      for i in range(int(format[0])):
+      timesToLoop = __extractIntUntilString(format)
+      for i in range(timesToLoop):
           if format[1] in "AIX":
             numberOfColumns = int(format[2:])
           elif format[1] == "F":
@@ -97,4 +102,14 @@ class RinexHeader:
             numberOfColumns = int(floatingSplit[0])
           output.append(line[i*numberOfColumns:i*numberOfColumns+numberOfColumns].strip())
     return output
-    
+
+  def extractIntUntilString(self,string):
+    if not any(char.isdigit() for char in string):
+      return 0
+    numberString = ""
+    for i in range(len(string)):
+      if not string[i].isdigit():
+        break
+      else: #123
+        numberString += string[i]
+    return int(numberString)
