@@ -33,15 +33,16 @@ class RinexHeader:
   }
   # == Methods ==
   def __init__(self):
-    """Initializes the header to the empty string, so that header lines can be appended and
-    resets the number of headers to zero
+    """
+    Initializes the header to the empty string, so that header lines can be appended and
+    resets the number of headers to zero.
     """
     self.header          = ""
     self.numberOfHeaders = 0
     self.version         = None
 
   def readMandatoryHeader(self,rinexFile):
-    """Reads a rinex file's mandatory header lines and counts their number
+    """Reads a rinex file's mandatory header lines and counts their number.
 
     Parameters
     ----------
@@ -69,7 +70,7 @@ class RinexHeader:
         
 
   def isValidHeader(self):
-    """Checks if a RINEX header is valid
+    """Checks if a RINEX header is valid.
 
     Returns
     ----------
@@ -92,41 +93,50 @@ class RinexHeader:
   def __isValidAntenna(self):
     pass
 
-  def __parseFormat(self,line,columnFormat):
+  def __parseFormat(self,line,headerFormat):
+    """Parses a RINEX header format to read the respective columns of the header line.
+
+    Parameters
+    ----------
+    line         : str
+      The header line to parse
+    headerFormat : str
+      The format to parse the header line
+
+    Returns
+    ----------
+    list
+      A list of each element of the header line as parsed from the header format
+    """
     output          = []
     columnsRead     = 0
     numberOfColumns = 0
-    if "," in columnFormat:
-      for f in columnFormat.split(","):
-        timesToLoop,numberOfDigitsInBeggining = self.__extractIntUntilString(f)
-        for i in range(timesToLoop):
-          if f[numberOfDigitsInBeggining] in "AI":
-            numberOfColumns = 1 if not f[-1].isdigit() else int(f[numberOfDigitsInBeggining+1:])
-          elif f[numberOfDigitsInBeggining] == "X":
-            numberOfColumns = timesToLoop
-            output.append(line[columnsRead:columnsRead+numberOfColumns].strip())
-            columnsRead += numberOfColumns
-            break
-          elif f[numberOfDigitsInBeggining] == "F":
-            floatingSplit   = f[numberOfDigitsInBeggining+1:].split(".")
-            numberOfColumns = int(floatingSplit[0])
-          output.append(line[columnsRead:columnsRead+numberOfColumns].strip())
-          columnsRead += numberOfColumns
+    formatString    = []
+    #is multi format string?
+    if "," in headerFormat:
+      formatString  = headerFormat.split(",")
     else:
-      timesToLoop,numberOfDigitsInBeggining = self.__extractIntUntilString(columnFormat)
+      formatString.append(headerFormat)
+    #loop through format
+    for f in formatString:
+      timesToLoop,numberOfDigitsInBeggining = self.__extractIntUntilString(f)
+      #loop through repetitions of format
       for i in range(timesToLoop):
-          if columnFormat[numberOfDigitsInBeggining] in "AI":
-            numberOfColumns = 1 if not columnFormat[-1].isdigit() else int(columnFormat[numberOfDigitsInBeggining+1:])
-          elif columnFormat[numberOfDigitsInBeggining] == "X":
-            numberOfColumns = timesToLoop
-            output.append(line[columnsRead:columnsRead+numberOfColumns].strip())
-            columnsRead += numberOfColumns
-            break
-          elif columnFormat[numberOfDigitsInBeggining] == "F":
-            floatingSplit   = columnFormat[numberOfDigitsInBeggining+1:].split(".")
-            numberOfColumns = int(floatingSplit[0])
+        #string or integer
+        if f[numberOfDigitsInBeggining] in "AI":
+          numberOfColumns = 1 if not f[-1].isdigit() else int(f[numberOfDigitsInBeggining+1:])
+        #spaces
+        elif f[numberOfDigitsInBeggining] == "X":
+          numberOfColumns = timesToLoop
           output.append(line[columnsRead:columnsRead+numberOfColumns].strip())
           columnsRead += numberOfColumns
+          break
+        #floats
+        elif f[numberOfDigitsInBeggining] == "F":
+          floatingSplit   = f[numberOfDigitsInBeggining+1:].split(".")
+          numberOfColumns = int(floatingSplit[0])
+        output.append(line[columnsRead:columnsRead+numberOfColumns].strip())
+        columnsRead += numberOfColumns
     return output
 
   def __extractIntUntilString(self,string):
