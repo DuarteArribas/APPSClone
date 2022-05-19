@@ -1,5 +1,6 @@
 class RinexHeader:
-  """A rinex header
+  """A rinex header. It's constituted by several mandatory header lines and several optional header lines.
+  It's used to display metadata about a RINEX file.
 
   Attributes
   ----------
@@ -32,8 +33,9 @@ class RinexHeader:
     """
     self.header          = ""
     self.numberOfHeaders = 0
-  def readHeader(self,rinexFile):
-    """Reads a rinex file's header and counts the number of header it contains
+    self.receiver        = (None,None,None)
+  def readMandatoryHeader(self,rinexFile):
+    """Reads a rinex file's mandatory header lines and counts their number
 
     Parameters
     ----------
@@ -48,9 +50,51 @@ class RinexHeader:
           break
         elif line[RinexHeader.HEADER_START:RinexHeader.HEADER_END].strip() in list(RinexHeader.MANDATORY_RINEX_HEADERS.keys()):
           self.numberOfHeaders += 1
-          self.header          += line[:RinexHeader.HEADER_START].strip()
+          self.header          += line.strip()
           self.header          += "\n"
 
   def isValidHeader(self):
+    """Checks if a RINEX header is valid
+
+    Returns
+    ----------
+    bool
+      True if the header is valid and False otherwise
+    """
+    if self.__isValidNumberOfHeaders(): #avoid checking receiver and antenna if at least one header is not there
+      return self.__isValidReceiver() and self.__isValidAntenna()
+
+  def __isValidNumberOfHeaders(self):
     return self.numberOfHeaders == len(list(RinexHeader.MANDATORY_RINEX_HEADERS.keys()))
+
+  def __isValidReceiver(self):
+    
+    # for line in self.header.split("\n"):
+    #   if line
+    # givenReceiver
+    pass
+
+  def __isValidAntenna(self):
+    pass
+
+  def parseFormat(self,line,format):
+    output = []
+    if "," in format:
+      for f in format.split(","):
+        for i in range(int(f[0])):
+          if f[1] in "AIX":
+            numberOfColumns = int(f[2:])
+          elif f[1] == "F":
+            floatingSplit   = f[2:].split(".")
+            numberOfColumns = int(floatingSplit[0])
+          output.append(line[i*numberOfColumns:i*numberOfColumns+numberOfColumns].strip())
+    else:
+      for i in range(int(format[0])):
+          if format[1] in "AIX":
+            numberOfColumns = int(format[2:])
+          elif format[1] == "F":
+            floatingSplit   = format[2:].split(".")
+            numberOfColumns = int(floatingSplit[0])
+          output.append(line[i*numberOfColumns:i*numberOfColumns+numberOfColumns].strip())
+    return output
     
