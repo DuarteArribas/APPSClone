@@ -7,7 +7,7 @@ with open("in/antennas/igs14_2196.atx","r") as f:
   for line in lines:
     #if the line contains an antenna, append it to the list, well formatted
     if antennaInNextLine:
-      newLines.append(f"\"{line[0:16].strip()}\",")
+      newLines.append(f"\"{line[0:20].strip()}\",")
       antennaInNextLine = False
     #if the line contains START OF ANTENNA, then the next line contains an antenna
     if "START OF ANTENNA" in line:

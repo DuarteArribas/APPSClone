@@ -1,3 +1,4 @@
+from receiversAndAntennas import *
 class RinexHeader:
   """A rinex header. It's constituted by several mandatory header lines and several optional header lines.
   It's used to display metadata about a RINEX file.
@@ -81,17 +82,42 @@ class RinexHeader:
       return self.__isValidReceiver() and self.__isValidAntenna()
 
   def __isValidNumberOfHeaders(self):
-    return self.numberOfHeaders == len(list(RinexHeader.MANDATORY_RINEX_HEADERS.keys()))
+    """Check if the number of headers read is equal to the number of needed headers.
+
+    Returns
+    ----------
+    bool
+      True if the number of headers read is equal to the number of needed headers or False otherwise
+    """
+    return self.numberOfHeaders == len(list(RinexHeader.MANDATORY_RINEX_HEADERS.keys())) + 1
 
   def __isValidReceiver(self):
-    
-    # for line in self.header.split("\n"):
-    #   if line
-    # givenReceiver
-    pass
+    """Check if the receiver is valid.
+
+    Returns
+    ----------
+    bool
+      True if the receiver is in the valid receivers set or False otherwise
+    """
+    for line in self.header.split("\n"):
+      if line[RinexHeader.HEADER_START:RinexHeader.HEADER_END] == "REC # / TYPE / VERS":
+        receiver = self.__parseFormat(line[:RinexHeader.HEADER_START],RinexHeader.MANDATORY_RINEX_HEADERS["REC # / TYPE / VERS"])[1]
+        return receiver in receivers
+    return False
 
   def __isValidAntenna(self):
-    pass
+    """Check if the antenna is valid.
+
+    Returns
+    ----------
+    bool
+      True if the antenna is in the valid antennas set or False otherwise
+    """
+    for line in self.header.split("\n"):
+      if line[RinexHeader.HEADER_START:RinexHeader.HEADER_END] == "ANT # / TYPE":
+        antenna = self.__parseFormat(line[:RinexHeader.HEADER_START],RinexHeader.MANDATORY_RINEX_HEADERS["ANT # / TYPE"])[1]
+        return antenna in antennas
+    return False
 
   def __parseFormat(self,line,headerFormat):
     """Parse a RINEX header format to read the respective columns of the header line.
@@ -123,7 +149,7 @@ class RinexHeader:
       formatString.append(headerFormat)
     #loop through format
     for f in formatString:
-      timesToLoop,numberOfDigitsInBeggining = self.__extractIntUntilString(f)
+      timesToLoop,numberOfDigitsInBeggining = self.__extractIntUntilChar(f)
       #loop through repetitions of format
       for i in range(timesToLoop):
         #string or integer
@@ -143,7 +169,19 @@ class RinexHeader:
         columnsRead += numberOfColumns
     return output
 
-  def __extractIntUntilString(self,string):
+  def __extractIntUntilChar(self,string):
+    """Extract the number before a character appears.
+
+    Parameters
+    ----------
+    string       : str
+      the string to extract from
+
+    Returns
+    ----------
+    integer, integer
+      The number before the first char and the length of that number
+    """
     if string == "":
       return 0,0
     elif not any(char.isdigit() for char in string):

@@ -19,43 +19,43 @@ class TestRinexheader(unittest.TestCase):
 
   def test_string_extractor(self):
     header             = RinexHeader()
-    number,numberCount = header._RinexHeader__extractIntUntilString("1234abc321")
+    number,numberCount = header._RinexHeader__extractIntUntilChar("1234abc321")
     self.assertEqual(number,1234)
     self.assertEqual(numberCount,4)
 
   def test_string_extractor2(self):
     header             = RinexHeader()
-    number,numberCount = header._RinexHeader__extractIntUntilString("1234")
+    number,numberCount = header._RinexHeader__extractIntUntilChar("1234")
     self.assertEqual(number,1234)
     self.assertEqual(numberCount,4)
 
   def test_string_extractor3(self):
     header             = RinexHeader()
-    number,numberCount = header._RinexHeader__extractIntUntilString("")
+    number,numberCount = header._RinexHeader__extractIntUntilChar("")
     self.assertEqual(number,0)
     self.assertEqual(numberCount,0)
 
   def test_string_extractor4(self):
     header             = RinexHeader()
-    number,numberCount = header._RinexHeader__extractIntUntilString("abc")
+    number,numberCount = header._RinexHeader__extractIntUntilChar("abc")
     self.assertEqual(number,1)
     self.assertEqual(numberCount,0)
 
   def test_string_extractor4(self):
     header             = RinexHeader()
-    number,numberCount = header._RinexHeader__extractIntUntilString("abc12345")
+    number,numberCount = header._RinexHeader__extractIntUntilChar("abc12345")
     self.assertEqual(number,1)
     self.assertEqual(numberCount,0)
 
   def test_string_extractor5(self):
     header             = RinexHeader()
-    number,numberCount = header._RinexHeader__extractIntUntilString("F9.2")
+    number,numberCount = header._RinexHeader__extractIntUntilChar("F9.2")
     self.assertEqual(number,1)
     self.assertEqual(numberCount,0)
 
   def test_string_extractor6(self):
     header             = RinexHeader()
-    number,numberCount = header._RinexHeader__extractIntUntilString("11X")
+    number,numberCount = header._RinexHeader__extractIntUntilChar("11X")
     self.assertEqual(number,11)
     self.assertEqual(numberCount,2)
 
@@ -107,5 +107,14 @@ class TestRinexheader(unittest.TestCase):
     header = RinexHeader()
     self.assertEqual(header._RinexHeader__parseFormat("                                                            ","60X"),[""])
 
+  def test_check_receiver(self):
+    header = RinexHeader()
+    header.readMandatoryHeader("in/uploads/CVTY2720.21D")
+    self.assertEqual(header._RinexHeader__isValidReceiver(),True)
+
+  def test_check_antenna(self):
+    header = RinexHeader()
+    header.readMandatoryHeader("in/uploads/CVTY2720.21D")
+    self.assertEqual(header._RinexHeader__isValidAntenna(),True)
 if __name__ == '__main__':
   unittest.main()
