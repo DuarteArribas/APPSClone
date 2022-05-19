@@ -1,16 +1,21 @@
 from receiversAndAntennas import *
+from enum import Enum
 class RinexHeader:
   """A rinex header. It's constituted by several mandatory header lines and several optional header lines.
   It's used to display metadata about a RINEX file.
 
   Attributes
   ----------
-  HEADER_START            : int
+  HEADER_START              : int
     rinex headers start at column 61 (python strings start counting at 0, so we subtract 1)
-  HEADER_END              : int
+  HEADER_END                : int
     rinex headers end at column 80
-  MANDATORY_RINEX_HEADERS : dict
+  MANDATORY_RINEX_HEADERS   : dict
     both rinex 2.11 and 3.02 must have these headers (their value is the respective format)
+  ALLOWED_VERSIONS          : list
+    the allowed RINEX versions
+  VALIDITY_ERRORS           : enum
+    the error messages for when the file is not valid 
   """
   # == Attributes ==
   HEADER_START              = 60
@@ -26,17 +31,15 @@ class RinexHeader:
     "TIME OF FIRST OBS"   : "5I6,F13.7,5X,A3",
     "END OF HEADER"       : "60X"
   }
-  RINEX_VERSION_HEADER_FULL = {
-    "RINEX VERSION / TYPE": "F9.2,11X,A20,A20"
-  }
-  RINEX_VERSION_HEADER_ABBR = {
-    "RINEX VERSION / TYPE": "F9.2,11X,A1,19X,A1,19X"
-  }
+  ALLOWED_VERSIONS          = ["2.11","3.02"]
+  VALIDITY_ERRORS           = Enum(
+    'VALIDITY_ERRORS', 'OK INVALID_NUMBER_OF_HEADERS INVALID_RECEIVER INVALID_ANTENNA INVALID_VERSION'
+  )
   # == Methods ==
   def __init__(self):
     """
-    Initialize the header to the empty string, so that header lines can be appended and
-    resets the number of headers to zero.
+    Initialize the header to the empty string, so that header lines can be appended,
+    resets the number of headers to zero and sets the version to None.
     """
     self.header          = ""
     self.numberOfHeaders = 0
@@ -54,9 +57,9 @@ class RinexHeader:
       lines = f.readlines()
       for line in lines:
         if "2.11" in line:
-          version = "2.11"
+          self.version = "2.11"
         elif "3.02" in line:
-          version = "3.02"
+          self.version = "3.02"
         if line[RinexHeader.HEADER_START:RinexHeader.HEADER_END].strip() == "END OF HEADER":
           self.numberOfHeaders += 1
           break
@@ -69,7 +72,6 @@ class RinexHeader:
           self.header          += line.strip()
           self.header          += "\n"
         
-
   def isValidHeader(self):
     """Check if a RINEX header is valid.
 
@@ -79,7 +81,18 @@ class RinexHeader:
       True if the header is valid and False otherwise
     """
     if self.__isValidNumberOfHeaders(): #avoid checking receiver and antenna if at least one header is not there
-      return self.__isValidReceiver() and self.__isValidAntenna()
+      if self.__isValidReceiver():
+        if self.__isValidAntenna():
+          if self.version in RinexHeader.ALLOWED_VERSIONS:
+            return True,RinexHeader.VALIDITY_ERRORS.OK
+          else:
+            return False,RinexHeader.VALIDITY_ERRORS.INVALID_VERSION
+        else:
+          return False,RinexHeader.VALIDITY_ERRORS.INVALID_ANTENNA
+      else:
+        return False,RinexHeader.VALIDITY_ERRORS.INVALID_RECEIVER
+    else:
+      return False,RinexHeader.VALIDITY_ERRORS.INVALID_NUMBER_OF_HEADERS
 
   def __isValidNumberOfHeaders(self):
     """Check if the number of headers read is equal to the number of needed headers.

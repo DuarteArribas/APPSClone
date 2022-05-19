@@ -1,5 +1,6 @@
 1.0                 COMPACT RINEX FORMAT                    CRINEX VERS   / TYPE
 RNX2CRX ver.4.0.8                       01-Oct-21 13:16     CRINEX PROG / DATE
+     2.12           OBSERVATION DATA    M (MIXED)           RINEX VERSION / TYPE
 teqc  2019Feb25                         20211001 13:13:56UTCPGM / RUN BY / DATE
 Linux 2.6.32-573.12.1.x86_64|x86_64|gcc -static|Linux 64|=+ COMMENT
 BIT 2 OF LLI FLAGS DATA COLLECTED UNDER A/S CONDITION       COMMENT

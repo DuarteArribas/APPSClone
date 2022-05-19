@@ -2,20 +2,59 @@ import unittest
 from rinexHeader import *
 
 class TestRinexheader(unittest.TestCase):
-  # def test_rinex_validity1(self):
-  #   header = RinexHeader()
-  #   header.readMandatoryHeader("in/uploads/CVTY2720.21D")
-  #   self.assertTrue(header.isValidHeader())
+  def test_rinex_validity1(self):
+    header = RinexHeader()
+    header.readMandatoryHeader("in/uploads/CVTY2720.21D")
+    validity,validityError = header.isValidHeader()
+    self.assertTrue(validity)
 
-  # def test_rinex_validity2(self):
-  #   header = RinexHeader()
-  #   header.readMandatoryHeader("in/uploads/fileTest")
-  #   self.assertFalse(header.isValidHeader())
+  def test_rinex_validity2(self):
+    header = RinexHeader()
+    header.readMandatoryHeader("in/uploads/fileTest")
+    validity,validityError = header.isValidHeader()
+    self.assertFalse(validity)
 
-  # def test_rinex_validity3(self):
-  #   header = RinexHeader()
-  #   header.readMandatoryHeader("in/uploads/fileTest2")
-  #   self.assertFalse(header.isValidHeader())
+  def test_rinex_validity3(self):
+    header = RinexHeader()
+    header.readMandatoryHeader("in/uploads/fileTest2")
+    validity,validityError = header.isValidHeader()
+    self.assertFalse(validity)
+
+  def test_rinex_validity4(self):
+    header = RinexHeader()
+    header.readMandatoryHeader("in/uploads/fileTest3")
+    validity,validityError = header.isValidHeader()
+    self.assertFalse(validity)
+
+  def test_rinex_validity5(self):
+    header = RinexHeader()
+    header.readMandatoryHeader("in/uploads/DUTH0630.22O")
+    validity,validityError = header.isValidHeader()
+    self.assertTrue(validity)
+
+  def test_rinex_validity6(self):
+    header = RinexHeader()
+    header.readMandatoryHeader("in/uploads/LARM0630.22O")
+    validity,validityError = header.isValidHeader()
+    self.assertTrue(validity)
+
+  def test_rinex_validity7(self):
+    header = RinexHeader()
+    header.readMandatoryHeader("in/uploads/NOA10630.22O")
+    validity,validityError = header.isValidHeader()
+    self.assertTrue(validity)
+
+  def test_rinex_validity8(self):
+    header = RinexHeader()
+    header.readMandatoryHeader("in/uploads/rovn0010.21o")
+    validity,validityError = header.isValidHeader()
+    self.assertTrue(validity)
+
+  def test_rinex_validity8(self):
+    header = RinexHeader()
+    header.readMandatoryHeader("in/uploads/VLNS0630.22O")
+    validity,validityError = header.isValidHeader()
+    self.assertTrue(validity)
 
   def test_string_extractor(self):
     header             = RinexHeader()
