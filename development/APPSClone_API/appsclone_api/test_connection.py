@@ -20,7 +20,11 @@ class TestConnection(unittest.TestCase):
 
   def test_gzip_uncompression(self):
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
-    self.assertEqual(conn._Connection_APPS__compressUncompressGzip("in/test/massa.gz",False),"in/test/massa.gzUncompressed") 
+    self.assertEqual(conn._Connection_APPS__compressUncompressGzip("in/test/massa.gz",False),"in/test/massa.gzUncompressed")
+
+  def test_upload_file(self):
+    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
+    conn.uploadFile("in/uploads_test/fileTest","out/queue/queue")
 
 if __name__ == '__main__':
   unittest.main()
