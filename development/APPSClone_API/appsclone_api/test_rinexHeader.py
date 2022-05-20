@@ -155,5 +155,14 @@ class TestRinexheader(unittest.TestCase):
     header = RinexHeader()
     header.readMandatoryHeader("in/uploads/CVTY2720.21D")
     self.assertEqual(header._RinexHeader__isValidAntenna(),True)
+
+  def test_validity_error_no_of_headers_toString(self):
+    header = RinexHeader()
+    self.assertEqual(RinexHeader.validityErrorToString(RinexHeader.VALIDITY_ERRORS.INVALID_NUMBER_OF_HEADERS),"The rinex file doesn't contain the mandatory header lines!")
+
+  def test_validity_error_version_toString(self):
+    header = RinexHeader()
+    self.assertEqual(RinexHeader.validityErrorToString(RinexHeader.VALIDITY_ERRORS.INVALID_VERSION),"The version  of the rinex file is invalid! (Supported versions are 2.11, 3.02)")
+
 if __name__ == '__main__':
   unittest.main()

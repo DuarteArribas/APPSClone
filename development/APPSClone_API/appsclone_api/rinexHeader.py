@@ -6,15 +6,15 @@ class RinexHeader:
 
   Attributes
   ----------
-  HEADER_START              : int
+  HEADER_START            : int
     rinex headers start at column 61 (python strings start counting at 0, so we subtract 1)
-  HEADER_END                : int
+  HEADER_END              : int
     rinex headers end at column 80
-  MANDATORY_RINEX_HEADERS   : dict
+  MANDATORY_RINEX_HEADERS : dict
     both rinex 2.11 and 3.02 must have these headers (their value is the respective format)
-  ALLOWED_VERSIONS          : list
+  ALLOWED_VERSIONS        : list
     the allowed RINEX versions
-  VALIDITY_ERRORS           : enum
+  VALIDITY_ERRORS         : enum
     the error messages for when the file is not valid 
   """
   # == Attributes ==
@@ -187,7 +187,7 @@ class RinexHeader:
 
     Parameters
     ----------
-    string       : str
+    string : str
       the string to extract from
 
     Returns
@@ -206,3 +206,27 @@ class RinexHeader:
       else:
         numberString += string[i]
     return (int(numberString) if numberString != "" else 1),(len(numberString))
+
+  @staticmethod
+  def validityErrorToString(validityError):
+    """Transform the validity error into a string error message.
+
+    Parameters
+    ----------
+    validityError : enum
+      The validity error
+
+    Returns
+    ----------
+    string
+      A validity error message
+    """
+    if validityError   == RinexHeader.VALIDITY_ERRORS.INVALID_NUMBER_OF_HEADERS:
+      return "The rinex file doesn't contain the mandatory header lines!"
+    elif validityError == RinexHeader.VALIDITY_ERRORS.INVALID_RECEIVER:
+      return "The receiver of the rinex file is invalid!"
+    elif validityError == RinexHeader.VALIDITY_ERRORS.INVALID_ANTENNA:
+      return "The antenna of the rinex file is invalid!"
+    elif validityError == RinexHeader.VALIDITY_ERRORS.INVALID_VERSION:
+      supportedVersions = ", ".join([version for version in RinexHeader.ALLOWED_VERSIONS])
+      return f"The version  of the rinex file is invalid! (Supported versions are {supportedVersions})"
