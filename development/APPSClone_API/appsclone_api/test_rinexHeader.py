@@ -2,59 +2,26 @@ import unittest
 from rinexHeader import *
 
 class TestRinexheader(unittest.TestCase):
-  def test_rinex_validity1(self):
+  def test_rinex_header_reading(self):
     header = RinexHeader()
     header.readMandatoryHeader("in/uploads/CVTY2720.21D")
-    validity,validityError = header.isValidHeader()
-    self.assertTrue(validity)
+    for h in header.mandatoryHeaders:
+      print(header.mandatoryHeaders[h])
 
-  def test_rinex_validity2(self):
+  def test_header_required(self):
     header = RinexHeader()
-    header.readMandatoryHeader("in/uploads/fileTest")
-    validity,validityError = header.isValidHeader()
-    self.assertFalse(validity)
+    header.readMandatoryHeader("in/uploads/CVTY2720.21D")
+    self.assertTrue(header._RinexHeader__isHeaderFromCurrentVersion("2.11"))
 
-  def test_rinex_validity3(self):
+  def test_header_required2(self):
     header = RinexHeader()
-    header.readMandatoryHeader("in/uploads/fileTest2")
-    validity,validityError = header.isValidHeader()
-    self.assertFalse(validity)
+    header.readMandatoryHeader("in/uploads/CVTY2720.21D")
+    self.assertTrue(header._RinexHeader__isHeaderFromCurrentVersion("ALL"))
 
-  def test_rinex_validity4(self):
+  def test_header_required3(self):
     header = RinexHeader()
-    header.readMandatoryHeader("in/uploads/fileTest3")
-    validity,validityError = header.isValidHeader()
-    self.assertFalse(validity)
-
-  def test_rinex_validity5(self):
-    header = RinexHeader()
-    header.readMandatoryHeader("in/uploads/DUTH0630.22O")
-    validity,validityError = header.isValidHeader()
-    self.assertTrue(validity)
-
-  def test_rinex_validity6(self):
-    header = RinexHeader()
-    header.readMandatoryHeader("in/uploads/LARM0630.22O")
-    validity,validityError = header.isValidHeader()
-    self.assertTrue(validity)
-
-  def test_rinex_validity7(self):
-    header = RinexHeader()
-    header.readMandatoryHeader("in/uploads/NOA10630.22O")
-    validity,validityError = header.isValidHeader()
-    self.assertTrue(validity)
-
-  def test_rinex_validity8(self):
-    header = RinexHeader()
-    header.readMandatoryHeader("in/uploads/rovn0010.21o")
-    validity,validityError = header.isValidHeader()
-    self.assertTrue(validity)
-
-  def test_rinex_validity8(self):
-    header = RinexHeader()
-    header.readMandatoryHeader("in/uploads/VLNS0630.22O")
-    validity,validityError = header.isValidHeader()
-    self.assertTrue(validity)
+    header.readMandatoryHeader("in/uploads/CVTY2720.21D")
+    self.assertFalse(header._RinexHeader__isHeaderFromCurrentVersion("3.02"))
 
   def test_string_extractor(self):
     header             = RinexHeader()
@@ -146,23 +113,77 @@ class TestRinexheader(unittest.TestCase):
     header = RinexHeader()
     self.assertEqual(header._RinexHeader__parseFormat("                                                            ","60X"),[""])
 
-  def test_check_receiver(self):
-    header = RinexHeader()
-    header.readMandatoryHeader("in/uploads/CVTY2720.21D")
-    self.assertEqual(header._RinexHeader__isValidReceiver(),True)
+  # def test_rinex_validity1(self):
+  #   header = RinexHeader()
+  #   header.readMandatoryHeader("in/uploads/CVTY2720.21D")
+  #   validity,validityError = header.isValidHeader()
+  #   self.assertTrue(validity)
 
-  def test_check_antenna(self):
-    header = RinexHeader()
-    header.readMandatoryHeader("in/uploads/CVTY2720.21D")
-    self.assertEqual(header._RinexHeader__isValidAntenna(),True)
+  # def test_rinex_validity2(self):
+  #   header = RinexHeader()
+  #   header.readMandatoryHeader("in/uploads/fileTest")
+  #   validity,validityError = header.isValidHeader()
+  #   self.assertFalse(validity)
 
-  def test_validity_error_no_of_headers_toString(self):
-    header = RinexHeader()
-    self.assertEqual(RinexHeader.validityErrorToString(RinexHeader.VALIDITY_ERRORS.INVALID_NUMBER_OF_HEADERS),"The rinex file doesn't contain the mandatory header lines!")
+  # def test_rinex_validity3(self):
+  #   header = RinexHeader()
+  #   header.readMandatoryHeader("in/uploads/fileTest2")
+  #   validity,validityError = header.isValidHeader()
+  #   self.assertFalse(validity)
 
-  def test_validity_error_version_toString(self):
-    header = RinexHeader()
-    self.assertEqual(RinexHeader.validityErrorToString(RinexHeader.VALIDITY_ERRORS.INVALID_VERSION),"The version  of the rinex file is invalid! (Supported versions are 2.11, 3.02)")
+  # def test_rinex_validity4(self):
+  #   header = RinexHeader()
+  #   header.readMandatoryHeader("in/uploads/fileTest3")
+  #   validity,validityError = header.isValidHeader()
+  #   self.assertFalse(validity)
+
+  # def test_rinex_validity5(self):
+  #   header = RinexHeader()
+  #   header.readMandatoryHeader("in/uploads/DUTH0630.22O")
+  #   validity,validityError = header.isValidHeader()
+  #   self.assertTrue(validity)
+
+  # def test_rinex_validity6(self):
+  #   header = RinexHeader()
+  #   header.readMandatoryHeader("in/uploads/LARM0630.22O")
+  #   validity,validityError = header.isValidHeader()
+  #   self.assertTrue(validity)
+
+  # def test_rinex_validity7(self):
+  #   header = RinexHeader()
+  #   header.readMandatoryHeader("in/uploads/NOA10630.22O")
+  #   validity,validityError = header.isValidHeader()
+  #   self.assertTrue(validity)
+
+  # def test_rinex_validity8(self):
+  #   header = RinexHeader()
+  #   header.readMandatoryHeader("in/uploads/rovn0010.21o")
+  #   validity,validityError = header.isValidHeader()
+  #   self.assertTrue(validity)
+
+  # def test_rinex_validity8(self):
+  #   header = RinexHeader()
+  #   header.readMandatoryHeader("in/uploads/VLNS0630.22O")
+  #   validity,validityError = header.isValidHeader()
+  #   self.assertTrue(validity)
+
+  # def test_check_receiver(self):
+  #   header = RinexHeader()
+  #   header.readMandatoryHeader("in/uploads/CVTY2720.21D")
+  #   self.assertEqual(header._RinexHeader__isValidReceiver(),True)
+
+  # def test_check_antenna(self):
+  #   header = RinexHeader()
+  #   header.readMandatoryHeader("in/uploads/CVTY2720.21D")
+  #   self.assertEqual(header._RinexHeader__isValidAntenna(),True)
+
+  # def test_validity_error_no_of_headers_toString(self):
+  #   header = RinexHeader()
+  #   self.assertEqual(RinexHeader.validityErrorToString(RinexHeader.VALIDITY_ERRORS.INVALID_NUMBER_OF_HEADERS),"The rinex file doesn't contain the mandatory header lines!")
+
+  # def test_validity_error_version_toString(self):
+  #   header = RinexHeader()
+  #   self.assertEqual(RinexHeader.validityErrorToString(RinexHeader.VALIDITY_ERRORS.INVALID_VERSION),"The version  of the rinex file is invalid! (Supported versions are 2.11, 3.02)")
 
 if __name__ == '__main__':
   unittest.main()

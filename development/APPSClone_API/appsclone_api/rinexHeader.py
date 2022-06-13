@@ -1,4 +1,4 @@
-from receiversAndAntennas import *
+from vars.receiversAndAntennas import *
 from enum import Enum
 class RinexHeader:
   """A rinex header. It's constituted by several mandatory header lines and several optional header lines.
@@ -20,33 +20,29 @@ class RinexHeader:
   # == Attributes ==
   HEADER_START              = 60
   HEADER_END                = 80
-  MANDATORY_RINEX_HEADERS   = {
-    "PGM / RUN BY / DATE" : "A20,A20,A20",
-    "MARKER NAME"         : "A60",
-    "OBSERVER / AGENCY"   : "A20,A40",
-    "REC # / TYPE / VERS" : "3A20",
-    "ANT # / TYPE"        : "2A20",
-    "APPROX POSITION XYZ" : "3F14.4",
-    "ANTENNA: DELTA H/E/N": "3F14.4",
-    "TIME OF FIRST OBS"   : "5I6,F13.7,5X,A3",
-    "END OF HEADER"       : "60X"
-  }
-  ALLOWED_VERSIONS          = ["2.11","3.02"]
+  ALLOWED_VERSIONS          = ["ALL","2.11","3.02"]
   VALIDITY_ERRORS           = Enum(
     'VALIDITY_ERRORS', 'OK INVALID_NUMBER_OF_HEADERS INVALID_RECEIVER INVALID_ANTENNA INVALID_VERSION'
   )
   # == Methods ==
   def __init__(self):
-    """
-    Initialize the header to the empty string, so that header lines can be appended,
-    resets the number of headers to zero and sets the version to None.
-    """
-    self.header          = ""
-    self.numberOfHeaders = 0
-    self.version         = None
+    """Reset all mandatory header lines of the RINEX file being read and its version, so that new data can be appended"""
+    self.mandatoryHeaders = {
+      "RINEX VERSION / TYPE" : [RinexHeader.ALLOWED_VERSIONS[0],"F9.2,11X,A1,19X,A1,19X",[]],
+      "PGM / RUN BY / DATE"  : [RinexHeader.ALLOWED_VERSIONS[0],"A20,A20,A20"           ,[]],
+      "MARKER NAME"          : [RinexHeader.ALLOWED_VERSIONS[0],"A60"                   ,[]],
+      "OBSERVER / AGENCY"    : [RinexHeader.ALLOWED_VERSIONS[0],"A20,A40"               ,[]],
+      "REC # / TYPE / VERS"  : [RinexHeader.ALLOWED_VERSIONS[0],"3A20"                  ,[]],
+      "ANT # / TYPE"         : [RinexHeader.ALLOWED_VERSIONS[0],"2A20"                  ,[]],
+      "APPROX POSITION XYZ"  : [RinexHeader.ALLOWED_VERSIONS[0],"3F14.4"                ,[]],
+      "ANTENNA: DELTA H/E/N" : [RinexHeader.ALLOWED_VERSIONS[0],"3F14.4"                ,[]],
+      "TIME OF FIRST OBS"    : [RinexHeader.ALLOWED_VERSIONS[0],"5I6,F13.7,5X,A3"       ,[]],
+      "END OF HEADER"        : [RinexHeader.ALLOWED_VERSIONS[0],"60X"                   ,[]]
+    }
+    self.version          = None
 
   def readMandatoryHeader(self,rinexFile):
-    """Read a rinex file's mandatory header lines and counts their number.
+    """Read a rinex file's mandatory header lines.
 
     Parameters
     ----------
@@ -56,29 +52,48 @@ class RinexHeader:
     with open(rinexFile,"r") as f:
       lines = f.readlines()
       for line in lines:
-        if "2.11" in line:
-          self.version = "2.11"
-        elif "3.02" in line:
-          self.version = "3.02"
-        if line[RinexHeader.HEADER_START:RinexHeader.HEADER_END].strip() == "END OF HEADER":
-          self.numberOfHeaders += 1
-          break
-        elif line[RinexHeader.HEADER_START:RinexHeader.HEADER_END].strip() in list(RinexHeader.MANDATORY_RINEX_HEADERS.keys()):
-          self.numberOfHeaders += 1
-          self.header          += line.strip()
-          self.header          += "\n"
-        elif line[RinexHeader.HEADER_START:RinexHeader.HEADER_END].strip() == "RINEX VERSION / TYPE":
-          self.numberOfHeaders += 1
-          self.header          += line.strip()
-          self.header          += "\n"
-        
+        headerLabel = line[RinexHeader.HEADER_START:RinexHeader.HEADER_END].strip()
+        #hasn't found the version yet-searching for it
+        if not self.version:
+          if headerLabel == "RINEX VERSION / TYPE":
+            self.__fillHeaderData(headerLabel,line)
+            if self.mandatoryHeaders[headerLabel][2][0] in RinexHeader.ALLOWED_VERSIONS:
+              self.version = self.mandatoryHeaders[headerLabel][2][0]
+        #has found the version, searching for mandatory header labels
+        else:
+          if headerLabel in list(self.mandatoryHeaders.keys()) and self.__isHeaderFromCurrentVersion(self.mandatoryHeaders[headerLabel][0]):
+            self.__fillHeaderData(headerLabel,line)
+            #header ends, data starts
+            if headerLabel == "END OF HEADER":
+              break
+  
+  def __fillHeaderData(self,headerLabel,line):
+    """Fill the header's data with the parsed data from the current line."""
+    self.mandatoryHeaders[headerLabel][2] = self.__parseFormat(
+      line[:RinexHeader.HEADER_START],
+      self.mandatoryHeaders[headerLabel][1]
+    )
+
+  def __isHeaderFromCurrentVersion(self,requiredVersion):
+    """Check if the version required of the header that is currently being read is the version 
+    of the file or a mandatory header for all RINEX versions
+
+    Returns
+    ----------
+    bool
+      True if the version required of the header is the version of the file or 
+      a mandatory one for all RINEX versions and False otherwise
+    """
+    return requiredVersion == self.version or requiredVersion == "ALL"
+
   def isValidHeader(self):
     """Check if a RINEX header is valid.
 
     Returns
     ----------
-    bool
-      True if the header is valid and False otherwise
+    tuple(bool,enum)
+      the bool is True if the header is valid and False otherwise. The enum 
+      is the message, which indicates why the header is not valid
     """
     if self.__isValidNumberOfHeaders(): #avoid checking receiver and antenna if at least one header is not there
       if self.__isValidReceiver():
@@ -95,13 +110,16 @@ class RinexHeader:
       return False,RinexHeader.VALIDITY_ERRORS.INVALID_NUMBER_OF_HEADERS
 
   def __isValidNumberOfHeaders(self):
-    """Check if the number of headers read is equal to the number of needed headers.
+    """Check if the number of headers read is equal to the number of mandatory headers for the current version.
 
     Returns
     ----------
     bool
       True if the number of headers read is equal to the number of needed headers or False otherwise
     """
+    # hasAllHeaders = True
+    # for header in self.mandatoryHeaders:
+    #   if self.mandatoryHeaders[header][0]
     return self.numberOfHeaders == len(list(RinexHeader.MANDATORY_RINEX_HEADERS.keys())) + 1
 
   def __isValidReceiver(self):
@@ -142,7 +160,7 @@ class RinexHeader:
     headerFormat : str
       The format to parse the header line. It's a string containing one format or mutiple formats separated
       by commas. If there are multiple formats, they should be applied in order. Each format is constituted by
-      three parts, as: RTC, where R is the number of times it should be repeated, T is the type of data it'll
+      three parts, as: `RTC`, where R is the number of times it should be repeated, T is the type of data it'll
       contain (A -> String, I -> Integer, X -> Space, F -> Float) and C is the number of columns to read. E.G.:
       the format 3I10 will read 10 columns of integers 3 times.
 
@@ -192,7 +210,7 @@ class RinexHeader:
 
     Returns
     ----------
-    integer, integer
+    tuple(integer,integer)
       The number before the first char and the length of that number
     """
     if string == "":
@@ -229,4 +247,4 @@ class RinexHeader:
       return "The antenna of the rinex file is invalid!"
     elif validityError == RinexHeader.VALIDITY_ERRORS.INVALID_VERSION:
       supportedVersions = ", ".join([version for version in RinexHeader.ALLOWED_VERSIONS])
-      return f"The version  of the rinex file is invalid! (Supported versions are {supportedVersions})"
+      return f"The version of the rinex file is invalid! (Supported versions are {supportedVersions})"
