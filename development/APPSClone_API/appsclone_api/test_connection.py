@@ -24,7 +24,7 @@ class TestConnection(unittest.TestCase):
 
   def test_upload_file(self):
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
-    conn.uploadFile("in/uploads_test/fileTest","out/queue/queue")
+    conn.uploadFile("in/uploads_test/CVTY2720.21D","out/queue/queue")
 
 if __name__ == '__main__':
   unittest.main()

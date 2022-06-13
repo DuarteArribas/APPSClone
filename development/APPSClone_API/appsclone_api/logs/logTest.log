@@ -88,3 +88,25 @@ Establishing client interface to https://pppx.gdgps.net//api/user
 Establishing client interface to https://pppx.gdgps.net//api/user
 2022-05-20 13:48:51.088051 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
 2022-05-20 13:48:51.104132 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+Session established with https://pppx.gdgps.net
+Establishing client interface to https://pppx.gdgps.net//api/user
+Establishing client interface to https://pppx.gdgps.net//api/user
+Establishing client interface to https://pppx.gdgps.net//api/user
+Establishing client interface to https://pppx.gdgps.net//api/user
+Establishing client interface to https://pppx.gdgps.net//api/user
+2022-05-20 15:08:00.178903 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 15:08:00.194933 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+Session established with https://pppx.gdgps.net
+Establishing client interface to https://pppx.gdgps.net//api/user
+Establishing client interface to https://pppx.gdgps.net//api/user
+Establishing client interface to https://pppx.gdgps.net//api/user
+Establishing client interface to https://pppx.gdgps.net//api/user
+Establishing client interface to https://pppx.gdgps.net//api/user
+2022-05-20 15:08:36.846530 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:36.870735 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 15:08:36.870897 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+Session established with https://pppx.gdgps.net
+Session established with https://pppx1dn.gdgps.net:443
+Session established with https://pppx1la.gdgps.net:443
+2022-05-20 15:08:47.036794 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:47.037470 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
