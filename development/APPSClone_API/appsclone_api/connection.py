@@ -23,40 +23,39 @@ class Connection_APPS:
       True if it was able to connect and False otherwise
     """
     connectionStatus = self.apps.ping()[0]
-    self.logger.writeLog(Logs.SEVERITY.INFO,connectionAttemptLog)
+    if connectionStatus:
+      self.logger.writeLog(Logs.SEVERITY.INFO,connectionSuccessLog)
+    else:
+      self.logger.writeLog(Logs.SEVERITY.INFO,connectionFailedLog)
     return connectionStatus
 
   def uploadFile(self,file,uploadedFiles):
     self.logger.writeLog(Logs.SEVERITY.INFO,uploadAttemptLog.format(file = file))
+    file   = self.__uncompressFile(file)
     header = RinexHeader()
-    self.__readFile()
-    
-    #check validity of file
+    header.readMandatoryHeader(file)
     isValid,validity = header.isValidHeader()
     if isValid:
       self.logger.writeLog(Logs.SEVERITY.INFO,fileValidatedLog.format(file = file))
-      if not isCompressed:
-        self.logger.writeLog(Logs.SEVERITY.WARNING,notCompressedLog.format(file = file))
-        compressedFile = self.__compressUncompressGzip(file,True)
-        fileResponseObject = self.apps.upload_gipsyx(compressedFile)
-      else:
-        fileResponseObject = self.apps.upload_gipsyx(file)
+      compressedFile     = self.__compressUncompressGzip(file,True)
+      fileResponseObject = self.apps.upload_gipsyx(compressedFile)
       self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccessLog.format(file = file))
       with open(uploadedFiles,"a") as f:
-        f.write(f"{fileResponseObject}\n")
+        f.write(f"{fileResponseObject["id"]}\n")
         self.logger.writeLog(Logs.SEVERITY.INFO,addedToQueueSuccessLog.format(file = file))
     else:
       validityErrorString = validityErrorToString(validity[0],validity[1])
       self.logger.writeLog(Logs.SEVERITY.ERROR,fileNotValidatedLog.format(file = file,validity = validityErrorString))
 
-  def __readFile(self):
+  def __uncompressFile(self,file):
     isCompressed = self.__checkCompressedWithGzip(file)
     if isCompressed:
+      self.logger.writeLog(Logs.SEVERITY.WARNING,compressedLog.format(file = file))
       uncompressedFile = self.__compressUncompressGzip(file,False)
-      header.readMandatoryHeader(uncompressedFile)
-      os.remove(uncompressedFile)
+      os.remove(file)
+      return uncompressedFile
     else:
-      header.readMandatoryHeader(file)
+      return file
 
   def __checkCompressedWithGzip(self,file):
     """Checks if a file was compressed using gzip
@@ -103,3 +102,17 @@ class Connection_APPS:
       compressedFile = gzip.open(file,"rb")
       fileToCompress.write(compressedFile.read())
       return f"{file}Uncompressed"
+
+  def getStateOfFile(self,uuid):
+    state = self.apps.detail(uuid)["state"]
+    if state == defines.Data.VERIFIED:
+      self.apps.approve(uuid)
+    elif state == defines.Data.AVAILABLE:
+      self.apps.download_result(uuid)
+      self.apps.delete_data(uuid)
+      #remove from queue
+      #log
+    elif state == defines.Data.ERROR:
+      self.apps.delete_data(uuid)
+      #remove from queue
+      #log
