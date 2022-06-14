@@ -1,5 +1,6 @@
-import logging
 import datetime
+import logging
+import re
 from enum import Enum
 class Logs:
   """A logging system, that formats logs according to their severity.
@@ -16,6 +17,7 @@ class Logs:
   # == Methods ==
   def __init__(self,loggingFile):
     """Set the default configuration of the logging tool to write to a specific file with a specific format."""
+    self.loggingFile = loggingFile
     logging.basicConfig(level = logging.INFO,filename = loggingFile,format = "%(message)s")
 
   def writeLog(self,severity,message):
@@ -42,6 +44,7 @@ class Logs:
       logging.critical(formattedMessage)
     else:
       logging.debug(formattedMessage)
+    self.__sanitizeLogs()
 
   def __setLogMessage(self,severity,message):
     """Formats the logging message, so that it stays aligned and the date, severity and message are logged.
@@ -55,3 +58,13 @@ class Logs:
     """
     severityString = str(severity).split(".")[1]
     return f"{datetime.datetime.now()} ({severityString}){' '*(8-len(severityString))} | {message}"
+
+  def __sanitizeLogs(self):
+    newLoggingFile = ""
+    with open(self.loggingFile,"r+") as f:
+      lines = f.readlines()
+      for line in lines:
+        if re.search("^(\d\d\d\d-\d\d-\d\d)",line):
+          newLoggingFile += line
+    with open(self.loggingFile,"w") as f:   
+      f.write(newLoggingFile)

@@ -1,0 +1,7 @@
+connectionAttemptLog   = "An attempt to test the connection with APPS was made."
+uploadAttemptLog       = "Attempting to upload file {file} to APPS."
+fileValidatedLog       = "The file {file} was validated and is being considered a valid file for uploading."
+fileNotValidatedLog    = "The file {file} is invalid - {validity}"
+notCompressedLog       = "File {file} was not compressed. Compressing it for uploading."
+uploadSuccessLog       = "Successfuly uploaded file {file} to APPS."
+addedToQueueSuccessLog = "Successfuly added file {file} to the uploaded queue."

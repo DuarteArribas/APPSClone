@@ -3,11 +3,6 @@
 2022-05-20 11:13:46,457 (ERROR) | error lol
 2022-05-20 11:13:46,457 (CRITICAL) | critical lol
 2022-05-20 11:13:49,458 (INFO) | after 3 seconds
-INFO:root:2022-05-20 11:27:34.457194 (SEVERITY.INFO)     | info lol
-WARNING:root:2022-05-20 11:27:34.457471 (SEVERITY.WARNING)  | warning lol
-ERROR:root:2022-05-20 11:27:34.457552 (SEVERITY.ERROR)    | error lol
-CRITICAL:root:2022-05-20 11:27:34.457614 (SEVERITY.CRITICAL) | critical lol
-INFO:root:2022-05-20 11:27:37.458187 (SEVERITY.INFO)     | after 3 seconds
 2022-05-20 11:28:11.535837 (SEVERITY.INFO)     | info lol
 2022-05-20 11:28:11.536565 (SEVERITY.WARNING)  | warning lol
 2022-05-20 11:28:11.536641 (SEVERITY.ERROR)    | error lol
@@ -18,95 +13,322 @@ INFO:root:2022-05-20 11:27:37.458187 (SEVERITY.INFO)     | after 3 seconds
 2022-05-20 11:28:32.387112 (ERROR)    | error lol
 2022-05-20 11:28:32.387193 (CRITICAL) | critical lol
 2022-05-20 11:28:35.388303 (INFO)     | after 3 seconds
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
 2022-05-20 13:46:03.007177 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
 2022-05-20 13:46:03.031211 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
 2022-05-20 13:46:03.031328 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
-Session established with https://pppx.gdgps.net
-Session established with https://pppx1dn.gdgps.net:443
-Session established with https://pppx1la.gdgps.net:443
 2022-05-20 13:46:12.996058 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
 2022-05-20 13:46:12.996539 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
 2022-05-20 13:48:51.088051 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
 2022-05-20 13:48:51.104132 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
 2022-05-20 15:08:00.178903 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
 2022-05-20 15:08:00.194933 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
-Session established with https://pppx.gdgps.net
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
 2022-05-20 15:08:36.846530 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
 2022-05-20 15:08:36.870735 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
 2022-05-20 15:08:36.870897 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
-Session established with https://pppx.gdgps.net
-Session established with https://pppx1dn.gdgps.net:443
-Session established with https://pppx1la.gdgps.net:443
 2022-05-20 15:08:47.036794 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
 2022-05-20 15:08:47.037470 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-14 18:59:16.596573 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:23.610988 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:56.839556 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:01:48.834872 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:11.431042 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:58.139700 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:03:04.863761 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:51.439307 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:56.191315 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:19:46.656635 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:04.196793 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:43.448246 (INFO)     | An attempt to test the connection with APPS was made.
+2022-05-20 11:13:46,457 (INFO) | info lol
+2022-05-20 11:13:46,457 (WARNING) | warning lol
+2022-05-20 11:13:46,457 (ERROR) | error lol
+2022-05-20 11:13:46,457 (CRITICAL) | critical lol
+2022-05-20 11:13:49,458 (INFO) | after 3 seconds
+2022-05-20 11:28:11.535837 (SEVERITY.INFO)     | info lol
+2022-05-20 11:28:11.536565 (SEVERITY.WARNING)  | warning lol
+2022-05-20 11:28:11.536641 (SEVERITY.ERROR)    | error lol
+2022-05-20 11:28:11.536693 (SEVERITY.CRITICAL) | critical lol
+2022-05-20 11:28:14.537600 (SEVERITY.INFO)     | after 3 seconds
+2022-05-20 11:28:32.386641 (INFO)     | info lol
+2022-05-20 11:28:32.386985 (WARNING)  | warning lol
+2022-05-20 11:28:32.387112 (ERROR)    | error lol
+2022-05-20 11:28:32.387193 (CRITICAL) | critical lol
+2022-05-20 11:28:35.388303 (INFO)     | after 3 seconds
+2022-05-20 13:46:03.007177 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 13:46:03.031211 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 13:46:03.031328 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+2022-05-20 13:46:12.996058 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 13:46:12.996539 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-05-20 13:48:51.088051 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 13:48:51.104132 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+2022-05-20 15:08:00.178903 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 15:08:00.194933 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+2022-05-20 15:08:36.846530 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:36.870735 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 15:08:36.870897 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+2022-05-20 15:08:47.036794 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:47.037470 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-14 18:59:16.596573 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:23.610988 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:56.839556 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:01:48.834872 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:11.431042 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:58.139700 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:03:04.863761 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:51.439307 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:56.191315 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:19:46.656635 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:04.196793 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:43.448246 (INFO)     | An attempt to test the connection with APPS was made.
+2022-05-20 11:13:46,457 (INFO) | info lol
+2022-05-20 11:13:46,457 (WARNING) | warning lol
+2022-05-20 11:13:46,457 (ERROR) | error lol
+2022-05-20 11:13:46,457 (CRITICAL) | critical lol
+2022-05-20 11:13:49,458 (INFO) | after 3 seconds
+2022-05-20 11:28:11.535837 (SEVERITY.INFO)     | info lol
+2022-05-20 11:28:11.536565 (SEVERITY.WARNING)  | warning lol
+2022-05-20 11:28:11.536641 (SEVERITY.ERROR)    | error lol
+2022-05-20 11:28:11.536693 (SEVERITY.CRITICAL) | critical lol
+2022-05-20 11:28:14.537600 (SEVERITY.INFO)     | after 3 seconds
+2022-05-20 11:28:32.386641 (INFO)     | info lol
+2022-05-20 11:28:32.386985 (WARNING)  | warning lol
+2022-05-20 11:28:32.387112 (ERROR)    | error lol
+2022-05-20 11:28:32.387193 (CRITICAL) | critical lol
+2022-05-20 11:28:35.388303 (INFO)     | after 3 seconds
+2022-05-20 13:46:03.007177 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 13:46:03.031211 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 13:46:03.031328 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+2022-05-20 13:46:12.996058 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 13:46:12.996539 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-05-20 13:48:51.088051 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 13:48:51.104132 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+2022-05-20 15:08:00.178903 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 15:08:00.194933 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+2022-05-20 15:08:36.846530 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:36.870735 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 15:08:36.870897 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+2022-05-20 15:08:47.036794 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:47.037470 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-14 18:59:16.596573 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:23.610988 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:56.839556 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:01:48.834872 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:11.431042 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:58.139700 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:03:04.863761 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:51.439307 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:56.191315 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:19:46.656635 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:04.196793 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:43.448246 (INFO)     | An attempt to test the connection with APPS was made.
+2022-05-20 11:13:46,457 (INFO) | info lol
+2022-05-20 11:13:46,457 (WARNING) | warning lol
+2022-05-20 11:13:46,457 (ERROR) | error lol
+2022-05-20 11:13:46,457 (CRITICAL) | critical lol
+2022-05-20 11:13:49,458 (INFO) | after 3 seconds
+2022-05-20 11:28:11.535837 (SEVERITY.INFO)     | info lol
+2022-05-20 11:28:11.536565 (SEVERITY.WARNING)  | warning lol
+2022-05-20 11:28:11.536641 (SEVERITY.ERROR)    | error lol
+2022-05-20 11:28:11.536693 (SEVERITY.CRITICAL) | critical lol
+2022-05-20 11:28:14.537600 (SEVERITY.INFO)     | after 3 seconds
+2022-05-20 11:28:32.386641 (INFO)     | info lol
+2022-05-20 11:28:32.386985 (WARNING)  | warning lol
+2022-05-20 11:28:32.387112 (ERROR)    | error lol
+2022-05-20 11:28:32.387193 (CRITICAL) | critical lol
+2022-05-20 11:28:35.388303 (INFO)     | after 3 seconds
+2022-05-20 13:46:03.007177 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 13:46:03.031211 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 13:46:03.031328 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+2022-05-20 13:46:12.996058 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 13:46:12.996539 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-05-20 13:48:51.088051 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 13:48:51.104132 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+2022-05-20 15:08:00.178903 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 15:08:00.194933 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+2022-05-20 15:08:36.846530 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:36.870735 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 15:08:36.870897 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+2022-05-20 15:08:47.036794 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:47.037470 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-14 18:59:16.596573 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:23.610988 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:56.839556 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:01:48.834872 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:11.431042 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:58.139700 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:03:04.863761 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:51.439307 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:56.191315 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:19:46.656635 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:04.196793 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:43.448246 (INFO)     | An attempt to test the connection with APPS was made.
+2022-05-20 11:13:46,457 (INFO) | info lol
+2022-05-20 11:13:46,457 (WARNING) | warning lol
+2022-05-20 11:13:46,457 (ERROR) | error lol
+2022-05-20 11:13:46,457 (CRITICAL) | critical lol
+2022-05-20 11:13:49,458 (INFO) | after 3 seconds
+2022-05-20 11:28:11.535837 (SEVERITY.INFO)     | info lol
+2022-05-20 11:28:11.536565 (SEVERITY.WARNING)  | warning lol
+2022-05-20 11:28:11.536641 (SEVERITY.ERROR)    | error lol
+2022-05-20 11:28:11.536693 (SEVERITY.CRITICAL) | critical lol
+2022-05-20 11:28:14.537600 (SEVERITY.INFO)     | after 3 seconds
+2022-05-20 11:28:32.386641 (INFO)     | info lol
+2022-05-20 11:28:32.386985 (WARNING)  | warning lol
+2022-05-20 11:28:32.387112 (ERROR)    | error lol
+2022-05-20 11:28:32.387193 (CRITICAL) | critical lol
+2022-05-20 11:28:35.388303 (INFO)     | after 3 seconds
+2022-05-20 13:46:03.007177 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 13:46:03.031211 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 13:46:03.031328 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+2022-05-20 13:46:12.996058 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 13:46:12.996539 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-05-20 13:48:51.088051 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 13:48:51.104132 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+2022-05-20 15:08:00.178903 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 15:08:00.194933 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+2022-05-20 15:08:36.846530 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:36.870735 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 15:08:36.870897 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+2022-05-20 15:08:47.036794 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:47.037470 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-14 18:59:16.596573 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:23.610988 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:56.839556 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:01:48.834872 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:11.431042 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:58.139700 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:03:04.863761 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:51.439307 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:56.191315 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:19:46.656635 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:04.196793 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:43.448246 (INFO)     | An attempt to test the connection with APPS was made.
+2022-05-20 11:13:46,457 (INFO) | info lol
+2022-05-20 11:13:46,457 (WARNING) | warning lol
+2022-05-20 11:13:46,457 (ERROR) | error lol
+2022-05-20 11:13:46,457 (CRITICAL) | critical lol
+2022-05-20 11:13:49,458 (INFO) | after 3 seconds
+2022-05-20 11:28:11.535837 (SEVERITY.INFO)     | info lol
+2022-05-20 11:28:11.536565 (SEVERITY.WARNING)  | warning lol
+2022-05-20 11:28:11.536641 (SEVERITY.ERROR)    | error lol
+2022-05-20 11:28:11.536693 (SEVERITY.CRITICAL) | critical lol
+2022-05-20 11:28:14.537600 (SEVERITY.INFO)     | after 3 seconds
+2022-05-20 11:28:32.386641 (INFO)     | info lol
+2022-05-20 11:28:32.386985 (WARNING)  | warning lol
+2022-05-20 11:28:32.387112 (ERROR)    | error lol
+2022-05-20 11:28:32.387193 (CRITICAL) | critical lol
+2022-05-20 11:28:35.388303 (INFO)     | after 3 seconds
+2022-05-20 13:46:03.007177 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 13:46:03.031211 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 13:46:03.031328 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+2022-05-20 13:46:12.996058 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 13:46:12.996539 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-05-20 13:48:51.088051 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 13:48:51.104132 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+2022-05-20 15:08:00.178903 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 15:08:00.194933 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+2022-05-20 15:08:36.846530 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:36.870735 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 15:08:36.870897 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+2022-05-20 15:08:47.036794 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:47.037470 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-14 18:59:16.596573 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:23.610988 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:56.839556 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:01:48.834872 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:11.431042 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:58.139700 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:03:04.863761 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:51.439307 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:56.191315 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:19:46.656635 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:04.196793 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:43.448246 (INFO)     | An attempt to test the connection with APPS was made.
+2022-05-20 11:13:46,457 (INFO) | info lol
+2022-05-20 11:13:46,457 (WARNING) | warning lol
+2022-05-20 11:13:46,457 (ERROR) | error lol
+2022-05-20 11:13:46,457 (CRITICAL) | critical lol
+2022-05-20 11:13:49,458 (INFO) | after 3 seconds
+2022-05-20 11:28:11.535837 (SEVERITY.INFO)     | info lol
+2022-05-20 11:28:11.536565 (SEVERITY.WARNING)  | warning lol
+2022-05-20 11:28:11.536641 (SEVERITY.ERROR)    | error lol
+2022-05-20 11:28:11.536693 (SEVERITY.CRITICAL) | critical lol
+2022-05-20 11:28:14.537600 (SEVERITY.INFO)     | after 3 seconds
+2022-05-20 11:28:32.386641 (INFO)     | info lol
+2022-05-20 11:28:32.386985 (WARNING)  | warning lol
+2022-05-20 11:28:32.387112 (ERROR)    | error lol
+2022-05-20 11:28:32.387193 (CRITICAL) | critical lol
+2022-05-20 11:28:35.388303 (INFO)     | after 3 seconds
+2022-05-20 13:46:03.007177 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 13:46:03.031211 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 13:46:03.031328 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+2022-05-20 13:46:12.996058 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 13:46:12.996539 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-05-20 13:48:51.088051 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 13:48:51.104132 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+2022-05-20 15:08:00.178903 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 15:08:00.194933 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+2022-05-20 15:08:36.846530 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:36.870735 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 15:08:36.870897 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+2022-05-20 15:08:47.036794 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:47.037470 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-14 18:59:16.596573 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:23.610988 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:56.839556 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:01:48.834872 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:11.431042 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:58.139700 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:03:04.863761 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:51.439307 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:56.191315 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:19:46.656635 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:04.196793 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:43.448246 (INFO)     | An attempt to test the connection with APPS was made.
+2022-05-20 11:13:46,457 (INFO) | info lol
+2022-05-20 11:13:46,457 (WARNING) | warning lol
+2022-05-20 11:13:46,457 (ERROR) | error lol
+2022-05-20 11:13:46,457 (CRITICAL) | critical lol
+2022-05-20 11:13:49,458 (INFO) | after 3 seconds
+2022-05-20 11:28:11.535837 (SEVERITY.INFO)     | info lol
+2022-05-20 11:28:11.536565 (SEVERITY.WARNING)  | warning lol
+2022-05-20 11:28:11.536641 (SEVERITY.ERROR)    | error lol
+2022-05-20 11:28:11.536693 (SEVERITY.CRITICAL) | critical lol
+2022-05-20 11:28:14.537600 (SEVERITY.INFO)     | after 3 seconds
+2022-05-20 11:28:32.386641 (INFO)     | info lol
+2022-05-20 11:28:32.386985 (WARNING)  | warning lol
+2022-05-20 11:28:32.387112 (ERROR)    | error lol
+2022-05-20 11:28:32.387193 (CRITICAL) | critical lol
+2022-05-20 11:28:35.388303 (INFO)     | after 3 seconds
+2022-05-20 13:46:03.007177 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 13:46:03.031211 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 13:46:03.031328 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+2022-05-20 13:46:12.996058 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 13:46:12.996539 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-05-20 13:48:51.088051 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 13:48:51.104132 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+2022-05-20 15:08:00.178903 (INFO)     | Attempting to upload file in/uploads_test/fileTest to APPS.
+2022-05-20 15:08:00.194933 (ERROR)    | The file in/uploads_test/fileTest is invalid - The rinex file doesn't contain the mandatory header lines!
+2022-05-20 15:08:36.846530 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:36.870735 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-05-20 15:08:36.870897 (WARNING)  | File in/uploads_test/CVTY2720.21D was not compressed. Compressing it for uploading...
+2022-05-20 15:08:47.036794 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-05-20 15:08:47.037470 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-14 18:59:16.596573 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:23.610988 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:00:56.839556 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:01:48.834872 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:11.431042 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:02:58.139700 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:03:04.863761 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:51.439307 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:17:56.191315 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:19:46.656635 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:04.196793 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:20:43.448246 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:43:22.512049 (INFO)     | An attempt to test the connection with APPS was made.
+2022-06-14 19:44:10.152080 (INFO)     | An attempt to test the connection with APPS was made.
+Establishing client interface to https://pppx.gdgps.net//api/user
+Establishing client interface to https://pppx.gdgps.net//api/user
+Establishing client interface to https://pppx.gdgps.net//api/user
+Establishing client interface to https://pppx.gdgps.net//api/user
