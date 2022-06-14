@@ -22,7 +22,7 @@ class RinexHeader:
   HEADER_END                = 80
   ALLOWED_VERSIONS          = ["ALL","2.11","3.02"]
   VALIDITY_ERRORS           = Enum(
-    'VALIDITY_ERRORS', 'OK INVALID_NUMBER_OF_HEADERS INVALID_RECEIVER INVALID_ANTENNA INVALID_VERSION'
+    'VALIDITY_ERRORS', 'OK INVALID_VERSION INVALID_NUMBER_OF_HEADERS INVALID_RECEIVER INVALID_ANTENNA'
   )
   # == Methods ==
   def __init__(self):
@@ -54,11 +54,10 @@ class RinexHeader:
       for line in lines:
         headerLabel = line[RinexHeader.HEADER_START:RinexHeader.HEADER_END].strip()
         #hasn't found the version yet-searching for it
-        if not self.version:
+        if self.version not in RinexHeader.ALLOWED_VERSIONS:
           if headerLabel == "RINEX VERSION / TYPE":
             self.__fillHeaderData(headerLabel,line)
-            if self.mandatoryHeaders[headerLabel][2][0] in RinexHeader.ALLOWED_VERSIONS:
-              self.version = self.mandatoryHeaders[headerLabel][2][0]
+            self.version = self.mandatoryHeaders[headerLabel][2][0]
         #has found the version, searching for mandatory header labels
         else:
           if headerLabel in list(self.mandatoryHeaders.keys()) and self.__isHeaderFromCurrentVersion(self.mandatoryHeaders[headerLabel][0]):
@@ -95,19 +94,22 @@ class RinexHeader:
       the bool is True if the header is valid and False otherwise. The enum 
       is the message, which indicates why the header is not valid
     """
-    if self.__isValidNumberOfHeaders(): #avoid checking receiver and antenna if at least one header is not there
-      if self.__isValidReceiver():
-        if self.__isValidAntenna():
-          if self.version in RinexHeader.ALLOWED_VERSIONS:
-            return True,RinexHeader.VALIDITY_ERRORS.OK
+    if self.version in RinexHeader.ALLOWED_VERSIONS and self.version != "ALL":
+      numOfHeadersValidity,missingHeader = self.__isValidNumberOfHeaders()
+      if numOfHeadersValidity:
+        receiverValidity,receiver = self.__isValidReceiver()
+        if receiverValidity:
+          antennaValidity,antenna = self.__isValidAntenna()
+          if antennaValidity:
+            return True,(RinexHeader.VALIDITY_ERRORS.OK,"OK")
           else:
-            return False,RinexHeader.VALIDITY_ERRORS.INVALID_VERSION
+            return False,(RinexHeader.VALIDITY_ERRORS.INVALID_ANTENNA,antenna)
         else:
-          return False,RinexHeader.VALIDITY_ERRORS.INVALID_ANTENNA
+          return False,(RinexHeader.VALIDITY_ERRORS.INVALID_RECEIVER,receiver)
       else:
-        return False,RinexHeader.VALIDITY_ERRORS.INVALID_RECEIVER
+        return False,(RinexHeader.VALIDITY_ERRORS.INVALID_NUMBER_OF_HEADERS,missingHeader)  
     else:
-      return False,RinexHeader.VALIDITY_ERRORS.INVALID_NUMBER_OF_HEADERS
+      return False,(RinexHeader.VALIDITY_ERRORS.INVALID_VERSION,self.version)
 
   def __isValidNumberOfHeaders(self):
     """Check if the number of headers read is equal to the number of mandatory headers for the current version.
@@ -117,10 +119,10 @@ class RinexHeader:
     bool
       True if the number of headers read is equal to the number of needed headers or False otherwise
     """
-    # hasAllHeaders = True
-    # for header in self.mandatoryHeaders:
-    #   if self.mandatoryHeaders[header][0]
-    return self.numberOfHeaders == len(list(RinexHeader.MANDATORY_RINEX_HEADERS.keys())) + 1
+    for header in self.mandatoryHeaders:
+      if self.__isHeaderFromCurrentVersion(self.mandatoryHeaders[header][0]) and not self.mandatoryHeaders[header][2]:
+        return False,header
+    return True,"None"
 
   def __isValidReceiver(self):
     """Check if the receiver is valid.
@@ -130,11 +132,10 @@ class RinexHeader:
     bool
       True if the receiver is in the valid receivers set or False otherwise
     """
-    for line in self.header.split("\n"):
-      if line[RinexHeader.HEADER_START:RinexHeader.HEADER_END] == "REC # / TYPE / VERS":
-        receiver = self.__parseFormat(line[:RinexHeader.HEADER_START],RinexHeader.MANDATORY_RINEX_HEADERS["REC # / TYPE / VERS"])[1]
-        return receiver in receivers
-    return False
+    if not self.mandatoryHeaders["REC # / TYPE / VERS"][2]:
+      return False,"Empty"
+    receiver = self.mandatoryHeaders["REC # / TYPE / VERS"][2][1]
+    return receiver in receivers,receiver
 
   def __isValidAntenna(self):
     """Check if the antenna is valid.
@@ -144,11 +145,10 @@ class RinexHeader:
     bool
       True if the antenna is in the valid antennas set or False otherwise
     """
-    for line in self.header.split("\n"):
-      if line[RinexHeader.HEADER_START:RinexHeader.HEADER_END] == "ANT # / TYPE":
-        antenna = self.__parseFormat(line[:RinexHeader.HEADER_START],RinexHeader.MANDATORY_RINEX_HEADERS["ANT # / TYPE"])[1]
-        return antenna in antennas
-    return False
+    if not self.mandatoryHeaders["ANT # / TYPE"][2]:
+      return False,"Empty"
+    antenna = self.mandatoryHeaders["ANT # / TYPE"][2][1]
+    return antenna in antennas,antenna
 
   def __parseFormat(self,line,headerFormat):
     """Parse a RINEX header format to read the respective columns of the header line.
@@ -226,7 +226,7 @@ class RinexHeader:
     return (int(numberString) if numberString != "" else 1),(len(numberString))
 
   @staticmethod
-  def validityErrorToString(validityError):
+  def validityErrorToString(validityError,errorMsg):
     """Transform the validity error into a string error message.
 
     Parameters
@@ -240,11 +240,13 @@ class RinexHeader:
       A validity error message
     """
     if validityError   == RinexHeader.VALIDITY_ERRORS.INVALID_NUMBER_OF_HEADERS:
-      return "The rinex file doesn't contain the mandatory header lines!"
+      return f"The rinex file doesn't contain the mandatory header lines. Missing, at least, header `{errorMsg}`!"
     elif validityError == RinexHeader.VALIDITY_ERRORS.INVALID_RECEIVER:
-      return "The receiver of the rinex file is invalid!"
+      return f"The receiver `{errorMsg}` of the rinex file is invalid!"
     elif validityError == RinexHeader.VALIDITY_ERRORS.INVALID_ANTENNA:
-      return "The antenna of the rinex file is invalid!"
+      return f"The antenna `{errorMsg}` of the rinex file is invalid!"
     elif validityError == RinexHeader.VALIDITY_ERRORS.INVALID_VERSION:
-      supportedVersions = ", ".join([version for version in RinexHeader.ALLOWED_VERSIONS])
-      return f"The version of the rinex file is invalid! (Supported versions are {supportedVersions})"
+      supportedVersionsList = RinexHeader.ALLOWED_VERSIONS
+      supportedVersionsList.remove("ALL")
+      supportedVersions = ", ".join([version for version in supportedVersionsList])
+      return f"The version `{errorMsg}` of the rinex file is invalid! (Supported versions are {supportedVersions})"
