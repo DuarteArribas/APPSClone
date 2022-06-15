@@ -12,8 +12,23 @@ class Connection_APPS:
   # == Methods ==
   def __init__(self,settingsFile,downloadDirectory,loggingFile):
     """Connects to APPS and initalizes the logger."""
-    self.apps   = APPS(settings_file = settingsFile,download_directory = downloadDirectory)
-    self.logger = Logs(loggingFile)
+    self.apps              = APPS(settings_file = settingsFile,download_directory = downloadDirectory)
+    self.logger            = Logs(loggingFile)
+    self.uploadArgs        = {
+      "pressure"             : None,
+      "attitude"             : None,
+      "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
+      "access"               : defines.Data.ACCESS_DEFAULT,
+      "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+      "product"              : defines.GIPSYData.PRODUCT_DEFAULT,
+      "troposphere_model"    : defines.GIPSYData.TROP_GMF,
+      "ocean_loading"        : True,
+      "model_tides"          : True,
+      "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
+      "elev_angle_cutoff"    : 7.5,
+      "solution_period"      : 300,
+      "generate_quaternions" : False,
+    }
 
   def testConnection(self):
     """Test the connection to apps.
@@ -30,7 +45,7 @@ class Connection_APPS:
       self.logger.writeLog(Logs.SEVERITY.INFO,connectionFailedLog)
     return connectionStatus
 
-  def uploadFile(self,file,uploadedFilesQueueFile):
+  def uploadFile(self,file,uploadedFilesQueueFile,uploadArgs):
     """Upload file to APPS and add it to uploaded queue.
 
     Parameters
@@ -44,7 +59,8 @@ class Connection_APPS:
     isValid = self.__checkFileValidity(file)
     if isValid:
       fileResponseObject = self.apps.upload_gipsyx(
-        self.__compressUncompressGzip(file,True)
+        self.__compressUncompressGzip(file,True),
+        **self.uploadArgs
       )
       self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccessLog.format(file = file))
       self.__addUploadToQueue(file,fileResponseObject["id"],uploadedFilesQueueFile)
