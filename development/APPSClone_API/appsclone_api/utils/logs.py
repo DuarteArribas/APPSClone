@@ -44,9 +44,10 @@ class Logs:
       logging.critical(formattedMessage)
     else:
       logging.debug(formattedMessage)
+    self.__sanitizeLogs()
 
   def __setLogMessage(self,severity,message):
-    """Formats the logging message, so that it stays aligned and the date, severity and message are logged.
+    """Format the logging message, so that it stays aligned and the date, severity and message are logged.
 
     Parameters
     ----------
@@ -57,3 +58,13 @@ class Logs:
     """
     severityString = str(severity).split(".")[1]
     return f"{datetime.datetime.now()} ({severityString}){' '*(8-len(severityString))} | {message}"
+
+  def __sanitizeLogs(self):
+    newLoggingFile = ""
+    with open(self.loggingFile,"r+") as f:
+      lines = f.readlines()
+      for line in lines:
+        if re.search("^(\d\d\d\d-\d\d-\d\d)",line):
+          newLoggingFile += line
+    with open(self.loggingFile,"w") as f:   
+      f.write(newLoggingFile)

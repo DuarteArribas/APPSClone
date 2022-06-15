@@ -30,6 +30,5 @@ class TestLogs(unittest.TestCase):
   def test_log_regex3(self):
     self.assertFalse(re.search("^(\d\d\d\d-\d\d-\d\d)","arrozEstablishing client interface to https://pppx.gdgps.net//api/user"))
 
-
 if __name__ == '__main__':
   unittest.main()

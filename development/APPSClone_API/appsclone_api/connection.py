@@ -11,7 +11,7 @@ class Connection_APPS:
   # == Methods ==
   def __init__(self,settingsFile,downloadDirectory,loggingFile):
     """Connects to APPS and initalizes the logger."""
-    self.apps   = APPS(settings_file = settingsFile,download_directory = downloadDirectory,log_level = None)
+    self.apps   = APPS(settings_file = settingsFile,download_directory = downloadDirectory)
     self.logger = Logs(loggingFile)
 
   def testConnection(self):
@@ -41,7 +41,7 @@ class Connection_APPS:
       fileResponseObject = self.apps.upload_gipsyx(compressedFile)
       self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccessLog.format(file = file))
       with open(uploadedFiles,"a") as f:
-        f.write(f"{fileResponseObject["id"]}\n")
+        #f.write(f"{fileResponseObject["id"]}\n")
         self.logger.writeLog(Logs.SEVERITY.INFO,addedToQueueSuccessLog.format(file = file))
     else:
       validityErrorString = validityErrorToString(validity[0],validity[1])
