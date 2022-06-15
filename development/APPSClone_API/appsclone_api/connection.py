@@ -11,7 +11,7 @@ class Connection_APPS:
   # == Methods ==
   def __init__(self,settingsFile,downloadDirectory,loggingFile):
     """Connects to APPS and initalizes the logger."""
-    self.apps   = APPS(settings_file = settingsFile,download_directory = downloadDirectory)
+    self.apps   = APPS(settings_file = settingsFile,download_directory = downloadDirectory,log_level = None)
     self.logger = Logs(loggingFile)
 
   def testConnection(self):
