@@ -1,5 +1,6 @@
 import gzip
 import os
+import os.path
 from vars.loggingStrings.connectionLoggingStrings import *
 from gdgps_apps.apps                              import APPS
 from gdgps_apps                                   import defines
@@ -29,25 +30,63 @@ class Connection_APPS:
       self.logger.writeLog(Logs.SEVERITY.INFO,connectionFailedLog)
     return connectionStatus
 
-  def uploadFile(self,file,uploadedFiles):
-    self.logger.writeLog(Logs.SEVERITY.INFO,uploadAttemptLog.format(file = file))
-    file   = self.__uncompressFile(file)
+  def uploadFile(self,file,uploadedFilesQueueFile):
+    """Upload file to APPS and add it to uploaded queue.
+
+    Parameters
+    ----------
+    file                   : str
+      The file to upload
+    uploadedFilesQueueFile : str
+      The file, which contains the uploaded files queue
+    """
+    self.logger.writeLog(Logs.SEVERITY.INFO,uploadStartLog.format(file = file))
+    isValid = self.__checkFileValidity(file)
+    if isValid:
+      fileResponseObject = self.apps.upload_gipsyx(
+        self.__compressUncompressGzip(file,True)
+      )
+      self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccessLog.format(file = file))
+      self.__addUploadToQueue(file,fileResponseObject["id"],uploadedFilesQueueFile)
+    self.logger.writeLog(Logs.SEVERITY.INFO,uploadEndLog.format(file = file))
+
+  def __checkFileValidity(self,file):
+    """Check file validity and log it.
+
+    Parameters
+    ----------
+    file       : str
+      The file to check its validity
+
+    Returns
+    ----------
+    bool
+      True if the rinex file is valid and False otherwise
+    """
+    file   = self.__getUncompressedFile(file)
     header = RinexHeader()
     header.readMandatoryHeader(file)
     isValid,validity = header.isValidHeader()
     if isValid:
       self.logger.writeLog(Logs.SEVERITY.INFO,fileValidatedLog.format(file = file))
-      compressedFile     = self.__compressUncompressGzip(file,True)
-      fileResponseObject = self.apps.upload_gipsyx(compressedFile)
-      self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccessLog.format(file = file))
-      with open(uploadedFiles,"a") as f:
-        #f.write(f"{fileResponseObject["id"]}\n")
-        self.logger.writeLog(Logs.SEVERITY.INFO,addedToQueueSuccessLog.format(file = file))
     else:
-      validityErrorString = validityErrorToString(validity[0],validity[1])
+      validityErrorString = header.validityErrorToString(validity[0],validity[1])
       self.logger.writeLog(Logs.SEVERITY.ERROR,fileNotValidatedLog.format(file = file,validity = validityErrorString))
+    return isValid
 
-  def __uncompressFile(self,file):
+  def __getUncompressedFile(self,file):
+    """Uncompress and delete original file with gzip.
+
+    Parameters
+    ----------
+    file       : str
+      The file to uncompress
+
+    Returns
+    ----------
+    str
+      The name of the uncompressed file or the given file if the file was already uncompressed
+    """
     isCompressed = self.__checkCompressedWithGzip(file)
     if isCompressed:
       self.logger.writeLog(Logs.SEVERITY.WARNING,compressedLog.format(file = file))
@@ -58,7 +97,7 @@ class Connection_APPS:
       return file
 
   def __checkCompressedWithGzip(self,file):
-    """Checks if a file was compressed using gzip
+    """Check if a file is compressed with gzip.
 
     Parameters
     ----------
@@ -98,10 +137,29 @@ class Connection_APPS:
       compressedFile.writelines(fileToCompress)
       return f"{file}.gz"
     else:
-      fileToCompress = open(f"{file}Uncompressed","wb")
-      compressedFile = gzip.open(file,"rb")
+      filenameNoExtension  = file.split(".")
+      filenameNoExtension.pop()
+      uncompressedFilename = "".join(filenameNoExtension)
+      fileToCompress       = open(f"{uncompressedFilename}Uncompressed","wb")
+      compressedFile       = gzip.open(file,"rb")
       fileToCompress.write(compressedFile.read())
-      return f"{file}Uncompressed"
+      return f"{uncompressedFilename}Uncompressed"
+
+  def __addUploadToQueue(self,file,uuid,uploadedFilesQueueFile):
+    """Add upload to the uploaded files queue.
+
+    Parameters
+    ----------
+    file                   : str
+      The uploaded file
+    uuid                   : int
+      The id of the uploaded file
+    uploadedFilesQueueFile : str
+      The file, which contains the uploaded files queue
+    """
+    with open(uploadedFilesQueueFile,"a") as f:
+      f.write(f"{uuid}\n")
+      self.logger.writeLog(Logs.SEVERITY.INFO,addedToQueueSuccessLog.format(file = file))
 
   def getStateOfFile(self,uuid):
     state = self.apps.detail(uuid)["state"]

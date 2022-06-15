@@ -3,3 +3,65 @@
 2022-06-15 19:10:26.629812 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
 2022-06-15 19:13:05.763805 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
 2022-06-15 19:13:13.395074 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 19:20:59.287354 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 19:21:29.496406 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 19:25:11.344686 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 19:25:11.380240 (WARNING)  | File in/test/massa.gz was compressed. Decompressing it, so its header can be read.
+2022-06-15 19:25:34.896941 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 19:25:34.930139 (WARNING)  | File in/test/arroz.gz was compressed. Decompressing it, so its header can be read.
+2022-06-15 19:33:47.063445 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 19:33:47.095558 (WARNING)  | File in/test/file.gz was compressed. Decompressing it, so its header can be read.
+2022-06-15 20:02:49.320149 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:03:27.321260 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:03:43.581133 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:03:49.032388 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:03:55.203498 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:04:06.718930 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:04:16.109928 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:04:55.014886 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:05:38.579489 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:05:56.983913 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:06:02.363115 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:07:08.152313 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:07:08.167244 (WARNING)  | File in/test/arroz.gz was compressed. Decompressing it, so its header can be read.
+2022-06-15 20:21:37.680333 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:21:37.740323 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-06-15 20:21:57.395213 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:21:57.412786 (ERROR)    | The file in/test/file is invalid - The version `None` of the rinex file is invalid! (Supported versions are 2.11, 3.02)
+2022-06-15 20:21:57.460501 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-06-15 20:22:12.080808 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:22:12.097132 (ERROR)    | The file in/test/file is invalid - The version `None` of the rinex file is invalid! (Supported versions are 2.11, 3.02)
+2022-06-15 20:22:12.143115 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-06-15 20:31:45.916697 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-15 20:31:45.933856 (ERROR)    | The file in/test/file is invalid - The version `None` of the rinex file is invalid! (Supported versions are 2.11, 3.02)
+2022-06-15 20:31:45.980635 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-06-15 20:31:46.008071 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-06-15 20:31:46.050873 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-06-15 20:31:55.666749 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-06-15 20:38:56.060616 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-06-15 20:38:56.102594 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-06-15 20:39:05.759554 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-06-15 20:39:29.872444 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-06-15 20:39:29.912153 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-06-15 20:39:39.253094 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-06-15 20:39:39.260619 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-15 20:39:48.191322 (INFO)     | Attempting to upload file in/uploads_test/CVTY2720.21D to APPS.
+2022-06-15 20:39:48.232649 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-06-15 20:39:58.054390 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-06-15 20:39:58.061759 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-15 20:42:45.183567 (INFO)     | == UPLOAD START on file in/uploads_test/CVTY2720.21D ==
+2022-06-15 20:42:45.225308 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-06-15 20:42:54.479880 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-06-15 20:42:54.487263 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-15 20:42:54.491388 (INFO)     | == UPLOAD END on file in/uploads_test/CVTY2720.21D ==
+2022-06-15 20:44:29.847646 (INFO)     | == UPLOAD START on file in/uploads_test/CVTY272CEE0.21D ==
+2022-06-15 20:44:29.854626 (ERROR)    | The in/uploads_test/CVTY272CEE0.21D does not exist or has been removed.
+2022-06-15 20:45:10.205066 (INFO)     | == UPLOAD START on file in/uploads_test/CVTY272CEE0.21D ==
+2022-06-15 20:45:10.211979 (ERROR)    | The in/uploads_test/CVTY272CEE0.21D does not exist or has been removed.
+2022-06-15 20:45:10.217176 (INFO)     | == UPLOAD END on file in/uploads_test/CVTY272CEE0.21D ==
+2022-06-15 20:46:38.270893 (INFO)     | == UPLOAD START on file in/uploads_test/CVTY272CEE0.21D ==
+2022-06-15 20:47:05.322446 (INFO)     | == UPLOAD START on file in/uploads_test/CVTY2720.21D ==
+2022-06-15 20:47:05.362997 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-06-15 20:47:14.726675 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-06-15 20:47:14.734734 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-15 20:47:14.739548 (INFO)     | == UPLOAD END on file in/uploads_test/CVTY2720.21D ==
