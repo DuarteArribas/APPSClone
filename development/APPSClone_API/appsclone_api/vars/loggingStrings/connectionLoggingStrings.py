@@ -9,3 +9,6 @@ compressedLog          = "File {file} was compressed. Decompressing it, so its h
 uploadSuccessLog       = "Successfuly uploaded file {file} to APPS."
 addedToQueueSuccessLog = "Successfuly added file {file} to the uploaded queue."
 invalidArgLog          = "The value `{arg}` is invalid for argument {argName}. Using default value `{defaultValue}`."
+checkStateStartLog     = "== STATE CHECK START on file {file} =="
+checkStateEndLog       = "== STATE CHECK END on file {file} =="
+approvedLog            = "The file {file} has been verified by APPS and is now approved for processing."

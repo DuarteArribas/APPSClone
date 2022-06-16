@@ -248,7 +248,7 @@ class Connection_APPS:
     ----------
     file                   : str
       The uploaded file
-    uuid                   : int
+    uuid                   : str
       The id of the uploaded file
     uploadedFilesQueueFile : str
       The file, which contains the uploaded files queue
@@ -311,16 +311,29 @@ class Connection_APPS:
     else:
       return arg in Connection_APPS.DEFAULT_ARGS[argName][1]
 
-  def getStateOfFile(self,uuid):
-    state = self.apps.detail(uuid)["state"]
-    if state == defines.Data.VERIFIED:
-      self.apps.approve(uuid)
-    elif state == defines.Data.AVAILABLE:
+  def handleFileState(self,uuid):
+    self.logger.writeLog(Logs.SEVERITY.INFO,checkStateStartLog.format(file = self.apps.detail(uuid)["name"]))
+    fileState = self.apps.detail(uuid)["state"]
+    if fileState   == defines.Data.VERIFIED:
+      self.__approveSubmission(uuid)
+    elif fileState == defines.Data.AVAILABLE:
       self.apps.download_result(uuid)
       self.apps.delete_data(uuid)
       #remove from queue
       #log
-    elif state == defines.Data.ERROR:
+    elif fileState == defines.Data.ERROR:
       self.apps.delete_data(uuid)
       #remove from queue
       #log
+    self.logger.writeLog(Logs.SEVERITY.INFO,checkStateStartLog.format(file = self.apps.detail(uuid)["name"]))
+
+  def __approveSubmission(self,uuid):
+    """Approve the submission after it has been verified.
+
+    Parameters
+    ----------
+    uuid : str
+      The id of the submission
+    """
+    self.apps.approve(uuid)
+    self.logger.writeLog(Logs.SEVERITY.INFO,approvedLog.format(file = self.apps.detail(uuid)["name"]))
