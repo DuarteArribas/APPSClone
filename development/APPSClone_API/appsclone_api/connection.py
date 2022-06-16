@@ -4,6 +4,7 @@ import os.path
 from vars.loggingStrings.connectionLoggingStrings import *
 from gdgps_apps.apps                              import APPS
 from gdgps_apps                                   import defines
+from gdgps_apps.exceptions                        import *
 from rinexHeader                                  import *
 from utils.logs                                   import *
 
@@ -89,6 +90,9 @@ class Connection_APPS:
       )
     ),
   }
+  QUEUE_TYPE   = Enum(
+    'QUEUE_TYPE', 'UPLOAD DOWNLOAD'
+  )
   # == Methods ==
   def __init__(self,settingsFile,downloadDirectory,loggingFile):
     """Connects to APPS and initalizes the logger."""
@@ -143,7 +147,7 @@ class Connection_APPS:
         generate_quaternions = args[12]
       )
       self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccessLog.format(file = file))
-      self.__addUploadToQueue(file,fileResponseObject["id"],uploadedFilesQueueFile)
+      self.__addUploadToQueue(fileResponseObject["id"],file,uploadedFilesQueueFile)
     self.logger.writeLog(Logs.SEVERITY.INFO,uploadEndLog.format(file = file))
 
   def __checkFileValidity(self,file):
@@ -241,21 +245,50 @@ class Connection_APPS:
       fileToCompress.write(compressedFile.read())
       return f"{uncompressedFilename}Uncompressed"
 
-  def __addUploadToQueue(self,file,uuid,uploadedFilesQueueFile):
-    """Add upload to the uploaded files queue.
+  def __addToQueue(self,uuid,file,queue,queueType):
+    """Add file to queue.
 
     Parameters
     ----------
-    file                   : str
-      The uploaded file
     uuid                   : str
       The id of the uploaded file
+    file                   : str
+      The uploaded file
     uploadedFilesQueueFile : str
       The file, which contains the uploaded files queue
     """
-    with open(uploadedFilesQueueFile,"a") as f:
-      f.write(f"{uuid}\n")
-      self.logger.writeLog(Logs.SEVERITY.INFO,addedToQueueSuccessLog.format(file = file))
+    with open(queue,"a") as f:
+      if queueType == Connection_APPS.QUEUE_TYPE.UPLOAD:
+        f.write(f"{uuid}\n")
+        self.logger.writeLog(Logs.SEVERITY.INFO,addedToUploadQueueSuccessLog.format(file = file))
+
+  def __removeFromUploadQueue(self,uuid,file,uploadedFilesQueueFile):
+    """Remove upload from the uploaded files queue.
+
+    Parameters
+    ----------
+    uuid                   : str
+      The id of the uploaded file
+    file                   : str
+      The uploaded file
+    uploadedFilesQueueFile : str
+      The file, which contains the uploaded files queue
+    """
+    newQueue       = ""
+    uuidNotInQueue = True
+    with open(uploadedFilesQueueFile,"r") as f:
+      lines = f.readlines()
+      for line in lines:
+        if not uuid == line.split("\n")[0]:
+          newQueue += line
+        else:
+          uuidNotInQueue = False
+    if uuidNotInQueue:
+      self.logger.writeLog(Logs.SEVERITY.WARNING,uuidNotInQueueLog.format(file = file))
+      return
+    with open(uploadedFilesQueueFile,"w") as f:
+      f.write(newQueue)
+      self.logger.writeLog(Logs.SEVERITY.INFO,removedFromQueueSuccessLog.format(file = file))
 
   def __updateUploadArgs(self,uploadArgs):
     """Update uploading args with the specified ones or with the defaults ones if no args
@@ -311,29 +344,112 @@ class Connection_APPS:
     else:
       return arg in Connection_APPS.DEFAULT_ARGS[argName][1]
 
-  def handleFileState(self,uuid):
+  def handleFileState(self,uuid,uploadedFilesQueueFile):
     self.logger.writeLog(Logs.SEVERITY.INFO,checkStateStartLog.format(file = self.apps.detail(uuid)["name"]))
+    file  = self.apps.detail(uuid)["name"]
     fileState = self.apps.detail(uuid)["state"]
-    if fileState   == defines.Data.VERIFIED:
-      self.__approveSubmission(uuid)
+    if fileState   == defines.Data.SUBMITTED or fileState == defines.Data.NASCENT:
+      self.logger.writeLog(Logs.SEVERITY.INFO,submittedLog.format(file = file))
+    elif fileState   == defines.Data.VERIFIED:
+      self.__approveSubmission(uuid,file,uploadedFilesQueueFile)
+    elif fileState   == defines.Data.APPROVED:
+      pass
+    elif fileState   == defines.Data.WAITING:
+      self.logger.writeLog(Logs.SEVERITY.WARNING,waitingLog.format(file = file))
+    elif fileState   == defines.Data.QUEUED:
+      self.logger.writeLog(Logs.SEVERITY.INFO,queuedLog.format(file = file))
+    elif fileState   == defines.Data.PROCESSING:
+      self.logger.writeLog(Logs.SEVERITY.INFO,processingLog.format(file = file))
+    elif fileState   == defines.Data.DONE:
+      pass
     elif fileState == defines.Data.AVAILABLE:
-      self.apps.download_result(uuid)
-      self.apps.delete_data(uuid)
-      #remove from queue
-      #log
+      self.__retrieveData(uuid,file)
+      self.__removeData(uuid,file,uploadedFilesQueueFile)
     elif fileState == defines.Data.ERROR:
       self.apps.delete_data(uuid)
       #remove from queue
       #log
-    self.logger.writeLog(Logs.SEVERITY.INFO,checkStateStartLog.format(file = self.apps.detail(uuid)["name"]))
+    self.logger.writeLog(Logs.SEVERITY.INFO,checkStateStartLog.format(file = file))
 
-  def __approveSubmission(self,uuid):
+  def __approveSubmission(self,uuid,file,uploadedFilesQueueFile):
     """Approve the submission after it has been verified.
 
     Parameters
     ----------
-    uuid : str
+    uuid                   : str
       The id of the submission
+    file                   : str
+      The name of the submission
+    uploadedFilesQueueFile : str
+      The file, which contains the uploaded files queue
     """
-    self.apps.approve(uuid)
-    self.logger.writeLog(Logs.SEVERITY.INFO,approvedLog.format(file = self.apps.detail(uuid)["name"]))
+    try:
+      self.apps.approve(uuid)
+      self.logger.writeLog(Logs.SEVERITY.INFO,approvedSuccessfulLog.format(file = file))
+    except DataNotFound:
+      self.logger.writeLog(Logs.SEVERITY.ERROR,dataNotFoundLog.format(file = file))
+      self.__removeFromUploadQueue(uuid,file,uploadedFilesQueueFile)
+    except InvalidIdentifier:
+      self.logger.writeLog(Logs.SEVERITY.ERROR,InvalidIdentifierLog.format(uuid = uuid))
+      self.__removeFromUploadQueue(uuid,file,uploadedFilesQueueFile)
+    except InvalidOperation:
+      self.logger.writeLog(Logs.SEVERITY.ERROR,approvedUnsuccessfulLog.format(file = file))
+      self.__removeData(uuid,file,uploadedFilesQueueFile)
+      self.__removeFromUploadQueue(uuid,file,uploadedFilesQueueFile)
+    except:
+      self.logger.writeLog(Logs.SEVERITY.CRITICAL,criticalExceptionLog.format(file = file))
+
+  def __removeData(self,uuid,file,uploadedFilesQueueFile):
+    """Remove both source and result data from APPS and from the uploaded queue.
+
+    Parameters
+    ----------
+    uuid                   : str
+      The id of the submission
+    file                   : str
+      The name of the submission
+    uploadedFilesQueueFile : str
+      The file, which contains the uploaded files queue
+    """
+    try:
+      self.apps.delete_data(uuid)
+      self.logger.writeLog(Logs.SEVERITY.INFO,dataDeletedSuccessfulLog.format(file = file))
+    except DataNotFound:
+      self.logger.writeLog(Logs.SEVERITY.ERROR,dataNotFoundLog.format(file = file))
+    except InvalidIdentifier:
+      self.logger.writeLog(Logs.SEVERITY.ERROR,InvalidIdentifierLog.format(uuid = uuid))
+    except InvalidOperation:
+      self.logger.writeLog(Logs.SEVERITY.ERROR,dataDeletedUnsuccessfulLog.format(file = file))
+    except:
+      self.logger.writeLog(Logs.SEVERITY.CRITICAL,criticalExceptionLog.format(file = file))
+    finally:
+      self.__removeFromUploadQueue(uuid,file,uploadedFilesQueueFile)
+
+  def __retrieveData(self,uuid,file,uploadedFilesQueueFile,downloadFolder):
+    """Retrieve results from APPS.
+
+    Parameters
+    ----------
+    uuid                   : str
+      The id of the submission
+    file                   : str
+      The name of the submission
+    uploadedFilesQueueFile : str
+      The file, which contains the uploaded files queue
+    downloadFolder         : str
+      The file to which download the results into
+    """
+    try:
+      self.apps.download_result(uuid = uuid,dr = downloadFolder)
+      self.logger.writeLog(Logs.SEVERITY.INFO,downloadSuccessLog.format(file = file))
+    except DataNotFound:
+      self.logger.writeLog(Logs.SEVERITY.ERROR,dataNotFoundLog.format(file = file))
+      self.__removeFromUploadQueue(uuid,file,uploadedFilesQueueFile)
+    except InvalidIdentifier:
+      self.logger.writeLog(Logs.SEVERITY.ERROR,InvalidIdentifierLog.format(uuid = uuid))
+      self.__removeFromUploadQueue(uuid,file,uploadedFilesQueueFile)
+    except InvalidOperation:
+      self.logger.writeLog(Logs.SEVERITY.ERROR,dataDeletedUnsuccessfulLog.format(file = file))
+      self.__removeFromUploadQueue(uuid,file,uploadedFilesQueueFile)
+    except:
+      self.logger.writeLog(Logs.SEVERITY.CRITICAL,criticalExceptionLog.format(file = file))

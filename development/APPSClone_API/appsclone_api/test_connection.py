@@ -2,17 +2,17 @@ import unittest
 from connection import *
 
 class TestConnection(unittest.TestCase):
-  # def test_connection_ok(self):
-  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
-  #   self.assertTrue(conn.testConnection())
+  def test_connection_ok(self):
+   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
+   self.assertTrue(conn.testConnection())
 
-  # def test_gzip(self):
-  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
-  #   self.assertTrue(conn._Connection_APPS__checkCompressedWithGzip("in/test/file.gz"))
+  def test_gzip(self):
+   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
+   self.assertTrue(conn._Connection_APPS__checkCompressedWithGzip("in/test/file.gz"))
 
-  # def test_gzip2(self):
-  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
-  #   self.assertFalse(conn._Connection_APPS__checkCompressedWithGzip("in/test/file"))
+  def test_gzip2(self):
+   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
+   self.assertFalse(conn._Connection_APPS__checkCompressedWithGzip("in/test/file"))
 
   # def test_getUncompressedFile(self):
   #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
@@ -446,8 +446,24 @@ class TestConnection(unittest.TestCase):
   #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
   #   conn.uploadFile("in/uploads_test/CVTY2720.21D","out/queue/queue",args)
 
-  def test_approve_file(self):
+  def test_add_to_queue(self):
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
-    conn._Connection_APPS__approveSubmission("9c4c9ed6-ed20-11ec-998d-e0db5501adf2")
+    conn._Connection_APPS__addUploadToQueue("00000000-0000-0000-0000-000000000000","arroz","out/queue/queue")
+
+  def test_remove_from_queue(self):
+    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
+    conn._Connection_APPS__removeFromUploadQueue("00000000-0000-0000-0000-000000000000","arroz","out/queue/queue")
+
+  # def test_delete_file(self):
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
+  #   conn._Connection_APPS__removeData("26704bae-ed20-11ec-8f7d-e0db5501adf2","arroz","out/queue/queue")
+
+  # def test_approve_file(self):
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
+  #   conn._Connection_APPS__approveSubmission("2b231f2e-ed1f-11ec-bd99-e0db5501adf2","arroz","out/queue/queue")
+
+  def test_retrieve_data(self):
+    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
+    conn._Connection_APPS__retrieveData("2b231f2e-ed1f-11ec-bd99-e0db5501adf2","arroz","out/queue/queue","out/downloads")
 if __name__ == '__main__':
   unittest.main()
