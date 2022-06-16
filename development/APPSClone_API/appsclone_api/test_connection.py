@@ -454,6 +454,10 @@ class TestConnection(unittest.TestCase):
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
     conn._Connection_APPS__removeFromUploadQueue("00000000-0000-0000-0000-000000000000","arroz","out/queue/queue")
 
+  def test_get_file_data(self):
+    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
+    conn._Connection_APPS__getFileData("2b231f2e-ed1f-11ec-bd99-e0db5501adf2","out/queue/queue")
+
   # def test_delete_file(self):
   #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
   #   conn._Connection_APPS__removeData("26704bae-ed20-11ec-8f7d-e0db5501adf2","arroz","out/queue/queue")
@@ -462,8 +466,16 @@ class TestConnection(unittest.TestCase):
   #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
   #   conn._Connection_APPS__approveSubmission("2b231f2e-ed1f-11ec-bd99-e0db5501adf2","arroz","out/queue/queue")
 
-  def test_retrieve_data(self):
+  # def test_retrieve_data(self):
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
+  #   conn._Connection_APPS__retrieveData("2b231f2e-ed1f-11ec-bd99-e0db5501adf2","arroz","out/queue/queue","out/downloads")
+
+  # def test_handle_error(self):
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
+  #   conn._Connection_APPS__handleError("2b231f2e-ed1f-11ec-bd99-e0db5501adf3","arroz","out/queue/queue")
+
+  def test_handle_file_state(self):
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
-    conn._Connection_APPS__retrieveData("2b231f2e-ed1f-11ec-bd99-e0db5501adf2","arroz","out/queue/queue","out/downloads")
+    conn._Connection_APPS__handleFileState("2b231f2e-ed1f-11ec-bd99-e0db5501adf2","out/queue/queue","out/downloads")
 if __name__ == '__main__':
   unittest.main()
