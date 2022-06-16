@@ -9,26 +9,91 @@ from utils.logs                                   import *
 
 class Connection_APPS:
   """A connection to APPS, which contains all functions to interact with its API."""
+  DEFAULT_ARGS = {
+    "pressure"             : None,
+    "attitude"             : None,
+    "email"                : (
+      defines.Data.EMAIL_NOTIFY_DEFAULT,(
+        defines.Data.EMAIL_NOTIFY_DEFAULT,
+        True,
+        False
+      )
+    ),
+    "access"               : (
+      defines.Data.ACCESS_DEFAULT,(
+        defines.Data.ACCESS_DEFAULT,
+        defines.Data.PRIVATE,
+        defines.Data.PUBLIC
+      )
+    ),
+    "processing_mode"      : (
+      defines.GIPSYData.PROCESSING_MODE_DEFAULT,(
+        defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+        defines.GIPSYData.STATIC,
+        defines.GIPSYData.KINEMATIC
+      )
+    ),
+    "product"              : (
+      defines.GIPSYData.PRODUCT_DEFAULT,(
+        defines.GIPSYData.PRODUCT_DEFAULT,
+        defines.OrbitClockProduct.REAL_TIME,
+        defines.OrbitClockProduct.ULTRA,
+        defines.OrbitClockProduct.RAPID,
+        defines.OrbitClockProduct.FINAL,
+        defines.GIPSYData.BEST
+      )
+    ),
+    "troposphere_model"    : (
+      defines.GIPSYData.TROP_GMF,(
+        defines.GIPSYData.TROP_OFF,
+        defines.GIPSYData.TROP_PROVIDED,
+        defines.GIPSYData.TROP_VMF1,
+        defines.GIPSYData.TROP_GMF,
+        defines.GIPSYData.TROP_GPT2
+      )
+    ),
+    "ocean_loading"        : (
+      True,(
+        True,
+        False
+      )
+    ),
+    "model_tides"          : (
+      True,(
+        True,
+        False
+      )
+    ),
+    "elev_dep_weighting"   : (
+      defines.GIPSYData.ROOT_SINE,(
+        defines.GIPSYData.FLAT,
+        defines.GIPSYData.SINE,
+        defines.GIPSYData.ROOT_SINE
+      )
+    ),
+    "elev_angle_cutoff"    : (
+      7.5,(
+        defines.GIPSYData.ELEV_ANGLE_CUTOFF_MIN,
+        defines.GIPSYData.ELEV_ANGLE_CUTOFF_MAX
+      )
+    ),
+    "solution_period"      : (
+      300,(
+        defines.GIPSYData.SOLUTION_PERIOD_MIN
+      )
+    ),
+    "generate_quaternions" : (
+      False,(
+        True,
+        False
+      )
+    ),
+  }
   # == Methods ==
   def __init__(self,settingsFile,downloadDirectory,loggingFile):
     """Connects to APPS and initalizes the logger."""
     self.apps              = APPS(settings_file = settingsFile,download_directory = downloadDirectory)
     self.logger            = Logs(loggingFile)
-    self.uploadArgs        = {
-      "pressure"             : None,
-      "attitude"             : None,
-      "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
-      "access"               : defines.Data.ACCESS_DEFAULT,
-      "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
-      "product"              : defines.GIPSYData.PRODUCT_DEFAULT,
-      "troposphere_model"    : defines.GIPSYData.TROP_GMF,
-      "ocean_loading"        : True,
-      "model_tides"          : True,
-      "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
-      "elev_angle_cutoff"    : 7.5,
-      "solution_period"      : 300,
-      "generate_quaternions" : False,
-    }
 
   def testConnection(self):
     """Test the connection to apps.
@@ -54,13 +119,16 @@ class Connection_APPS:
       The file to upload
     uploadedFilesQueueFile : str
       The file, which contains the uploaded files queue
+    uploadArgs             : dict
+      Contains pairs of argumentName->argument
     """
     self.logger.writeLog(Logs.SEVERITY.INFO,uploadStartLog.format(file = file))
     isValid = self.__checkFileValidity(file)
     if isValid:
+      args               = self.__updateUploadArgs(uploadArgs)
       fileResponseObject = self.apps.upload_gipsyx(
         self.__compressUncompressGzip(file,True),
-        **self.uploadArgs
+        *args
       )
       self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccessLog.format(file = file))
       self.__addUploadToQueue(file,fileResponseObject["id"],uploadedFilesQueueFile)
@@ -176,6 +244,60 @@ class Connection_APPS:
     with open(uploadedFilesQueueFile,"a") as f:
       f.write(f"{uuid}\n")
       self.logger.writeLog(Logs.SEVERITY.INFO,addedToQueueSuccessLog.format(file = file))
+
+  def __updateUploadArgs(self,uploadArgs):
+    """Update uploading args with the specified ones or with the defaults ones if no args
+    are specified or if they're incorrect.
+
+    Parameters
+    ----------
+    uploadArgs             : dict
+      Contains pairs of argumentName->argument
+
+    Returns
+    ----------
+    list
+      The list of arguments
+    """
+    args = []
+    for argName in uploadArgs:
+      if uploadArgs[argName] != "" and self.__isValidArg(argName,uploadArgs[argName]):
+        args.append(uploadArgs[argName])
+      else:
+        defaultValue = Connection_APPS.DEFAULT_ARGS[argName][0] if isinstance(Connection_APPS.DEFAULT_ARGS[argName],tuple) else Connection_APPS.DEFAULT_ARGS[argName]
+        self.logger.writeLog(
+          Logs.SEVERITY.WARNING,invalidArgLog.format(
+            arg          = uploadArgs[argName],
+            argName      = argName,
+            defaultValue = defaultValue
+          )
+        )
+        args.append(defaultValue)
+    return args
+
+  def __isValidArg(self,argName,arg):
+    """Check if received argument is valid.
+
+    Parameters
+    ----------
+    argName                : str
+      The name of the argument
+    arg                    : str
+      The received argument
+
+    Returns
+    ----------
+    bool
+      True if the argument is valid and False otherwise
+    """
+    if argName   == "pressure" or argName == "attitude":
+      return arg == None or os.path.isfile(arg)
+    elif argName == "elev_angle_cutoff":
+      return arg > Connection_APPS.DEFAULT_ARGS[argName][1][0] and arg < Connection_APPS.DEFAULT_ARGS[argName][1][1]
+    elif argName == "solution_period":
+      return arg > Connection_APPS.DEFAULT_ARGS[argName][1]
+    else:
+      return arg in Connection_APPS.DEFAULT_ARGS[argName][1]
 
   def getStateOfFile(self,uuid):
     state = self.apps.detail(uuid)["state"]
