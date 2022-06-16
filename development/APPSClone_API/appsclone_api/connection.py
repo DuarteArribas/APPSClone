@@ -128,7 +128,19 @@ class Connection_APPS:
       args               = self.__updateUploadArgs(uploadArgs)
       fileResponseObject = self.apps.upload_gipsyx(
         self.__compressUncompressGzip(file,True),
-        *args
+        pressure             = args[0],
+        attitude             = args[1],
+        email                = args[2],
+        access               = args[3],
+        processing_mode      = args[4],
+        product              = args[5],
+        troposphere_model    = args[6],
+        ocean_loading        = args[7],
+        model_tides          = args[8],
+        elev_dep_weighting   = args[9],
+        elev_angle_cutoff    = args[10],
+        solution_period      = args[11],
+        generate_quaternions = args[12]
       )
       self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccessLog.format(file = file))
       self.__addUploadToQueue(file,fileResponseObject["id"],uploadedFilesQueueFile)
