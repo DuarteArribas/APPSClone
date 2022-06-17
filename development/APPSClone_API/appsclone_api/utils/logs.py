@@ -7,17 +7,29 @@ class Logs:
 
   Attributes
   ----------
-  SEVERITY : enum
+  SEVERITY     : enum
     Represents the logs severity in an easier to write way
+  MIN_NUM_LOGS : int
+    The minimum number of logs allowed
+  MAX_NUM_LOGS : int
+    The maximum number of logs allowed 
   """
   # == Attributes ==
-  SEVERITY = Enum(
+  SEVERITY     = Enum(
     'SEVERITY', 'DEBUG INFO WARNING ERROR CRITICAL'
   )
+  MIN_NUM_LOGS = 100
+  MAX_NUM_LOGS = 100000
   # == Methods ==
-  def __init__(self,loggingFile):
+  def __init__(self,loggingFile,maxLogs):
     """Set the default configuration of the logging tool to write to a specific file with a specific format."""
     self.loggingFile = loggingFile
+    if maxLogs > Logs.MAX_NUM_LOGS:
+      self.maxLogs = Logs.MAX_NUM_LOGS
+    elif maxLogs < Logs.MIN_NUM_LOGS:
+      self.maxLogs = Logs.MIN_NUM_LOGS
+    else:
+      self.maxLogs = maxLogs
     logging.basicConfig(level = logging.INFO,filename = loggingFile,format = "%(message)s")
 
   def writeLog(self,severity,message):
@@ -60,11 +72,16 @@ class Logs:
     return f"{datetime.datetime.now()} ({severityString}){' '*(8-len(severityString))} | {message}"
 
   def __sanitizeLogs(self):
+    """Sanitize logs, so that logs from APPS don't appear and make sure the maximum amount of logs is not exceeded."""
     newLoggingFile = ""
     with open(self.loggingFile,"r+") as f:
       lines = f.readlines()
       for line in lines:
         if re.search("^(\d\d\d\d-\d\d-\d\d)",line):
           newLoggingFile += line
-    with open(self.loggingFile,"w") as f:   
+      logsList = newLoggingFile.split("\n")
+      if len(logsList) > self.maxLogs:
+        logsList = logsList[len(logsList)-self.maxLogs:]
+      newLoggingFile = "\n".join(logsList)
+    with open(self.loggingFile,"w") as f:
       f.write(newLoggingFile)

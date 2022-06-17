@@ -98,10 +98,10 @@ class Connection_APPS:
     ),
   }
   # == Methods ==
-  def __init__(self,settingsFile,downloadDirectory,loggingFile):
+  def __init__(self,settingsFile,downloadDirectory,loggingFile,maxLogs):
     """Connects to APPS and initalizes the logger."""
     self.apps              = APPS(settings_file = settingsFile,download_directory = downloadDirectory)
-    self.logger            = Logs(loggingFile)
+    self.logger            = Logs(loggingFile,maxLogs)
 
   def testConnection(self):
     """Test the connection to apps.
@@ -391,7 +391,7 @@ class Connection_APPS:
         self.__handleError(uuid,file,uploadedFilesQueueFile)
       self.logger.writeLog(Logs.SEVERITY.INFO,checkStateEndFileLog.format(file = file))
     else:
-      self.logger.writeLog(Logs.SEVERITY.INFO,checkStateEndLog.format(file = file))
+      self.logger.writeLog(Logs.SEVERITY.INFO,checkStateEndLog)
 
   def __getFileData(self,uuid,uploadedFilesQueueFile):
     """Get details from the file in APPS.
