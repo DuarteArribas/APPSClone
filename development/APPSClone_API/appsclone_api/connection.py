@@ -154,6 +154,32 @@ class Connection_APPS:
       self.__addUploadToQueue(fileResponseObject["id"],file,uploadedFilesQueueFile)
     self.logger.writeLog(Logs.SEVERITY.INFO,uploadEndLog.format(file = file))
 
+  def getQuotaLeft(self):
+    """Check the amount of space left in the user's quota.
+
+    Returns
+    ----------
+    int
+      The amount of space left in the user's quota in mebibytes
+    """
+    profile = self.apps.profile()
+    return self.__bytesToMB(profile["quota"] - profile["usage"])
+
+  def __bytesToMB(self,by):
+    """Convert bytes to mebibytes.
+    
+    Parameters
+    ----------
+    by : int
+      The value in bytes to convert
+
+    Returns
+    ----------
+    int
+      The given value in mebibytes with three decimal places
+    """
+    return round(by / 1.049e+6,3)
+
   def __checkFileValidity(self,file):
     """Check file validity and log it.
 

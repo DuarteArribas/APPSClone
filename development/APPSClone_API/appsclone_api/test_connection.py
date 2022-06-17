@@ -474,8 +474,17 @@ class TestConnection(unittest.TestCase):
   #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log",maxLogs = 1000)
   #   conn._Connection_APPS__handleError("2b231f2e-ed1f-11ec-bd99-e0db5501adf3","arroz","out/queue/queue")
 
-  def test_handle_file_state(self):
+  #def test_handle_file_state(self):
+  #  conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log",maxLogs = 1000)
+  #  conn.handleFileState("869c3e66-ee51-11ec-bd99-e0db5501adf2","out/queue/queue","out/downloads")
+
+  def test_convert_to_mb(self):
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log",maxLogs = 1000)
-    conn.handleFileState("869c3e66-ee51-11ec-bd99-e0db5501adf2","out/queue/queue","out/downloads")
+    print(conn._Connection_APPS__bytesToMB(102898948))
+
+  def test_get_user_quota(self):
+    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log",maxLogs = 1000)
+    print(conn.getQuotaLeft())
+
 if __name__ == '__main__':
   unittest.main()
