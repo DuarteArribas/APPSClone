@@ -1626,6 +1626,626 @@
 2022-06-16 13:57:22.117623 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
 2022-06-16 13:57:22.126045 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
 2022-06-16 13:57:22.134428 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-16 14:45:01.848194 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-16 14:45:03.428881 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-16 14:45:03.445090 (INFO)     | == GATHERING DATA START on uuid 2b231f2e-ed1f-11ec-bd99-e0db5501adf2 ==
+2022-06-16 14:45:08.356016 (INFO)     | == GATHERING DATA END on uuid 2b231f2e-ed1f-11ec-bd99-e0db5501adf2 ==
+2022-06-16 14:45:08.392024 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-16 14:45:08.419860 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-16 14:45:08.435125 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-16 14:45:08.444713 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-16 14:45:08.453453 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-16 14:45:08.462123 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-16 14:45:08.471311 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-16 14:45:08.480322 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-16 14:45:08.488994 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-16 14:45:08.497552 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-16 14:45:08.506112 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-16 14:45:08.515067 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-16 14:45:08.524128 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-16 14:45:08.532923 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-16 14:45:08.543445 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-16 14:45:08.559648 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-16 14:45:08.570738 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-16 14:45:08.581266 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-16 14:45:08.591210 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-16 14:45:08.600736 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-16 14:45:08.610512 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-16 14:45:08.619601 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-16 14:45:08.629056 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-16 14:45:08.638456 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-16 14:45:08.648722 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-16 14:45:08.658708 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-16 14:45:08.668444 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-16 14:45:08.684621 (INFO)     | === UPLOAD START on file in/uploads_test/CVTY2720.21D ===
+2022-06-16 14:45:08.736725 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-06-16 14:45:18.149876 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-06-16 14:45:18.160575 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-16 14:45:18.169216 (INFO)     | === UPLOAD END on file in/uploads_test/CVTY2720.21D ===
+2022-06-16 14:47:01.990013 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-16 14:47:03.573007 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-16 14:47:03.588986 (INFO)     | == GATHERING DATA START on uuid 2b231f2e-ed1f-11ec-bd99-e0db5501adf2 ==
+2022-06-16 14:47:08.458440 (INFO)     | == GATHERING DATA END on uuid 2b231f2e-ed1f-11ec-bd99-e0db5501adf2 ==
+2022-06-16 14:47:08.493719 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-16 14:47:08.521092 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-16 14:47:08.535961 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-16 14:47:08.545124 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-16 14:47:08.554560 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-16 14:47:08.564082 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-16 14:47:08.574655 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-16 14:47:08.584188 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-16 14:47:08.593764 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-16 14:47:08.602393 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-16 14:47:08.610597 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-16 14:47:08.619348 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-16 14:47:08.628142 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-16 14:47:08.636696 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-16 14:47:08.645185 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-16 14:47:08.659129 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-16 14:47:08.668122 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-16 14:47:08.677598 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-16 14:47:08.686599 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-16 14:47:08.696288 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-16 14:47:08.705288 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-16 14:47:08.713975 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-16 14:47:08.722591 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-16 14:47:08.732716 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-16 14:47:08.741856 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-16 14:47:08.750349 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-16 14:47:08.759367 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-16 14:47:08.773075 (INFO)     | === UPLOAD START on file in/uploads_test/CVTY2720.21D.gz ===
+2022-06-16 14:47:08.817539 (INFO)     | The file in/uploads_test/CVTY2720.21D.gz was validated and is being considered a valid file for uploading.
+2022-06-16 14:47:21.227945 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D.gz to APPS.
+2022-06-16 14:47:21.239042 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D.gz to the uploaded queue.
+2022-06-16 14:47:21.246891 (INFO)     | === UPLOAD END on file in/uploads_test/CVTY2720.21D.gz ===
+2022-06-17 16:12:46.565655 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:12:48.340034 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:12:48.357854 (INFO)     | == GATHERING DATA START on uuid 2b231f2e-ed1f-11ec-bd99-e0db5501adf2 ==
+2022-06-17 16:12:51.528860 (ERROR)    | The file Unknown was not found on APPS.
+2022-06-17 16:12:51.541429 (WARNING)  | The file Unknown was not in the uploaded queue, so cannot be removed from it.
+2022-06-17 16:12:51.548307 (INFO)     | == GATHERING DATA END on uuid 2b231f2e-ed1f-11ec-bd99-e0db5501adf2 ==
+2022-06-17 16:12:51.591859 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:12:51.625465 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:12:51.643515 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:12:51.653976 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:12:51.663310 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:12:51.672099 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:12:51.680728 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:12:51.690134 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:12:51.699684 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:12:51.709498 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:12:51.718312 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:12:51.726695 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:12:51.736368 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:12:51.746340 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:12:51.757512 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:12:51.776092 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:12:51.786987 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:12:51.796293 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:12:51.805451 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:12:51.813775 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:12:51.822489 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:12:51.832271 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:12:51.841225 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:12:51.850204 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:12:51.859514 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:12:51.868239 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:12:51.876894 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:12:51.893507 (INFO)     | === UPLOAD START on file in/uploads_test/CVTY2720.21D ===
+2022-06-17 16:12:51.939923 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-06-17 16:13:01.633481 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-06-17 16:13:01.645974 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-17 16:13:01.655435 (INFO)     | === UPLOAD END on file in/uploads_test/CVTY2720.21D ===
+2022-06-17 16:13:59.388711 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:14:01.011163 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:14:01.054681 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:14:01.080783 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:14:01.095623 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:14:01.105258 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:14:01.113644 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:14:01.122579 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:14:01.131018 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:14:01.139665 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:14:01.147900 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:14:01.155655 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:14:01.163339 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:14:01.170904 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:14:01.178577 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:14:01.186255 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:14:01.193613 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:14:01.205826 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:14:01.213925 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:14:01.221415 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:14:01.229568 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:14:01.237314 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:14:01.245811 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:14:01.253746 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:14:01.261732 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:14:01.270466 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:14:01.278556 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:14:01.286541 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:14:01.295315 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:14:10.295941 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:14:11.912773 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:14:11.942428 (INFO)     | === STATE CHECK START ===
+2022-06-17 16:14:11.951712 (INFO)     | == GATHERING DATA START on uuid fcf53236-ee4f-11ec-b3b6-e0db5501adf2 ==
+2022-06-17 16:14:16.820576 (INFO)     | == GATHERING DATA END on uuid fcf53236-ee4f-11ec-b3b6-e0db5501adf2 ==
+2022-06-17 16:14:16.830450 (INFO)     | Checking file CVTY2720.21D.
+2022-06-17 16:14:16.839375 (INFO)     | The file CVTY2720.21D is in the `Verified` state.
+2022-06-17 16:14:16.848120 (INFO)     | == APPROVAL START on file CVTY2720.21D ==
+2022-06-17 16:14:18.549804 (INFO)     | The file CVTY2720.21D has been verified by APPS and is now approved for processing.
+2022-06-17 16:14:18.559245 (INFO)     | == APPROVAL END on file CVTY2720.21D ==
+2022-06-17 16:14:18.568118 (INFO)     | === STATE CHECK END on file CVTY2720.21D ===
+2022-06-17 16:14:18.587396 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:14:18.613235 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:14:18.628612 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:14:18.637924 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:14:18.646648 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:14:18.654781 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:14:18.663840 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:14:18.671888 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:14:18.680907 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:14:18.688831 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:14:18.696979 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:14:18.705103 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:14:18.712951 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:14:18.720929 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:14:18.729097 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:14:18.742993 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:14:18.752669 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:14:18.760997 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:14:18.769532 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:14:18.777761 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:14:18.786712 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:14:18.794760 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:14:18.803175 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:14:18.811889 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:14:18.820853 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:14:18.829074 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:14:18.837089 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:15:38.125089 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:15:39.752441 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:15:39.782052 (INFO)     | === STATE CHECK START ===
+2022-06-17 16:15:39.791384 (INFO)     | == GATHERING DATA START on uuid fcf53236-ee4f-11ec-b3b6-e0db5501adf2 ==
+2022-06-17 16:15:44.737188 (INFO)     | == GATHERING DATA END on uuid fcf53236-ee4f-11ec-b3b6-e0db5501adf2 ==
+2022-06-17 16:15:44.747094 (INFO)     | Checking file CVTY2720.21D.
+2022-06-17 16:15:44.755670 (INFO)     | The file CVTY2720.21D is in the `Waiting` state.
+2022-06-17 16:15:44.764135 (INFO)     | === STATE CHECK END on file CVTY2720.21D ===
+2022-06-17 16:15:44.782246 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:15:44.807301 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:15:44.821735 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:15:44.830476 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:15:44.839146 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:15:44.848482 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:15:44.857483 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:15:44.866031 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:15:44.874413 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:15:44.882750 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:15:44.890945 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:15:44.899340 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:15:44.907884 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:15:44.916058 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:15:44.924263 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:15:44.937474 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:15:44.946468 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:15:44.955337 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:15:44.964218 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:15:44.973090 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:15:44.981573 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:15:44.989976 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:15:44.998267 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:15:45.006421 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:15:45.014993 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:15:45.023488 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:15:45.031784 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:16:45.257781 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:16:46.903537 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:16:46.936776 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:16:46.962620 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:16:46.977337 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:16:46.986746 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:16:46.995814 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:16:47.004610 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:16:47.013815 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:16:47.023121 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:16:47.032579 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:16:47.041263 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:16:47.050054 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:16:47.058759 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:16:47.067604 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:16:47.076029 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:16:47.085570 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:16:47.099939 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:16:47.109160 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:16:47.119078 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:16:47.127765 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:16:47.137663 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:16:47.146317 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:16:47.154719 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:16:47.163572 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:16:47.172576 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:16:47.181392 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:16:47.190439 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:16:47.199305 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:16:47.214179 (INFO)     | === UPLOAD START on file in/uploads_test/file303 ===
+2022-06-17 16:16:47.263848 (ERROR)    | The file in/uploads_test/file303 is invalid - The version `3.03` of the rinex file is invalid! (Supported versions are 2.11, 3.02)
+2022-06-17 16:16:47.273397 (INFO)     | === UPLOAD END on file in/uploads_test/file303 ===
+2022-06-17 16:17:52.891260 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:17:54.578406 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:17:54.611839 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:17:54.637343 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:17:54.652022 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:17:54.661220 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:17:54.670064 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:17:54.678601 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:17:54.687414 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:17:54.696839 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:17:54.705612 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:17:54.713869 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:17:54.722221 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:17:54.730395 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:17:54.738618 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:17:54.747118 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:17:54.756264 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:17:54.769948 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:17:54.778785 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:17:54.787298 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:17:54.795961 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:17:54.804965 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:17:54.814059 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:17:54.823351 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:17:54.832150 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:17:54.841061 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:17:54.849907 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:17:54.858353 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:17:54.867237 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:17:54.881269 (INFO)     | === UPLOAD START on file in/uploads_test/NOA10630.22O ===
+2022-06-17 16:17:54.894276 (INFO)     | The file in/uploads_test/NOA10630.22O was validated and is being considered a valid file for uploading.
+2022-06-17 16:17:54.902911 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
+2022-06-17 16:18:02.716487 (INFO)     | Successfuly uploaded file in/uploads_test/NOA10630.22O to APPS.
+2022-06-17 16:18:02.729213 (INFO)     | Successfuly added file in/uploads_test/NOA10630.22O to the uploaded queue.
+2022-06-17 16:18:02.738114 (INFO)     | === UPLOAD END on file in/uploads_test/NOA10630.22O ===
+2022-06-17 16:19:01.026722 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:19:02.703211 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:19:02.733835 (INFO)     | === STATE CHECK START ===
+2022-06-17 16:19:02.743316 (INFO)     | == GATHERING DATA START on uuid b06cd6ac-ee50-11ec-bd99-e0db5501adf2 ==
+2022-06-17 16:19:07.674643 (INFO)     | == GATHERING DATA END on uuid b06cd6ac-ee50-11ec-bd99-e0db5501adf2 ==
+2022-06-17 16:19:07.684263 (INFO)     | Checking file NOA10630.22O.
+2022-06-17 16:19:07.692806 (INFO)     | The file NOA10630.22O is in the `Verified` state.
+2022-06-17 16:19:07.701421 (INFO)     | == APPROVAL START on file NOA10630.22O ==
+2022-06-17 16:19:09.336800 (INFO)     | The file NOA10630.22O has been verified by APPS and is now approved for processing.
+2022-06-17 16:19:09.346601 (INFO)     | == APPROVAL END on file NOA10630.22O ==
+2022-06-17 16:19:09.355115 (INFO)     | === STATE CHECK END on file NOA10630.22O ===
+2022-06-17 16:19:09.373697 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:19:09.399137 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:19:09.413650 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:19:09.422633 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:19:09.431409 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:19:09.439938 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:19:09.448668 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:19:09.458573 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:19:09.467428 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:19:09.476609 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:19:09.485537 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:19:09.494349 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:19:09.503370 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:19:09.512301 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:19:09.521150 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:19:09.534962 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:19:09.543854 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:19:09.552723 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:19:09.561343 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:19:09.571473 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:19:09.580403 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:19:09.589112 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:19:09.597638 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:19:09.606131 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:19:09.614883 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:19:09.623323 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:19:09.632089 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:19:29.748096 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:19:31.340820 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:19:31.384512 (INFO)     | === STATE CHECK START ===
+2022-06-17 16:19:31.394641 (INFO)     | == GATHERING DATA START on uuid b06cd6ac-ee50-11ec-bd99-e0db5501adf2 ==
+2022-06-17 16:19:36.345550 (INFO)     | == GATHERING DATA END on uuid b06cd6ac-ee50-11ec-bd99-e0db5501adf2 ==
+2022-06-17 16:19:36.356439 (INFO)     | Checking file NOA10630.22O.
+2022-06-17 16:19:36.366063 (INFO)     | The file NOA10630.22O is in the `Error` state.
+2022-06-17 16:19:36.375246 (INFO)     | == REMOVE DATA START on file NOA10630.22O ==
+2022-06-17 16:19:38.118030 (INFO)     | The file NOA10630.22O has been deleted from APPS.
+2022-06-17 16:19:38.133587 (INFO)     | Successfuly removed file NOA10630.22O from the uploaded queue.
+2022-06-17 16:19:38.144393 (INFO)     | == REMOVE DATA END on file NOA10630.22O ==
+2022-06-17 16:19:38.153513 (ERROR)    | There was an error with the file NOA10630.22O in APPS.
+2022-06-17 16:19:38.165100 (INFO)     | === STATE CHECK END on file NOA10630.22O ===
+2022-06-17 16:19:38.189440 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:19:38.218478 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:19:38.235178 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:19:38.246611 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:19:38.256565 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:19:38.266222 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:19:38.276112 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:19:38.285643 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:19:38.295863 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:19:38.305837 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:19:38.315458 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:19:38.325305 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:19:38.335963 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:19:38.345822 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:19:38.356041 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:19:38.371010 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:19:38.380552 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:19:38.389919 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:19:38.399642 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:19:38.409204 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:19:38.419309 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:19:38.429001 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:19:38.438505 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:19:38.447745 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:19:38.457057 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:19:38.466372 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:19:38.475808 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:20:53.328926 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:20:55.015800 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:20:55.050528 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:20:55.076749 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:20:55.091853 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:20:55.101367 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:20:55.110462 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:20:55.119628 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:20:55.129066 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:20:55.138491 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:20:55.147548 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:20:55.160394 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:20:55.169261 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:20:55.178356 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:20:55.187101 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:20:55.196081 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:20:55.204720 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:20:55.218744 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:20:55.227781 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:20:55.236894 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:20:55.246233 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:20:55.255765 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:20:55.265219 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:20:55.274314 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:20:55.283119 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:20:55.292575 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:20:55.302199 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:20:55.311195 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:20:55.320059 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:20:55.334430 (INFO)     | === UPLOAD START on file in/uploads_test/rovn0010.21o ===
+2022-06-17 16:20:55.349275 (INFO)     | The file in/uploads_test/rovn0010.21o was validated and is being considered a valid file for uploading.
+2022-06-17 16:20:55.358551 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
+2022-06-17 16:21:03.154724 (INFO)     | Successfuly uploaded file in/uploads_test/rovn0010.21o to APPS.
+2022-06-17 16:21:03.167791 (INFO)     | Successfuly added file in/uploads_test/rovn0010.21o to the uploaded queue.
+2022-06-17 16:21:03.178094 (INFO)     | === UPLOAD END on file in/uploads_test/rovn0010.21o ===
+2022-06-17 16:21:39.997285 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:21:41.626024 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:21:41.654279 (INFO)     | === STATE CHECK START ===
+2022-06-17 16:21:41.664201 (INFO)     | == GATHERING DATA START on uuid 1bfa0930-ee51-11ec-998d-e0db5501adf2 ==
+2022-06-17 16:21:46.516002 (INFO)     | == GATHERING DATA END on uuid 1bfa0930-ee51-11ec-998d-e0db5501adf2 ==
+2022-06-17 16:21:46.525950 (INFO)     | Checking file rovn0010.21o.
+2022-06-17 16:21:46.535331 (INFO)     | The file rovn0010.21o is in the `Verified` state.
+2022-06-17 16:21:46.544594 (INFO)     | == APPROVAL START on file rovn0010.21o ==
+2022-06-17 16:21:48.196968 (INFO)     | The file rovn0010.21o has been verified by APPS and is now approved for processing.
+2022-06-17 16:21:48.207197 (INFO)     | == APPROVAL END on file rovn0010.21o ==
+2022-06-17 16:21:48.215804 (INFO)     | === STATE CHECK END on file rovn0010.21o ===
+2022-06-17 16:21:48.233155 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:21:48.256373 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:21:48.269780 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:21:48.279010 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:21:48.287893 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:21:48.296368 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:21:48.304434 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:21:48.312808 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:21:48.321271 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:21:48.329337 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:21:48.337416 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:21:48.345351 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:21:48.353887 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:21:48.362326 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:21:48.370607 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:21:48.382851 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:21:48.391397 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:21:48.399568 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:21:48.407747 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:21:48.415903 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:21:48.423917 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:21:48.432509 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:21:48.440837 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:21:48.449076 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:21:48.457073 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:21:48.465105 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:21:48.473267 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:22:19.726119 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:22:21.375030 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:22:21.407602 (INFO)     | === STATE CHECK START ===
+2022-06-17 16:22:21.418164 (INFO)     | == GATHERING DATA START on uuid 1bfa0930-ee51-11ec-998d-e0db5501adf2 ==
+2022-06-17 16:22:26.257833 (INFO)     | == GATHERING DATA END on uuid 1bfa0930-ee51-11ec-998d-e0db5501adf2 ==
+2022-06-17 16:22:26.268222 (INFO)     | Checking file rovn0010.21o.
+2022-06-17 16:22:26.276914 (INFO)     | The file rovn0010.21o is in the `Error` state.
+2022-06-17 16:22:26.285925 (INFO)     | == REMOVE DATA START on file rovn0010.21o ==
+2022-06-17 16:22:28.014275 (INFO)     | The file rovn0010.21o has been deleted from APPS.
+2022-06-17 16:22:28.028355 (INFO)     | Successfuly removed file rovn0010.21o from the uploaded queue.
+2022-06-17 16:22:28.038607 (INFO)     | == REMOVE DATA END on file rovn0010.21o ==
+2022-06-17 16:22:28.047057 (ERROR)    | There was an error with the file rovn0010.21o in APPS.
+2022-06-17 16:22:28.055717 (INFO)     | === STATE CHECK END on file rovn0010.21o ===
+2022-06-17 16:22:28.074395 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:22:28.099461 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:22:28.114277 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:22:28.124310 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:22:28.133688 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:22:28.142504 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:22:28.151812 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:22:28.160762 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:22:28.169785 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:22:28.178583 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:22:28.187709 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:22:28.196731 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:22:28.205570 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:22:28.214510 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:22:28.223285 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:22:28.238729 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:22:28.248655 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:22:28.257707 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:22:28.266722 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:22:28.275549 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:22:28.285030 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:22:28.294165 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:22:28.303616 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:22:28.312358 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:22:28.321214 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:22:28.330042 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:22:28.340302 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:23:50.583589 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:23:52.226290 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:23:52.260805 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:23:52.287199 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:23:52.302465 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:23:52.312351 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:23:52.321743 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:23:52.330888 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:23:52.340812 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:23:52.350005 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:23:52.359221 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:23:52.368107 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:23:52.376938 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:23:52.385715 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:23:52.394507 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:23:52.403222 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:23:52.412128 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:23:52.426077 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:23:52.435879 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:23:52.444724 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:23:52.454609 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:23:52.463753 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:23:52.472154 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:23:52.481850 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:23:52.491375 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:23:52.500582 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:23:52.510079 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:23:52.519225 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:23:52.528233 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:23:52.542874 (INFO)     | === UPLOAD START on file in/uploads_test/CVTY2720.21D ===
+2022-06-17 16:23:52.586835 (INFO)     | The file in/uploads_test/CVTY2720.21D was validated and is being considered a valid file for uploading.
+2022-06-17 16:23:52.596795 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
+2022-06-17 16:24:02.068418 (INFO)     | Successfuly uploaded file in/uploads_test/CVTY2720.21D to APPS.
+2022-06-17 16:24:02.080457 (INFO)     | Successfuly added file in/uploads_test/CVTY2720.21D to the uploaded queue.
+2022-06-17 16:24:02.090500 (INFO)     | === UPLOAD END on file in/uploads_test/CVTY2720.21D ===
+2022-06-17 16:24:20.408432 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:24:22.009454 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:24:22.040071 (INFO)     | === STATE CHECK START ===
+2022-06-17 16:24:22.050387 (INFO)     | == GATHERING DATA START on uuid 869c3e66-ee51-11ec-bd99-e0db5501adf2 ==
+2022-06-17 16:24:26.978005 (INFO)     | == GATHERING DATA END on uuid 869c3e66-ee51-11ec-bd99-e0db5501adf2 ==
+2022-06-17 16:24:26.988407 (INFO)     | Checking file CVTY2720.21D (1).
+2022-06-17 16:24:26.997644 (INFO)     | The file CVTY2720.21D (1) is in the `Verified` state.
+2022-06-17 16:24:27.007276 (INFO)     | == APPROVAL START on file CVTY2720.21D (1) ==
+2022-06-17 16:24:28.653766 (INFO)     | The file CVTY2720.21D (1) has been verified by APPS and is now approved for processing.
+2022-06-17 16:24:28.664062 (INFO)     | == APPROVAL END on file CVTY2720.21D (1) ==
+2022-06-17 16:24:28.673470 (INFO)     | === STATE CHECK END on file CVTY2720.21D (1) ===
+2022-06-17 16:24:28.693371 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:24:28.727567 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:24:28.748136 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:24:28.758995 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:24:28.768566 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:24:28.778246 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:24:28.787523 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:24:28.797164 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:24:28.806566 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:24:28.816540 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:24:28.826079 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:24:28.835633 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:24:28.845288 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:24:28.854714 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:24:28.865097 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:24:28.880875 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:24:28.892023 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:24:28.901833 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:24:28.911490 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:24:28.921221 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:24:28.931006 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:24:28.940190 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:24:28.950068 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:24:28.960111 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:24:28.969875 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:24:28.978994 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:24:28.988223 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:24:36.091657 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:24:37.755541 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:24:37.787191 (INFO)     | === STATE CHECK START ===
+2022-06-17 16:24:37.797579 (INFO)     | == GATHERING DATA START on uuid 869c3e66-ee51-11ec-bd99-e0db5501adf2 ==
+2022-06-17 16:24:42.707621 (INFO)     | == GATHERING DATA END on uuid 869c3e66-ee51-11ec-bd99-e0db5501adf2 ==
+2022-06-17 16:24:42.717463 (INFO)     | Checking file CVTY2720.21D (1).
+2022-06-17 16:24:42.726644 (INFO)     | The file CVTY2720.21D (1) is in the `Processing` state.
+2022-06-17 16:24:42.735744 (INFO)     | === STATE CHECK END on file CVTY2720.21D (1) ===
+2022-06-17 16:24:42.754137 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:24:42.778711 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:24:42.793632 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:24:42.803511 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:24:42.813309 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:24:42.822211 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:24:42.831715 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:24:42.840523 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:24:42.849349 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:24:42.859002 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:24:42.867875 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:24:42.876778 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:24:42.885797 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:24:42.894553 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:24:42.903379 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:24:42.917369 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:24:42.927928 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:24:42.937457 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:24:42.946688 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:24:42.955632 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:24:42.964552 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:24:42.973729 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:24:42.982523 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:24:42.991565 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:24:43.000392 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:24:43.009565 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:24:43.018584 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:25:18.593092 (INFO)     | Successfuly added file arroz to the uploaded queue.
+2022-06-17 16:25:20.259515 (INFO)     | An attempt to test the connection with APPS was made and the connection was successful.
+2022-06-17 16:25:20.293272 (INFO)     | === STATE CHECK START ===
+2022-06-17 16:25:20.304381 (INFO)     | == GATHERING DATA START on uuid 869c3e66-ee51-11ec-bd99-e0db5501adf2 ==
+2022-06-17 16:25:25.176317 (INFO)     | == GATHERING DATA END on uuid 869c3e66-ee51-11ec-bd99-e0db5501adf2 ==
+2022-06-17 16:25:25.186935 (INFO)     | Checking file CVTY2720.21D (1).
+2022-06-17 16:25:25.195810 (INFO)     | The file CVTY2720.21D (1) is in the `Available` state.
+2022-06-17 16:25:25.205360 (INFO)     | == RETRIEVE DATA START on file CVTY2720.21D (1)
+2022-06-17 16:25:30.544748 (INFO)     | The file CVTY2720.21D (1)'s processed files have been successfully downloaded.
+2022-06-17 16:25:30.555646 (INFO)     | == RETRIEVE DATA END on file CVTY2720.21D (1)
+2022-06-17 16:25:30.566121 (INFO)     | == REMOVE DATA START on file CVTY2720.21D (1) ==
+2022-06-17 16:25:32.392599 (INFO)     | The file CVTY2720.21D (1) has been deleted from APPS.
+2022-06-17 16:25:32.406932 (INFO)     | Successfuly removed file CVTY2720.21D (1) from the uploaded queue.
+2022-06-17 16:25:32.417807 (INFO)     | == REMOVE DATA END on file CVTY2720.21D (1) ==
+2022-06-17 16:25:32.427643 (INFO)     | === STATE CHECK END on file CVTY2720.21D (1) ===
+2022-06-17 16:25:32.449948 (INFO)     | Successfuly removed file arroz from the uploaded queue.
+2022-06-17 16:25:32.475604 (WARNING)  | The value `arroz` is invalid for argument access. Using default value `X`.
+2022-06-17 16:25:32.491144 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:25:32.501485 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:25:32.511190 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:25:32.520774 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:25:32.529267 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:25:32.537911 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:25:32.547464 (WARNING)  | The value `` is invalid for argument troposphere_model. Using default value `GMF`.
+2022-06-17 16:25:32.556808 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:25:32.566124 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:25:32.575024 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:25:32.584783 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:25:32.593883 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:25:32.603797 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
+2022-06-17 16:25:32.618942 (WARNING)  | The value `` is invalid for argument pressure. Using default value `None`.
+2022-06-17 16:25:32.629387 (WARNING)  | The value `` is invalid for argument attitude. Using default value `None`.
+2022-06-17 16:25:32.639733 (WARNING)  | The value `` is invalid for argument email. Using default value `None`.
+2022-06-17 16:25:32.649677 (WARNING)  | The value `` is invalid for argument access. Using default value `X`.
+2022-06-17 16:25:32.659936 (WARNING)  | The value `` is invalid for argument processing_mode. Using default value `S`.
+2022-06-17 16:25:32.669503 (WARNING)  | The value `` is invalid for argument product. Using default value `B`.
+2022-06-17 16:25:32.678565 (WARNING)  | The value `` is invalid for argument ocean_loading. Using default value `True`.
+2022-06-17 16:25:32.688011 (WARNING)  | The value `` is invalid for argument model_tides. Using default value `True`.
+2022-06-17 16:25:32.697662 (WARNING)  | The value `` is invalid for argument elev_dep_weighting. Using default value `SQRTSIN`.
+2022-06-17 16:25:32.707622 (WARNING)  | The value `` is invalid for argument elev_angle_cutoff. Using default value `7.5`.
+2022-06-17 16:25:32.718151 (WARNING)  | The value `` is invalid for argument solution_period. Using default value `300`.
+2022-06-17 16:25:32.727855 (WARNING)  | The value `` is invalid for argument generate_quaternions. Using default value `False`.
 Establishing client interface to https://pppx.gdgps.net//api/user
 Establishing client interface to https://pppx.gdgps.net//api/user
 Establishing client interface to https://pppx.gdgps.net//api/user

@@ -341,6 +341,17 @@ class Connection_APPS:
       return arg in Connection_APPS.DEFAULT_ARGS[argName][1]
 
   def handleFileState(self,uuid,uploadedFilesQueueFile,downloadFolder):
+    """Handle what should be done, given the state of a file.
+
+    Parameters
+    ----------
+    uuid                   : str
+      The id of the file to handle
+    uploadedFilesQueueFile : str
+      The file, which contains the uploaded files queue
+    downloadFolder         : str
+      The file to which download the results into
+    """
     self.logger.writeLog(Logs.SEVERITY.INFO,checkStateStartLog)
     fileDetails = self.__getFileData(uuid,uploadedFilesQueueFile)
     if fileDetails != None:
@@ -512,5 +523,5 @@ class Connection_APPS:
     uploadedFilesQueueFile : str
       The file, which contains the uploaded files queue
     """
-    self.__removeData(uuid,file,uploadedFilesQueueFile)
     self.logger.writeLog(Logs.SEVERITY.ERROR,errorFromAPPSLog.format(file = file))
+    self.__removeData(uuid,file,uploadedFilesQueueFile)

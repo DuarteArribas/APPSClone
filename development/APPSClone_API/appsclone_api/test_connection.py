@@ -427,24 +427,24 @@ class TestConnection(unittest.TestCase):
       ]
     )
 
-  # def test_upload_file(self):
-  #   args = {
-  #     "pressure"             : None,
-  #     "attitude"             : None,
-  #     "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
-  #     "access"               : defines.Data.ACCESS_DEFAULT,
-  #     "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
-  #     "product"              : defines.OrbitClockProduct.REAL_TIME,
-  #     "troposphere_model"    : defines.GIPSYData.TROP_GMF,
-  #     "ocean_loading"        : True,
-  #     "model_tides"          : True,
-  #     "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
-  #     "elev_angle_cutoff"    : 7.5,
-  #     "solution_period"      : 300,
-  #     "generate_quaternions" : False,
-  #   }
-  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
-  #   conn.uploadFile("in/uploads_test/CVTY2720.21D","out/queue/queue",args)
+  #def test_upload_file(self):
+  #  args = {
+  #    "pressure"             : None,
+  #    "attitude"             : None,
+  #    "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
+  #    "access"               : defines.Data.ACCESS_DEFAULT,
+  #    "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+  #    "product"              : "arroz",
+  #    "troposphere_model"    : defines.GIPSYData.TROP_GMF,
+  #    "ocean_loading"        : True,
+  #    "model_tides"          : True,
+  #    "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
+  #    "elev_angle_cutoff"    : 7.5,
+  #    "solution_period"      : 300,
+  #    "generate_quaternions" : False,
+  #  }
+  #  conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
+  #  conn.uploadFile("in/uploads_test/NOA10630.22O","out/queue/queue",args)
 
   def test_add_to_queue(self):
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
@@ -454,9 +454,9 @@ class TestConnection(unittest.TestCase):
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
     conn._Connection_APPS__removeFromUploadQueue("00000000-0000-0000-0000-000000000000","arroz","out/queue/queue")
 
-  def test_get_file_data(self):
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
-    conn._Connection_APPS__getFileData("2b231f2e-ed1f-11ec-bd99-e0db5501adf2","out/queue/queue")
+  #def test_get_file_data(self):
+  #  conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
+  #  conn._Connection_APPS__getFileData("2b231f2e-ed1f-11ec-bd99-e0db5501adf2","out/queue/queue")
 
   # def test_delete_file(self):
   #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
@@ -476,6 +476,6 @@ class TestConnection(unittest.TestCase):
 
   def test_handle_file_state(self):
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",loggingFile = "logs/logTest.log")
-    conn._Connection_APPS__handleFileState("2b231f2e-ed1f-11ec-bd99-e0db5501adf2","out/queue/queue","out/downloads")
+    conn.handleFileState("869c3e66-ee51-11ec-bd99-e0db5501adf2","out/queue/queue","out/downloads")
 if __name__ == '__main__':
   unittest.main()
