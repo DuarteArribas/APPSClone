@@ -9,7 +9,14 @@ from rinexHeader                                  import *
 from utils.logs                                   import *
 
 class Connection_APPS:
-  """A connection to APPS, which contains all functions to interact with its API."""
+  """A connection to APPS, which contains all functions to interact with its API.
+  
+  Attributes
+  ----------
+  DEFAULT_ARGS : dict
+    Default upload arguments of APPS and the possible choices for them
+  """
+  # == Attributes ==
   DEFAULT_ARGS = {
     "pressure"             : None,
     "attitude"             : None,
