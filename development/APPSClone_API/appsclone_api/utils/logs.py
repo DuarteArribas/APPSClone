@@ -22,7 +22,16 @@ class Logs:
   MAX_NUM_LOGS = 100000
   # == Methods ==
   def __init__(self,loggingFile,maxLogs):
-    """Set the default configuration of the logging tool to write to a specific file with a specific format."""
+    """Set the default configuration of the logging tool to write to a specific file with a specific format.
+    
+    Parameters
+    ----------
+    loggingFile : str
+      The file to log to
+    maxLogs     : int
+      The max quantity of allowed logs. Older logs will be deleted if this number is surpassed, so 
+      that the number of logs will not be more than maxLogs
+    """
     self.loggingFile = loggingFile
     if maxLogs > Logs.MAX_NUM_LOGS:
       self.maxLogs = Logs.MAX_NUM_LOGS

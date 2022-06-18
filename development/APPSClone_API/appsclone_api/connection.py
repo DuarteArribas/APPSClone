@@ -98,10 +98,20 @@ class Connection_APPS:
     ),
   }
   # == Methods ==
-  def __init__(self,settingsFile,downloadDirectory,loggingFile,maxLogs):
-    """Connects to APPS and initalizes the logger."""
-    self.apps              = APPS(settings_file = settingsFile,download_directory = downloadDirectory)
-    self.logger            = Logs(loggingFile,maxLogs)
+  def __init__(self,settingsFile,downloadDirectory,logger):
+    """Connects to APPS and initalizes the logger.
+    
+    Parameters
+    ----------
+    settingsFile      : str
+      The APPS settings file to read the user's credentials from
+    downloadDirectory : str
+      The directory to download the processed results to
+    logger            : Logs
+      The logger object to log to
+    """
+    self.apps   = APPS(settings_file = settingsFile,download_directory = downloadDirectory)
+    self.logger = logger
 
   def testConnection(self):
     """Test the connection to apps.
