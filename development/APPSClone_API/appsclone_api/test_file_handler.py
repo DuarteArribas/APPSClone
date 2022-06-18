@@ -99,10 +99,16 @@ class TestFileHandler(unittest.TestCase):
     self.assertEqual(FileHandler._concatenateFileToPath("arroz","aa/bb/cc"),"aa/bb/cc/arroz")
 
   def test_get_validated_list_of_uploadFiles(self):
-    self.assertEqual(FileHandler.getUploadFiles("in/uploadFilesTest/1"),["uploadFile1","uploadFile2","uploadFile3","uploadFile4","uploadFile5"])
+    self.assertEqual(FileHandler._getUploadFiles("in/uploadFilesTest/1"),["uploadFile1","uploadFile2","uploadFile3","uploadFile4","uploadFile5"])
 
   def test_get_validated_list_of_uploadFiles2(self):
-    self.assertEqual(FileHandler.getUploadFiles("in/uploadFilesTest/2"),["uploadFile1","uploadFile4"])
+    self.assertEqual(FileHandler._getUploadFiles("in/uploadFilesTest/2"),["uploadFile1","uploadFile4"])
+
+  def test_parse_upload_file(self):
+    self.assertEqual(FileHandler._parseUploadFile("in/uploadFilesTest/1/uploadFile1"),("arroz","massa","192.168.8.1"))
+
+  def test_parse_upload_file2(self):
+    self.assertEqual(FileHandler._parseUploadFile("in/uploadFilesTest/2/uploadFile4"),("aaa","massa","192.168.8.1"))
 
 if __name__ == '__main__':
   unittest.main()

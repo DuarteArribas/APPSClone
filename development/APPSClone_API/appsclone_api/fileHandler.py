@@ -8,8 +8,13 @@ class FileHandler:
   """
   # == Attributes ==
   # == Methods ==
+  # @staticmethod
+  # def downloadRinexFiles(uploadFilesDirectory,logger = None):
+  #   for uploadFile in _getUploadFiles(uploadFilesDirectory,logger):
+  #     pathToDownloadFrom,pathToUploadTo,ipToConnect
+
   @staticmethod
-  def getUploadFiles(uploadFilesDirectory,logger = None):
+  def _getUploadFiles(uploadFilesDirectory,logger = None):
     """Get the list of upload files that are valid from the given directory.
 
     Parameters
@@ -106,13 +111,25 @@ class FileHandler:
     """
     return [item for item in lst if item.strip()]
 
-
   @staticmethod
-  def parseUploadFile(file):
-    with open(file,"r") as f:
-      lines              = f.readlines()
-      pathToDownloadFrom = lines[0]
-      pathToUploadTo     = lines[1]
-      ipToConnect        = lines[2]
-      return pathToDownloadFrom,pathToUploadTo,ipToConnect
+  def _parseUploadFile(uploadFile):
+    """Parse an upload file to get its properties.
 
+    Parameters
+    ----------
+    uploadFile : str
+      The upload file to parse
+
+    Returns
+    ----------
+    tuple(str,str,str)
+      The path to download the rinex files from
+      The path to upload the results of the processed rinex files to
+      The IPV4 of the machine to donwload the rinex files from and upload the results to
+    """
+    with open(uploadFile,"r") as f:
+      lines              = f.readlines()
+      pathToDownloadFrom = lines[0].split("\n")[0]
+      pathToUploadTo     = lines[1].split("\n")[0]
+      ipToConnect        = lines[2].split("\n")[0]
+      return pathToDownloadFrom,pathToUploadTo,ipToConnect
