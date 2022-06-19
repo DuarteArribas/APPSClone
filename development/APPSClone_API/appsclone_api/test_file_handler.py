@@ -135,13 +135,13 @@ class TestFileHandler(unittest.TestCase):
     logger = Logs("logs/logTest2.log",1000)
     self.assertEqual(FileHandler._getUploadFiles("in/uploadFilesTest/2",logger),["uploadFile1","uploadFile4"])
 
-  #def test_parse_upload_file(self):
-  #  logger = Logs("logs/logTest2.log",1000)
-  #  self.assertEqual(FileHandler._parseUploadFile("in/uploadFilesTest/1/uploadFile1"),("arroz","massa","192.168.8.1"))
+  def test_parse_upload_file(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertEqual(FileHandler._parseUploadFile("in/uploadFilesTest/1/uploadFile1"),("arroz","massa","192.168.8.1"))
 
-  #def test_parse_upload_file2(self):
-  #  logger = Logs("logs/logTest2.log",1000)
-  #  self.assertEqual(FileHandler._parseUploadFile("in/uploadFilesTest/2/uploadFile4"),("aaa","massa","192.168.8.1"))
+  def test_parse_upload_file2(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertEqual(FileHandler._parseUploadFile("in/uploadFilesTest/2/uploadFile4"),("aaa","massa","192.168.8.1"))
 
 if __name__ == '__main__':
   unittest.main()
