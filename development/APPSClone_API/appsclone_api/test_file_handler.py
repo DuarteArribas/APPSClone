@@ -20,32 +20,32 @@ class TestFileHandler(unittest.TestCase):
   def test_clean_empty_strs_from_list5(self):
     self.assertEqual(FileHandler._cleanEmptyFieldsInList([]),[])
 
-  #def test_is_valid_ipv4(self):
-  #  self.assertFalse(FileHandler._isValidIpv4(""))
+  def test_is_valid_ipv4(self):
+    self.assertFalse(FileHandler._isValidIpv4(""))
 
-  #def test_is_valid_ipv42(self):
-  #  self.assertTrue(FileHandler._isValidIpv4("123.111.222.121"))
+  def test_is_valid_ipv42(self):
+    self.assertTrue(FileHandler._isValidIpv4("123.111.222.121"))
 
-  #def test_is_valid_ipv43(self):
-  #  self.assertTrue(FileHandler._isValidIpv4("123.12.222.121"))
+  def test_is_valid_ipv43(self):
+    self.assertTrue(FileHandler._isValidIpv4("123.12.222.121"))
 
-  #def test_is_valid_ipv44(self):
-  #  self.assertFalse(FileHandler._isValidIpv4("2.1.2.1.1"))
+  def test_is_valid_ipv44(self):
+    self.assertFalse(FileHandler._isValidIpv4("2.1.2.1.1"))
 
-  #def test_is_valid_ipv45(self):
-  #  self.assertFalse(FileHandler._isValidIpv4("2.1.2.1."))
+  def test_is_valid_ipv45(self):
+    self.assertFalse(FileHandler._isValidIpv4("2.1.2.1."))
 
-  #def test_is_valid_ipv46(self):
-  #  self.assertFalse(FileHandler._isValidIpv4("2.1.2"))
+  def test_is_valid_ipv46(self):
+    self.assertFalse(FileHandler._isValidIpv4("2.1.2"))
 
-  #def test_is_valid_ipv47(self):
-  #  self.assertFalse(FileHandler._isValidIpv4("2.1.2."))
+  def test_is_valid_ipv47(self):
+    self.assertFalse(FileHandler._isValidIpv4("2.1.2."))
 
-  #def test_is_valid_ipv48(self):
-  #  self.assertFalse(FileHandler._isValidIpv4("192.168.8.256"))
+  def test_is_valid_ipv48(self):
+    self.assertFalse(FileHandler._isValidIpv4("192.168.8.256"))
 
-  #def test_is_valid_ipv49(self):
-  #  self.assertTrue(FileHandler._isValidIpv4("0.0.0.0"))
+  def test_is_valid_ipv49(self):
+    self.assertTrue(FileHandler._isValidIpv4("0.0.0.0"))
 
   #def test_is_valid_upload_file(self):
   #  self.assertFalse(FileHandler._isValidUploadFile("in/test/arroz"))

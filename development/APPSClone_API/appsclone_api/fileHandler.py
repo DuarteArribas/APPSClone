@@ -96,6 +96,22 @@ class FileHandler:
       return False
 
   @staticmethod
+  def _cleanEmptyFieldsInList(lst):
+    """Clean the empty (stripped) fields in a list.
+
+    Parameters
+    ----------
+    lst : list
+      The list to cleanup
+
+    Returns
+    ----------
+    list
+      The list without any empty (stripped) fields
+    """
+    return [item for item in lst if item.strip()]
+
+  @staticmethod
   def _isValidIpv4(address):
     """Check if an IPV4 address is valid.
 
@@ -115,22 +131,6 @@ class FileHandler:
       return len(addressBytes) == 4 and len(validAddressBytes) == 4
     except:
       return False
-
-  @staticmethod
-  def _cleanEmptyFieldsInList(lst):
-    """Clean the empty (stripped) fields in a list.
-
-    Parameters
-    ----------
-    lst : list
-      The list to cleanup
-
-    Returns
-    ----------
-    list
-      The list without any empty (stripped) fields
-    """
-    return [item for item in lst if item.strip()]
 
   @staticmethod
   def _parseUploadFile(uploadFile):
