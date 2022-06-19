@@ -12,6 +12,7 @@ class FileHandler:
   def downloadRinexFiles(uploadFilesDirectory,downloadFolder,logger = None):
     for uploadFile in _getUploadFiles(uploadFilesDirectory,logger):
       pathToDownloadFrom,pathToUploadTo,ipToConnect = _parseUploadFile(uploadFile)
+      FileHandler._downloadRinexFile(pathToDownloadFrom,pathToUploadTo,ipToConnect)
 
   @staticmethod
   def _getUploadFiles(uploadFilesDirectory,logger = None):
@@ -135,7 +136,12 @@ class FileHandler:
       return pathToDownloadFrom,pathToUploadTo,ipToConnect
 
   @staticmethod
-  def createSSHClient(ip,port,user,password):
+  def _downloadRinexFile(pathToDownloadFrom,pathToUploadTo,ipToConnect,port = 22,user):
+    ssh = FileHandler._createSSHClient(ipToConnect,22,"root","Pr0j#to_Spr1ng")
+    scp = SCPClient(ssh.get_transport())
+
+  @staticmethod
+  def _createSSHClient(ip,port,user,password):
     """Create ssh client.
 
     Parameters
