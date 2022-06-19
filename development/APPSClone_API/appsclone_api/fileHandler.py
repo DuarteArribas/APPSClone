@@ -13,14 +13,36 @@ class FileHandler:
   # == Attributes ==
   # == Methods ==
   @staticmethod
-  def downloadRinexFiles(uploadFilesDirectory,downloadFolder,logger):
+  def downloadRinexFiles(uploadFilesDirectory,downloadFolder,uploadFilesQueueFile,logger):
+    """Download all files from the given upload files to the given directory.
+
+    Parameters
+    ----------
+    uploadFilesDirectory : str
+      The directory to read the upload files from
+    downloadFolder       : str
+      The directory to download the files to 
+    uploadFilesQueueFile : str
+      The file, which contains the queue of the upload files
+    logger               : Logs
+      The Logs object that will be used to log several actions
+    """
     logger.writeLog(Logs.SEVERITY.INFO,downloadRinexFilesRoutineStartLog)
-    for uploadFile in _getUploadFiles(uploadFilesDirectory,logger):
-      pathToDownloadFrom,pathToUploadTo,ipToConnect = _parseUploadFile(uploadFile)
-      port = 22                           #hardcode
-      user = UserSSHClient("root","root") #hardcode
+    for uploadFile in FileHandler._getUploadFiles(uploadFilesDirectory,logger):
+      pathToDownloadFrom,pathToUploadTo,ipToConnect = FileHandler._parseUploadFile(
+        FileHandler._concatenateFileToPath(uploadFile,uploadFilesDirectory)
+      )
+      port = 22                                     #hardcode
+      user = UserSSHClient("root","Pr0j#to_Spr1ng") #hardcode
       FileHandler._downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user,logger)
-      FileHandler._addFileToQueueUploadFiles(uploadFilesQueueFile,FileHandler._getFileFromPath(pathToDownloadFrom),pathToUploadTo,ipToConnect,port,logger)
+      FileHandler._addFileToQueueUploadFiles(
+        uploadFilesQueueFile,
+        FileHandler._getFileFromPath(pathToDownloadFrom),
+        pathToUploadTo,
+        ipToConnect,
+        port,
+        logger
+      )
     logger.writeLog(Logs.SEVERITY.INFO,downloadRinexFilesRoutineEndLog)
 
   @staticmethod
@@ -186,7 +208,7 @@ class FileHandler:
     pathToDownloadFrom : str
       The path to the file on the server
     downloadFolder     : str
-      The directory to download the file to 
+      The directory to download the files to 
     ipToConnect        : str
       The IP of the server
     port               : int

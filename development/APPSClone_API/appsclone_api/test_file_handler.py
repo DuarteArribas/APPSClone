@@ -137,7 +137,7 @@ class TestFileHandler(unittest.TestCase):
 
   def test_parse_upload_file(self):
     logger = Logs("logs/logTest2.log",1000)
-    self.assertEqual(FileHandler._parseUploadFile("in/uploadFilesTest/1/uploadFile1"),("arroz","massa","192.168.8.1"))
+    self.assertEqual(FileHandler._parseUploadFile("in/uploadFilesTest/1/uploadFile1"),("~/arroz","~","138.68.128.182"))
 
   def test_parse_upload_file2(self):
     logger = Logs("logs/logTest2.log",1000)
@@ -182,6 +182,10 @@ class TestFileHandler(unittest.TestCase):
   def test_add_to_queue(self):
     logger = Logs("logs/logTest2.log",1000)
     FileHandler._addFileToQueueUploadFiles("out/queue/uploadFilesQueue","arroz","aa/bb/cc","192.168.8.2",22,logger)
+
+  def test_download_files(self):
+    logger = Logs("logs/logTest2.log",1000)
+    FileHandler.downloadRinexFiles("in/uploadFilesTest/1","out/downloads_test","out/queue/uploadFilesQueue",logger)
 
 if __name__ == '__main__':
   unittest.main()
