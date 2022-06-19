@@ -49,3 +49,34 @@
 2022-06-19 18:26:02.671301 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
 2022-06-19 18:26:02.680254 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
 2022-06-19 18:26:02.689072 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:30:35.983743 (INFO)     | Checking for upload files.
+2022-06-19 18:30:35.995979 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:30:36.005372 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 18:30:36.014534 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 18:30:36.024286 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:30:36.033535 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 18:30:36.039123 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:30:36.043954 (INFO)     | Checking for upload files.
+2022-06-19 18:30:36.052595 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:30:36.062190 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:30:36.071388 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:30:36.080860 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:30:36.090606 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:30:36.096317 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:30:36.104774 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:30:36.113738 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 18:30:36.124505 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:30:36.135493 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:30:36.145783 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 18:30:36.155933 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 18:30:36.168274 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 18:30:36.177529 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 18:30:36.189390 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:30:36.200654 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:30:36.210668 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:30:36.222497 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:30:36.232657 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:30:36.244244 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:30:36.254410 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:30:36.265196 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:30:36.276160 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.

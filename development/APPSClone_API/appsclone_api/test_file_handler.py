@@ -127,16 +127,20 @@ class TestFileHandler(unittest.TestCase):
     logger = Logs("logs/logTest2.log",1000)
     self.assertTrue(FileHandler._isValidUploadFile("in/uploadFilesTest/1/uploadFile1",logger))
 
-  #def test_get_validated_list_of_uploadFiles(self):
-  #  self.assertEqual(FileHandler._getUploadFiles("in/uploadFilesTest/1"),["uploadFile1","uploadFile2","uploadFile3","uploadFile4","uploadFile5"])
+  def test_get_validated_list_of_uploadFiles(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertEqual(FileHandler._getUploadFiles("in/uploadFilesTest/1",logger),["uploadFile1","uploadFile2","uploadFile3","uploadFile4","uploadFile5"])
 
-  #def test_get_validated_list_of_uploadFiles2(self):
-  #  self.assertEqual(FileHandler._getUploadFiles("in/uploadFilesTest/2"),["uploadFile1","uploadFile4"])
+  def test_get_validated_list_of_uploadFiles2(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertEqual(FileHandler._getUploadFiles("in/uploadFilesTest/2",logger),["uploadFile1","uploadFile4"])
 
   #def test_parse_upload_file(self):
+  #  logger = Logs("logs/logTest2.log",1000)
   #  self.assertEqual(FileHandler._parseUploadFile("in/uploadFilesTest/1/uploadFile1"),("arroz","massa","192.168.8.1"))
 
   #def test_parse_upload_file2(self):
+  #  logger = Logs("logs/logTest2.log",1000)
   #  self.assertEqual(FileHandler._parseUploadFile("in/uploadFilesTest/2/uploadFile4"),("aaa","massa","192.168.8.1"))
 
 if __name__ == '__main__':

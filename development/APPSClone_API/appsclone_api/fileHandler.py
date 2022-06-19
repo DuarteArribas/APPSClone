@@ -28,7 +28,7 @@ class FileHandler:
     ----------
     uploadFilesDirectory : str
       The directory to read the upload files from
-    logger : Logs
+    logger               : Logs
       The Logs object that will be used to log several actions
 
     Returns
