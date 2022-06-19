@@ -15,3 +15,4 @@ connectAttemptUnsuccessfulLog       = "Could not establish a connection to the s
 scpSuccessful                       = "Successfully copied file '{file}' to '{downloadFolder}'."
 scpUnsuccessful                     = "Could not copy file '{file}' to '{downloadFolder}'."
 unexpectedErrorLog                  = "An unexpected error ocurred. Files were not downloaded."
+fileAddedToQueueLog                 = "The file {file} was added upload files queue file."

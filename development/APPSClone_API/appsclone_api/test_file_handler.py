@@ -143,41 +143,45 @@ class TestFileHandler(unittest.TestCase):
     logger = Logs("logs/logTest2.log",1000)
     self.assertEqual(FileHandler._parseUploadFile("in/uploadFilesTest/2/uploadFile4"),("aaa","massa","192.168.8.1"))
 
-  def test_download_rinex_file(self):
-    logger   = Logs("logs/logTest2.log",1000)
-    password = input("Password:")
-    user     = UserSSHClient("root",password)
-    FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.182",22,user,logger)
+  #def test_download_rinex_file(self):
+  #  logger   = Logs("logs/logTest2.log",1000)
+  #  password = input("Password:")
+  #  user     = UserSSHClient("root",password)
+  #  FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.182",22,user,logger)
 
-  def test_download_rinex_file2(self):
-    logger = Logs("logs/logTest2.log",1000)
-    password = input("Password:")
-    user = UserSSHClient("root",password)
-    FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.181",22,user,logger)
+  #def test_download_rinex_file2(self):
+  #  logger = Logs("logs/logTest2.log",1000)
+  #  password = input("Password:")
+  #  user = UserSSHClient("root",password)
+  #  FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.181",22,user,logger)
 
-  def test_download_rinex_file3(self):
-    logger = Logs("logs/logTest2.log",1000)
-    password = input("Password:")
-    user = UserSSHClient("root",password)
-    FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.182",21,user,logger)
+  #def test_download_rinex_file3(self):
+  #  logger = Logs("logs/logTest2.log",1000)
+  #  password = input("Password:")
+  #  user = UserSSHClient("root",password)
+  #  FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.182",21,user,logger)
 
-  def test_download_rinex_file4(self):
-    logger = Logs("logs/logTest2.log",1000)
-    password = input("Password:")
-    user = UserSSHClient("roota",password)
-    FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.182",22,user,logger)
+  #def test_download_rinex_file4(self):
+  #  logger = Logs("logs/logTest2.log",1000)
+  #  password = input("Password:")
+  #  user = UserSSHClient("roota",password)
+  #  FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.182",22,user,logger)
 
-  def test_download_rinex_file5(self):
-    logger = Logs("logs/logTest2.log",1000)
-    password = input("Password (wrong):")
-    user = UserSSHClient("root",password)
-    FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.182",22,user,logger)
+  #def test_download_rinex_file5(self):
+  #  logger = Logs("logs/logTest2.log",1000)
+  #  password = input("Password (wrong):")
+  #  user = UserSSHClient("root",password)
+  #  FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.182",22,user,logger)
 
-  def test_download_rinex_file6(self):
+  #def test_download_rinex_file6(self):
+  #  logger = Logs("logs/logTest2.log",1000)
+  #  password = input("Password:")
+  #  user = UserSSHClient("root",password)
+  #  FileHandler._downloadRinexFile("~/arroza","out/downloads_test","138.68.128.182",22,user,logger)
+
+  def test_add_to_queue(self):
     logger = Logs("logs/logTest2.log",1000)
-    password = input("Password:")
-    user = UserSSHClient("root",password)
-    FileHandler._downloadRinexFile("~/arroza","out/downloads_test","138.68.128.182",22,user,logger)
+    FileHandler._addFileToQueueUploadFiles("out/queue/uploadFilesQueue","arroz","aa/bb/cc","192.168.8.2",22,logger)
 
 if __name__ == '__main__':
   unittest.main()

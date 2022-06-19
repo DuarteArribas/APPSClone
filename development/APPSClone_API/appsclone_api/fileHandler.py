@@ -1,11 +1,11 @@
-import os.path
-import re
-from os import listdir
-from vars.loggingStrings.fileHandlerLoggingStrings import *
-from userSSHClient import *
-from utils.logs import *
 import paramiko
+import os.path
 import scp
+import re
+from vars.loggingStrings.fileHandlerLoggingStrings import *
+from userSSHClient                                 import *
+from utils.logs                                    import *
+from os                                            import listdir
 
 class FileHandler:
   """
@@ -20,6 +20,7 @@ class FileHandler:
       port = 22                           #hardcode
       user = UserSSHClient("root","root") #hardcode
       FileHandler._downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user,logger)
+      FileHandler._addFileToQueueUploadFiles(uploadFilesQueueFile,FileHandler._getFileFromPath(pathToDownloadFrom),pathToUploadTo,ipToConnect,port,logger)
     logger.writeLog(Logs.SEVERITY.INFO,downloadRinexFilesRoutineEndLog)
 
   @staticmethod
@@ -270,3 +271,26 @@ class FileHandler:
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     client.connect(ip,port,user,password)
     return client
+
+  @staticmethod
+  def _addFileToQueueUploadFiles(uploadFilesQueueFile,rinexFile,pathToUploadTo,ipToConnect,port,logger):
+    """Add the rinex file, its upload path and its ip and port to the upload files queue file.
+
+    Parameters
+    ----------
+    uploadFilesQueueFile : str
+      The file, which contains the queue of the upload files
+    rinexFile            : str
+      The rinex file to add to the queue
+    pathToUploadTo       : str
+      The path to which the results must be uploaded to
+    ipToConnect          : str
+      The ip of the server to connect to
+    port                 : int
+      The port of the server to connect to
+    logger     : Logs
+      The Logs object that will be used to log several actions
+    """
+    with open(uploadFilesQueueFile,"a") as f:
+      f.write(rinexFile + " " + pathToUploadTo + " " + ipToConnect + " " + str(port) + "\n")
+    logger.writeLog(Logs.SEVERITY.INFO,fileAddedToQueueLog.format(file = rinexFile))
