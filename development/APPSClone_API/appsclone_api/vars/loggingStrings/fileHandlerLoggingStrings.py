@@ -1,0 +1,16 @@
+#routines
+downloadRinexFilesRoutineStartLog   = "=== RINEX FILES DOWNLOAD ROUTINE (START) ==="
+downloadRinexFilesRoutineEndLog     = "=== RINEX FILES DOWNLOAD ROUTINE (END) ==="
+downloadRinexFileSubroutineStartLog = "== RINEX FILE '{file}' DOWNLOAD SUBROUTINE (START) =="
+downloadRinexFileSubroutineEndLog   = "== RINEX FILE '{file}' DOWNLOAD SUBROUTINE (END) =="
+#other
+uploadFilesCheckingLog              = "Checking for upload files."
+invalidUploadFileLog                = "The upload file '{file}' is invalid. Reason: '{reason}'."
+validUploadFileLog                  = "The upload file '{file}' was validated."
+uploadFilesExistLog                 = "{numOfUploadFiles} upload files were found. Attempting to download corresponding rinex files."
+noUploadFilesLog                    = "No upload files were found."
+sshConnectAttemptLog                = "Attempting to connect (via ssh) to '{ip}/{port}', with user '{username}'."
+connectAttemptSuccessfulLog         = "Successfully established a connection to the server."
+scpSuccessful                       = "Successfully copied file '{file}' to '{downloadFolder}'."
+scpUnsuccessful                     = "Could not copy '{file}' to '{downloadFolder}'."
+unexpectedErrorLog                  = "An unexpected error ocurred. Files were not downloaded."

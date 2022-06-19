@@ -2,6 +2,8 @@ import os.path
 import re
 from os import listdir
 from vars.loggingStrings.fileHandlerLoggingStrings import *
+from userSSHClient import *
+from utils.logs import *
 
 class FileHandler:
   """
@@ -9,13 +11,17 @@ class FileHandler:
   # == Attributes ==
   # == Methods ==
   @staticmethod
-  def downloadRinexFiles(uploadFilesDirectory,downloadFolder,logger = None):
+  def downloadRinexFiles(uploadFilesDirectory,downloadFolder,logger):
+    logger.writeLog(Logs.SEVERITY.INFO,downloadRinexFilesRoutineStartLog)
     for uploadFile in _getUploadFiles(uploadFilesDirectory,logger):
       pathToDownloadFrom,pathToUploadTo,ipToConnect = _parseUploadFile(uploadFile)
-      FileHandler._downloadRinexFile(pathToDownloadFrom,pathToUploadTo,ipToConnect)
+      port = 22                           #hardcode
+      user = UserSSHClient("root","root") #hardcode
+      FileHandler._downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user)
+    logger.writeLog(Logs.SEVERITY.INFO,downloadRinexFilesRoutineEndLog)
 
   @staticmethod
-  def _getUploadFiles(uploadFilesDirectory,logger = None):
+  def _getUploadFiles(uploadFilesDirectory,logger):
     """Get the list of upload files that are valid from the given directory.
 
     Parameters
@@ -30,8 +36,14 @@ class FileHandler:
     list
       The valid upload files
     """
-    uploadFiles = os.listdir(uploadFilesDirectory)
-    return [uploadFile for uploadFile in uploadFiles if FileHandler._isValidUploadFile(FileHandler._concatenateFileToPath(uploadFile,uploadFilesDirectory),logger)]
+    logger.writeLog(Logs.SEVERITY.INFO,uploadFilesCheckingLog)
+    uploadFiles          = os.listdir(uploadFilesDirectory)
+    validatedUploadFiles = [uploadFile for uploadFile in uploadFiles if FileHandler._isValidUploadFile(FileHandler._concatenateFileToPath(uploadFile,uploadFilesDirectory),logger)]
+    if len(validatedUploadFiles) > 0:
+      logger.writeLog(Logs.SEVERITY.INFO,uploadFilesExistLog.format(numOfUploadFiles = len(validatedUploadFiles)))
+    else:
+      logger.writeLog(Logs.SEVERITY.INFO,noUploadFilesLog)
+    return validatedUploadFiles
 
   @staticmethod
   def _concatenateFileToPath(file,path):
@@ -52,7 +64,7 @@ class FileHandler:
     return path+"/"+file
 
   @staticmethod
-  def _isValidUploadFile(uploadFile,logger = None):
+  def _isValidUploadFile(uploadFile,logger):
     """Check if an upload file is valid. The first two lines must be file paths and the second line must
     be an ipv4 address. No more lines should be in the file.
 
@@ -71,8 +83,16 @@ class FileHandler:
         lines = f.readlines()
         lines = FileHandler._cleanEmptyFieldsInList(lines)
         if len(lines) == 3 and lines[0].strip() != "" and lines[1].strip() != "" and lines[2].strip() != "":
-          return FileHandler._isValidIpv4(lines[2])
+          validIpv4 = FileHandler._isValidIpv4(lines[2])
+          if not validIpv4:
+            logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = uploadFile,reason = "Invalid ip"))
+          else:
+            logger.writeLog(Logs.SEVERITY.INFO,validUploadFileLog.format(file = uploadFile))
+          return validIpv4
+        else:
+          logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = uploadFile,reason = "Invalid fields in file"))  
     else:
+      logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = uploadFile,reason = "Not a file"))
       return False
 
   @staticmethod
@@ -136,9 +156,47 @@ class FileHandler:
       return pathToDownloadFrom,pathToUploadTo,ipToConnect
 
   @staticmethod
-  def _downloadRinexFile(pathToDownloadFrom,pathToUploadTo,ipToConnect,port = 22,user):
-    ssh = FileHandler._createSSHClient(ipToConnect,22,"root","Pr0j#to_Spr1ng")
-    scp = SCPClient(ssh.get_transport())
+  def _downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port = 22,user):
+    logger.writeLog(
+      Logs.SEVERITY.INFO,
+      downloadRinexFileSubroutineStartLog.format(file = FileHandler._getFileFromPath(pathToDownloadFrom))
+    )
+    try:
+      logger.writeLog(
+        Logs.SEVERITY.INFO,
+        sshConnectAttemptLog.format(ip = ipToConnect,port = port,username = user.username)
+      )
+      ssh = FileHandler._createSSHClient(ipToConnect,port,user.username,user.password)
+      logger.writeLog(Logs.SEVERITY.INFO,connectAttemptSuccessfulLog)
+      scp = SCPClient(ssh.get_transport())
+      scp.get(pathToDownloadFrom,downloadFolder)
+      logger.writeLog(
+        Logs.SEVERITY.INFO,
+        scpSuccessful.format(file = FileHandler._getFileFromPath(pathToDownloadFrom),downloadFolder = downloadFolder)
+      )
+    except paramiko.ssh_exception.BadAuthenticationType:
+      logger.writeLog(Logs.SEVERITY.ERROR,connectAttemptUnsuccessfulLog.format(reason = "Could not connect to the given ip"))
+      return
+    except paramiko.ssh_exception.NoValidConnectionsError:
+      logger.writeLog(Logs.SEVERITY.ERROR,connectAttemptUnsuccessfulLog.format(reason = "The given port is not available"))
+      return
+    except paramiko.ssh_exception.AuthenticationException:
+      logger.writeLog(Logs.SEVERITY.ERROR,connectAttemptUnsuccessfulLog.format(reason = "Could not authenticate user"))
+      return      
+    except scp.SCPException:
+      logger.writeLog(
+        Logs.SEVERITY.ERROR,
+        scpUnsuccessful.format(file = FileHandler._getFileFromPath(pathToDownloadFrom),downloadFolder = downloadFolder)
+      )
+      return
+    except:
+      logger.writeLog(Logs.SEVERITY.CRITICAL,unexpectedErrorLog)
+      return
+    finally:
+      logger.writeLog(
+        Logs.SEVERITY.INFO,
+        downloadRinexFileSubroutineEndLog.format(file = FileHandler._getFileFromPath(pathToDownloadFrom))
+      )
 
   @staticmethod
   def _createSSHClient(ip,port,user,password):
@@ -165,3 +223,19 @@ class FileHandler:
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     client.connect(ip,port,user,password)
     return client
+
+  @staticmethod
+  def _getFileFromPath(path):
+    """Get a file, given its path.
+
+    Parameters
+    ----------
+    path : str
+      The path to gather the file from
+
+    Returns
+    ----------
+    str
+      The file from the file path
+    """
+    return path.split("/")[-1]
