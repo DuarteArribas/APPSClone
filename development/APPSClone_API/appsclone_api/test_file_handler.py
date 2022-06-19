@@ -5,6 +5,18 @@ class TestFileHandler(unittest.TestCase):
   def test_concatenate_file_to_path(self):
     self.assertEqual(FileHandler._concatenateFileToPath("arroz","aa/bb/cc"),"aa/bb/cc/arroz")
 
+  def test_get_file_from_path(self):
+    self.assertEqual(FileHandler._getFileFromPath("arroz/massa/feijao"),"feijao")
+
+  def test_get_file_from_path2(self):
+    self.assertEqual(FileHandler._getFileFromPath("arroz"),"arroz")
+
+  def test_get_file_from_path3(self):
+    self.assertEqual(FileHandler._getFileFromPath("arroz/"),"")
+
+  def test_get_file_from_path4(self):
+    self.assertEqual(FileHandler._getFileFromPath(""),"")
+
   def test_clean_empty_strs_from_list(self):
     self.assertEqual(FileHandler._cleanEmptyFieldsInList(["a","b","c"]),["a","b","c"])
 
@@ -47,56 +59,73 @@ class TestFileHandler(unittest.TestCase):
   def test_is_valid_ipv49(self):
     self.assertTrue(FileHandler._isValidIpv4("0.0.0.0"))
 
-  #def test_is_valid_upload_file(self):
-  #  self.assertFalse(FileHandler._isValidUploadFile("in/test/arroz"))
+  def test_is_valid_upload_file(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertFalse(FileHandler._isValidUploadFile("in/test/arroz",logger))
 
-  #def test_is_valid_upload_file2(self):
-  #  self.assertFalse(FileHandler._isValidUploadFile("in/test/lol"))
+  def test_is_valid_upload_file2(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertFalse(FileHandler._isValidUploadFile("in/test/lol",logger))
 
-  #def test_is_valid_upload_file3(self):
-  #  self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile"))
+  def test_is_valid_upload_file3(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile",logger))
 
-  #def test_is_valid_upload_file4(self):
-  #  self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile2"))
+  def test_is_valid_upload_file4(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile2",logger))
 
-  #def test_is_valid_upload_file5(self):
-  #  self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile3"))
+  def test_is_valid_upload_file5(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile3",logger))
 
-  #def test_is_valid_upload_file6(self):
-  #  self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile4"))
+  def test_is_valid_upload_file6(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile4",logger))
 
-  #def test_is_valid_upload_file7(self):
-  #  self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile5"))
+  def test_is_valid_upload_file7(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile5",logger))
 
-  #def test_is_valid_upload_file8(self):
-  #  self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile6"))
+  def test_is_valid_upload_file8(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile6",logger))
 
-  #def test_is_valid_upload_file9(self):
-  #  self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile7"))
+  def test_is_valid_upload_file9(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile7",logger))
 
-  #def test_is_valid_upload_file10(self):
-  #  self.assertTrue(FileHandler._isValidUploadFile("in/test/uploadFile8"))
+  def test_is_valid_upload_file10(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertTrue(FileHandler._isValidUploadFile("in/test/uploadFile8",logger))
 
-  #def test_is_valid_upload_file11(self):
-  #  self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile9"))
+  def test_is_valid_upload_file11(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile9",logger))
 
-  #def test_is_valid_upload_file12(self):
-  #  self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile10"))
+  def test_is_valid_upload_file12(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile10",logger))
 
-  #def test_is_valid_upload_file13(self):
-  #  self.assertTrue(FileHandler._isValidUploadFile("in/test/uploadFile11"))
+  def test_is_valid_upload_file13(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertTrue(FileHandler._isValidUploadFile("in/test/uploadFile11",logger))
 
-  #def test_is_valid_upload_file14(self):
-  #  self.assertTrue(FileHandler._isValidUploadFile("in/test/uploadFile12"))
+  def test_is_valid_upload_file14(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertTrue(FileHandler._isValidUploadFile("in/test/uploadFile12",logger))
 
-  #def test_is_valid_upload_file15(self):
-  #  self.assertTrue(FileHandler._isValidUploadFile("in/test/uploadFile13"))
+  def test_is_valid_upload_file15(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertTrue(FileHandler._isValidUploadFile("in/test/uploadFile13",logger))
 
-  #def test_is_valid_upload_file16(self):
-  #  self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile14"))
+  def test_is_valid_upload_file16(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertFalse(FileHandler._isValidUploadFile("in/test/uploadFile14",logger))
 
-  #def test_is_valid_upload_file17(self):
-  #  self.assertTrue(FileHandler._isValidUploadFile("in/uploadFilesTest/1/uploadFile1"))
+  def test_is_valid_upload_file17(self):
+    logger = Logs("logs/logTest2.log",1000)
+    self.assertTrue(FileHandler._isValidUploadFile("in/uploadFilesTest/1/uploadFile1",logger))
 
   #def test_get_validated_list_of_uploadFiles(self):
   #  self.assertEqual(FileHandler._getUploadFiles("in/uploadFilesTest/1"),["uploadFile1","uploadFile2","uploadFile3","uploadFile4","uploadFile5"])

@@ -72,12 +72,15 @@ class FileHandler:
     ----------
     uploadFile : str
       The upload file to check
+    logger     : Logs
+      The Logs object that will be used to log several actions
 
     Returns
     ----------
     bool
       True if the upload file is valid and False otherwise
     """
+    file = FileHandler._getFileFromPath(uploadFile)
     if os.path.isfile(uploadFile):
       with open(uploadFile,"r") as f:
         lines = f.readlines()
@@ -85,15 +88,31 @@ class FileHandler:
         if len(lines) == 3 and lines[0].strip() != "" and lines[1].strip() != "" and lines[2].strip() != "":
           validIpv4 = FileHandler._isValidIpv4(lines[2])
           if not validIpv4:
-            logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = uploadFile,reason = "Invalid ip"))
+            logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = file,reason = "Invalid ip"))
           else:
-            logger.writeLog(Logs.SEVERITY.INFO,validUploadFileLog.format(file = uploadFile))
+            logger.writeLog(Logs.SEVERITY.INFO,validUploadFileLog.format(file = file))
           return validIpv4
         else:
-          logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = uploadFile,reason = "Invalid fields in file"))  
+          logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = file,reason = "Invalid fields in file"))  
     else:
-      logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = uploadFile,reason = "Not a file"))
+      logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = file,reason = "Not a file"))
       return False
+
+  @staticmethod
+  def _getFileFromPath(path):
+    """Get a file, given its path.
+
+    Parameters
+    ----------
+    path : str
+      The path to gather the file from
+
+    Returns
+    ----------
+    str
+      The file from the file path
+    """
+    return path.split("/")[-1]
 
   @staticmethod
   def _cleanEmptyFieldsInList(lst):
@@ -223,19 +242,3 @@ class FileHandler:
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     client.connect(ip,port,user,password)
     return client
-
-  @staticmethod
-  def _getFileFromPath(path):
-    """Get a file, given its path.
-
-    Parameters
-    ----------
-    path : str
-      The path to gather the file from
-
-    Returns
-    ----------
-    str
-      The file from the file path
-    """
-    return path.split("/")[-1]
