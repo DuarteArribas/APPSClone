@@ -156,7 +156,7 @@ class FileHandler:
       return pathToDownloadFrom,pathToUploadTo,ipToConnect
 
   @staticmethod
-  def _downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port = 22,user):
+  def _downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user):
     logger.writeLog(
       Logs.SEVERITY.INFO,
       downloadRinexFileSubroutineStartLog.format(file = FileHandler._getFileFromPath(pathToDownloadFrom))
