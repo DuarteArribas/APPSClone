@@ -8,10 +8,10 @@ class FileHandler:
   """
   # == Attributes ==
   # == Methods ==
-  # @staticmethod
-  # def downloadRinexFiles(uploadFilesDirectory,logger = None):
-  #   for uploadFile in _getUploadFiles(uploadFilesDirectory,logger):
-  #     pathToDownloadFrom,pathToUploadTo,ipToConnect
+  @staticmethod
+  def downloadRinexFiles(uploadFilesDirectory,downloadFolder,logger = None):
+    for uploadFile in _getUploadFiles(uploadFilesDirectory,logger):
+      pathToDownloadFrom,pathToUploadTo,ipToConnect = _parseUploadFile(uploadFile)
 
   @staticmethod
   def _getUploadFiles(uploadFilesDirectory,logger = None):
@@ -133,3 +133,29 @@ class FileHandler:
       pathToUploadTo     = lines[1].split("\n")[0]
       ipToConnect        = lines[2].split("\n")[0]
       return pathToDownloadFrom,pathToUploadTo,ipToConnect
+
+  @staticmethod
+  def createSSHClient(ip,port,user,password):
+    """Create ssh client.
+
+    Parameters
+    ----------
+    ip       : str
+      The ip of the server to connect to
+    port     : int
+      The port of the server to connect to
+    user     : str
+      The user to connect to the server with
+    password : str
+      The password of the user
+
+    Returns
+    ----------
+    SSHClient
+      An ssh client object
+    """
+    client = paramiko.SSHClient()
+    client.load_system_host_keys()
+    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    client.connect(ip,port,user,password)
+    return client

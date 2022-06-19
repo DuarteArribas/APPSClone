@@ -1,1 +1,3 @@
 pip3 install https://pppx.gdgps.net/static/lib/gdgps-apps-1.0.0b2.tar.gz
+pip3 install paramiko
+pip3 install scp
