@@ -4,6 +4,8 @@ from os import listdir
 from vars.loggingStrings.fileHandlerLoggingStrings import *
 from userSSHClient import *
 from utils.logs import *
+import paramiko
+import scp
 
 class FileHandler:
   """
@@ -17,7 +19,7 @@ class FileHandler:
       pathToDownloadFrom,pathToUploadTo,ipToConnect = _parseUploadFile(uploadFile)
       port = 22                           #hardcode
       user = UserSSHClient("root","root") #hardcode
-      FileHandler._downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user)
+      FileHandler._downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user,logger)
     logger.writeLog(Logs.SEVERITY.INFO,downloadRinexFilesRoutineEndLog)
 
   @staticmethod
@@ -175,7 +177,24 @@ class FileHandler:
       return pathToDownloadFrom,pathToUploadTo,ipToConnect
 
   @staticmethod
-  def _downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user):
+  def _downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user,logger):
+    """Download a rinex file from the given server.
+
+    Parameters
+    ----------
+    pathToDownloadFrom : str
+      The path to the file on the server
+    downloadFolder     : str
+      The directory to download the file to 
+    ipToConnect        : str
+      The IP of the server
+    port               : int
+      The port to connect to the server on
+    user               : UserSSHClient
+      A user representation of the user that connects via ssh
+    logger     : Logs
+      The Logs object that will be used to log several actions
+    """
     logger.writeLog(
       Logs.SEVERITY.INFO,
       downloadRinexFileSubroutineStartLog.format(file = FileHandler._getFileFromPath(pathToDownloadFrom))
@@ -187,20 +206,29 @@ class FileHandler:
       )
       ssh = FileHandler._createSSHClient(ipToConnect,port,user.username,user.password)
       logger.writeLog(Logs.SEVERITY.INFO,connectAttemptSuccessfulLog)
-      scp = SCPClient(ssh.get_transport())
-      scp.get(pathToDownloadFrom,downloadFolder)
+      scpClient = scp.SCPClient(ssh.get_transport())
+      scpClient.get(pathToDownloadFrom,downloadFolder)
       logger.writeLog(
         Logs.SEVERITY.INFO,
         scpSuccessful.format(file = FileHandler._getFileFromPath(pathToDownloadFrom),downloadFolder = downloadFolder)
       )
     except paramiko.ssh_exception.BadAuthenticationType:
-      logger.writeLog(Logs.SEVERITY.ERROR,connectAttemptUnsuccessfulLog.format(reason = "Could not connect to the given ip"))
+      logger.writeLog(
+        Logs.SEVERITY.ERROR,
+        connectAttemptUnsuccessfulLog.format(reason = f"Could not connect to ip {ipToConnect}")
+      )
       return
     except paramiko.ssh_exception.NoValidConnectionsError:
-      logger.writeLog(Logs.SEVERITY.ERROR,connectAttemptUnsuccessfulLog.format(reason = "The given port is not available"))
+      logger.writeLog(
+        Logs.SEVERITY.ERROR,
+        connectAttemptUnsuccessfulLog.format(reason = f"The port {port} is not available")
+      )
       return
     except paramiko.ssh_exception.AuthenticationException:
-      logger.writeLog(Logs.SEVERITY.ERROR,connectAttemptUnsuccessfulLog.format(reason = "Could not authenticate user"))
+      logger.writeLog(
+        Logs.SEVERITY.ERROR,
+        connectAttemptUnsuccessfulLog.format(reason = "Could not authenticate user. The username or password may be invalid")
+      )
       return      
     except scp.SCPException:
       logger.writeLog(

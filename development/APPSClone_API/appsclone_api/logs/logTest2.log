@@ -111,3 +111,848 @@
 2022-06-19 18:42:44.048148 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
 2022-06-19 18:42:44.058546 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
 2022-06-19 18:42:44.069268 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:17.668445 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:49:17.674568 (INFO)     | Attempting to connect (via ssh) to '138.68.128.182/22', with user 'root'.
+2022-06-19 18:49:17.679978 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:49:17.689965 (INFO)     | Checking for upload files.
+2022-06-19 18:49:17.701255 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:49:17.711512 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 18:49:17.721335 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 18:49:17.731025 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:49:17.741302 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 18:49:17.747901 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:49:17.752933 (INFO)     | Checking for upload files.
+2022-06-19 18:49:17.763758 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:49:17.773720 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:17.783302 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:49:17.793554 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:49:17.804121 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:49:17.811569 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:49:17.821102 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:49:17.831876 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 18:49:17.842041 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:49:17.853853 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:49:17.864549 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 18:49:17.875497 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 18:49:17.886410 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 18:49:17.894591 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 18:49:17.902954 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:49:17.914665 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:49:17.925479 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:17.936064 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:17.946794 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:17.958311 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:17.969339 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:17.979989 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:17.992231 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:48.245629 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:49:48.251808 (INFO)     | Attempting to connect (via ssh) to '138.68.128.182/22', with user 'root'.
+2022-06-19 18:49:48.782785 (INFO)     | Successfully established a connection to the server.
+2022-06-19 18:49:49.920039 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 18:49:49.926143 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:49:49.931978 (INFO)     | Checking for upload files.
+2022-06-19 18:49:49.942496 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:49:49.952310 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 18:49:49.962139 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 18:49:49.972473 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:49:49.983172 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 18:49:49.990074 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:49:49.995678 (INFO)     | Checking for upload files.
+2022-06-19 18:49:50.007839 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:49:50.017849 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:50.028591 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:49:50.039024 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:49:50.048861 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:49:50.055061 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:49:50.063412 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:49:50.072954 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 18:49:50.082277 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:49:50.092325 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:49:50.102346 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 18:49:50.111835 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 18:49:50.121623 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 18:49:50.129061 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 18:49:50.138050 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:49:50.147538 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:49:50.158142 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:50.168045 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:50.177700 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:50.187887 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:50.197657 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:50.207231 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:49:50.217209 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:50:38.411173 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:50:38.418506 (INFO)     | Attempting to connect to '138.68.128.182/22', with user 'root'.
+2022-06-19 18:50:39.000059 (INFO)     | Successfully established a connection to the server.
+2022-06-19 18:50:40.018291 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 18:50:40.024741 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:50:40.031892 (INFO)     | Checking for upload files.
+2022-06-19 18:50:40.043563 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:50:40.053764 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 18:50:40.064420 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 18:50:40.074770 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:50:40.085006 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 18:50:40.091332 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:50:40.096354 (INFO)     | Checking for upload files.
+2022-06-19 18:50:40.107573 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:50:40.117538 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:50:40.128235 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:50:40.138306 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:50:40.150130 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:50:40.156892 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:50:40.165257 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:50:40.175294 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 18:50:40.185088 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:50:40.194706 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:50:40.204635 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 18:50:40.210954 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 18:50:40.221073 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 18:50:40.228738 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 18:50:40.237128 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:50:40.246732 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:50:40.258105 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:50:40.268251 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:50:40.278211 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:50:40.289334 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:50:40.299161 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:50:40.309265 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:50:40.319579 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:11.814605 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:51:11.821729 (INFO)     | Attempting to connect to '138.68.128.182/22', with user 'root'.
+2022-06-19 18:51:12.387945 (INFO)     | Successfully established a connection to the server.
+2022-06-19 18:51:13.473093 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 18:51:13.480095 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:51:13.486604 (INFO)     | Checking for upload files.
+2022-06-19 18:51:13.498432 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:51:13.508524 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 18:51:13.518629 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 18:51:13.529133 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:51:13.539490 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 18:51:13.546157 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:51:13.551131 (INFO)     | Checking for upload files.
+2022-06-19 18:51:13.562642 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:51:13.573136 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:13.583213 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:51:13.594103 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:51:13.604603 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:51:13.611143 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:51:13.619754 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:51:13.629439 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 18:51:13.638977 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:51:13.648711 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:51:13.658538 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 18:51:13.668416 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 18:51:13.678449 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 18:51:13.686458 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 18:51:13.694475 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:51:13.704418 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:51:13.715360 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:13.725575 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:13.735830 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:13.745967 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:13.752450 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:13.762765 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:13.772971 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:36.024782 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:51:36.031558 (INFO)     | Attempting to connect to '138.68.128.182/22', with user 'root'.
+2022-06-19 18:51:36.573623 (INFO)     | Successfully established a connection to the server.
+2022-06-19 18:51:37.645497 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 18:51:37.651891 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:51:37.657390 (INFO)     | Checking for upload files.
+2022-06-19 18:51:37.668509 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:51:37.678602 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 18:51:37.688451 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 18:51:37.698969 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:51:37.709336 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 18:51:37.715455 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:51:37.720111 (INFO)     | Checking for upload files.
+2022-06-19 18:51:37.731241 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:51:37.741442 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:37.751553 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:51:37.762592 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:51:37.773571 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:51:37.779811 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:51:37.788580 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:51:37.798254 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 18:51:37.807874 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:51:37.817176 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:51:37.827021 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 18:51:37.836906 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 18:51:37.846520 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 18:51:37.854017 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 18:51:37.861816 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:51:37.871608 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:51:37.882114 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:37.892147 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:37.902082 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:37.911638 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:37.921846 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:37.931496 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:37.941693 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:51:58.420006 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:51:58.427111 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 18:51:58.979217 (INFO)     | Successfully established a connection to the server.
+2022-06-19 18:51:59.954333 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 18:51:59.961305 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:51:59.968032 (INFO)     | Checking for upload files.
+2022-06-19 18:51:59.979615 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:51:59.990290 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 18:52:00.001232 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 18:52:00.012653 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:52:00.025516 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 18:52:00.032780 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:52:00.037976 (INFO)     | Checking for upload files.
+2022-06-19 18:52:00.049817 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:52:00.061072 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:52:00.072181 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:52:00.083333 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:52:00.094017 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:52:00.100748 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:52:00.109459 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:52:00.116044 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 18:52:00.126024 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:52:00.132983 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:52:00.143205 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 18:52:00.150372 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 18:52:00.161030 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 18:52:00.165522 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 18:52:00.174531 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:52:00.184956 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:52:00.191688 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:52:00.202070 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:52:00.211650 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:52:00.222081 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:52:00.232515 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:52:00.242141 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:52:00.252254 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:55:29.649951 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:55:29.657290 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 18:55:30.193199 (INFO)     | Successfully established a connection to the server.
+2022-06-19 18:55:31.234398 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 18:55:31.241606 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:55:31.248000 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:55:31.253984 (INFO)     | Attempting to connect to '138.68.128.181:22', with user 'root'.
+2022-06-19 18:55:31.927077 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:55:31.939390 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:55:31.945960 (INFO)     | Attempting to connect to '138.68.128.182:21', with user 'root'.
+2022-06-19 18:55:32.022244 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:55:32.031704 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:55:32.035601 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 18:55:34.870227 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:55:34.879632 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:55:34.883402 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 18:55:35.442474 (INFO)     | Successfully established a connection to the server.
+2022-06-19 18:55:36.288840 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:55:36.298522 (INFO)     | Checking for upload files.
+2022-06-19 18:55:36.307827 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:55:36.318169 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 18:55:36.328612 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 18:55:36.339707 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:55:36.350437 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 18:55:36.357098 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:55:36.362060 (INFO)     | Checking for upload files.
+2022-06-19 18:55:36.373664 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:55:36.384354 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:55:36.395092 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:55:36.406606 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:55:36.417749 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:55:36.424599 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:55:36.433238 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:55:36.443063 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 18:55:36.452940 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:55:36.462887 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:55:36.473139 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 18:55:36.483443 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 18:55:36.489958 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 18:55:36.497852 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 18:55:36.506747 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:55:36.517367 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:55:36.527756 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:55:36.534650 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:55:36.544938 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:55:36.554944 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:55:36.565759 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:55:36.576590 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:55:36.587038 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:56:55.486935 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:56:55.494152 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 18:56:56.099940 (INFO)     | Successfully established a connection to the server.
+2022-06-19 18:56:57.186830 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 18:56:57.193852 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:56:57.199825 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:56:57.205443 (INFO)     | Attempting to connect to '138.68.128.181:22', with user 'root'.
+2022-06-19 18:56:57.827183 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not connect to the given ip'.
+2022-06-19 18:56:57.835520 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:56:57.842320 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:56:57.848844 (INFO)     | Attempting to connect to '138.68.128.182:21', with user 'root'.
+2022-06-19 18:56:57.916572 (ERROR)    | Could not establish a connection to the server. Reason: 'The given port is not available'.
+2022-06-19 18:56:57.924374 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:56:57.930890 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:56:57.937152 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 18:57:00.725034 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not authenticate user'.
+2022-06-19 18:57:00.732470 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:57:00.738498 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:57:00.744499 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 18:57:01.306532 (INFO)     | Successfully established a connection to the server.
+2022-06-19 18:57:02.391588 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:57:02.403868 (INFO)     | Checking for upload files.
+2022-06-19 18:57:02.416427 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:57:02.427931 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 18:57:02.439091 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 18:57:02.450098 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:57:02.460753 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 18:57:02.467607 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:57:02.472629 (INFO)     | Checking for upload files.
+2022-06-19 18:57:02.484348 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:57:02.495038 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:57:02.506415 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:57:02.517578 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:57:02.528390 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:57:02.535018 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:57:02.544121 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:57:02.554053 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 18:57:02.563869 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:57:02.574045 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:57:02.584268 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 18:57:02.594358 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 18:57:02.604296 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 18:57:02.613773 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 18:57:02.622343 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:57:02.632362 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:57:02.642514 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:57:02.652695 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:57:02.662875 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:57:02.673193 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:57:02.683894 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:57:02.693849 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:57:02.704097 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:09.341838 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:59:09.348428 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 18:59:09.888166 (INFO)     | Successfully established a connection to the server.
+2022-06-19 18:59:10.970043 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 18:59:10.976581 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:59:10.982193 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:59:10.987581 (INFO)     | Attempting to connect to '138.68.128.181:22', with user 'root'.
+2022-06-19 18:59:11.592540 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not connect to the given ip'.
+2022-06-19 18:59:11.598959 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:59:11.604436 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:59:11.609609 (INFO)     | Attempting to connect to '138.68.128.182:21', with user 'root'.
+2022-06-19 18:59:11.671939 (ERROR)    | Could not establish a connection to the server. Reason: 'The given port is not available'.
+2022-06-19 18:59:11.678766 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:59:11.685124 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:59:11.691340 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 18:59:14.442528 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not authenticate user'.
+2022-06-19 18:59:14.449255 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:59:14.454669 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:59:14.459891 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 18:59:15.017875 (INFO)     | Successfully established a connection to the server.
+2022-06-19 18:59:16.005019 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:59:16.017691 (INFO)     | Checking for upload files.
+2022-06-19 18:59:16.025475 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:59:16.035154 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 18:59:16.041230 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 18:59:16.047236 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:59:16.052743 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 18:59:16.060153 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:59:16.066202 (INFO)     | Checking for upload files.
+2022-06-19 18:59:16.077063 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:59:16.086389 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:16.092058 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:59:16.097668 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:59:16.104209 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:59:16.110553 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:59:16.118684 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:59:16.125212 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 18:59:16.131063 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:59:16.136797 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:59:16.142077 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 18:59:16.147477 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 18:59:16.153453 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 18:59:16.157440 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 18:59:16.164836 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:59:16.173923 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:59:16.179452 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:16.186014 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:16.192171 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:16.200796 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:16.206651 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:16.213716 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:16.221872 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:40.197630 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:59:40.205077 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 18:59:40.920404 (INFO)     | Successfully established a connection to the server.
+2022-06-19 18:59:42.092715 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 18:59:42.099960 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:59:42.106290 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:59:42.112106 (INFO)     | Attempting to connect to '138.68.128.181:22', with user 'root'.
+2022-06-19 18:59:42.716853 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not connect to the given ip'.
+2022-06-19 18:59:42.724202 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:59:42.730858 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:59:42.737128 (INFO)     | Attempting to connect to '138.68.128.182:21', with user 'root'.
+2022-06-19 18:59:42.803414 (ERROR)    | Could not establish a connection to the server. Reason: 'The given port is not available'.
+2022-06-19 18:59:42.810945 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:59:42.817502 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:59:42.824292 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 18:59:45.593964 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not authenticate user'.
+2022-06-19 18:59:45.601980 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:59:45.608825 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 18:59:45.615048 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 18:59:46.189832 (INFO)     | Successfully established a connection to the server.
+2022-06-19 18:59:47.228050 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 18:59:47.242577 (INFO)     | Checking for upload files.
+2022-06-19 18:59:47.257748 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:59:47.272034 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 18:59:47.286950 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 18:59:47.295529 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:59:47.307247 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 18:59:47.315103 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:59:47.321374 (INFO)     | Checking for upload files.
+2022-06-19 18:59:47.333865 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:59:47.344603 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:47.356090 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:59:47.367124 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 18:59:47.378101 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:59:47.384765 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 18:59:47.393565 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:59:47.403754 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 18:59:47.413881 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:59:47.423921 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:59:47.434588 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 18:59:47.445240 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 18:59:47.456325 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 18:59:47.464848 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 18:59:47.473379 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 18:59:47.484103 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 18:59:47.494760 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:47.504797 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:47.515002 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:47.525488 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:47.535713 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:47.545748 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 18:59:47.556106 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:00:20.719847 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:00:20.726893 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:00:21.291711 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:00:21.298572 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:00:21.308595 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:00:21.314761 (INFO)     | Attempting to connect to '138.68.128.181:22', with user 'root'.
+2022-06-19 19:00:22.123821 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not connect to the given ip'.
+2022-06-19 19:00:22.131044 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:00:22.137027 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:00:22.142644 (INFO)     | Attempting to connect to '138.68.128.182:21', with user 'root'.
+2022-06-19 19:00:22.202648 (ERROR)    | Could not establish a connection to the server. Reason: 'The given port is not available'.
+2022-06-19 19:00:22.209676 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:00:22.215465 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:00:22.221012 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:00:25.032325 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not authenticate user'.
+2022-06-19 19:00:25.039659 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:00:25.046334 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:00:25.052538 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:00:25.614362 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:00:25.621671 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:00:25.630376 (INFO)     | Checking for upload files.
+2022-06-19 19:00:25.640446 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:00:25.652768 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 19:00:25.665008 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 19:00:25.677287 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:00:25.689761 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 19:00:25.697805 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:00:25.704524 (INFO)     | Checking for upload files.
+2022-06-19 19:00:25.718804 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:00:25.731378 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:00:25.744909 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:00:25.758661 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:00:25.772758 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:00:25.782307 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:00:25.795134 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:00:25.807693 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 19:00:25.816599 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:00:25.829230 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:00:25.841862 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 19:00:25.854433 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 19:00:25.861868 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 19:00:25.866903 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 19:00:25.876511 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:00:25.887448 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:00:25.897930 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:00:25.909127 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:00:25.916202 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:00:25.923368 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:00:25.930944 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:00:25.942244 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:00:25.954210 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:05.093095 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:05.101260 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:01:05.718680 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:01:06.851472 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 19:01:06.860287 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:06.868087 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:06.875353 (INFO)     | Attempting to connect to '138.68.128.181:22', with user 'root'.
+2022-06-19 19:01:07.462929 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not connect to the given ip'.
+2022-06-19 19:01:07.471036 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:07.478229 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:07.484857 (INFO)     | Attempting to connect to '138.68.128.182:21', with user 'root'.
+2022-06-19 19:01:07.547552 (ERROR)    | Could not establish a connection to the server. Reason: 'The given port is not available'.
+2022-06-19 19:01:07.555580 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:07.562691 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:07.569397 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:01:12.579995 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not authenticate user'.
+2022-06-19 19:01:12.588288 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:12.594734 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:12.600818 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:01:13.144562 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:01:14.078036 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:14.090643 (INFO)     | Checking for upload files.
+2022-06-19 19:01:14.103283 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:01:14.115249 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 19:01:14.126974 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 19:01:14.138341 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:01:14.149612 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 19:01:14.157069 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:01:14.163193 (INFO)     | Checking for upload files.
+2022-06-19 19:01:14.175408 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:01:14.186918 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:14.199393 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:14.211001 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:01:14.222491 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:14.230914 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:01:14.240424 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:14.251143 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 19:01:14.261686 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:14.272602 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:14.283375 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 19:01:14.291423 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 19:01:14.302238 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 19:01:14.311469 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 19:01:14.321586 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:01:14.332878 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:14.340390 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:14.348013 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:14.355765 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:14.363281 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:14.374553 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:14.382940 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:14.394294 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:35.773548 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:35.781567 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:01:36.398346 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:01:36.407684 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:36.421064 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:36.429911 (INFO)     | Attempting to connect to '138.68.128.181:22', with user 'root'.
+2022-06-19 19:01:37.058266 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not connect to the given ip'.
+2022-06-19 19:01:37.066930 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:37.076221 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:37.084439 (INFO)     | Attempting to connect to '138.68.128.182:21', with user 'root'.
+2022-06-19 19:01:37.149165 (ERROR)    | Could not establish a connection to the server. Reason: 'The given port is not available'.
+2022-06-19 19:01:37.158282 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:37.166244 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:37.174390 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:01:42.157718 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not authenticate user'.
+2022-06-19 19:01:42.165601 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:42.172798 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:42.179908 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:01:42.703823 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:01:42.712223 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:42.721636 (INFO)     | Checking for upload files.
+2022-06-19 19:01:42.732931 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:01:42.745113 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 19:01:42.756711 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 19:01:42.768479 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:01:42.781592 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 19:01:42.790318 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:01:42.798004 (INFO)     | Checking for upload files.
+2022-06-19 19:01:42.812083 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:01:42.826188 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:42.840059 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:42.853495 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:01:42.866976 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:42.876788 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:01:42.888911 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:42.902137 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 19:01:42.915384 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:42.928515 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:42.941496 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 19:01:42.954626 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 19:01:42.967976 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 19:01:42.977933 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 19:01:42.988322 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:01:42.999575 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:43.007174 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:43.018505 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:43.030402 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:43.041842 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:43.054119 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:43.065458 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:43.076933 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:47.144181 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:47.152180 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:01:47.717136 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:01:48.859671 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 19:01:48.867690 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:48.874860 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:48.881337 (INFO)     | Attempting to connect to '138.68.128.181:22', with user 'root'.
+2022-06-19 19:01:49.494671 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not connect to the given ip'.
+2022-06-19 19:01:49.502523 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:49.509177 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:49.515659 (INFO)     | Attempting to connect to '138.68.128.182:21', with user 'root'.
+2022-06-19 19:01:49.589772 (ERROR)    | Could not establish a connection to the server. Reason: 'The given port is not available'.
+2022-06-19 19:01:49.597636 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:49.604448 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:49.611116 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:01:52.344994 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not authenticate user'.
+2022-06-19 19:01:52.352979 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:52.360549 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:52.367861 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:01:52.935177 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:01:53.829987 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:53.843208 (INFO)     | Checking for upload files.
+2022-06-19 19:01:53.856876 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:01:53.868755 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 19:01:53.880525 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 19:01:53.892222 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:01:53.903843 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 19:01:53.911417 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:01:53.918064 (INFO)     | Checking for upload files.
+2022-06-19 19:01:53.930572 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:01:53.943252 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:53.956277 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:53.969343 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:01:53.982391 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:53.991085 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:01:54.002966 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:54.016154 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 19:01:54.030259 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:54.043527 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:54.056420 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 19:01:54.069674 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 19:01:54.081870 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 19:01:54.092435 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 19:01:54.103122 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:01:54.116280 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:01:54.126834 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:54.140100 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:54.152423 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:54.163716 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:54.175319 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:54.186815 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:54.198380 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:01:57.018915 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:57.026945 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:01:57.604387 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:01:58.828405 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 19:01:58.836980 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:58.844910 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:58.852270 (INFO)     | Attempting to connect to '138.68.128.181:22', with user 'root'.
+2022-06-19 19:01:59.530741 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not connect to the given ip'.
+2022-06-19 19:01:59.538844 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:59.546113 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:59.553317 (INFO)     | Attempting to connect to '138.68.128.182:21', with user 'root'.
+2022-06-19 19:01:59.639376 (ERROR)    | Could not establish a connection to the server. Reason: 'The given port is not available'.
+2022-06-19 19:01:59.647437 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:01:59.654281 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:01:59.661685 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:02:02.417868 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not authenticate user'.
+2022-06-19 19:02:02.426287 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:02:02.433308 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:02:02.440181 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:02:03.028187 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:02:03.948389 (ERROR)    | Could not copy 'arroza' to 'out/downloads_test'.
+2022-06-19 19:02:03.956708 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:02:03.964178 (INFO)     | Checking for upload files.
+2022-06-19 19:02:03.977021 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:02:03.988754 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 19:02:04.000530 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 19:02:04.012545 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:02:04.024844 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 19:02:04.032758 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:02:04.039255 (INFO)     | Checking for upload files.
+2022-06-19 19:02:04.051718 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:02:04.064551 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:02:04.077037 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:02:04.088795 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:02:04.100563 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:02:04.108363 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:02:04.118187 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:02:04.129166 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 19:02:04.136337 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:02:04.147101 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:02:04.158209 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 19:02:04.165530 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 19:02:04.176614 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 19:02:04.181671 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 19:02:04.191742 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:02:04.202956 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:02:04.210241 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:02:04.218191 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:02:04.229309 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:02:04.241091 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:02:04.253068 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:02:04.260424 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:02:04.272063 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:04:48.418367 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:04:48.426620 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:04:48.971594 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:04:50.079432 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 19:04:50.087589 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:04:50.094795 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:04:50.101346 (INFO)     | Attempting to connect to '138.68.128.181:22', with user 'root'.
+2022-06-19 19:04:50.732951 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not connect to ip 138.68.128.181'.
+2022-06-19 19:04:50.741450 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:04:50.748800 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:04:50.756311 (INFO)     | Attempting to connect to '138.68.128.182:21', with user 'root'.
+2022-06-19 19:04:50.820073 (ERROR)    | Could not establish a connection to the server. Reason: 'The port 21 is not available'.
+2022-06-19 19:04:50.828114 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:04:50.835574 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:04:50.842562 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:04:53.607138 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not authenticate user. The username or password may be invalid'.
+2022-06-19 19:04:53.615336 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:04:53.622599 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:04:53.629392 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:04:54.181952 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:04:55.137840 (ERROR)    | Could not copy 'arroza' to 'out/downloads_test'.
+2022-06-19 19:04:55.146584 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:04:55.154842 (INFO)     | Checking for upload files.
+2022-06-19 19:04:55.167932 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:04:55.180222 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 19:04:55.192336 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 19:04:55.204925 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:04:55.216948 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 19:04:55.224891 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:04:55.231311 (INFO)     | Checking for upload files.
+2022-06-19 19:04:55.244021 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:04:55.256245 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:04:55.268629 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:04:55.281059 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:04:55.293260 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:04:55.301087 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:04:55.311368 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:04:55.322658 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 19:04:55.330151 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:04:55.341859 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:04:55.353578 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 19:04:55.360975 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 19:04:55.372643 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 19:04:55.382396 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 19:04:55.393129 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:04:55.405003 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:04:55.413629 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:04:55.425982 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:04:55.438918 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:04:55.451701 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:04:55.464474 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:04:55.477410 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:04:55.490725 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:05:49.759170 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:05:49.768046 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:05:50.350680 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:05:51.358332 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 19:05:51.366580 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:05:51.374057 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:05:51.381579 (INFO)     | Attempting to connect to '138.68.128.181:22', with user 'root'.
+2022-06-19 19:05:51.989904 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not connect to ip 138.68.128.181'.
+2022-06-19 19:05:51.998129 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:05:52.005169 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:05:52.012158 (INFO)     | Attempting to connect to '138.68.128.182:21', with user 'root'.
+2022-06-19 19:05:52.074109 (ERROR)    | Could not establish a connection to the server. Reason: 'The port 21 is not available'.
+2022-06-19 19:05:52.082624 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:05:52.090353 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:05:52.097212 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'roota'.
+2022-06-19 19:05:56.347343 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not authenticate user. The username or password may be invalid'.
+2022-06-19 19:05:56.355978 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:05:56.363408 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:05:56.370562 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:06:01.388444 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not authenticate user. The username or password may be invalid'.
+2022-06-19 19:06:01.397540 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:06:01.406352 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:06:01.414558 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:06:02.004603 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:06:02.968798 (ERROR)    | Could not copy 'arroza' to 'out/downloads_test'.
+2022-06-19 19:06:02.977577 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:06:02.985236 (INFO)     | Checking for upload files.
+2022-06-19 19:06:02.998355 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:06:03.010666 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 19:06:03.023340 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 19:06:03.035483 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:06:03.047411 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 19:06:03.056043 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:06:03.062770 (INFO)     | Checking for upload files.
+2022-06-19 19:06:03.076470 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:06:03.089325 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:06:03.101619 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:06:03.113603 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:06:03.125704 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:06:03.134019 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:06:03.144546 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:06:03.155930 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 19:06:03.166775 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:06:03.174407 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:06:03.182715 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 19:06:03.194714 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 19:06:03.206284 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 19:06:03.213471 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 19:06:03.221919 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:06:03.233725 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:06:03.246357 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:06:03.257685 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:06:03.265902 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:06:03.274234 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:06:03.286202 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:06:03.298132 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:06:03.306837 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:13:56.162798 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:13:56.171638 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:13:56.726860 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:13:57.884674 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
+2022-06-19 19:13:57.893043 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:13:59.174411 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:13:59.182830 (INFO)     | Attempting to connect to '138.68.128.181:22', with user 'root'.
+2022-06-19 19:13:59.916336 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not connect to ip 138.68.128.181'.
+2022-06-19 19:13:59.925248 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:14:00.753414 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:14:00.761743 (INFO)     | Attempting to connect to '138.68.128.182:21', with user 'root'.
+2022-06-19 19:14:00.824241 (ERROR)    | Could not establish a connection to the server. Reason: 'The port 21 is not available'.
+2022-06-19 19:14:00.832231 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:14:01.870670 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:14:01.879157 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'roota'.
+2022-06-19 19:14:06.170557 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not authenticate user. The username or password may be invalid'.
+2022-06-19 19:14:06.179310 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:14:09.315220 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:14:09.323605 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:14:12.063713 (ERROR)    | Could not establish a connection to the server. Reason: 'Could not authenticate user. The username or password may be invalid'.
+2022-06-19 19:14:12.072645 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:14:13.852003 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (START) ==
+2022-06-19 19:14:13.860292 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
+2022-06-19 19:14:14.374928 (INFO)     | Successfully established a connection to the server.
+2022-06-19 19:14:15.273843 (ERROR)    | Could not copy 'arroza' to 'out/downloads_test'.
+2022-06-19 19:14:15.282489 (INFO)     | == RINEX FILE 'arroza' DOWNLOAD SUBROUTINE (END) ==
+2022-06-19 19:14:15.290003 (INFO)     | Checking for upload files.
+2022-06-19 19:14:15.303380 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:14:15.315615 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-19 19:14:15.327945 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-19 19:14:15.339787 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:14:15.352030 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-19 19:14:15.360246 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:14:15.366905 (INFO)     | Checking for upload files.
+2022-06-19 19:14:15.380426 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:14:15.393551 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:14:15.406290 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:14:15.418415 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-19 19:14:15.430335 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:14:15.438369 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
+2022-06-19 19:14:15.449500 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:14:15.460676 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-19 19:14:15.471626 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:14:15.480145 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:14:15.491442 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-19 19:14:15.499813 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-19 19:14:15.508127 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-19 19:14:15.513603 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
+2022-06-19 19:14:15.523934 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-19 19:14:15.535527 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
+2022-06-19 19:14:15.543658 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:14:15.551543 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:14:15.563235 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:14:15.571364 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:14:15.583170 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:14:15.595124 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
+2022-06-19 19:14:15.607725 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
