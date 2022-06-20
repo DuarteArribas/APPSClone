@@ -456,3 +456,7 @@ class FileHandler:
         pass
 
   @staticmethod
+  def uploadAllRinexToApps(conn,downloadFolder,uploadedFilesQueue,args,logger):
+    for rinex in os.listdir(downloadFolder):
+      if os.path.getsize(FileHandler._concatenateFileToPath(rinex,downloadFolder)) / (1024 * 1024.0) < conn.getQuotaLeft():
+        conn.uploadFile(FileHandler._concatenateFileToPath(rinex,downloadFolder),uploadedFilesQueue,args)

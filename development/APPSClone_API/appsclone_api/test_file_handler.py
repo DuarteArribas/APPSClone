@@ -208,9 +208,29 @@ class TestFileHandler(unittest.TestCase):
   #  logger   = Logs("logs/logTest2.log",1000)
   #  FileHandler._uploadResultsFile("out/downloads_test/lol.tar.gz","~","138.68.128.182",22,user,logger)
 
-  def test_upload_all_results(self):
+  #def test_upload_all_results(self):
+  #  logger   = Logs("logs/logTest2.log",1000)
+  #  FileHandler.uploadBackResults("out/queue/uploadFilesQueue","out/resultsDir",logger)
+
+  def test_upload_all_rinex(self):
     logger   = Logs("logs/logTest2.log",1000)
-    FileHandler.uploadBackResults("out/queue/uploadFilesQueue","out/resultsDir",logger)
+    args = {
+      "pressure"             : None,
+      "attitude"             : None,
+      "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
+      "access"               : defines.Data.ACCESS_DEFAULT,
+      "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+      "product"              : "arroz",
+      "troposphere_model"    : defines.GIPSYData.TROP_GMF,
+      "ocean_loading"        : True,
+      "model_tides"          : True,
+      "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
+      "elev_angle_cutoff"    : 7.5,
+      "solution_period"      : 300,
+      "generate_quaternions" : False,
+    }
+    conn = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+    FileHandler.uploadAllRinexToApps(conn,"in/test2","out/queue/queue",args,logger)
 
 if __name__ == '__main__':
   unittest.main()
