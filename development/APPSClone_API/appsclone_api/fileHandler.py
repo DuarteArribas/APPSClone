@@ -319,7 +319,7 @@ class FileHandler:
     logger.writeLog(Logs.SEVERITY.INFO,fileAddedToQueueLog.format(file = rinexFile))
 
   @staticmethod
-  def handleQueueFilesStates(conn,uploadedFilesQueueFile,resultDownloadFolder):
+  def handleQueueFilesStates(conn,uploadedFilesQueueFile,resultsDir):
     """Handle the state of all files in the in uploaded files queue.
 
     Parameters
@@ -328,11 +328,38 @@ class FileHandler:
       A connection to APPS object
     uploadedFilesQueueFile : str
       The file, which contains the uploaded files queue
-    resultDownloadFolder   : str
+    resultsDir             : str
       The folder, to which the results ust be downloaded to
     """
     with open(uploadedFilesQueueFile,"r") as f:
       uuids = f.readlines()
       uuids = [uuid.split("\n")[0] for uuid in uuids]
       for uuid in uuids:
-        conn.handleFileState(uuid,uploadedFilesQueueFile,resultDownloadFolder)
+        conn.handleFileState(uuid,uploadedFilesQueueFile,resultsDir)
+
+  @staticmethod
+  def uploadBackResults(uploadFilesQueueFile,resultsDir):
+    for result in os.listdir(resultsDir):
+      queueLine = FileHandler._getUploadFileLine(uploadFilesQueueFile,result)
+      if queueLine:
+        pass
+      else:
+        pass
+
+  @staticmethod
+  def _getUploadFileLine(uploadFilesQueueFile,result):
+    """Get a line from the upload files queue.
+
+    Parameters
+    ----------
+    uploadFilesQueueFile : str
+      The file, which contains the queue of the upload files
+    result               : str
+      The name of the results file
+    """
+    with open(uploadFilesQueueFile,"r") as f:
+      lines = f.readlines()
+      for line in lines:
+        if line.split(" ")[0] == result.split("_results")[0]:
+          return line
+      return None
