@@ -1,5 +1,6 @@
 import unittest
 from fileHandler import *
+from connection  import *
 
 class TestFileHandler(unittest.TestCase):
   def test_concatenate_file_to_path(self):
@@ -186,6 +187,11 @@ class TestFileHandler(unittest.TestCase):
   #def test_download_files(self):
   #  logger = Logs("logs/logTest2.log",1000)
   #  FileHandler.downloadRinexFiles("in/uploadFilesTest/1","out/downloads_test","out/queue/uploadFilesQueue",logger)
+
+  #def test_handle_states_of_uploaded_files_in_queue(self):
+  #  logger = Logs("logs/logTest2.log",1000)
+  #  conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #  FileHandler.handleQueueFilesStates(conn,"out/queue/queue","out/downloads")
 
 if __name__ == '__main__':
   unittest.main()

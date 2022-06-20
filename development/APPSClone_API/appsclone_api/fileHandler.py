@@ -6,6 +6,7 @@ from vars.loggingStrings.fileHandlerLoggingStrings import *
 from userSSHClient                                 import *
 from utils.logs                                    import *
 from os                                            import listdir
+from connection                                    import *
 
 class FileHandler:
   """
@@ -316,3 +317,22 @@ class FileHandler:
     with open(uploadFilesQueueFile,"a") as f:
       f.write(rinexFile + " " + pathToUploadTo + " " + ipToConnect + " " + str(port) + "\n")
     logger.writeLog(Logs.SEVERITY.INFO,fileAddedToQueueLog.format(file = rinexFile))
+
+  @staticmethod
+  def handleQueueFilesStates(conn,uploadedFilesQueueFile,resultDownloadFolder):
+    """Handle the state of all files in the in uploaded files queue.
+
+    Parameters
+    ----------
+    conn                   : Connection_APPS
+      A connection to APPS object
+    uploadedFilesQueueFile : str
+      The file, which contains the uploaded files queue
+    resultDownloadFolder   : str
+      The folder, to which the results ust be downloaded to
+    """
+    with open(uploadedFilesQueueFile,"r") as f:
+      uuids = f.readlines()
+      uuids = [uuid.split("\n")[0] for uuid in uuids]
+      for uuid in uuids:
+        conn.handleFileState(uuid,uploadedFilesQueueFile,resultDownloadFolder)

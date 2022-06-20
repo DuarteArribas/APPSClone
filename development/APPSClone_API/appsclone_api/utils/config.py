@@ -60,3 +60,18 @@ class Config:
       The corresponding configuration
     """
     return self.config.get("UPLOAD_FILES",key)
+
+  def getSettingsConfig(self,key):
+    """Get a config from the SETTINGS section on the config file.
+
+    Parameters
+    ----------
+    key : str
+      The key corresponding to the wanted configuration
+
+    Returns
+    ----------
+    str
+      The corresponding configuration
+    """
+    return self.config.get("SETTINGS",key)

@@ -20,29 +20,29 @@ class TestConnection(unittest.TestCase):
 
   # def test_getUncompressedFile(self):
   #   logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
   #   print(conn._Connection_APPS__getUncompressedFile("in/test/arroz.gz"))
   #   #self.assertFalse()
 
   # def test_gzip_compression(self):
   #   logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
   #   self.assertEqual(conn._Connection_APPS__compressUncompressGzip("in/test/arroz",True),"in/test/arroz.gz")
 
   # def test_gzip_uncompression(self):
   #   logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
   #   self.assertEqual(conn._Connection_APPS__compressUncompressGzip("in/test/arroz.gz",False),"in/test/arrozUncompressed")
 
-  # def test_file_validity(self):
-  #   logger = Logs("logs/logTest.log",1000)
+  def test_file_validity(self):
+    logger = Logs("logs/logTest.log",1000)
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-  #   self.assertFalse(conn._Connection_APPS__checkFileValidity("in/test/file"))
+    self.assertFalse(conn._Connection_APPS__checkFileValidity("in/test/file"))
 
-  # def test_file_validity2(self):
-  #   logger = Logs("logs/logTest.log",1000)
+  def test_file_validity2(self):
+    logger = Logs("logs/logTest.log",1000)
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-  #   self.assertTrue(conn._Connection_APPS__checkFileValidity("in/uploads_test/CVTY2720.21D"))
+    self.assertTrue(conn._Connection_APPS__checkFileValidity("in/uploads_test/CVTY2720.21D"))
 
   def test_valid_arg_email(self):
     logger = Logs("logs/logTest.log",1000)
@@ -494,25 +494,25 @@ class TestConnection(unittest.TestCase):
       ]
     )
 
-  #def test_upload_file(self):
-  #  args = {
-  #    "pressure"             : None,
-  #    "attitude"             : None,
-  #    "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
-  #    "access"               : defines.Data.ACCESS_DEFAULT,
-  #    "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
-  #    "product"              : "arroz",
-  #    "troposphere_model"    : defines.GIPSYData.TROP_GMF,
-  #    "ocean_loading"        : True,
-  #    "model_tides"          : True,
-  #    "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
-  #    "elev_angle_cutoff"    : 7.5,
-  #    "solution_period"      : 300,
-  #    "generate_quaternions" : False,
-  #  }
-  #  logger = Logs("logs/logTest.log",1000)
+  def test_upload_file(self):
+    args = {
+      "pressure"             : None,
+      "attitude"             : None,
+      "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
+      "access"               : defines.Data.ACCESS_DEFAULT,
+      "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+      "product"              : "arroz",
+      "troposphere_model"    : defines.GIPSYData.TROP_GMF,
+      "ocean_loading"        : True,
+      "model_tides"          : True,
+      "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
+      "elev_angle_cutoff"    : 7.5,
+      "solution_period"      : 300,
+      "generate_quaternions" : False,
+    }
+    logger = Logs("logs/logTest.log",1000)
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-  #  conn.uploadFile("in/uploads_test/NOA10630.22O","out/queue/queue",args)
+    conn.uploadFile("in/uploads_test/CVTY2720.21D","out/queue/queue",args)
 
   def test_add_to_queue(self):
     logger = Logs("logs/logTest.log",1000)
