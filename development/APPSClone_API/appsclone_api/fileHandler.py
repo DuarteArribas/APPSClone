@@ -275,10 +275,10 @@ class FileHandler:
 
     Parameters
     ----------
-    pathToDownloadFrom : str
-      The path to the file on the server
-    downloadFolder     : str
-      The directory to download the files to 
+    resultFile         : str
+      The result file to upload
+    uploadDir          : str
+      The directory to upload the files to 
     ipToConnect        : str
       The IP of the server
     port               : int
@@ -439,7 +439,18 @@ class FileHandler:
     for result in os.listdir(resultsDir):
       queueLine = FileHandler._getFileLineFromQueueUploadFiles(uploadFilesQueueFile,result)
       if queueLine:
-
+        uploadPath = queueLine.split(" ")[1]
+        ip         = queueLine.split(" ")[2]
+        port       = queueLine.split(" ")[3]
+        user = UserSSHClient("root","Pr0j#to_Spr1ng")
+        FileHandler._uploadResultsFile(
+          FileHandler._concatenateFileToPath(result,resultsDir),
+          uploadPath,
+          ip,
+          int(port),
+          user,
+          logger
+        )
         FileHandler._removeFileFromQueueUploadFiles(uploadFilesQueueFile,result)
       else:
         pass

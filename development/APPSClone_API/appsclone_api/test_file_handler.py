@@ -186,7 +186,7 @@ class TestFileHandler(unittest.TestCase):
 
   #def test_download_files(self):
   #  logger = Logs("logs/logTest2.log",1000)
-  #  FileHandler.downloadRinexFiles("in/uploadFilesTest/1","out/downloads_test","out/queue/uploadFilesQueue",logger)
+  #  FileHandler.downloadRinexFiles("in/uploadFilesTest/3","out/downloads_test","out/queue/uploadFilesQueue",logger)
 
   #def test_handle_states_of_uploaded_files_in_queue(self):
   #  logger = Logs("logs/logTest2.log",1000)
@@ -202,8 +202,15 @@ class TestFileHandler(unittest.TestCase):
   #def test_remove_line_from_queue(self):
   #  FileHandler._removeFileFromQueueUploadFiles("out/queue/uploadFilesQueue","massaaaa")
 
-  def test_upload_results_file(self):
-    pass
+  #def test_upload_results_file(self):
+  #  password = input("Password:")
+  #  user     = UserSSHClient("root",password)
+  #  logger   = Logs("logs/logTest2.log",1000)
+  #  FileHandler._uploadResultsFile("out/downloads_test/lol.tar.gz","~","138.68.128.182",22,user,logger)
+
+  def test_upload_all_results(self):
+    logger   = Logs("logs/logTest2.log",1000)
+    FileHandler.uploadBackResults("out/queue/uploadFilesQueue","out/resultsDir",logger)
 
 if __name__ == '__main__':
   unittest.main()
