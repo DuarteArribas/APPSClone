@@ -454,3 +454,5 @@ class FileHandler:
         FileHandler._removeFileFromQueueUploadFiles(uploadFilesQueueFile,result)
       else:
         pass
+
+  @staticmethod

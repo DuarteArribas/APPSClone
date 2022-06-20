@@ -24,7 +24,11 @@ if __name__ == '__main__':
     appsCloneConfig.getAPPSUploadFilesConfig("RESULTS_DIR")
   )
   #upload results (if any) to the respective upload directory
-  FileHandler
+  FileHandler.uploadBackResults(
+    appsCloneConfig.getUploadFilesConfig("RINEX_QUEUE"),
+    appsCloneConfig.getAPPSUploadFilesConfig("RESULTS_DIR"),
+    logger
+  )
   #check for new upload files (if any)
   FileHandler.downloadRinexFiles(
     appsCloneConfig.getUploadFilesConfig("UPLOAD_FILES_DIR"),
@@ -33,3 +37,4 @@ if __name__ == '__main__':
     logger
   )
   #upload files to apps (if any)
+  
