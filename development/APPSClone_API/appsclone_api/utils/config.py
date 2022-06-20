@@ -31,12 +31,12 @@ class Config:
     """
     return self.config.get("FILE_PATHS",filePathKey)
 
-  def getLogConfig(self,logKey):
+  def getLogConfig(self,key):
     """Get a config from the LOGS section on the config file.
 
     Parameters
     ----------
-    logKey : str
+    key : str
       The key corresponding to the wanted configuration
 
     Returns
@@ -44,4 +44,19 @@ class Config:
     str
       The corresponding configuration
     """
-    return self.config.get("LOGS",logKey)
+    return self.config.get("LOGS",key)
+
+  def getUploadFilesConfig(self,key):
+    """Get a config from the UPLOAD_FILES section on the config file.
+
+    Parameters
+    ----------
+    key : str
+      The key corresponding to the wanted configuration
+
+    Returns
+    ----------
+    str
+      The corresponding configuration
+    """
+    return self.config.get("UPLOAD_FILES",key)

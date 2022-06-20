@@ -179,13 +179,13 @@ class TestFileHandler(unittest.TestCase):
   #  user = UserSSHClient("root",password)
   #  FileHandler._downloadRinexFile("~/arroza","out/downloads_test","138.68.128.182",22,user,logger)
 
-  def test_add_to_queue(self):
-    logger = Logs("logs/logTest2.log",1000)
-    FileHandler._addFileToQueueUploadFiles("out/queue/uploadFilesQueue","arroz","aa/bb/cc","192.168.8.2",22,logger)
+  #def test_add_to_queue(self):
+  #  logger = Logs("logs/logTest2.log",1000)
+  #  FileHandler._addFileToQueueUploadFiles("out/queue/uploadFilesQueue","arroz","aa/bb/cc","192.168.8.2",22,logger)
 
-  def test_download_files(self):
-    logger = Logs("logs/logTest2.log",1000)
-    FileHandler.downloadRinexFiles("in/uploadFilesTest/1","out/downloads_test","out/queue/uploadFilesQueue",logger)
+  #def test_download_files(self):
+  #  logger = Logs("logs/logTest2.log",1000)
+  #  FileHandler.downloadRinexFiles("in/uploadFilesTest/1","out/downloads_test","out/queue/uploadFilesQueue",logger)
 
 if __name__ == '__main__':
   unittest.main()
