@@ -193,8 +193,14 @@ class TestFileHandler(unittest.TestCase):
   #  conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
   #  FileHandler.handleQueueFilesStates(conn,"out/queue/queue","out/downloads")
 
-  def test_get_line_from_queue(self):
-    self.assertEqual(FileHandler._getUploadFileLine("out/queue/uploadFilesQueue","arroz_results.tar.gz"),"arroz ~ 138.68.128.181 22\n")
+  #def test_get_line_from_queue(self):
+  #  self.assertEqual(FileHandler._getFileLineFromQueueUploadFiles("out/queue/uploadFilesQueue","arroz_results.tar.gz"),"arroz ~ 138.68.128.181 22\n")
+
+  #def test_get_line_from_queue2(self):
+  #  self.assertEqual(FileHandler._getFileLineFromQueueUploadFiles("out/queue/uploadFilesQueue","aarroz_results.tar.gz"),None)
+
+  #def test_remove_line_from_queue(self):
+  #  FileHandler._removeFileToQueueUploadFiles("out/queue/uploadFilesQueue","massaaaa")
 
 if __name__ == '__main__':
   unittest.main()

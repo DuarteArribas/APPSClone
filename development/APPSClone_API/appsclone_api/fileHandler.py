@@ -319,6 +319,49 @@ class FileHandler:
     logger.writeLog(Logs.SEVERITY.INFO,fileAddedToQueueLog.format(file = rinexFile))
 
   @staticmethod
+  def _getFileLineFromQueueUploadFiles(uploadFilesQueueFile,result):
+    """Get a line from the upload files queue.
+
+    Parameters
+    ----------
+    uploadFilesQueueFile : str
+      The file, which contains the queue of the upload files
+    result               : str
+      The name of the results file
+
+    Returns
+    ----------
+    str or None
+      The line, which contains the given result or None if no line contains the given result
+    """
+    with open(uploadFilesQueueFile,"r") as f:
+      lines = f.readlines()
+      for line in lines:
+        if line.split(" ")[0] == result.split("_results")[0]:
+          return line
+      return None
+
+  @staticmethod
+  def _removeFileToQueueUploadFiles(uploadFilesQueueFile,result):
+    """Remove a line from the upload files queue.
+
+    Parameters
+    ----------
+    uploadFilesQueueFile : str
+      The file, which contains the queue of the upload files
+    result               : str
+      The name of the results file
+    """
+    newFileLines = ""
+    with open(uploadFilesQueueFile,"r") as f:
+      lines = f.readlines()
+      for line in lines:
+        if line.split(" ")[0] != result.split("_results")[0]:
+          newFileLines += line
+    with open(uploadFilesQueueFile,"w") as f: 
+      f.write(newFileLines)
+
+  @staticmethod
   def handleQueueFilesStates(conn,uploadedFilesQueueFile,resultsDir):
     """Handle the state of all files in the in uploaded files queue.
 
@@ -340,26 +383,8 @@ class FileHandler:
   @staticmethod
   def uploadBackResults(uploadFilesQueueFile,resultsDir):
     for result in os.listdir(resultsDir):
-      queueLine = FileHandler._getUploadFileLine(uploadFilesQueueFile,result)
+      queueLine = FileHandler._getFileLineFromQueueUploadFiles(uploadFilesQueueFile,result)
       if queueLine:
         pass
       else:
         pass
-
-  @staticmethod
-  def _getUploadFileLine(uploadFilesQueueFile,result):
-    """Get a line from the upload files queue.
-
-    Parameters
-    ----------
-    uploadFilesQueueFile : str
-      The file, which contains the queue of the upload files
-    result               : str
-      The name of the results file
-    """
-    with open(uploadFilesQueueFile,"r") as f:
-      lines = f.readlines()
-      for line in lines:
-        if line.split(" ")[0] == result.split("_results")[0]:
-          return line
-      return None
