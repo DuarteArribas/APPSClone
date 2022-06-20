@@ -202,5 +202,8 @@ class TestFileHandler(unittest.TestCase):
   #def test_remove_line_from_queue(self):
   #  FileHandler._removeFileFromQueueUploadFiles("out/queue/uploadFilesQueue","massaaaa")
 
+  def test_upload_results_file(self):
+    pass
+
 if __name__ == '__main__':
   unittest.main()

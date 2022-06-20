@@ -270,6 +270,60 @@ class FileHandler:
       )
 
   @staticmethod
+  def _uploadResultsFile(resultFile,uploadDir,ipToConnect,port,user,logger):
+    """Download a rinex file from the given server.
+
+    Parameters
+    ----------
+    pathToDownloadFrom : str
+      The path to the file on the server
+    downloadFolder     : str
+      The directory to download the files to 
+    ipToConnect        : str
+      The IP of the server
+    port               : int
+      The port to connect to the server on
+    user               : UserSSHClient
+      A user representation of the user that connects via ssh
+    logger     : Logs
+      The Logs object that will be used to log several actions
+    """
+    try:
+      logger.writeLog(
+        Logs.SEVERITY.INFO,
+        sshConnectAttemptLog.format(ip = ipToConnect,port = port,username = user.username)
+      )
+      ssh = FileHandler._createSSHClient(ipToConnect,port,user.username,user.password)
+      logger.writeLog(Logs.SEVERITY.INFO,connectAttemptSuccessfulLog)
+      scpClient = scp.SCPClient(ssh.get_transport())
+      scpClient.put(resultFile,uploadDir)
+    except paramiko.ssh_exception.BadAuthenticationType:
+      logger.writeLog(
+        Logs.SEVERITY.ERROR,
+        connectAttemptUnsuccessfulLog.format(reason = f"Could not connect to ip {ipToConnect}")
+      )
+      return
+    except paramiko.ssh_exception.NoValidConnectionsError:
+      logger.writeLog(
+        Logs.SEVERITY.ERROR,
+        connectAttemptUnsuccessfulLog.format(reason = f"The port {port} is not available")
+      )
+      return
+    except paramiko.ssh_exception.AuthenticationException:
+      logger.writeLog(
+        Logs.SEVERITY.ERROR,
+        connectAttemptUnsuccessfulLog.format(reason = "Could not authenticate user. The username or password may be invalid")
+      )
+      return      
+    except scp.SCPException:
+      return
+    except:
+      logger.writeLog(Logs.SEVERITY.CRITICAL,unexpectedErrorLog)
+      return
+    finally:
+      pass
+
+  @staticmethod
   def _createSSHClient(ip,port,user,password):
     """Create ssh client.
 
@@ -381,10 +435,11 @@ class FileHandler:
         conn.handleFileState(uuid,uploadedFilesQueueFile,resultsDir)
 
   @staticmethod
-  def uploadBackResults(uploadFilesQueueFile,resultsDir):
+  def uploadBackResults(uploadFilesQueueFile,resultsDir,logger):
     for result in os.listdir(resultsDir):
       queueLine = FileHandler._getFileLineFromQueueUploadFiles(uploadFilesQueueFile,result)
       if queueLine:
-        FileHandler._removeFileFromQueueUploadFiles
+
+        FileHandler._removeFileFromQueueUploadFiles(uploadFilesQueueFile,result)
       else:
         pass
