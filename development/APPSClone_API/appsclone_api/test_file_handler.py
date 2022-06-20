@@ -200,7 +200,7 @@ class TestFileHandler(unittest.TestCase):
   #  self.assertEqual(FileHandler._getFileLineFromQueueUploadFiles("out/queue/uploadFilesQueue","aarroz_results.tar.gz"),None)
 
   #def test_remove_line_from_queue(self):
-  #  FileHandler._removeFileToQueueUploadFiles("out/queue/uploadFilesQueue","massaaaa")
+  #  FileHandler._removeFileFromQueueUploadFiles("out/queue/uploadFilesQueue","massaaaa")
 
 if __name__ == '__main__':
   unittest.main()

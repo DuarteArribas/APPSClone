@@ -342,7 +342,7 @@ class FileHandler:
       return None
 
   @staticmethod
-  def _removeFileToQueueUploadFiles(uploadFilesQueueFile,result):
+  def _removeFileFromQueueUploadFiles(uploadFilesQueueFile,result):
     """Remove a line from the upload files queue.
 
     Parameters
@@ -385,6 +385,6 @@ class FileHandler:
     for result in os.listdir(resultsDir):
       queueLine = FileHandler._getFileLineFromQueueUploadFiles(uploadFilesQueueFile,result)
       if queueLine:
-        pass
+        FileHandler._removeFileFromQueueUploadFiles
       else:
         pass
