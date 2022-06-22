@@ -44,6 +44,8 @@ class FileHandler:
         port,
         logger
       )
+      os.remove(FileHandler._concatenateFileToPath(uploadFile,uploadFilesDirectory))
+
     logger.writeLog(Logs.SEVERITY.INFO,downloadRinexFilesRoutineEndLog)
 
   @staticmethod
