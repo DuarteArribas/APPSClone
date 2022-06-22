@@ -564,10 +564,16 @@ class TestConnection(unittest.TestCase):
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
     print(conn.getQuotaLeft())
 
-  def test_update_queue_with_name(self):
+  #def test_update_queue_with_name(self):
+  #  logger = Logs("logs/logTest.log",1000)
+  #  conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #  conn.updateQueueWithName("4","lol","out/queue/uploadFilesQueue")
+
+  def test_update_queue_with_uuid(self):
     logger = Logs("logs/logTest.log",1000)
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    conn.updateQueueWithName("4","lol","out/queue/uploadFilesQueue")
+    conn._Connection_APPS__addUploadToUploadQueue("a112-3344-112-445-11","vinagre","out/queue/uploadFilesQueue")
+  
 
 if __name__ == '__main__':
   unittest.main()

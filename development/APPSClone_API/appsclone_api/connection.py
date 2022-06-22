@@ -128,7 +128,7 @@ class Connection_APPS:
       self.logger.writeLog(Logs.SEVERITY.INFO,connectionFailedLog)
     return connectionStatus
 
-  def uploadFile(self,file,uploadedFilesQueueFile,uploadArgs):
+  def uploadFile(self,file,uploadedFilesQueueFile,uploadArgs,uploadFilesQueueFile):
     """Upload file to APPS and add it to uploaded queue.
 
     Parameters
@@ -162,6 +162,7 @@ class Connection_APPS:
       )
       self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccessLog.format(file = file))
       self.__addUploadToQueue(fileResponseObject["id"],file,uploadedFilesQueueFile)
+      self.__addUploadToUploadQueue(fileResponseObject["id"],file.split("/")[-1],uploadFilesQueueFile)
     self.logger.writeLog(Logs.SEVERITY.INFO,uploadEndLog.format(file = file))
 
   def getQuotaLeft(self):
@@ -328,6 +329,22 @@ class Connection_APPS:
     with open(uploadedFilesQueueFile,"w") as f:
       f.write(newQueue)
       self.logger.writeLog(Logs.SEVERITY.INFO,removedFromQueueSuccessLog.format(file = file))
+
+  def __addUploadToUploadQueue(self,uuid,file,uploadFilesQueueFile):
+    newLines = ""
+    with open(uploadFilesQueueFile,"r") as f:
+      lines = f.readlines()
+      for line in lines:
+        if line.split(" ")[0] == file:
+          temp = line.split(" ")
+          temp[-1] = temp[-1].split("\n")[0]
+          temp.append(uuid)
+          newLines += " ".join(temp)
+          newLines += "\n"
+        else:
+          newLines += line
+    with open(uploadFilesQueueFile,"w") as f:
+      f.write(newLines)
 
   def __updateUploadArgs(self,uploadArgs):
     """Update uploading args with the specified ones or with the defaults ones if no args
