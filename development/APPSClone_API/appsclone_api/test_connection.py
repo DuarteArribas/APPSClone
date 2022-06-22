@@ -564,5 +564,10 @@ class TestConnection(unittest.TestCase):
     conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
     print(conn.getQuotaLeft())
 
+  def test_update_queue_with_name(self):
+    logger = Logs("logs/logTest.log",1000)
+    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+    conn.updateQueueWithName("4","lol","out/queue/uploadFilesQueue")
+
 if __name__ == '__main__':
   unittest.main()

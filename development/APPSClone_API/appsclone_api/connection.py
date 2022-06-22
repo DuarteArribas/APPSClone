@@ -383,7 +383,7 @@ class Connection_APPS:
     else:
       return arg in Connection_APPS.DEFAULT_ARGS[argName][1]
 
-  def handleFileState(self,uuid,uploadedFilesQueueFile,downloadFolder):
+  def handleFileState(self,uuid,uploadedFilesQueueFile,downloadFolder,uploadFilesQueueFile):
     """Handle what should be done, given the state of a file.
 
     Parameters
@@ -400,6 +400,7 @@ class Connection_APPS:
     if fileDetails != None:
       fileState   = fileDetails["state"]
       file        = fileDetails["name"]
+      self.updateQueueWithName(uuid,file,uploadFilesQueueFile)
       self.logger.writeLog(Logs.SEVERITY.INFO,checkStateStartFileLog.format(file = file))
       if fileState   == defines.Data.NASCENT:
         self.logger.writeLog(Logs.SEVERITY.INFO,stateLog.format(file = file,state = "Nascent"))
@@ -462,6 +463,20 @@ class Connection_APPS:
     finally:
       self.logger.writeLog(Logs.SEVERITY.INFO,fileDataEndLog.format(uuid = uuid))
       return fileData
+
+  def updateQueueWithName(self,uuid,file,uploadFilesQueueFile):
+    newLines = ""
+    with open(uploadFilesQueueFile,"r") as f:
+      lines = f.readlines()
+      for line in lines:
+        if line.split(" ")[-1].split("\n")[0] == uuid:
+          temp = line.split(" ")
+          temp[0] = file
+          line = " ".join(temp)
+        newLines += line
+    print(newLines)
+    with open(uploadFilesQueueFile,"w") as f:
+      f.write(newLines)
 
   def __approveSubmission(self,uuid,file,uploadedFilesQueueFile):
     """Approve the submission after it has been verified.

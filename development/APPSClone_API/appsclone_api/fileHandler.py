@@ -454,6 +454,7 @@ class FileHandler:
           logger
         )
         FileHandler._removeFileFromQueueUploadFiles(uploadFilesQueueFile,result)
+        os.remove(FileHandler._concatenateFileToPath(result,resultsDir))
       else:
         pass
 
