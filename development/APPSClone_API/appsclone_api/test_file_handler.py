@@ -184,9 +184,9 @@ class TestFileHandler(unittest.TestCase):
   #  logger = Logs("logs/logTest2.log",1000)
   #  FileHandler._addFileToQueueUploadFiles("out/queue/uploadFilesQueue","arroz","aa/bb/cc","192.168.8.2",22,logger)
 
-  def test_download_files(self):
-    logger = Logs("logs/logTest2.log",1000)
-    FileHandler.downloadRinexFiles("in/uploadFilesTest/1","out/downloads_test","out/queue/uploadFilesQueue",logger)
+  #def test_download_files(self):
+  #  logger = Logs("logs/logTest2.log",1000)
+  #  FileHandler.downloadRinexFiles("in/uploadFilesTest/1","out/downloads_test","out/queue/uploadFilesQueue",logger)
 
   #def test_handle_states_of_uploaded_files_in_queue(self):
   #  logger = Logs("logs/logTest2.log",1000)
@@ -212,25 +212,25 @@ class TestFileHandler(unittest.TestCase):
   #  logger   = Logs("logs/logTest2.log",1000)
   #  FileHandler.uploadBackResults("out/queue/uploadFilesQueue","out/resultsDir",logger)
 
-  #def test_upload_all_rinex(self):
-  #  logger   = Logs("logs/logTest2.log",1000)
-  #  args = {
-  #    "pressure"             : None,
-  #    "attitude"             : None,
-  #    "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
-  #    "access"               : defines.Data.ACCESS_DEFAULT,
-  #    "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
-  #    "product"              : "arroz",
-  #    "troposphere_model"    : defines.GIPSYData.TROP_GMF,
-  #    "ocean_loading"        : True,
-  #    "model_tides"          : True,
-  #    "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
-  #    "elev_angle_cutoff"    : 7.5,
-  #    "solution_period"      : 300,
-  #    "generate_quaternions" : False,
-  #  }
-  #  conn = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-  #  FileHandler.uploadAllRinexToApps(conn,"in/test2","out/queue/queue",args,logger)
+  def test_upload_all_rinex(self):
+    logger   = Logs("logs/logTest2.log",1000)
+    args = {
+      "pressure"             : None,
+      "attitude"             : None,
+      "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
+      "access"               : defines.Data.ACCESS_DEFAULT,
+      "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+      "product"              : "arroz",
+      "troposphere_model"    : defines.GIPSYData.TROP_GMF,
+      "ocean_loading"        : True,
+      "model_tides"          : True,
+      "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
+      "elev_angle_cutoff"    : 7.5,
+      "solution_period"      : 300,
+      "generate_quaternions" : False,
+    }
+    conn = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+    FileHandler.uploadAllRinexToApps(conn,"in/test2","out/queue/queue",args,logger)
 
 if __name__ == '__main__':
   unittest.main()

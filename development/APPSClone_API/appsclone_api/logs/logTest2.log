@@ -1,63 +1,3 @@
-2022-06-20 16:22:58.441751 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
-2022-06-20 16:22:58.453721 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-20 16:22:58.465335 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
-2022-06-20 16:22:58.473581 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
-2022-06-20 16:22:58.484486 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
-2022-06-20 16:22:58.496019 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-20 16:22:58.507168 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
-2022-06-20 16:22:58.518675 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
-2022-06-20 16:22:58.530152 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-20 16:22:58.542051 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-20 16:22:58.553439 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-20 16:22:58.563209 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
-2022-06-20 16:22:58.573490 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-20 16:22:58.584608 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
-2022-06-20 16:22:58.596744 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
-2022-06-20 16:22:58.608238 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
-2022-06-20 16:22:58.620610 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
-2022-06-20 16:22:58.631708 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
-2022-06-20 16:22:58.644525 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
-2022-06-20 16:22:58.657031 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
-2022-06-20 16:22:58.668529 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
-2022-06-20 17:20:50.028497 (INFO)     | Checking for upload files.
-2022-06-20 17:20:50.043509 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-20 17:20:50.056184 (INFO)     | The upload file 'uploadFile2' was validated.
-2022-06-20 17:20:50.069264 (INFO)     | The upload file 'uploadFile3' was validated.
-2022-06-20 17:20:50.081872 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-20 17:20:50.093539 (INFO)     | The upload file 'uploadFile5' was validated.
-2022-06-20 17:20:50.101935 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
-2022-06-20 17:20:50.108595 (INFO)     | Checking for upload files.
-2022-06-20 17:20:50.121845 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-20 17:20:50.135077 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
-2022-06-20 17:20:50.148328 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid fields in file'.
-2022-06-20 17:20:50.160989 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-20 17:20:50.173374 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid fields in file'.
-2022-06-20 17:20:50.181095 (INFO)     | 2 upload files were found. Attempting to download corresponding rinex files.
-2022-06-20 17:20:50.191274 (ERROR)    | The upload file 'arroz' is invalid. Reason: 'Invalid fields in file'.
-2022-06-20 17:20:50.202831 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-20 17:20:50.216543 (ERROR)    | The upload file 'uploadFile9' is invalid. Reason: 'Invalid fields in file'.
-2022-06-20 17:20:50.230254 (ERROR)    | The upload file 'uploadFile10' is invalid. Reason: 'Invalid fields in file'.
-2022-06-20 17:20:50.244441 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-20 17:20:50.258212 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-20 17:20:50.271672 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-20 17:20:50.282028 (ERROR)    | The upload file 'uploadFile14' is invalid. Reason: 'Not a file'.
-2022-06-20 17:20:50.294926 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-20 17:20:50.309168 (ERROR)    | The upload file 'lol' is invalid. Reason: 'Invalid fields in file'.
-2022-06-20 17:20:50.322032 (ERROR)    | The upload file 'uploadFile' is invalid. Reason: 'Invalid ip'.
-2022-06-20 17:20:50.336140 (ERROR)    | The upload file 'uploadFile2' is invalid. Reason: 'Invalid ip'.
-2022-06-20 17:20:50.349256 (ERROR)    | The upload file 'uploadFile3' is invalid. Reason: 'Invalid ip'.
-2022-06-20 17:20:50.363464 (ERROR)    | The upload file 'uploadFile4' is invalid. Reason: 'Invalid ip'.
-2022-06-20 17:20:50.376832 (ERROR)    | The upload file 'uploadFile5' is invalid. Reason: 'Invalid ip'.
-2022-06-20 17:20:50.389770 (ERROR)    | The upload file 'uploadFile6' is invalid. Reason: 'Invalid ip'.
-2022-06-20 17:20:50.403477 (ERROR)    | The upload file 'uploadFile7' is invalid. Reason: 'Invalid ip'.
-2022-06-20 17:20:52.044760 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
-2022-06-20 17:20:52.763795 (INFO)     | Successfully established a connection to the server.
-2022-06-20 17:26:47.404036 (INFO)     | === RINEX FILES DOWNLOAD ROUTINE (START) ===
-2022-06-20 17:26:47.412175 (INFO)     | Checking for upload files.
-2022-06-20 17:26:47.425760 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-20 17:26:47.438114 (INFO)     | The upload file 'uploadFile2' was validated.
-2022-06-20 17:26:47.452175 (INFO)     | The upload file 'uploadFile3' was validated.
-2022-06-20 17:26:47.464261 (INFO)     | The upload file 'uploadFile4' was validated.
 2022-06-20 17:26:47.476143 (INFO)     | The upload file 'uploadFile5' was validated.
 2022-06-20 17:26:47.483814 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
 2022-06-20 17:26:47.492701 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
@@ -997,3 +937,63 @@
 2022-06-22 17:42:09.591522 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (END) ==
 2022-06-22 17:42:09.600785 (INFO)     | The file arroz was added upload files queue file.
 2022-06-22 17:42:09.608257 (INFO)     | === RINEX FILES DOWNLOAD ROUTINE (END) ===
+2022-06-22 17:46:36.386202 (INFO)     | === UPLOAD START on file in/test2/arroz ===
+2022-06-22 17:46:36.430835 (INFO)     | The file in/test2/arroz was validated and is being considered a valid file for uploading.
+2022-06-22 17:46:36.438915 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
+2022-06-22 17:46:49.926897 (INFO)     | Successfuly uploaded file in/test2/arroz to APPS.
+2022-06-22 17:46:49.935699 (INFO)     | Successfuly added file in/test2/arroz to the uploaded queue.
+2022-06-22 17:46:49.943232 (INFO)     | === UPLOAD END on file in/test2/arroz ===
+2022-06-22 17:46:51.565663 (INFO)     | === UPLOAD START on file in/test2/feijao ===
+2022-06-22 17:46:51.605158 (INFO)     | The file in/test2/feijao was validated and is being considered a valid file for uploading.
+2022-06-22 17:46:51.612539 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
+2022-06-22 17:46:59.701971 (INFO)     | Successfuly uploaded file in/test2/feijao to APPS.
+2022-06-22 17:46:59.712372 (INFO)     | Successfuly added file in/test2/feijao to the uploaded queue.
+2022-06-22 17:46:59.718738 (INFO)     | === UPLOAD END on file in/test2/feijao ===
+2022-06-22 17:47:01.287443 (INFO)     | === UPLOAD START on file in/test2/grao ===
+2022-06-22 17:47:01.326246 (INFO)     | The file in/test2/grao was validated and is being considered a valid file for uploading.
+2022-06-22 17:47:01.334159 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
+2022-06-22 17:47:09.265693 (INFO)     | Successfuly uploaded file in/test2/grao to APPS.
+2022-06-22 17:47:09.278158 (INFO)     | Successfuly added file in/test2/grao to the uploaded queue.
+2022-06-22 17:47:09.287099 (INFO)     | === UPLOAD END on file in/test2/grao ===
+2022-06-22 17:47:10.918146 (INFO)     | === UPLOAD START on file in/test2/massa ===
+2022-06-22 17:47:10.973095 (INFO)     | The file in/test2/massa was validated and is being considered a valid file for uploading.
+2022-06-22 17:47:10.983216 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
+2022-06-22 17:47:19.463744 (INFO)     | Successfuly uploaded file in/test2/massa to APPS.
+2022-06-22 17:47:19.472340 (INFO)     | Successfuly added file in/test2/massa to the uploaded queue.
+2022-06-22 17:47:19.478754 (INFO)     | === UPLOAD END on file in/test2/massa ===
+2022-06-22 17:47:21.076716 (INFO)     | === UPLOAD START on file in/test2/vinagre ===
+2022-06-22 17:47:21.117428 (INFO)     | The file in/test2/vinagre was validated and is being considered a valid file for uploading.
+2022-06-22 17:47:21.124904 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
+2022-06-22 17:47:29.005958 (INFO)     | Successfuly uploaded file in/test2/vinagre to APPS.
+2022-06-22 17:47:29.014159 (INFO)     | Successfuly added file in/test2/vinagre to the uploaded queue.
+2022-06-22 17:47:29.021319 (INFO)     | === UPLOAD END on file in/test2/vinagre ===
+2022-06-22 17:50:02.313876 (INFO)     | === UPLOAD START on file in/test2/arroz ===
+2022-06-22 17:50:02.351712 (INFO)     | The file in/test2/arroz was validated and is being considered a valid file for uploading.
+2022-06-22 17:50:02.359663 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
+2022-06-22 17:50:09.994130 (INFO)     | Successfuly uploaded file in/test2/arroz to APPS.
+2022-06-22 17:50:10.005585 (INFO)     | Successfuly added file in/test2/arroz to the uploaded queue.
+2022-06-22 17:50:10.012057 (INFO)     | === UPLOAD END on file in/test2/arroz ===
+2022-06-22 17:50:11.592894 (INFO)     | === UPLOAD START on file in/test2/feijao ===
+2022-06-22 17:50:11.627787 (INFO)     | The file in/test2/feijao was validated and is being considered a valid file for uploading.
+2022-06-22 17:50:11.636286 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
+2022-06-22 17:50:19.491020 (INFO)     | Successfuly uploaded file in/test2/feijao to APPS.
+2022-06-22 17:50:19.499824 (INFO)     | Successfuly added file in/test2/feijao to the uploaded queue.
+2022-06-22 17:50:19.505721 (INFO)     | === UPLOAD END on file in/test2/feijao ===
+2022-06-22 17:50:21.101521 (INFO)     | === UPLOAD START on file in/test2/grao ===
+2022-06-22 17:50:21.136884 (INFO)     | The file in/test2/grao was validated and is being considered a valid file for uploading.
+2022-06-22 17:50:21.144111 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
+2022-06-22 17:50:28.686076 (INFO)     | Successfuly uploaded file in/test2/grao to APPS.
+2022-06-22 17:50:28.694733 (INFO)     | Successfuly added file in/test2/grao to the uploaded queue.
+2022-06-22 17:50:28.701117 (INFO)     | === UPLOAD END on file in/test2/grao ===
+2022-06-22 17:50:30.293053 (INFO)     | === UPLOAD START on file in/test2/massa ===
+2022-06-22 17:50:30.334053 (INFO)     | The file in/test2/massa was validated and is being considered a valid file for uploading.
+2022-06-22 17:50:30.342113 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
+2022-06-22 17:50:38.352746 (INFO)     | Successfuly uploaded file in/test2/massa to APPS.
+2022-06-22 17:50:38.362690 (INFO)     | Successfuly added file in/test2/massa to the uploaded queue.
+2022-06-22 17:50:38.369374 (INFO)     | === UPLOAD END on file in/test2/massa ===
+2022-06-22 17:50:39.948884 (INFO)     | === UPLOAD START on file in/test2/vinagre ===
+2022-06-22 17:50:39.990691 (INFO)     | The file in/test2/vinagre was validated and is being considered a valid file for uploading.
+2022-06-22 17:50:39.998546 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
+2022-06-22 17:50:47.904015 (INFO)     | Successfuly uploaded file in/test2/vinagre to APPS.
+2022-06-22 17:50:47.913686 (INFO)     | Successfuly added file in/test2/vinagre to the uploaded queue.
+2022-06-22 17:50:47.920629 (INFO)     | === UPLOAD END on file in/test2/vinagre ===

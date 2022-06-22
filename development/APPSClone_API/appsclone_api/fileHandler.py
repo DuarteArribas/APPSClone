@@ -462,3 +462,5 @@ class FileHandler:
     for rinex in os.listdir(downloadFolder):
       if os.path.getsize(FileHandler._concatenateFileToPath(rinex,downloadFolder)) / (1024 * 1024.0) < conn.getQuotaLeft():
         conn.uploadFile(FileHandler._concatenateFileToPath(rinex,downloadFolder),uploadedFilesQueue,args)
+        os.remove(FileHandler._concatenateFileToPath(rinex,downloadFolder))
+        os.remove(FileHandler._concatenateFileToPath(rinex,downloadFolder)+".gz")
