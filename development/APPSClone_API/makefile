@@ -30,6 +30,9 @@ setup:
 	$(PIP) install -r requirements.txt
 
 test:
+	$(PYTHON) -m unittest $(testDir)/test_$(tf).py > /dev/null
+
+testPrint:
 	$(PYTHON) -m unittest $(testDir)/test_$(tf).py
 
 clean:

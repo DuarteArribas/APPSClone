@@ -1,43 +1,3 @@
-2022-06-22 18:33:54.027478 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
-2022-06-22 18:33:54.688974 (INFO)     | Successfully established a connection to the server.
-2022-06-22 18:33:56.500774 (INFO)     | Successfully copied file 'grao' to 'out/downloads_test'.
-2022-06-22 18:33:56.507594 (INFO)     | == RINEX FILE 'grao' DOWNLOAD SUBROUTINE (END) ==
-2022-06-22 18:33:56.515208 (INFO)     | The file grao was added upload files queue file.
-2022-06-22 18:33:56.523225 (INFO)     | == RINEX FILE 'vinagre' DOWNLOAD SUBROUTINE (START) ==
-2022-06-22 18:33:56.529448 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
-2022-06-22 18:33:57.206099 (INFO)     | Successfully established a connection to the server.
-2022-06-22 18:33:59.031519 (INFO)     | Successfully copied file 'vinagre' to 'out/downloads_test'.
-2022-06-22 18:33:59.038372 (INFO)     | == RINEX FILE 'vinagre' DOWNLOAD SUBROUTINE (END) ==
-2022-06-22 18:33:59.046228 (INFO)     | The file vinagre was added upload files queue file.
-2022-06-22 18:33:59.052209 (INFO)     | === RINEX FILES DOWNLOAD ROUTINE (END) ===
-2022-06-22 18:34:00.662922 (INFO)     | === UPLOAD START on file out/downloads_test/arroz ===
-2022-06-22 18:34:00.698308 (INFO)     | The file out/downloads_test/arroz was validated and is being considered a valid file for uploading.
-2022-06-22 18:34:00.705076 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
-2022-06-22 18:34:11.756434 (INFO)     | Successfuly uploaded file out/downloads_test/arroz to APPS.
-2022-06-22 18:34:11.764331 (INFO)     | Successfuly added file out/downloads_test/arroz to the uploaded queue.
-2022-06-22 18:34:11.774328 (INFO)     | === UPLOAD END on file out/downloads_test/arroz ===
-2022-06-22 18:34:13.371774 (INFO)     | === UPLOAD START on file out/downloads_test/feijao ===
-2022-06-22 18:34:13.416012 (INFO)     | The file out/downloads_test/feijao was validated and is being considered a valid file for uploading.
-2022-06-22 18:34:13.424383 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
-2022-06-22 18:34:21.326366 (INFO)     | Successfuly uploaded file out/downloads_test/feijao to APPS.
-2022-06-22 18:34:21.336721 (INFO)     | Successfuly added file out/downloads_test/feijao to the uploaded queue.
-2022-06-22 18:34:21.348566 (INFO)     | === UPLOAD END on file out/downloads_test/feijao ===
-2022-06-22 18:34:22.966569 (INFO)     | === UPLOAD START on file out/downloads_test/grao ===
-2022-06-22 18:34:23.009007 (INFO)     | The file out/downloads_test/grao was validated and is being considered a valid file for uploading.
-2022-06-22 18:34:23.016759 (WARNING)  | The value `arroz` is invalid for argument product. Using default value `B`.
-2022-06-22 18:38:28.110912 (INFO)     | === RINEX FILES DOWNLOAD ROUTINE (START) ===
-2022-06-22 18:38:28.119055 (INFO)     | Checking for upload files.
-2022-06-22 18:38:28.128442 (INFO)     | No upload files were found.
-2022-06-22 18:38:28.133058 (INFO)     | === RINEX FILES DOWNLOAD ROUTINE (END) ===
-2022-06-22 18:38:52.335517 (INFO)     | === RINEX FILES DOWNLOAD ROUTINE (START) ===
-2022-06-22 18:38:52.344596 (INFO)     | Checking for upload files.
-2022-06-22 18:38:52.359140 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-22 18:38:52.372136 (INFO)     | The upload file 'uploadFile2' was validated.
-2022-06-22 18:38:52.385239 (INFO)     | The upload file 'uploadFile3' was validated.
-2022-06-22 18:38:52.398542 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-22 18:38:52.411763 (INFO)     | The upload file 'uploadFile5' was validated.
-2022-06-22 18:38:52.420104 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
-2022-06-22 18:38:52.429580 (INFO)     | == RINEX FILE 'arroz' DOWNLOAD SUBROUTINE (START) ==
 2022-06-22 18:38:52.433864 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
 2022-06-22 18:38:53.275151 (INFO)     | Successfully established a connection to the server.
 2022-06-22 18:39:07.841966 (INFO)     | Successfully copied file 'arroz' to 'out/downloads_test'.
@@ -997,3 +957,43 @@
 2022-06-22 19:07:18.941148 (INFO)     | Checking for upload files.
 2022-06-22 19:07:18.952483 (INFO)     | No upload files were found.
 2022-06-22 19:07:18.958006 (INFO)     | === RINEX FILES DOWNLOAD ROUTINE (END) ===
+2022-06-23 22:25:20.669869 (INFO)     | info lol
+2022-06-23 22:25:20.677483 (WARNING)  | warning lol
+2022-06-23 22:25:20.684068 (ERROR)    | error lol
+2022-06-23 22:25:20.691250 (CRITICAL) | critical lol
+2022-06-23 22:25:23.702576 (INFO)     | after 3 seconds
+2022-06-23 22:25:50.572050 (INFO)     | info lol
+2022-06-23 22:25:50.580850 (WARNING)  | warning lol
+2022-06-23 22:25:50.588523 (ERROR)    | error lol
+2022-06-23 22:25:50.595719 (CRITICAL) | critical lol
+2022-06-23 22:25:53.605984 (INFO)     | after 3 seconds
+2022-06-23 22:28:11.673980 (INFO)     | info lol
+2022-06-23 22:28:11.681569 (WARNING)  | warning lol
+2022-06-23 22:28:11.688351 (ERROR)    | error lol
+2022-06-23 22:28:11.697030 (CRITICAL) | critical lol
+2022-06-23 22:28:14.708542 (INFO)     | after 3 seconds
+2022-06-23 22:28:28.673852 (INFO)     | info lol
+2022-06-23 22:28:28.680772 (WARNING)  | warning lol
+2022-06-23 22:28:28.687556 (ERROR)    | error lol
+2022-06-23 22:28:28.695790 (CRITICAL) | critical lol
+2022-06-23 22:28:31.706333 (INFO)     | after 3 seconds
+2022-06-23 22:28:38.411090 (INFO)     | info lol
+2022-06-23 22:28:38.418517 (WARNING)  | warning lol
+2022-06-23 22:28:38.425042 (ERROR)    | error lol
+2022-06-23 22:28:38.431961 (CRITICAL) | critical lol
+2022-06-23 22:28:41.441831 (INFO)     | after 3 seconds
+2022-06-23 22:28:53.031453 (INFO)     | info lol
+2022-06-23 22:28:53.038963 (WARNING)  | warning lol
+2022-06-23 22:28:53.046758 (ERROR)    | error lol
+2022-06-23 22:28:53.053161 (CRITICAL) | critical lol
+2022-06-23 22:28:56.063783 (INFO)     | after 3 seconds
+2022-06-23 22:29:36.689074 (INFO)     | info lol
+2022-06-23 22:29:36.697192 (WARNING)  | warning lol
+2022-06-23 22:29:36.704289 (ERROR)    | error lol
+2022-06-23 22:29:36.711787 (CRITICAL) | critical lol
+2022-06-23 22:29:39.722001 (INFO)     | after 3 seconds
+2022-06-23 22:47:36.370267 (INFO)     | info lol
+2022-06-23 22:47:36.379749 (WARNING)  | warning lol
+2022-06-23 22:47:36.389841 (ERROR)    | error lol
+2022-06-23 22:47:36.398770 (CRITICAL) | critical lol
+2022-06-23 22:47:39.411556 (INFO)     | after 3 seconds

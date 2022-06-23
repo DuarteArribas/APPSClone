@@ -2,13 +2,14 @@ import datetime
 import logging
 import re
 from enum import Enum
+
 class Logs:
   """A logging system, that formats logs according to their severity.
 
   Attributes
   ----------
   SEVERITY     : enum
-    Represents the logs severity in an easier to write way
+    The logs severity in an easier to write way
   MIN_NUM_LOGS : int
     The minimum number of logs allowed
   MAX_NUM_LOGS : int
@@ -42,8 +43,8 @@ class Logs:
     logging.basicConfig(level = logging.INFO,filename = loggingFile,format = "%(message)s")
 
   def writeLog(self,severity,message):
-    """Write a log to a file, according to its severity. Debug logs are not written, but are the default, if
-       the parameter is misspelled.
+    """Write a log to a file, according to its severity. Debug logs are not 
+    written, but are the default if the parameter is misspelled.
 
     Parameters
     ----------
@@ -68,7 +69,7 @@ class Logs:
     self.__sanitizeLogs()
 
   def __setLogMessage(self,severity,message):
-    """Format the logging message, so that it stays aligned and the date, severity and message are logged.
+    """Format the logging message, so that it stays aligned. The date, severity and message are logged.
 
     Parameters
     ----------
@@ -81,7 +82,8 @@ class Logs:
     return f"{datetime.datetime.now()} ({severityString}){' '*(8-len(severityString))} | {message}"
 
   def __sanitizeLogs(self):
-    """Sanitize logs, so that logs from APPS don't appear and make sure the maximum amount of logs is not exceeded."""
+    """Sanitize logs, so that logs from APPS don't appear and that the file 
+    is truncated if it exceedes the maximum amount of allowed logs."""
     newLoggingFile = ""
     with open(self.loggingFile,"r+") as f:
       lines = f.readlines()
