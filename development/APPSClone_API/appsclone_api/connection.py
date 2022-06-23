@@ -128,7 +128,7 @@ class Connection_APPS:
       self.logger.writeLog(Logs.SEVERITY.INFO,connectionFailedLog)
     return connectionStatus
 
-  def uploadFile(self,file,uploadedFilesQueueFile,uploadArgs,uploadFilesQueueFile):
+  def uploadFile(self,file,uploadedFilesQueueFile,uploadArgs):
     """Upload file to APPS and add it to uploaded queue.
 
     Parameters
@@ -162,7 +162,6 @@ class Connection_APPS:
       )
       self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccessLog.format(file = file))
       self.__addUploadToQueue(fileResponseObject["id"],file,uploadedFilesQueueFile)
-      self.__addUploadToUploadQueue(fileResponseObject["id"],file.split("/")[-1],uploadFilesQueueFile)
     self.logger.writeLog(Logs.SEVERITY.INFO,uploadEndLog.format(file = file))
 
   def getQuotaLeft(self):
@@ -330,22 +329,6 @@ class Connection_APPS:
       f.write(newQueue)
       self.logger.writeLog(Logs.SEVERITY.INFO,removedFromQueueSuccessLog.format(file = file))
 
-  def __addUploadToUploadQueue(self,uuid,file,uploadFilesQueueFile):
-    newLines = ""
-    with open(uploadFilesQueueFile,"r") as f:
-      lines = f.readlines()
-      for line in lines:
-        if line.split(" ")[0] == file:
-          temp = line.split(" ")
-          temp[-1] = temp[-1].split("\n")[0]
-          temp.append(uuid)
-          newLines += " ".join(temp)
-          newLines += "\n"
-        else:
-          newLines += line
-    with open(uploadFilesQueueFile,"w") as f:
-      f.write(newLines)
-
   def __updateUploadArgs(self,uploadArgs):
     """Update uploading args with the specified ones or with the defaults ones if no args
     are specified or if they're incorrect.
@@ -400,7 +383,7 @@ class Connection_APPS:
     else:
       return arg in Connection_APPS.DEFAULT_ARGS[argName][1]
 
-  def handleFileState(self,uuid,uploadedFilesQueueFile,downloadFolder,uploadFilesQueueFile):
+  def handleFileState(self,uuid,uploadedFilesQueueFile,downloadFolder):
     """Handle what should be done, given the state of a file.
 
     Parameters
@@ -417,7 +400,6 @@ class Connection_APPS:
     if fileDetails != None:
       fileState   = fileDetails["state"]
       file        = fileDetails["name"]
-      self.updateQueueWithName(uuid,file,uploadFilesQueueFile)
       self.logger.writeLog(Logs.SEVERITY.INFO,checkStateStartFileLog.format(file = file))
       if fileState   == defines.Data.NASCENT:
         self.logger.writeLog(Logs.SEVERITY.INFO,stateLog.format(file = file,state = "Nascent"))
@@ -480,20 +462,6 @@ class Connection_APPS:
     finally:
       self.logger.writeLog(Logs.SEVERITY.INFO,fileDataEndLog.format(uuid = uuid))
       return fileData
-
-  def updateQueueWithName(self,uuid,file,uploadFilesQueueFile):
-    newLines = ""
-    with open(uploadFilesQueueFile,"r") as f:
-      lines = f.readlines()
-      for line in lines:
-        if line.split(" ")[-1].split("\n")[0] == uuid:
-          temp = line.split(" ")
-          temp[0] = file
-          line = " ".join(temp)
-        newLines += line
-    print(newLines)
-    with open(uploadFilesQueueFile,"w") as f:
-      f.write(newLines)
 
   def __approveSubmission(self,uuid,file,uploadedFilesQueueFile):
     """Approve the submission after it has been verified.

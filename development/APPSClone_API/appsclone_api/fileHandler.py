@@ -29,24 +29,40 @@ class FileHandler:
       The Logs object that will be used to log several actions
     """
     logger.writeLog(Logs.SEVERITY.INFO,downloadRinexFilesRoutineStartLog)
+    alreadyUploadedFileNames = []
+    alreadyUploadedFileNames.append(FileHandler._getAlreadyUploadedFilenames(uploadFilesQueueFile))
     for uploadFile in FileHandler._getUploadFiles(uploadFilesDirectory,logger):
       pathToDownloadFrom,pathToUploadTo,ipToConnect = FileHandler._parseUploadFile(
         FileHandler._concatenateFileToPath(uploadFile,uploadFilesDirectory)
       )
       port = 22                                     #hardcode
       user = UserSSHClient("root","Pr0j#to_Spr1ng") #hardcode
-      FileHandler._downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user,logger)
-      FileHandler._addFileToQueueUploadFiles(
-        uploadFilesQueueFile,
-        FileHandler._getFileFromPath(pathToDownloadFrom),
-        pathToUploadTo,
-        ipToConnect,
-        port,
-        logger
-      )
+      if FileHandler._getFileFromPath(pathToDownloadFrom) not in alreadyUploadedFileNames:
+        FileHandler._downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user,logger)
+        alreadyUploadedFileNames.append(FileHandler._getFileFromPath(pathToDownloadFrom))
+        FileHandler._addFileToQueueUploadFiles(
+          uploadFilesQueueFile,
+          FileHandler._getFileFromPath(pathToDownloadFrom),
+          pathToUploadTo,
+          ipToConnect,
+          port,
+          logger
+        )
+      else:
+        #TODO: log
+        pass
       os.remove(FileHandler._concatenateFileToPath(uploadFile,uploadFilesDirectory))
 
     logger.writeLog(Logs.SEVERITY.INFO,downloadRinexFilesRoutineEndLog)
+
+  @staticmethod
+  def _getAlreadyUploadedFilenames(uploadFilesQueueFile):
+    alreadyUploadedFileNames = []
+    with open(uploadFilesQueueFile,"r") as f:
+      lines = f.readlines()
+      for line in lines:
+       alreadyUploadedFileNames.append(line.split(" ")[0])
+    return alreadyUploadedFileNames
 
   @staticmethod
   def _getUploadFiles(uploadFilesDirectory,logger):
