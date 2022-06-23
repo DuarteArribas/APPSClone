@@ -5,3 +5,6 @@ class UserSSHClient:
     """Initialize a user"""
     self.username = username
     self.password = password
+
+# ✓    unit tested
+# ✓ feature tested

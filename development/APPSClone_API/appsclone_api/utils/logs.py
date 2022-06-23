@@ -96,3 +96,6 @@ class Logs:
       newLoggingFile = "\n".join(logsList)
     with open(self.loggingFile,"w") as f:
       f.write(newLoggingFile)
+
+# ✓    unit tested
+# ✓ feature tested

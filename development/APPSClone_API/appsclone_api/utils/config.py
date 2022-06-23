@@ -90,3 +90,6 @@ class Config:
       The corresponding configuration
     """
     return self.config.get("SETTINGS",key)
+
+
+# ✓    unit tested

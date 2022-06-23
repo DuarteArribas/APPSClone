@@ -268,3 +268,5 @@ class RinexHeader:
       supportedVersionsList.remove("ALL")
       supportedVersions = ", ".join([version for version in supportedVersionsList])
       return f"The version `{errorArg}` of the rinex file is invalid! (Supported versions are {supportedVersions})"
+
+# ✓    unit tested
