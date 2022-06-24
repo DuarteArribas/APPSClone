@@ -427,15 +427,15 @@ class TestConnection(unittest.TestCase):
   #     "out/results_test"
   #   )
 
-  def test_handle_error(self):
+  # def test_handle_error(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
+  #   conn._Connection_APPS__handleError("42307ec0-f416-11ec-9078-e0db5501adf2","arroz","queues/apps_id_queue_test")
+
+  def test_handle_file_state(self):
     logger = Logs("logs/logTest.log",1000)
     conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-    conn._Connection_APPS__handleError("42307ec0-f416-11ec-9078-e0db5501adf2","arroz","queues/apps_id_queue_test")
-
-  #def test_handle_file_state(self):
-  #  logger = Logs("logs/logTest.log",1000)
-    #conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-  #  conn.handleFileState("869c3e66-ee51-11ec-bd99-e0db5501adf2","out/queue/queue","out/results_test")
+    conn.handleFileState("5fa6743c-f416-11ec-92fe-e0db5501adf2","queues/apps_id_queue_test","out/results_test")
   
 if __name__ == '__main__':
   unittest.main()

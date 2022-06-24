@@ -306,51 +306,50 @@ class Connection_APPS:
       f.write(newQueue)
       self.logger.writeRegularLog(Logs.SEVERITY.INFO,removedFromQueueSuccess.format(file = filename))
 
-  def handleFileState(self,uuid,uploadedFilesQueueFile,downloadFolder):
+  def handleFileState(self,uuid,appsIDQueue,resultsDir):
     """Handle what should be done, given the state of a file.
 
     Parameters
     ----------
-    uuid                   : str
-      The id of the file to handle
-    uploadedFilesQueueFile : str
-      The file, which contains the uploaded files queue
-    downloadFolder         : str
-      The file to which download the results into
+    uuid        : str
+      The id of the submission
+    appsIDQueue : str
+      The file which contains the ids of the files that were uploaded to APPS
+    resultsDir  : str
+      The directory to which the results should be downloaded to
     """
-    self.logger.writeLog(Logs.SEVERITY.INFO,checkStateStartLog)
-    fileDetails = self.__getFileData(uuid,uploadedFilesQueueFile)
+    self.logger.writeRoutineLog(Logs.SEVERITY.INFO,checkState,Logs.ROUTINE_STATUS.START)
+    fileDetails = self.__getFileData(uuid,appsIDQueue)
     if fileDetails != None:
-      fileState   = fileDetails["state"]
-      file        = fileDetails["name"]
-      self.logger.writeLog(Logs.SEVERITY.INFO,checkStateStartFileLog.format(file = file))
+      fileState = fileDetails["state"]
+      filename  = fileDetails["name"]
+      self.logger.writeRegularLog(Logs.SEVERITY.INFO,checkStateFile.format(file = filename))
       if fileState   == defines.Data.NASCENT:
-        self.logger.writeLog(Logs.SEVERITY.INFO,stateLog.format(file = file,state = "Nascent"))
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,state.format(file = filename,state = "Nascent"))
       if fileState   == defines.Data.SUBMITTED:
-        self.logger.writeLog(Logs.SEVERITY.INFO,stateLog.format(file = file,state = "Submitted"))
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,state.format(file = filename,state = "Submitted"))
       elif fileState == defines.Data.VERIFIED:
-        self.logger.writeLog(Logs.SEVERITY.INFO,stateLog.format(file = file,state = "Verified"))
-        self.__approveSubmission(uuid,file,uploadedFilesQueueFile)
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,state.format(file = filename,state = "Verified"))
+        self.__approveSubmission(uuid,filename,appsIDQueue)
       elif fileState == defines.Data.APPROVED:
-        self.logger.writeLog(Logs.SEVERITY.INFO,stateLog.format(file = file,state = "Approved"))
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,state.format(file = filename,state = "Approved"))
       elif fileState == defines.Data.WAITING:
-        self.logger.writeLog(Logs.SEVERITY.INFO,stateLog.format(file = file,state = "Waiting"))
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,state.format(file = filename,state = "Waiting"))
       elif fileState == defines.Data.QUEUED:
-        self.logger.writeLog(Logs.SEVERITY.INFO,stateLog.format(file = file,state = "Queued"))
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,state.format(file = filename,state = "Queued"))
       elif fileState == defines.Data.PROCESSING:
-        self.logger.writeLog(Logs.SEVERITY.INFO,stateLog.format(file = file,state = "Processing"))
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,state.format(file = filename,state = "Processing"))
       elif fileState == defines.Data.DONE:
-        self.logger.writeLog(Logs.SEVERITY.INFO,stateLog.format(file = file,state = "Done"))
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,state.format(file = filename,state = "Done"))
       elif fileState == defines.Data.AVAILABLE:
-        self.logger.writeLog(Logs.SEVERITY.INFO,stateLog.format(file = file,state = "Available"))
-        self.__retrieveData(uuid,file,uploadedFilesQueueFile,downloadFolder)
-        self.__removeData(uuid,file,uploadedFilesQueueFile)
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,state.format(file = filename,state = "Available"))
+        self.__retrieveData(uuid,filename,appsIDQueue,resultsDir)
+        self.__removeData(uuid,filename,appsIDQueue)
       elif fileState == defines.Data.ERROR:
-        self.logger.writeLog(Logs.SEVERITY.INFO,stateLog.format(file = file,state = "Error"))
-        self.__handleError(uuid,file,uploadedFilesQueueFile)
-      self.logger.writeLog(Logs.SEVERITY.INFO,checkStateEndFileLog.format(file = file))
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,state.format(file = filename,state = "Error"))
+        self.__handleError(uuid,filename,appsIDQueue)
     else:
-      self.logger.writeLog(Logs.SEVERITY.INFO,checkStateEndLog)
+      self.logger.writeRoutineLog(Logs.SEVERITY.INFO,checkState,Logs.ROUTINE_STATUS.END)
 
   def __getFileData(self,uuid,appsIDQueue):
     """Get details from the file in APPS.

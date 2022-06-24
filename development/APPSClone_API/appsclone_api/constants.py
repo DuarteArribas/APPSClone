@@ -14,6 +14,7 @@ fileDataGathering          = "Gathering data on uuid '{uuid}'"
 approveFile                = "Approval on file '{file}'"
 removeData                 = "Data removal of file '{file}'"
 retrieveData               = "Data retrival on file '{file}'"
+checkState                 = "State check"
 # = Other =
 connectionSuccess          = "The connection with APPS was successful"
 connectionFailed           = "The connection with APPS failed"
@@ -34,15 +35,8 @@ dataDeletedUnsuccessful    = "Could not delete file '{file}' from APPS"
 dataDownloadedSuccessful   = "The file '{file}''s processed files have been successfully downloaded"
 dataDownloadedUnsuccessful = "The file '{file}''s processed files could not be downloaded"
 errorFromAPPS              = "There was an error with the file '{file}' in APPS"
-
-
-fileDoesNotExistLog        = "The {file} does not exist or has been removed."
-compressedLog              = "File {file} was compressed. Decompressing it, so its header can be read."
-checkStateStartLog         = "=== STATE CHECK START ==="
-checkStateStartFileLog     = "Checking file {file}."
-checkStateEndLog           = "=== STATE CHECK END ==="
-checkStateEndFileLog       = "=== STATE CHECK END on file {file} ==="
-stateLog                   = "The file {file} is in the `{state}` state."
+checkStateFile             = "Checking file '{file}'"
+state                      = "The file '{file}' is in the '{state}' state"
 
 #routines
 downloadRinexFilesRoutineStartLog   = "=== RINEX FILES DOWNLOAD ROUTINE (START) ==="
