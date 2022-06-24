@@ -12,13 +12,13 @@ class TestLogs(unittest.TestCase):
 
   def test_logging(self):
     logger = Logs("logs/logTest.log",1000)
-    logger.writeLog(Logs.SEVERITY.DEBUG,"debug lol")
-    logger.writeLog(Logs.SEVERITY.INFO,"info lol")
-    logger.writeLog(Logs.SEVERITY.WARNING,"warning lol")
-    logger.writeLog(Logs.SEVERITY.ERROR,"error lol")
-    logger.writeLog(Logs.SEVERITY.CRITICAL,"critical lol")
+    logger._Logs__writeLog(Logs.SEVERITY.DEBUG,"debug lol")
+    logger._Logs__writeLog(Logs.SEVERITY.INFO,"info lol")
+    logger._Logs__writeLog(Logs.SEVERITY.WARNING,"warning lol")
+    logger._Logs__writeLog(Logs.SEVERITY.ERROR,"error lol")
+    logger._Logs__writeLog(Logs.SEVERITY.CRITICAL,"critical lol")
     time.sleep(3)
-    logger.writeLog(Logs.SEVERITY.INFO,"after 3 seconds")
+    logger._Logs__writeLog(Logs.SEVERITY.INFO,"after 3 seconds")
 
   def test_log_regex(self):
     self.assertTrue(re.search("^(\d\d\d\d-\d\d-\d\d)","2022-06-14 19:20:43.448246 (INFO)     | An attempt to test the connection with APPS was made."))
@@ -30,6 +30,26 @@ class TestLogs(unittest.TestCase):
     self.assertFalse(re.search("^(\d\d\d\d-\d\d-\d\d)","arrozEstablishing client interface to https://pppx.gdgps.net//api/user"))
 
   def test_get_log_msg(self):
-    self.assertEqual(Logs.getLogMsg(Logs.LOG_TYPE.SUBROUTINE_START,"arroz"),"== arroz SUBROUTINE (START) ==")
+    self.assertEqual(Logs._getLogMsg(Logs.LOG_TYPE.SUBROUTINE_START,"arroz"),"== arroz SUBROUTINE (START) ==")
+
+  def test_write_routine(self):
+    logger = Logs("logs/logTest.log",1000)
+    logger.writeRoutineLog(Logs.SEVERITY.INFO,"infoRoutineStart",Logs.ROUTINE_STATUS.START)
+
+  def test_write_routine2(self):
+    logger = Logs("logs/logTest.log",1000)
+    logger.writeRoutineLog(Logs.SEVERITY.INFO,"infoRoutineEnd",Logs.ROUTINE_STATUS.END)
+
+  def test_write_subroutine(self):
+    logger = Logs("logs/logTest.log",1000)
+    logger.writeSubroutineLog(Logs.SEVERITY.INFO,"infoSubroutineStart",Logs.ROUTINE_STATUS.START)
+
+  def test_write_subroutine2(self):
+    logger = Logs("logs/logTest.log",1000)
+    logger.writeSubroutineLog(Logs.SEVERITY.INFO,"infoSubroutineEnd",Logs.ROUTINE_STATUS.END)
+
+  def test_write_regular_log(self):
+    logger = Logs("logs/logTest.log",1000)
+    logger.writeRegularLog(Logs.SEVERITY.INFO,"regularInfo")
 if __name__ == '__main__':
   unittest.main()

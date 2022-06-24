@@ -8,25 +8,30 @@ class Logs:
 
   Attributes
   ----------
-  SEVERITY     : enum
+  SEVERITY       : enum
     The logs severity in an easier to write way
-  MIN_NUM_LOGS : int
+  MIN_NUM_LOGS   : int
     The minimum number of logs allowed
-  MAX_NUM_LOGS : int
+  MAX_NUM_LOGS   : int
     The maximum number of logs allowed 
-  LOG_TYPE     : enum
+  LOG_TYPE       : enum
     The type of log. ROUTINE_START and ROUTINE_END mean that the log delimits the start and end
     of a routine. SUBROUTINE_START and SUBROUTINE_END mean that the log delimits the start and end
-    of a subroutine. OTHER means it's a regular log.
+    of a subroutine. OTHER means it's a regular log
+  ROUTINE_STATUS : enum
+    START means the start of a routine (or subroutine) and END means the end of a routine (or subroutine)
   """
   # == Attributes ==
-  SEVERITY     = Enum(
+  SEVERITY       = Enum(
     "SEVERITY","DEBUG INFO WARNING ERROR CRITICAL"
   )
-  MIN_NUM_LOGS = 100
-  MAX_NUM_LOGS = 100000
-  LOG_TYPE     = Enum(
+  MIN_NUM_LOGS   = 100
+  MAX_NUM_LOGS   = 100000
+  LOG_TYPE       = Enum(
     "LOG_TYPE","ROUTINE_START ROUTINE_END SUBROUTINE_START SUBROUTINE_END OTHER"
+  )
+  ROUTINE_STATUS = Enum(
+    "ROUTINE_STATUS","START END"
   )
   # == Methods ==
   def __init__(self,loggingFile,maxLogs):
@@ -49,7 +54,53 @@ class Logs:
       self.maxLogs = maxLogs
     logging.basicConfig(level = logging.INFO,filename = loggingFile,format = "%(message)s")
 
-  def writeLog(self,severity,message):
+  def writeRoutineLog(self,severity,message,routineStatus):
+    """Write a routine log to a file, according to its severity and routine status.
+
+    Parameters
+    ----------
+    severity      : enum
+      The severity of the log
+    message       : str
+      The log message
+    routineStatus : enum
+      START means the start of a routine and END means the end of a routine
+    """
+    if routineStatus == Logs.ROUTINE_STATUS.START:
+      self.__writeLog(severity,Logs._getLogMsg(Logs.LOG_TYPE.ROUTINE_START,message))
+    else:
+      self.__writeLog(severity,Logs._getLogMsg(Logs.LOG_TYPE.ROUTINE_END,message))
+
+  def writeSubroutineLog(self,severity,message,routineStatus):
+    """Write a subroutine log to a file, according to its severity and routine status.
+
+    Parameters
+    ----------
+    severity      : enum
+      The severity of the log
+    message       : str
+      The log message
+    routineStatus : enum
+      START means the start of a subroutine and END means the end of a subroutine
+    """
+    if routineStatus == Logs.ROUTINE_STATUS.START:
+      self.__writeLog(severity,Logs._getLogMsg(Logs.LOG_TYPE.SUBROUTINE_START,message))
+    else:
+      self.__writeLog(severity,Logs._getLogMsg(Logs.LOG_TYPE.SUBROUTINE_END,message))
+
+  def writeRegularLog(self,severity,message):
+    """Write a regular log to a file, according to its severity.
+
+    Parameters
+    ----------
+    severity : enum
+      The severity of the log
+    message  : str
+      The log message
+    """
+    self.__writeLog(severity,Logs._getLogMsg(Logs.LOG_TYPE.OTHER,message))
+
+  def __writeLog(self,severity,message):
     """Write a log to a file, according to its severity. Debug logs are not 
     written, but are the default if the parameter is misspelled.
 
@@ -106,7 +157,7 @@ class Logs:
       f.write(newLoggingFile)
 
   @staticmethod
-  def getLogMsg(logType,message):
+  def _getLogMsg(logType,message):
     """Get the log message, according to its type.
 
     Parameters
