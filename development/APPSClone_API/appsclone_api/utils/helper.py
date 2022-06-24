@@ -1,3 +1,6 @@
+import gzip
+import os
+
 class Helper:
   """Helper methods to other classes."""
   # == Methods ==
@@ -79,3 +82,78 @@ class Helper:
       The given value in mebibytes with five decimal places
     """
     return round(by / 1.049e+6,3)
+
+  @staticmethod
+  def getUncompressedFile(filePath):
+    """Uncompress and delete original file with gzip.
+
+    Parameters
+    ----------
+    filePath : str
+      The path of the file
+
+    Returns
+    ----------
+    str
+      The name of the uncompressed file or the given file if the file was already uncompressed
+    """
+    isCompressed = Helper._checkCompressedWithGzip(filePath)
+    if isCompressed:
+      uncompressedFile = Helper.compressUncompressGzip(filePath,False)
+      os.remove(filePath)
+      return uncompressedFile
+    else:
+      return filePath
+
+  @staticmethod
+  def _checkCompressedWithGzip(filePath):
+    """Check if a file is compressed with gzip.
+
+    Parameters
+    ----------
+    filePath : str
+      The path of the file
+
+    Returns
+    ----------
+    bool
+      True if the file was compressed using gzip and False otherwise
+    """
+    with gzip.open(filePath,'r') as fGzip:
+      try:
+        fGzip.read(1)
+        return True
+      except gzip.BadGzipFile:
+        return False
+
+  @staticmethod
+  def compressUncompressGzip(filePath,isCompress):
+    """Compress or uncompress a file with gzip.
+
+    Parameters
+    ----------
+    filePath   : str
+      The path of the file
+    isCompress : bool
+      True to compress and False to uncompress
+
+    Returns
+    ----------
+    str
+      The name of the compressed or uncompressed file
+    """
+    if isCompress:
+      fileToCompress = open(filePath,"rb")
+      compressedFile = gzip.open(f"{filePath}.gz","wb")
+      compressedFile.writelines(fileToCompress)
+      fileToCompress.close()
+      return f"{filePath}.gz"
+    else:
+      filenameNoExtension  = filePath.split(".")
+      filenameNoExtension.pop()
+      uncompressedFilename = "".join(filenameNoExtension)
+      fileToCompress       = open(uncompressedFilename,"wb")
+      compressedFile       = gzip.open(filePath,"rb")
+      fileToCompress.write(compressedFile.read())
+      fileToCompress.close()
+      return uncompressedFilename

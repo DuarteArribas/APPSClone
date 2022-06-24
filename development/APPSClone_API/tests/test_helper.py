@@ -63,5 +63,20 @@ class TestHelper(unittest.TestCase):
   def test_convert_bytes_to_mb3(self):
     self.assertEqual(Helper.bytesToMB(10000),0.010)
 
+  def test_is_gzip_compressed(self):
+    self.assertTrue(Helper._checkCompressedWithGzip("in/test/file.gz"))
+
+  def test_is_gzip_compressed2(self):
+    self.assertFalse(Helper._checkCompressedWithGzip("in/test/file"))
+
+  def test_gzip_compression(self):
+    self.assertEqual(Helper.compressUncompressGzip("in/test/arroz",True),"in/test/arroz.gz")
+
+  def test_gzip_uncompression(self):
+    self.assertEqual(Helper.compressUncompressGzip("in/test/arroz.gz",False),"in/test/arroz")
+
+  def test_get_uncompressed_file(self):
+    self.assertEqual(Helper.getUncompressedFile("in/test/arroz.gz"),"in/test/arroz")  
+
 if __name__ == '__main__':
   unittest.main()

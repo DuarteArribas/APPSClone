@@ -8,12 +8,12 @@ antennas      = set(antennasList)
 
 # == CONNECTION ==
 # = Routines =
-rinexUpload       = "Upload on file '{file}'"
 connectionTest    = "Connection test"
+rinexUpload       = "Upload on file '{file}'"
 # = Other =
-uploadSuccess     = "Successfully uploaded file '{file}' to APPS"
 connectionSuccess = "The connection with APPS was successful"
 connectionFailed  = "The connection with APPS failed"
+uploadSuccess     = "Successfully uploaded file '{file}' to APPS"
 
 
 uploadStartLog             = "=== UPLOAD START on file {file} ==="

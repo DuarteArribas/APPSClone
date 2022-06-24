@@ -1,9 +1,3 @@
-2022-06-22 18:42:14.249488 (INFO)     | The file feijao was added upload files queue file.
-2022-06-22 18:42:14.260855 (INFO)     | == RINEX FILE 'grao' DOWNLOAD SUBROUTINE (START) ==
-2022-06-22 18:42:14.269563 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
-2022-06-22 18:42:14.910915 (INFO)     | Successfully established a connection to the server.
-2022-06-22 18:42:16.748125 (INFO)     | Successfully copied file 'grao' to 'out/downloads_test'.
-2022-06-22 18:42:16.756604 (INFO)     | == RINEX FILE 'grao' DOWNLOAD SUBROUTINE (END) ==
 2022-06-22 18:42:16.766984 (INFO)     | The file grao was added upload files queue file.
 2022-06-22 18:42:16.777886 (INFO)     | == RINEX FILE 'vinagre' DOWNLOAD SUBROUTINE (START) ==
 2022-06-22 18:42:16.785764 (INFO)     | Attempting to connect to '138.68.128.182:22', with user 'root'.
@@ -997,3 +991,11 @@
 2022-06-24 18:42:52.575511 (INFO)     | === infoRoutineEnd ROUTINE (END) ===
 2022-06-24 18:42:52.581939 (INFO)     | == infoSubroutineStart SUBROUTINE (START) ==
 2022-06-24 18:42:52.587965 (INFO)     | == infoSubroutineEnd SUBROUTINE (END) ==
+2022-06-24 18:46:27.713535 (INFO)     | === Connection test ROUTINE (START) ===
+2022-06-24 18:46:29.404187 (INFO)     | The connection with APPS was successful.
+2022-06-24 18:46:29.411122 (INFO)     | === Connection test ROUTINE (END) ===
+2022-06-24 18:47:00.942427 (INFO)     | == Connection test SUBROUTINE (START) ==
+2022-06-24 18:47:02.580910 (INFO)     | The connection with APPS was successful.
+2022-06-24 18:47:02.588464 (INFO)     | == Connection test SUBROUTINE (END) ==
+Establishing client interface to https://pppx.gdgps.net//api/user
+Session established with https://pppx.gdgps.net
