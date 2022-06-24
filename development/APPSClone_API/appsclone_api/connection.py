@@ -407,7 +407,7 @@ class Connection_APPS:
       self.__removeFromIDQueue(uuid,filename,appsIDQueue)
     except InvalidIdentifier:
       self.logger.writeRegularLog(Logs.SEVERITY.ERROR,invalidIdentifier.format(uuid = uuid))
-      self.__removeFromIDQueue(uuid,file,appsIDQueue)
+      self.__removeFromIDQueue(uuid,filename,appsIDQueue)
     except InvalidOperation:
       self.logger.writeRegularLog(Logs.SEVERITY.ERROR,approveUnsuccessful.format(file = filename))
       self.__removeData(uuid,filename,appsIDQueue)
@@ -417,33 +417,33 @@ class Connection_APPS:
     finally:
       self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,approveFile.format(file = filename),Logs.ROUTINE_STATUS.END)
 
-  def __removeData(self,uuid,file,uploadedFilesQueueFile):
-    """Remove both source and result data from APPS and from the uploaded queue.
+  def __removeData(self,uuid,filename,appsIDQueue):
+    """Remove both source and result data from APPS and from apps ID queue.
 
     Parameters
     ----------
-    uuid                   : str
+    uuid        : str
       The id of the submission
-    file                   : str
-      The name of the submission
-    uploadedFilesQueueFile : str
-      The file, which contains the uploaded files queue
+    filename    : str
+      The uploaded filename
+    appsIDQueue : str
+      The file which contains the ids of the files that were uploaded to APPS
     """
     try:
-      self.logger.writeLog(Logs.SEVERITY.INFO,removeDataStartLog.format(file = file))
+      self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,removeData.format(file = filename),Logs.ROUTINE_STATUS.START)
       self.apps.delete_data(uuid)
-      self.logger.writeLog(Logs.SEVERITY.INFO,dataDeletedSuccessfulLog.format(file = file))
+      self.logger.writeRegularLog(Logs.SEVERITY.INFO,dataDeletedSuccessful.format(file = filename))
     except DataNotFound:
-      self.logger.writeLog(Logs.SEVERITY.ERROR,dataNotFoundLog.format(file = file))
+      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,dataNotFound.format(uuid = uuid))
     except InvalidIdentifier:
-      self.logger.writeLog(Logs.SEVERITY.ERROR,InvalidIdentifierLog.format(uuid = uuid))
+      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,invalidIdentifier.format(uuid = uuid))
     except InvalidOperation:
-      self.logger.writeLog(Logs.SEVERITY.ERROR,dataDeletedUnsuccessfulLog.format(file = file))
+      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,dataDeletedUnsuccessful.format(file = filename))
     except:
-      self.logger.writeLog(Logs.SEVERITY.CRITICAL,criticalExceptionLog.format(file = file))
+      self.logger.writeRegularLog(Logs.SEVERITY.CRITICAL,criticalException.format(uuid = uuid))
     finally:
-      self.__removeFromUploadQueue(uuid,file,uploadedFilesQueueFile)
-      self.logger.writeLog(Logs.SEVERITY.INFO,removeDataEndLog.format(file = file))
+      self.__removeFromIDQueue(uuid,filename,appsIDQueue)
+      self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,removeData.format(file = filename),Logs.ROUTINE_STATUS.END)
 
   def __retrieveData(self,uuid,file,uploadedFilesQueueFile,downloadFolder):
     """Retrieve results from APPS.
