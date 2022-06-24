@@ -1,5 +1,6 @@
-from enum                      import Enum
-from vars.receiversAndAntennas import *
+from enum import Enum
+from appsclone_api.constants import *
+
 class RinexHeader:
   """A rinex header. It's constituted by several mandatory header lines and several optional header lines.
   It's used to display metadata about a RINEX file.
@@ -20,11 +21,12 @@ class RinexHeader:
   HEADER_END       = 80
   ALLOWED_VERSIONS = ["ALL","2.11","3.02"]
   VALIDITY_ERRORS  = Enum(
-    'VALIDITY_ERRORS', 'OK INVALID_VERSION INVALID_NUMBER_OF_HEADERS INVALID_RECEIVER INVALID_ANTENNA'
+    'VALIDITY_ERRORS','OK INVALID_VERSION INVALID_NUMBER_OF_HEADERS INVALID_RECEIVER INVALID_ANTENNA'
   )
   # == Methods ==
   def __init__(self):
-    """Reset all mandatory header lines of the RINEX file being read and its version, so that new data can be appended."""
+    """Reset all mandatory header lines of the RINEX file being 
+    read and its version, so that new data can be appended."""
     self.mandatoryHeaders = {
       "RINEX VERSION / TYPE" : [RinexHeader.ALLOWED_VERSIONS[0],"F9.2,11X,A1,19X,A1,19X",[]],
       "PGM / RUN BY / DATE"  : [RinexHeader.ALLOWED_VERSIONS[0],"A20,A20,A20"           ,[]],
@@ -74,13 +76,13 @@ class RinexHeader:
     line        : str
       The current line
     """
-    self.mandatoryHeaders[headerLabel][2] = self.__parseFormat(
+    self.mandatoryHeaders[headerLabel][2] = RinexHeader._parseFormat(
       line[:RinexHeader.HEADER_START],
       self.mandatoryHeaders[headerLabel][1]
     )
 
   def __isHeaderFromCurrentVersion(self,requiredVersion):
-    """Check if the version required of the header that is currently being read is the version 
+    """Check if the version required for the header that is currently being read is the version 
     of the file or a mandatory header for all RINEX versions.
     
     Parameters
@@ -165,7 +167,8 @@ class RinexHeader:
     antenna = self.mandatoryHeaders["ANT # / TYPE"][2][1]
     return antenna in antennas,antenna
 
-  def __parseFormat(self,line,headerFormat):
+  @staticmethod
+  def _parseFormat(line,headerFormat):
     """Parse a RINEX header format to read the respective columns of the header line.
 
     Parameters
@@ -182,7 +185,7 @@ class RinexHeader:
     Returns
     ----------
     list
-      A list of each element of the header line as parsed from the header format
+      Each element of the header line as parsed from the header format
     """
     output          = []
     columnsRead     = 0
@@ -195,7 +198,7 @@ class RinexHeader:
       formatString.append(headerFormat)
     #loop through format
     for f in formatString:
-      timesToLoop,numberOfDigitsInBeggining = self.__extractIntUntilChar(f)
+      timesToLoop,numberOfDigitsInBeggining = RinexHeader._extractIntUntilChar(f)
       #loop through repetitions of format
       for i in range(timesToLoop):
         #string or integer
@@ -215,7 +218,8 @@ class RinexHeader:
         columnsRead += numberOfColumns
     return output
 
-  def __extractIntUntilChar(self,string):
+  @staticmethod
+  def _extractIntUntilChar(string):
     """Extract the number before a character appears.
 
     Parameters
@@ -258,15 +262,14 @@ class RinexHeader:
       A validity error message
     """
     if validityError   == RinexHeader.VALIDITY_ERRORS.INVALID_NUMBER_OF_HEADERS:
-      return f"The rinex file doesn't contain the mandatory header lines. Missing, at least, header `{errorArg}`!"
+      return f"The rinex file doesn't contain the mandatory header lines. Missing, at least, header '{errorArg}'"
     elif validityError == RinexHeader.VALIDITY_ERRORS.INVALID_RECEIVER:
-      return f"The receiver `{errorArg}` of the rinex file is invalid!"
+      return f"The receiver '{errorArg}' of the rinex file is invalid"
     elif validityError == RinexHeader.VALIDITY_ERRORS.INVALID_ANTENNA:
-      return f"The antenna `{errorArg}` of the rinex file is invalid!"
+      return f"The antenna '{errorArg}' of the rinex file is invalid"
     elif validityError == RinexHeader.VALIDITY_ERRORS.INVALID_VERSION:
-      supportedVersionsList = RinexHeader.ALLOWED_VERSIONS
-      supportedVersionsList.remove("ALL")
-      supportedVersions = ", ".join([version for version in supportedVersionsList])
-      return f"The version `{errorArg}` of the rinex file is invalid! (Supported versions are {supportedVersions})"
+      supportedVersions = ", ".join([version for version in RinexHeader.ALLOWED_VERSIONS if version != "ALL"])
+      return f"The version '{errorArg}' of the rinex file is invalid (Supported versions are {supportedVersions})"
 
 # ✓    unit tested
+# ✓ feature tested
