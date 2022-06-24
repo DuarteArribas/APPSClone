@@ -159,7 +159,7 @@ class Connection_APPS:
     if isValid:
       args               = self.__updateUploadArgs(uploadArgs)
       fileResponseObject = self.apps.upload_gipsyx(
-        self.__compressUncompressGzip(filePath,True),
+        Helper.compressUncompressGzip(filePath,True),
         pressure             = args[0],
         attitude             = args[1],
         email                = args[2],
@@ -174,15 +174,9 @@ class Connection_APPS:
         solution_period      = args[11],
         generate_quaternions = args[12]
       )
-      self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccess.format(file = Helper.getFileFromPath(filePath)))
-      self.__addUploadToQueue(fileResponseObject["id"],filePath,appsIDQueue)
-    self.logger.writeLog(
-      Logs.SEVERITY.INFO,
-      Logs.getLogMsg(
-        Logs.LOG_TYPE.SUBROUTINE_END,
-        rinexUpload.format(file = filePath)
-      )
-    )
+      self.logger.writeRegularLog(Logs.SEVERITY.INFO,uploadSuccess.format(file = filename))
+      self.__addToIDQueue(fileResponseObject["id"],filePath,appsIDQueue)
+    self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,rinexUpload.format(file = filename),Logs.ROUTINE_STATUS.END)
 
   def __checkFileValidity(self,filePath):
     """Check file validity.
@@ -306,7 +300,7 @@ class Connection_APPS:
         else:
           uuidNotInQueue = False
     if uuidNotInQueue:
-      self.logger.writeRegularLog(Logs.SEVERITY.WARNING,uuidNotInQueue.format(file = filename))
+      self.logger.writeRegularLog(Logs.SEVERITY.WARNING,idNotInQueue.format(file = filename))
       return
     with open(appsIDQueue,"w") as f:
       f.write(newQueue)

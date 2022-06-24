@@ -15,10 +15,10 @@ connectionSuccess       = "The connection with APPS was successful"
 connectionFailed        = "The connection with APPS failed"
 fileValidated           = "The file '{file}' was validated and is being considered a valid file for uploading"
 fileNotValidated        = "The file '{file}' is invalid - {validity}"
-uploadSuccess           = "Successfully uploaded file '{file}' to APPS"
 invalidArg              = "The value '{arg}' is invalid for argument '{argName}'. Using default value '{defaultValue}'"
+uploadSuccess           = "Successfully uploaded file '{file}' to APPS"
 addedToQueueSuccess     = "Successfully added file '{file}' to the apps ID queue"
-uuidNotInQueue          = "The file '{file}' was not in the apps ID queue, so cannot be removed from it"
+idNotInQueue            = "The file '{file}' was not in the apps ID queue, so cannot be removed from it"
 removedFromQueueSuccess = "Successfully removed file '{file}' from the apps ID queue"
 
 
