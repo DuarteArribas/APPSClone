@@ -381,6 +381,7 @@ class TestConnection(unittest.TestCase):
     conn._Connection_APPS__removeFromIDQueue("00000000-0000-0000-0000-000000000000","arroz","queues/apps_id_queue_test")
 
   # def test_upload_file(self):
+  #  warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
   #  args = {
   #    "pressure"             : None,
   #    "attitude"             : None,
@@ -401,19 +402,22 @@ class TestConnection(unittest.TestCase):
   #  conn.uploadFile("in/test/CVTY2720.21D","queues/apps_id_queue_test",args)
 
   # def test_get_file_data(self):
+  #   warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
   #   logger = Logs("logs/logTest.log",1000)
   #   conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
   #   print(conn._Connection_APPS__getFileData("230f4eb0-f40f-11ec-8d6a-e0db5501adf2","queues/apps_id_queue_test"))
 
   # def test_delete_file(self):
+  #warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
   #   logger = Logs("logs/logTest.log",1000)
     #conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-  #   conn._Connection_APPS__removeData("26704bae-ed20-11ec-8f7d-e0db5501adf2","arroz","out/queue/queue")
+  #   conn._Connection_APPS__removeData("26704bae-ed20-11ec-8f7d-e0db5501adf2","arroz","queues/apps_id_queue_test")
 
-  # def test_approve_file(self):
-  #   logger = Logs("logs/logTest.log",1000)
-    #conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-  #   conn._Connection_APPS__approveSubmission("2b231f2e-ed1f-11ec-bd99-e0db5501adf2","arroz","out/queue/queue")
+  def test_approve_file(self):
+    warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
+    logger = Logs("logs/logTest.log",1000)
+    conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
+    conn._Connection_APPS__approveSubmission("230f4eb0-f40f-11ec-8d6a-e0db5501adf2","arroz","queues/apps_id_queue_test")
 
   # def test_retrieve_data(self):
   #   logger = Logs("logs/logTest.log",1000)

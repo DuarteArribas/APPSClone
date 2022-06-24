@@ -11,6 +11,7 @@ antennas      = set(antennasList)
 connectionTest          = "Connection test"
 rinexUpload             = "Upload on file '{file}'"
 fileDataGathering       = "Gathering data on uuid '{uuid}'"
+approveFile             = "Approval on file '{file}'"
 # = Other =
 connectionSuccess       = "The connection with APPS was successful"
 connectionFailed        = "The connection with APPS failed"
@@ -24,6 +25,8 @@ removedFromQueueSuccess = "Successfully removed file '{file}' from the apps ID q
 dataNotFound            = "The file with uuid '{uuid}' was not found on APPS"
 invalidIdentifier       = "The uuid '{uuid}' is not valid"
 criticalException       = "Something, that wasn't accounted for, happened. It's recommended to check what happened to file with uuid '{uuid}'"
+approveSuccessful       = "The file '{file}' has been verified by APPS and is now approved for processing"
+approveUnsuccessful     = "The file '{file}' could not be approved for processing"
 
 
 fileDoesNotExistLog        = "The {file} does not exist or has been removed."
@@ -33,8 +36,6 @@ checkStateStartFileLog     = "Checking file {file}."
 checkStateEndLog           = "=== STATE CHECK END ==="
 checkStateEndFileLog       = "=== STATE CHECK END on file {file} ==="
 stateLog                   = "The file {file} is in the `{state}` state."
-approvedSuccessfullLog     = "The file {file} has been verified by APPS and is now approved for processing."
-approvedUnsuccessfullLog   = "The file {file} could not be approved for processing."
 downloadSuccessfullLog     = "The file {file}'s processed files have been successfully downloaded."
 downloadUnsuccessfullLog   = "The file {file}'s processed files could not be downloaded."
 dataDeletedSuccessfulLog   = "The file {file} has been deleted from APPS."
@@ -42,7 +43,7 @@ dataDeletedUnsuccessfulLog = "Could not delete {file} from APPS."
 errorFromAPPSLog           = "There was an error with the file {file} in APPS."
 
 fileDataEndLog             = "== GATHERING DATA END on uuid {uuid} =="
-approveStartLog            = "== APPROVAL START on file {file} =="
+
 approveEndLog              = "== APPROVAL END on file {file} =="
 removeDataStartLog         = "== REMOVE DATA START on file {file} =="
 removeDataEndLog           = "== REMOVE DATA END on file {file} =="
