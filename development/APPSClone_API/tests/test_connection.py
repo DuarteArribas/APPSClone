@@ -381,8 +381,8 @@ class TestConnection(unittest.TestCase):
     conn._Connection_APPS__removeFromIDQueue("00000000-0000-0000-0000-000000000000","arroz","queues/apps_id_queue_test")
 
   # def test_upload_file(self):
-  #  warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
-  #  args = {
+  #   warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
+  #   args = {
   #    "pressure"             : None,
   #    "attitude"             : None,
   #    "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
@@ -396,10 +396,10 @@ class TestConnection(unittest.TestCase):
   #    "elev_angle_cutoff"    : 7.5,
   #    "solution_period"      : 300,
   #    "generate_quaternions" : False,
-  #  }
-  #  logger = Logs("logs/logTest.log",1000)
-  #  conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-  #  conn.uploadFile("in/test/CVTY2720.21D","queues/apps_id_queue_test",args)
+  #   }
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
+  #   conn.uploadFile("in/test/CVTY2720.21D","queues/apps_id_queue_test",args)
 
   # def test_get_file_data(self):
   #   warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
@@ -407,11 +407,11 @@ class TestConnection(unittest.TestCase):
   #   conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
   #   print(conn._Connection_APPS__getFileData("230f4eb0-f40f-11ec-8d6a-e0db5501adf2","queues/apps_id_queue_test"))
 
-  def test_delete_file(self):
-    warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
-    logger = Logs("logs/logTest.log",1000)
-    conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-    conn._Connection_APPS__removeData("230f4eb0-f40f-11ec-8d6a-e0db5501adf2","arroz","queues/apps_id_queue_test")
+  # def test_delete_file(self):
+  #   warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
+  #   conn._Connection_APPS__removeData("230f4eb0-f40f-11ec-8d6a-e0db5501adf2","arroz","queues/apps_id_queue_test")
 
   # def test_approve_file(self):
   #   warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
@@ -421,28 +421,21 @@ class TestConnection(unittest.TestCase):
 
   # def test_retrieve_data(self):
   #   logger = Logs("logs/logTest.log",1000)
-    #conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-  #   conn._Connection_APPS__retrieveData("2b231f2e-ed1f-11ec-bd99-e0db5501adf2","arroz","out/queue/queue","out/results_test")
+  #   conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
+  #   conn._Connection_APPS__retrieveData(
+  #     "b9d3abb0-f415-11ec-a201-e0db5501adf2","arroz","queues/apps_id_queue_test",
+  #     "out/results_test"
+  #   )
 
-  # def test_handle_error(self):
-  #   logger = Logs("logs/logTest.log",1000)
-    #conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-  #   conn._Connection_APPS__handleError("2b231f2e-ed1f-11ec-bd99-e0db5501adf3","arroz","out/queue/queue")
+  def test_handle_error(self):
+    logger = Logs("logs/logTest.log",1000)
+    conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
+    conn._Connection_APPS__handleError("42307ec0-f416-11ec-9078-e0db5501adf2","arroz","queues/apps_id_queue_test")
 
   #def test_handle_file_state(self):
   #  logger = Logs("logs/logTest.log",1000)
     #conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
   #  conn.handleFileState("869c3e66-ee51-11ec-bd99-e0db5501adf2","out/queue/queue","out/results_test")
-
-  #def test_update_queue_with_name(self):
-  #  logger = Logs("logs/logTest.log",1000)
-  #  conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-  #  conn.updateQueueWithName("4","lol","out/queue/uploadFilesQueue")
-
-  # def test_update_queue_with_uuid(self):
-  #   logger = Logs("logs/logTest.log",1000)
-  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-  #   conn._Connection_APPS__addUploadToUploadQueue("a112-3344-112-445-11","vinagre","out/queue/uploadFilesQueue")
   
 if __name__ == '__main__':
   unittest.main()

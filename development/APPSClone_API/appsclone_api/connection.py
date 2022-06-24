@@ -445,49 +445,50 @@ class Connection_APPS:
       self.__removeFromIDQueue(uuid,filename,appsIDQueue)
       self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,removeData.format(file = filename),Logs.ROUTINE_STATUS.END)
 
-  def __retrieveData(self,uuid,file,uploadedFilesQueueFile,downloadFolder):
+  def __retrieveData(self,uuid,filename,appsIDQueue,resultsDir):
     """Retrieve results from APPS.
 
     Parameters
     ----------
-    uuid                   : str
+    uuid        : str
       The id of the submission
-    file                   : str
-      The name of the submission
-    uploadedFilesQueueFile : str
-      The file, which contains the uploaded files queue
-    downloadFolder         : str
-      The file to which download the results into
+    filename    : str
+      The uploaded filename
+    appsIDQueue : str
+      The file which contains the ids of the files that were uploaded to APPS
+    resultsDir  : str
+      The directory to which the results should be downloaded to
     """
     try:
-      self.logger.writeLog(Logs.SEVERITY.INFO,retrieveDataStartLog.format(file = file))
-      self.apps.download_result(uuid = uuid,dr = downloadFolder)
-      self.logger.writeLog(Logs.SEVERITY.INFO,downloadSuccessfullLog.format(file = file))
+      self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,retrieveData.format(file = filename),Logs.ROUTINE_STATUS.START)
+      self.apps.download_result(uuid = uuid,dr = resultsDir)
+      self.logger.writeRegularLog(Logs.SEVERITY.INFO,dataDownloadedSuccessful.format(file = filename))
     except DataNotFound:
-      self.logger.writeLog(Logs.SEVERITY.ERROR,dataNotFoundLog.format(file = file))
-      self.__removeFromUploadQueue(uuid,file,uploadedFilesQueueFile)
+      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,dataNotFound.format(uuid = uuid))
+      self.__removeFromIDQueue(uuid,filename,appsIDQueue)
     except InvalidIdentifier:
-      self.logger.writeLog(Logs.SEVERITY.ERROR,InvalidIdentifierLog.format(uuid = uuid))
-      self.__removeFromUploadQueue(uuid,file,uploadedFilesQueueFile)
+      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,invalidIdentifier.format(uuid = uuid))
+      self.__removeFromIDQueue(uuid,filename,appsIDQueue)
     except InvalidOperation:
-      self.logger.writeLog(Logs.SEVERITY.ERROR,downloadUnsuccessfullLog.format(file = file))
-      self.__removeFromUploadQueue(uuid,file,uploadedFilesQueueFile)
+      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,dataDownloadedUnsuccessful.format(file = filename))
+      self.__removeData(uuid,filename,appsIDQueue)
+      self.__removeFromIDQueue(uuid,filename,appsIDQueue)
     except:
-      self.logger.writeLog(Logs.SEVERITY.CRITICAL,criticalExceptionLog.format(file = file))
+      self.logger.writeLog(Logs.SEVERITY.CRITICAL,criticalExceptionLog.format(file = filename))
     finally:
-      self.logger.writeLog(Logs.SEVERITY.INFO,retrieveDataEndLog.format(file = file))
+      self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,retrieveData.format(file = filename),Logs.ROUTINE_STATUS.END)
 
-  def __handleError(self,uuid,file,uploadedFilesQueueFile):
+  def __handleError(self,uuid,filename,appsIDQueue):
     """Handler error from APPS.
 
     Parameters
     ----------
-    uuid                   : str
+    uuid        : str
       The id of the submission
-    file                   : str
-      The name of the submission
-    uploadedFilesQueueFile : str
-      The file, which contains the uploaded files queue
+    filename    : str
+      The uploaded filename
+    appsIDQueue : str
+      The file which contains the ids of the files that were uploaded to APPS
     """
-    self.logger.writeLog(Logs.SEVERITY.ERROR,errorFromAPPSLog.format(file = file))
-    self.__removeData(uuid,file,uploadedFilesQueueFile)
+    self.logger.writeRegularLog(Logs.SEVERITY.ERROR,errorFromAPPS.format(file = filename))
+    self.__removeData(uuid,filename,appsIDQueue)
