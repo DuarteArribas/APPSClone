@@ -54,5 +54,14 @@ class TestHelper(unittest.TestCase):
   def test_get_file_from_path5(self):
     self.assertEqual(Helper.getFileFromPath("."),".")
 
+  def test_convert_bytes_to_mb(self):
+    self.assertEqual(Helper.bytesToMB(1000),0.001)
+
+  def test_convert_bytes_to_mb2(self):
+    self.assertEqual(Helper.bytesToMB(200),0.000)
+
+  def test_convert_bytes_to_mb3(self):
+    self.assertEqual(Helper.bytesToMB(10000),0.010)
+
 if __name__ == '__main__':
   unittest.main()

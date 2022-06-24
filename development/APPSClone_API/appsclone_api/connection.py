@@ -1,12 +1,13 @@
 import os.path
 import gzip
 import os
-from appsclone_api.rinexHeader import *
-from appsclone_api.utils.logs  import *
-from appsclone_api.constants   import *
-from gdgps_apps.exceptions     import *
-from gdgps_apps.apps           import APPS
-from gdgps_apps                import defines
+from appsclone_api.utils.helper import *
+from appsclone_api.rinexHeader  import *
+from appsclone_api.utils.logs   import *
+from appsclone_api.constants    import *
+from gdgps_apps.exceptions      import *
+from gdgps_apps.apps            import APPS
+from gdgps_apps                 import defines
 
 class Connection_APPS:
   """A connection to APPS, which contains all functions to interact with its API.
@@ -128,6 +129,17 @@ class Connection_APPS:
       self.logger.writeLog(Logs.SEVERITY.INFO,connectionFailedLog)
     return connectionStatus
 
+  def getQuotaLeft(self):
+    """Check the amount of space left in the user's quota.
+
+    Returns
+    ----------
+    int
+      The amount of space left in the user's quota in mebibytes
+    """
+    profile = self.apps.profile()
+    return self.__bytesToMB(profile["quota"] - profile["usage"])
+
   def uploadFile(self,file,appsIDQueue,uploadArgs):
     """Upload a file to APPS and add its id to the id queue.
 
@@ -144,7 +156,7 @@ class Connection_APPS:
       Logs.SEVERITY.INFO,
       Logs.getLogMsg(
         Logs.LOG_TYPE.SUBROUTINE_START,
-        rinexUpload.format(file = file)
+        rinexUpload.format(file = Helper.getFileFromPath(file))
       )
     )
     isValid = self.__checkFileValidity(file)
@@ -166,7 +178,7 @@ class Connection_APPS:
         solution_period      = args[11],
         generate_quaternions = args[12]
       )
-      self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccessLog.format(file = file))
+      self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccess.format(file = Helper.getFileFromPath(file)))
       self.__addUploadToQueue(fileResponseObject["id"],file,appsIDQueue)
     self.logger.writeLog(
       Logs.SEVERITY.INFO,
@@ -175,32 +187,6 @@ class Connection_APPS:
         rinexUpload.format(file = file)
       )
     )
-
-  def getQuotaLeft(self):
-    """Check the amount of space left in the user's quota.
-
-    Returns
-    ----------
-    int
-      The amount of space left in the user's quota in mebibytes
-    """
-    profile = self.apps.profile()
-    return self.__bytesToMB(profile["quota"] - profile["usage"])
-
-  def __bytesToMB(self,by):
-    """Convert bytes to mebibytes.
-    
-    Parameters
-    ----------
-    by : int
-      The value in bytes to convert
-
-    Returns
-    ----------
-    int
-      The given value in mebibytes with three decimal places
-    """
-    return round(by / 1.049e+6,3)
 
   def __checkFileValidity(self,file):
     """Check file validity and log it.

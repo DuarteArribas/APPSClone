@@ -130,7 +130,7 @@ class Logs:
     elif logType == Logs.LOG_TYPE.SUBROUTINE_END:
       return "== " + message + " SUBROUTINE (END) =="
     else:
-      return message
+      return message + "."
 
 # ✓    unit tested
 # ✓ feature tested

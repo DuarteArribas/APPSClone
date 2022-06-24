@@ -8,7 +8,10 @@ antennas      = set(antennasList)
 
 # == CONNECTION ==
 # = Routines =
-rinexUpload = "Upload on file '{file}'"
+rinexUpload   = "Upload on file '{file}'"
+# = Other =
+uploadSuccess = "Successfully uploaded file '{file}' to APPS"
+
 
 connectionSuccessLog       = "An attempt to test the connection with APPS was made and the connection was successful."
 connectionFailedLog        = "An attempt to test the connection with APPS was made and the connection was failed."
@@ -18,9 +21,8 @@ fileDoesNotExistLog        = "The {file} does not exist or has been removed."
 fileValidatedLog           = "The file {file} was validated and is being considered a valid file for uploading."
 fileNotValidatedLog        = "The file {file} is invalid - {validity}"
 compressedLog              = "File {file} was compressed. Decompressing it, so its header can be read."
-uploadSuccessLog           = "Successfuly uploaded file {file} to APPS."
-addedToQueueSuccessLog     = "Successfuly added file {file} to the uploaded queue."
-removedFromQueueSuccessLog = "Successfuly removed file {file} from the uploaded queue."
+addedToQueueSuccessLog     = "Successfully added file {file} to the uploaded queue."
+removedFromQueueSuccessLog = "Successfully removed file {file} from the uploaded queue."
 uuidNotInQueueLog          = "The file {file} was not in the uploaded queue, so cannot be removed from it."
 invalidArgLog              = "The value `{arg}` is invalid for argument {argName}. Using default value `{defaultValue}`."
 checkStateStartLog         = "=== STATE CHECK START ==="

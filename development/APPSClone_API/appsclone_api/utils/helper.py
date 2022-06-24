@@ -63,3 +63,19 @@ class Helper:
       The file from the file path
     """
     return path.split("/")[-1]
+
+  @staticmethod
+  def bytesToMB(by):
+    """Convert bytes to mebibytes.
+    
+    Parameters
+    ----------
+    by : int
+      The value in bytes to convert
+
+    Returns
+    ----------
+    int
+      The given value in mebibytes with five decimal places
+    """
+    return round(by / 1.049e+6,3)
