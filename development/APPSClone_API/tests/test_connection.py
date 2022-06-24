@@ -370,6 +370,16 @@ class TestConnection(unittest.TestCase):
       ]
     )
 
+  def test_add_to_apps_id_queue(self):
+    logger = Logs("logs/logTest.log",1000)
+    conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
+    conn._Connection_APPS__addToIDQueue("00000000-0000-0000-0000-000000000000","arroz","queues/apps_id_queue_test")
+
+  def test_remove_from_apps_id_queue(self):
+    logger = Logs("logs/logTest.log",1000)
+    conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
+    conn._Connection_APPS__removeFromIDQueue("00000000-0000-0000-0000-000000000000","arroz","queues/apps_id_queue_test")
+
   #def test_upload_file(self):
   #  args = {
   #    "pressure"             : None,
@@ -390,15 +400,7 @@ class TestConnection(unittest.TestCase):
   #  conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
   #  conn.uploadFile("in/uploads_test/CVTY2720.21D","out/queue/queue",args)
 
-  # def test_add_to_queue(self):
-  #   logger = Logs("logs/logTest.log",1000)
-  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-  #   conn._Connection_APPS__addUploadToQueue("00000000-0000-0000-0000-000000000000","arroz","out/queue/queue")
-
-  # def test_remove_from_queue(self):
-  #   logger = Logs("logs/logTest.log",1000)
-  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-  #   conn._Connection_APPS__removeFromUploadQueue("00000000-0000-0000-0000-000000000000","arroz","out/queue/queue")
+  
 
   #def test_get_file_data(self):
   #  logger = Logs("logs/logTest.log",1000)

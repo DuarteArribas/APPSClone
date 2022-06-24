@@ -268,37 +268,37 @@ class Connection_APPS:
     else:
       return arg in Connection_APPS.DEFAULT_ARGS[argName][1]
 
-  def __addUploadToQueue(self,uuid,file,uploadedFilesQueueFile):
-    """Add upload to the uploaded files queue.
+  def __addToIDQueue(self,uuid,filename,appsIDQueue):
+    """Add the upload's id to the apps ID queue.
 
     Parameters
     ----------
-    uuid                   : str
+    uuid        : str
       The id of the uploaded file
-    file                   : str
-      The uploaded file
-    uploadedFilesQueueFile : str
-      The file, which contains the uploaded files queue
+    filename    : str
+      The uploaded filename
+    appsIDQueue : str
+      The file which contains the ids of the files that were uploaded to APPS
     """
-    with open(uploadedFilesQueueFile,"a") as f:
+    with open(appsIDQueue,"a") as f:
       f.write(f"{uuid}\n")
-      self.logger.writeLog(Logs.SEVERITY.INFO,addedToQueueSuccessLog.format(file = file))
+      self.logger.writeRegularLog(Logs.SEVERITY.INFO,addedToQueueSuccess.format(file = filename))
 
-  def __removeFromUploadQueue(self,uuid,file,uploadedFilesQueueFile):
-    """Remove upload from the uploaded files queue.
+  def __removeFromIDQueue(self,uuid,filename,appsIDQueue):
+    """Remove upload's id from the apps ID queue.
 
     Parameters
     ----------
-    uuid                   : str
+    uuid        : str
       The id of the uploaded file
-    file                   : str
-      The uploaded file
-    uploadedFilesQueueFile : str
-      The file, which contains the uploaded files queue
+    filename    : str
+      The uploaded filename
+    appsIDQueue : str
+      The file which contains the ids of the files that were uploaded to APPS
     """
     newQueue       = ""
     uuidNotInQueue = True
-    with open(uploadedFilesQueueFile,"r") as f:
+    with open(appsIDQueue,"r") as f:
       lines = f.readlines()
       for line in lines:
         if not uuid == line.split("\n")[0]:
@@ -306,11 +306,11 @@ class Connection_APPS:
         else:
           uuidNotInQueue = False
     if uuidNotInQueue:
-      self.logger.writeLog(Logs.SEVERITY.WARNING,uuidNotInQueueLog.format(file = file))
+      self.logger.writeRegularLog(Logs.SEVERITY.WARNING,uuidNotInQueue.format(file = filename))
       return
-    with open(uploadedFilesQueueFile,"w") as f:
+    with open(appsIDQueue,"w") as f:
       f.write(newQueue)
-      self.logger.writeLog(Logs.SEVERITY.INFO,removedFromQueueSuccessLog.format(file = file))
+      self.logger.writeRegularLog(Logs.SEVERITY.INFO,removedFromQueueSuccess.format(file = filename))
 
   def handleFileState(self,uuid,uploadedFilesQueueFile,downloadFolder):
     """Handle what should be done, given the state of a file.

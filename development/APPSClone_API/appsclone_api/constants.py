@@ -8,24 +8,22 @@ antennas      = set(antennasList)
 
 # == CONNECTION ==
 # = Routines =
-connectionTest    = "Connection test"
-rinexUpload       = "Upload on file '{file}'"
+connectionTest          = "Connection test"
+rinexUpload             = "Upload on file '{file}'"
 # = Other =
-connectionSuccess = "The connection with APPS was successful"
-connectionFailed  = "The connection with APPS failed"
-fileValidated     = "The file '{file}' was validated and is being considered a valid file for uploading"
-fileNotValidated  = "The file '{file}' is invalid - {validity}"
-uploadSuccess     = "Successfully uploaded file '{file}' to APPS"
-invalidArg        = "The value '{arg}' is invalid for argument {argName}. Using default value '{defaultValue}'"
+connectionSuccess       = "The connection with APPS was successful"
+connectionFailed        = "The connection with APPS failed"
+fileValidated           = "The file '{file}' was validated and is being considered a valid file for uploading"
+fileNotValidated        = "The file '{file}' is invalid - {validity}"
+uploadSuccess           = "Successfully uploaded file '{file}' to APPS"
+invalidArg              = "The value '{arg}' is invalid for argument '{argName}'. Using default value '{defaultValue}'"
+addedToQueueSuccess     = "Successfully added file '{file}' to the apps ID queue"
+uuidNotInQueue          = "The file '{file}' was not in the apps ID queue, so cannot be removed from it"
+removedFromQueueSuccess = "Successfully removed file '{file}' from the apps ID queue"
 
 
-uploadStartLog             = "=== UPLOAD START on file {file} ==="
-uploadEndLog               = "=== UPLOAD END on file {file} ==="
 fileDoesNotExistLog        = "The {file} does not exist or has been removed."
 compressedLog              = "File {file} was compressed. Decompressing it, so its header can be read."
-addedToQueueSuccessLog     = "Successfully added file {file} to the uploaded queue."
-removedFromQueueSuccessLog = "Successfully removed file {file} from the uploaded queue."
-uuidNotInQueueLog          = "The file {file} was not in the uploaded queue, so cannot be removed from it."
 checkStateStartLog         = "=== STATE CHECK START ==="
 checkStateStartFileLog     = "Checking file {file}."
 checkStateEndLog           = "=== STATE CHECK END ==="
