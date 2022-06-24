@@ -1,22 +1,30 @@
 import unittest
-from connection import *
-from utils.logs import *
+import warnings
+from appsclone_api.connection import *
+from appsclone_api.utils.logs import *
 
 class TestConnection(unittest.TestCase):
   def test_connection_ok(self):
+    warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
     logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+    conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
     self.assertTrue(conn.testConnection())
 
-  def test_gzip(self):
+  def test_get_user_quota(self):
+    warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
     logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__checkCompressedWithGzip("in/test/file.gz"))
+    conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
+    print(conn.getQuotaLeft())
 
-  def test_gzip2(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__checkCompressedWithGzip("in/test/file"))
+  # def test_gzip(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__checkCompressedWithGzip("in/test/file.gz"))
+
+  # def test_gzip2(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__checkCompressedWithGzip("in/test/file"))
 
   # def test_getUncompressedFile(self):
   #   logger = Logs("logs/logTest.log",1000)
@@ -554,16 +562,6 @@ class TestConnection(unittest.TestCase):
     #conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
   #  conn.handleFileState("869c3e66-ee51-11ec-bd99-e0db5501adf2","out/queue/queue","out/downloads")
 
-  # def test_convert_to_mb(self):
-  #   logger = Logs("logs/logTest.log",1000)
-  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-  #   print(conn._Connection_APPS__bytesToMB(102898948))
-
-  # def test_get_user_quota(self):
-  #   logger = Logs("logs/logTest.log",1000)
-  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-  #   print(conn.getQuotaLeft())
-
   #def test_update_queue_with_name(self):
   #  logger = Logs("logs/logTest.log",1000)
   #  conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
@@ -574,6 +572,5 @@ class TestConnection(unittest.TestCase):
   #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
   #   conn._Connection_APPS__addUploadToUploadQueue("a112-3344-112-445-11","vinagre","out/queue/uploadFilesQueue")
   
-
 if __name__ == '__main__':
   unittest.main()

@@ -8,13 +8,14 @@ antennas      = set(antennasList)
 
 # == CONNECTION ==
 # = Routines =
-rinexUpload   = "Upload on file '{file}'"
+rinexUpload       = "Upload on file '{file}'"
+connectionTest    = "Connection test"
 # = Other =
-uploadSuccess = "Successfully uploaded file '{file}' to APPS"
+uploadSuccess     = "Successfully uploaded file '{file}' to APPS"
+connectionSuccess = "The connection with APPS was successful"
+connectionFailed  = "The connection with APPS failed"
 
 
-connectionSuccessLog       = "An attempt to test the connection with APPS was made and the connection was successful."
-connectionFailedLog        = "An attempt to test the connection with APPS was made and the connection was failed."
 uploadStartLog             = "=== UPLOAD START on file {file} ==="
 uploadEndLog               = "=== UPLOAD END on file {file} ==="
 fileDoesNotExistLog        = "The {file} does not exist or has been removed."

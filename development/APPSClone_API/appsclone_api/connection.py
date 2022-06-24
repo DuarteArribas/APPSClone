@@ -122,11 +122,25 @@ class Connection_APPS:
     bool
       True if it was able to connect and False otherwise
     """
+    self.logger.writeLog(
+      Logs.SEVERITY.INFO,
+      Logs.getLogMsg(
+        Logs.LOG_TYPE.SUBROUTINE_START,
+        connectionTest
+      )
+    )
     connectionStatus = self.apps.ping()[0]
     if connectionStatus:
-      self.logger.writeLog(Logs.SEVERITY.INFO,connectionSuccessLog)
+      self.logger.writeLog(Logs.SEVERITY.INFO,connectionSuccess)
     else:
-      self.logger.writeLog(Logs.SEVERITY.INFO,connectionFailedLog)
+      self.logger.writeLog(Logs.SEVERITY.ERROR,connectionFailed)
+    self.logger.writeLog(
+      Logs.SEVERITY.INFO,
+      Logs.getLogMsg(
+        Logs.LOG_TYPE.SUBROUTINE_END,
+        connectionTest
+      )
+    )
     return connectionStatus
 
   def getQuotaLeft(self):
@@ -138,7 +152,7 @@ class Connection_APPS:
       The amount of space left in the user's quota in mebibytes
     """
     profile = self.apps.profile()
-    return self.__bytesToMB(profile["quota"] - profile["usage"])
+    return Helper.bytesToMB(profile["quota"] - profile["usage"])
 
   def uploadFile(self,file,appsIDQueue,uploadArgs):
     """Upload a file to APPS and add its id to the id queue.
