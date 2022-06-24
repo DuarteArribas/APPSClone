@@ -147,11 +147,11 @@ class Connection_APPS:
     Parameters
     ----------
     filePath    : str
-      The path of the file to upload
+      The path of the file
     appsIDQueue : str
       The file which contains the ids of the files that were uploaded to APPS
     uploadArgs  : dict
-      Contains pairs of argumentName->argument for the upload
+      Pairs of argumentName->argument for the upload
     """
     filename = Helper.getFileFromPath(filePath)
     self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,rinexUpload.format(file = filename),Logs.ROUTINE_STATUS.START)
@@ -185,28 +185,88 @@ class Connection_APPS:
     )
 
   def __checkFileValidity(self,filePath):
-    """Check file validity and log it.
+    """Check file validity.
 
     Parameters
     ----------
     filePath : str
-      The path of the file to upload
+      The path of the file
 
     Returns
     ----------
     bool
       True if the rinex file is valid and False otherwise
     """
-    file   = self.__getUncompressedFile(file)
-    header = RinexHeader()
+    file             = Helper.getUncompressedFile(filePath)
+    filename         = Helper.getFileFromPath(file)
+    header           = RinexHeader()
     header.readMandatoryHeader(file)
     isValid,validity = header.isValidHeader()
     if isValid:
-      self.logger.writeLog(Logs.SEVERITY.INFO,fileValidatedLog.format(file = file))
+      self.logger.writeRegularLog(Logs.SEVERITY.INFO,fileValidated.format(file = filename))
     else:
-      validityErrorString = header.validityErrorToString(validity[0],validity[1])
-      self.logger.writeLog(Logs.SEVERITY.ERROR,fileNotValidatedLog.format(file = file,validity = validityErrorString))
+      validityErrorString = RinexHeader.validityErrorToString(validity[0],validity[1])
+      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,fileNotValidated.format(file = filename,validity = validityErrorString))
     return isValid
+
+  def __updateUploadArgs(self,uploadArgs):
+    """Update uploading args with the specified ones or with the defaults ones if no args
+    are specified or if they're incorrect.
+
+    Parameters
+    ----------
+    uploadArgs : dict
+      Pairs of argumentName->argument for the upload
+
+    Returns
+    ----------
+    list
+      The arguments
+    """
+    args = []
+    for argName in uploadArgs:
+      if uploadArgs[argName] != "" and Connection_APPS._isValidArg(argName,uploadArgs[argName]):
+        args.append(uploadArgs[argName])
+      else:
+        defaultValue = None
+        if isinstance(Connection_APPS.DEFAULT_ARGS[argName],tuple):
+          defaultValue = Connection_APPS.DEFAULT_ARGS[argName][0]
+        else:
+          defaultValue = Connection_APPS.DEFAULT_ARGS[argName]
+        self.logger.writeRegularLog(
+          Logs.SEVERITY.WARNING,invalidArg.format(
+            arg          = uploadArgs[argName],
+            argName      = argName,
+            defaultValue = defaultValue
+          )
+        )
+        args.append(defaultValue)
+    return args
+
+  @staticmethod
+  def _isValidArg(argName,arg):
+    """Check if received argument is valid.
+
+    Parameters
+    ----------
+    argName : str
+      The name of the argument
+    arg     : str
+      The received argument
+
+    Returns
+    ----------
+    bool
+      True if the argument is valid and False otherwise
+    """
+    if argName   == "pressure" or argName == "attitude":
+      return arg == None or os.path.isfile(arg)
+    elif argName == "elev_angle_cutoff":
+      return arg > Connection_APPS.DEFAULT_ARGS[argName][1][0] and arg < Connection_APPS.DEFAULT_ARGS[argName][1][1]
+    elif argName == "solution_period":
+      return arg > Connection_APPS.DEFAULT_ARGS[argName][1]
+    else:
+      return arg in Connection_APPS.DEFAULT_ARGS[argName][1]
 
   def __addUploadToQueue(self,uuid,file,uploadedFilesQueueFile):
     """Add upload to the uploaded files queue.
@@ -251,60 +311,6 @@ class Connection_APPS:
     with open(uploadedFilesQueueFile,"w") as f:
       f.write(newQueue)
       self.logger.writeLog(Logs.SEVERITY.INFO,removedFromQueueSuccessLog.format(file = file))
-
-  def __updateUploadArgs(self,uploadArgs):
-    """Update uploading args with the specified ones or with the defaults ones if no args
-    are specified or if they're incorrect.
-
-    Parameters
-    ----------
-    uploadArgs             : dict
-      Contains pairs of argumentName->argument
-
-    Returns
-    ----------
-    list
-      The list of arguments
-    """
-    args = []
-    for argName in uploadArgs:
-      if uploadArgs[argName] != "" and self.__isValidArg(argName,uploadArgs[argName]):
-        args.append(uploadArgs[argName])
-      else:
-        defaultValue = Connection_APPS.DEFAULT_ARGS[argName][0] if isinstance(Connection_APPS.DEFAULT_ARGS[argName],tuple) else Connection_APPS.DEFAULT_ARGS[argName]
-        self.logger.writeLog(
-          Logs.SEVERITY.WARNING,invalidArgLog.format(
-            arg          = uploadArgs[argName],
-            argName      = argName,
-            defaultValue = defaultValue
-          )
-        )
-        args.append(defaultValue)
-    return args
-
-  def __isValidArg(self,argName,arg):
-    """Check if received argument is valid.
-
-    Parameters
-    ----------
-    argName                : str
-      The name of the argument
-    arg                    : str
-      The received argument
-
-    Returns
-    ----------
-    bool
-      True if the argument is valid and False otherwise
-    """
-    if argName   == "pressure" or argName == "attitude":
-      return arg == None or os.path.isfile(arg)
-    elif argName == "elev_angle_cutoff":
-      return arg > Connection_APPS.DEFAULT_ARGS[argName][1][0] and arg < Connection_APPS.DEFAULT_ARGS[argName][1][1]
-    elif argName == "solution_period":
-      return arg > Connection_APPS.DEFAULT_ARGS[argName][1]
-    else:
-      return arg in Connection_APPS.DEFAULT_ARGS[argName][1]
 
   def handleFileState(self,uuid,uploadedFilesQueueFile,downloadFolder):
     """Handle what should be done, given the state of a file.
