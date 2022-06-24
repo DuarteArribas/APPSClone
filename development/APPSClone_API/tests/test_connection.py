@@ -34,465 +34,465 @@ class TestConnection(unittest.TestCase):
   #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
   #   self.assertEqual(conn._Connection_APPS__compressUncompressGzip("in/test/arroz.gz",False),"in/test/arrozUncompressed")
 
-  def test_file_validity(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__checkFileValidity("in/test/file"))
+  # def test_file_validity(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__checkFileValidity("in/test/file"))
 
-  def test_file_validity2(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__checkFileValidity("in/uploads_test/CVTY2720.21D"))
+  # def test_file_validity2(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__checkFileValidity("in/uploads_test/CVTY2720.21D"))
 
-  def test_valid_arg_email(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("email",defines.Data.EMAIL_NOTIFY_DEFAULT))
+  # def test_valid_arg_email(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("email",defines.Data.EMAIL_NOTIFY_DEFAULT))
 
-  def test_valid_arg_email2(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("email",True))
+  # def test_valid_arg_email2(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("email",True))
 
-  def test_valid_arg_email3(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("email",False))
+  # def test_valid_arg_email3(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("email",False))
 
-  def test_valid_arg_email4(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("email","arroz"))
+  # def test_valid_arg_email4(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("email","arroz"))
 
-  def test_valid_arg_access(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("access",defines.Data.ACCESS_DEFAULT))
+  # def test_valid_arg_access(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("access",defines.Data.ACCESS_DEFAULT))
 
-  def test_valid_arg_access2(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("access",defines.Data.PRIVATE))
+  # def test_valid_arg_access2(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("access",defines.Data.PRIVATE))
 
-  def test_valid_arg_access3(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("access",defines.Data.PUBLIC))
+  # def test_valid_arg_access3(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("access",defines.Data.PUBLIC))
 
-  def test_valid_arg_access4(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("access",True))
+  # def test_valid_arg_access4(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("access",True))
 
-  def test_valid_arg_processing_mode(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("processing_mode",defines.GIPSYData.PROCESSING_MODE_DEFAULT))
+  # def test_valid_arg_processing_mode(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("processing_mode",defines.GIPSYData.PROCESSING_MODE_DEFAULT))
 
-  def test_valid_arg_processing_mode2(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("processing_mode",defines.GIPSYData.STATIC))
+  # def test_valid_arg_processing_mode2(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("processing_mode",defines.GIPSYData.STATIC))
 
-  def test_valid_arg_processing_mode3(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("processing_mode",defines.GIPSYData.KINEMATIC))
+  # def test_valid_arg_processing_mode3(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("processing_mode",defines.GIPSYData.KINEMATIC))
 
-  def test_valid_arg_processing_mode4(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("processing_mode",True))
+  # def test_valid_arg_processing_mode4(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("processing_mode",True))
 
-  def test_valid_arg_product(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("product",defines.GIPSYData.PRODUCT_DEFAULT))
+  # def test_valid_arg_product(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("product",defines.GIPSYData.PRODUCT_DEFAULT))
 
-  def test_valid_arg_product2(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("product",defines.OrbitClockProduct.REAL_TIME))
+  # def test_valid_arg_product2(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("product",defines.OrbitClockProduct.REAL_TIME))
 
-  def test_valid_arg_product3(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("product",defines.OrbitClockProduct.ULTRA))
+  # def test_valid_arg_product3(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("product",defines.OrbitClockProduct.ULTRA))
 
-  def test_valid_arg_product4(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("product",defines.OrbitClockProduct.RAPID))
+  # def test_valid_arg_product4(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("product",defines.OrbitClockProduct.RAPID))
 
-  def test_valid_arg_product5(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("product",defines.OrbitClockProduct.FINAL))
+  # def test_valid_arg_product5(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("product",defines.OrbitClockProduct.FINAL))
 
-  def test_valid_arg_product6(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("product",defines.GIPSYData.BEST))
+  # def test_valid_arg_product6(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("product",defines.GIPSYData.BEST))
 
-  def test_valid_arg_product7(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("product",False))
+  # def test_valid_arg_product7(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("product",False))
 
-  def test_valid_arg_troposphere_model(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("troposphere_model",defines.GIPSYData.TROP_GMF))
+  # def test_valid_arg_troposphere_model(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("troposphere_model",defines.GIPSYData.TROP_GMF))
 
-  def test_valid_arg_troposphere_model2(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("troposphere_model",defines.GIPSYData.TROP_OFF))
+  # def test_valid_arg_troposphere_model2(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("troposphere_model",defines.GIPSYData.TROP_OFF))
 
-  def test_valid_arg_troposphere_model3(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("troposphere_model",defines.GIPSYData.TROP_PROVIDED))
+  # def test_valid_arg_troposphere_model3(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("troposphere_model",defines.GIPSYData.TROP_PROVIDED))
 
-  def test_valid_arg_troposphere_model4(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("troposphere_model",defines.GIPSYData.TROP_VMF1))
+  # def test_valid_arg_troposphere_model4(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("troposphere_model",defines.GIPSYData.TROP_VMF1))
 
-  def test_valid_arg_troposphere_model5(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("troposphere_model",defines.GIPSYData.TROP_GPT2))
+  # def test_valid_arg_troposphere_model5(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("troposphere_model",defines.GIPSYData.TROP_GPT2))
 
-  def test_valid_arg_troposphere_model6(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("troposphere_model",True))
+  # def test_valid_arg_troposphere_model6(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("troposphere_model",True))
 
-  def test_valid_arg_ocean_loading(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("ocean_loading",True))
+  # def test_valid_arg_ocean_loading(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("ocean_loading",True))
 
-  def test_valid_arg_ocean_loading2(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("ocean_loading",False))
+  # def test_valid_arg_ocean_loading2(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("ocean_loading",False))
 
-  def test_valid_arg_ocean_loading3(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("ocean_loading","arroz"))
+  # def test_valid_arg_ocean_loading3(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("ocean_loading","arroz"))
 
-  def test_valid_arg_model_tides(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("model_tides",True))
+  # def test_valid_arg_model_tides(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("model_tides",True))
 
-  def test_valid_arg_model_tides2(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("model_tides",False))
+  # def test_valid_arg_model_tides2(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("model_tides",False))
 
-  def test_valid_arg_model_tides3(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("model_tides","arroz"))
+  # def test_valid_arg_model_tides3(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("model_tides","arroz"))
 
-  def test_valid_arg_elev_dep_weighting(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("elev_dep_weighting",defines.GIPSYData.ROOT_SINE))
+  # def test_valid_arg_elev_dep_weighting(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("elev_dep_weighting",defines.GIPSYData.ROOT_SINE))
 
-  def test_valid_arg_elev_dep_weighting2(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("elev_dep_weighting",defines.GIPSYData.FLAT))
+  # def test_valid_arg_elev_dep_weighting2(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("elev_dep_weighting",defines.GIPSYData.FLAT))
 
-  def test_valid_arg_elev_dep_weighting3(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("elev_dep_weighting",defines.GIPSYData.SINE))
+  # def test_valid_arg_elev_dep_weighting3(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("elev_dep_weighting",defines.GIPSYData.SINE))
 
-  def test_valid_arg_elev_angle_cutoff(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("elev_angle_cutoff",10))
+  # def test_valid_arg_elev_angle_cutoff(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("elev_angle_cutoff",10))
 
-  def test_valid_arg_elev_angle_cutoff2(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("elev_angle_cutoff",7.5))
+  # def test_valid_arg_elev_angle_cutoff2(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("elev_angle_cutoff",7.5))
 
-  def test_valid_arg_elev_angle_cutoff3(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("elev_angle_cutoff",defines.GIPSYData.ELEV_ANGLE_CUTOFF_MIN+1))
+  # def test_valid_arg_elev_angle_cutoff3(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("elev_angle_cutoff",defines.GIPSYData.ELEV_ANGLE_CUTOFF_MIN+1))
 
-  def test_valid_arg_elev_angle_cutoff4(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("elev_angle_cutoff",defines.GIPSYData.ELEV_ANGLE_CUTOFF_MIN))
+  # def test_valid_arg_elev_angle_cutoff4(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("elev_angle_cutoff",defines.GIPSYData.ELEV_ANGLE_CUTOFF_MIN))
 
-  def test_valid_arg_elev_angle_cutoff5(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("elev_angle_cutoff",defines.GIPSYData.ELEV_ANGLE_CUTOFF_MIN-1))
+  # def test_valid_arg_elev_angle_cutoff5(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("elev_angle_cutoff",defines.GIPSYData.ELEV_ANGLE_CUTOFF_MIN-1))
 
-  def test_valid_arg_elev_angle_cutoff6(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("elev_angle_cutoff",defines.GIPSYData.ELEV_ANGLE_CUTOFF_MAX+1))
+  # def test_valid_arg_elev_angle_cutoff6(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("elev_angle_cutoff",defines.GIPSYData.ELEV_ANGLE_CUTOFF_MAX+1))
 
-  def test_valid_arg_elev_angle_cutoff7(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("elev_angle_cutoff",defines.GIPSYData.ELEV_ANGLE_CUTOFF_MAX))
+  # def test_valid_arg_elev_angle_cutoff7(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("elev_angle_cutoff",defines.GIPSYData.ELEV_ANGLE_CUTOFF_MAX))
 
-  def test_valid_arg_elev_angle_cutoff8(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("elev_angle_cutoff",defines.GIPSYData.ELEV_ANGLE_CUTOFF_MAX-1))
+  # def test_valid_arg_elev_angle_cutoff8(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("elev_angle_cutoff",defines.GIPSYData.ELEV_ANGLE_CUTOFF_MAX-1))
 
-  def test_valid_arg_solution_period(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("solution_period",300))
+  # def test_valid_arg_solution_period(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("solution_period",300))
 
-  def test_valid_arg_solution_period2(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("solution_period",10))
+  # def test_valid_arg_solution_period2(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("solution_period",10))
 
-  def test_valid_arg_solution_period3(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("solution_period",-10))
+  # def test_valid_arg_solution_period3(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("solution_period",-10))
 
-  def test_valid_arg_solution_period3(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("solution_period",1000000))
+  # def test_valid_arg_solution_period3(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("solution_period",1000000))
 
-  def test_valid_arg_solution_period4(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("solution_period",defines.GIPSYData.SOLUTION_PERIOD_MIN-1))
+  # def test_valid_arg_solution_period4(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("solution_period",defines.GIPSYData.SOLUTION_PERIOD_MIN-1))
 
-  def test_valid_arg_solution_period5(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("solution_period",defines.GIPSYData.SOLUTION_PERIOD_MIN))
+  # def test_valid_arg_solution_period5(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("solution_period",defines.GIPSYData.SOLUTION_PERIOD_MIN))
 
-  def test_valid_arg_solution_period6(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("solution_period",defines.GIPSYData.SOLUTION_PERIOD_MIN+1))
+  # def test_valid_arg_solution_period6(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("solution_period",defines.GIPSYData.SOLUTION_PERIOD_MIN+1))
 
-  def test_valid_arg_solution_period7(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("solution_period",-10000))
+  # def test_valid_arg_solution_period7(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("solution_period",-10000))
 
-  def test_valid_arg_generate_quaternions(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("generate_quaternions",True))
+  # def test_valid_arg_generate_quaternions(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("generate_quaternions",True))
 
-  def test_valid_arg_generate_quaternions2(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertTrue(conn._Connection_APPS__isValidArg("generate_quaternions",False))
+  # def test_valid_arg_generate_quaternions2(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertTrue(conn._Connection_APPS__isValidArg("generate_quaternions",False))
 
-  def test_valid_arg_generate_quaternions3(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    self.assertFalse(conn._Connection_APPS__isValidArg("generate_quaternions","arroz"))
+  # def test_valid_arg_generate_quaternions3(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   self.assertFalse(conn._Connection_APPS__isValidArg("generate_quaternions","arroz"))
 
-  def test_update_upload_args(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    args = {
-      "pressure"             : None,
-      "attitude"             : None,
-      "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
-      "access"               : defines.Data.ACCESS_DEFAULT,
-      "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
-      "product"              : defines.GIPSYData.PRODUCT_DEFAULT,
-      "troposphere_model"    : defines.GIPSYData.TROP_GMF,
-      "ocean_loading"        : True,
-      "model_tides"          : True,
-      "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
-      "elev_angle_cutoff"    : 7.5,
-      "solution_period"      : 300,
-      "generate_quaternions" : False,
-    }
-    self.assertEqual(
-      conn._Connection_APPS__updateUploadArgs(args),
-      [
-        None,
-        None,
-        defines.Data.EMAIL_NOTIFY_DEFAULT,
-        defines.Data.ACCESS_DEFAULT,
-        defines.GIPSYData.PROCESSING_MODE_DEFAULT,
-        defines.GIPSYData.PRODUCT_DEFAULT,
-        defines.GIPSYData.TROP_GMF,
-        True,
-        True,
-        defines.GIPSYData.ROOT_SINE,
-        7.5,
-        300,
-        False
-      ]
-    )
+  # def test_update_upload_args(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   args = {
+  #     "pressure"             : None,
+  #     "attitude"             : None,
+  #     "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
+  #     "access"               : defines.Data.ACCESS_DEFAULT,
+  #     "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+  #     "product"              : defines.GIPSYData.PRODUCT_DEFAULT,
+  #     "troposphere_model"    : defines.GIPSYData.TROP_GMF,
+  #     "ocean_loading"        : True,
+  #     "model_tides"          : True,
+  #     "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
+  #     "elev_angle_cutoff"    : 7.5,
+  #     "solution_period"      : 300,
+  #     "generate_quaternions" : False,
+  #   }
+  #   self.assertEqual(
+  #     conn._Connection_APPS__updateUploadArgs(args),
+  #     [
+  #       None,
+  #       None,
+  #       defines.Data.EMAIL_NOTIFY_DEFAULT,
+  #       defines.Data.ACCESS_DEFAULT,
+  #       defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+  #       defines.GIPSYData.PRODUCT_DEFAULT,
+  #       defines.GIPSYData.TROP_GMF,
+  #       True,
+  #       True,
+  #       defines.GIPSYData.ROOT_SINE,
+  #       7.5,
+  #       300,
+  #       False
+  #     ]
+  #   )
 
-  def test_update_upload_args2(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    args = {
-      "pressure"             : None,
-      "attitude"             : None,
-      "email"                : True,
-      "access"               : defines.Data.ACCESS_DEFAULT,
-      "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
-      "product"              : defines.GIPSYData.PRODUCT_DEFAULT,
-      "troposphere_model"    : defines.GIPSYData.TROP_GMF,
-      "ocean_loading"        : True,
-      "model_tides"          : True,
-      "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
-      "elev_angle_cutoff"    : 7.5,
-      "solution_period"      : 300,
-      "generate_quaternions" : False,
-    }
-    self.assertEqual(
-      conn._Connection_APPS__updateUploadArgs(args),
-      [
-        None,
-        None,
-        True,
-        defines.Data.ACCESS_DEFAULT,
-        defines.GIPSYData.PROCESSING_MODE_DEFAULT,
-        defines.GIPSYData.PRODUCT_DEFAULT,
-        defines.GIPSYData.TROP_GMF,
-        True,
-        True,
-        defines.GIPSYData.ROOT_SINE,
-        7.5,
-        300,
-        False
-      ]
-    )
+  # def test_update_upload_args2(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   args = {
+  #     "pressure"             : None,
+  #     "attitude"             : None,
+  #     "email"                : True,
+  #     "access"               : defines.Data.ACCESS_DEFAULT,
+  #     "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+  #     "product"              : defines.GIPSYData.PRODUCT_DEFAULT,
+  #     "troposphere_model"    : defines.GIPSYData.TROP_GMF,
+  #     "ocean_loading"        : True,
+  #     "model_tides"          : True,
+  #     "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
+  #     "elev_angle_cutoff"    : 7.5,
+  #     "solution_period"      : 300,
+  #     "generate_quaternions" : False,
+  #   }
+  #   self.assertEqual(
+  #     conn._Connection_APPS__updateUploadArgs(args),
+  #     [
+  #       None,
+  #       None,
+  #       True,
+  #       defines.Data.ACCESS_DEFAULT,
+  #       defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+  #       defines.GIPSYData.PRODUCT_DEFAULT,
+  #       defines.GIPSYData.TROP_GMF,
+  #       True,
+  #       True,
+  #       defines.GIPSYData.ROOT_SINE,
+  #       7.5,
+  #       300,
+  #       False
+  #     ]
+  #   )
 
-  def test_update_upload_args3(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    args = {
-      "pressure"             : None,
-      "attitude"             : None,
-      "email"                : True,
-      "access"               : "arroz",
-      "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
-      "product"              : defines.GIPSYData.PRODUCT_DEFAULT,
-      "troposphere_model"    : defines.GIPSYData.TROP_GMF,
-      "ocean_loading"        : True,
-      "model_tides"          : True,
-      "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
-      "elev_angle_cutoff"    : 7.5,
-      "solution_period"      : 300,
-      "generate_quaternions" : False,
-    }
-    self.assertEqual(
-      conn._Connection_APPS__updateUploadArgs(args),
-      [
-        None,
-        None,
-        True,
-        defines.Data.ACCESS_DEFAULT,
-        defines.GIPSYData.PROCESSING_MODE_DEFAULT,
-        defines.GIPSYData.PRODUCT_DEFAULT,
-        defines.GIPSYData.TROP_GMF,
-        True,
-        True,
-        defines.GIPSYData.ROOT_SINE,
-        7.5,
-        300,
-        False
-      ]
-    )
+  # def test_update_upload_args3(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   args = {
+  #     "pressure"             : None,
+  #     "attitude"             : None,
+  #     "email"                : True,
+  #     "access"               : "arroz",
+  #     "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+  #     "product"              : defines.GIPSYData.PRODUCT_DEFAULT,
+  #     "troposphere_model"    : defines.GIPSYData.TROP_GMF,
+  #     "ocean_loading"        : True,
+  #     "model_tides"          : True,
+  #     "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
+  #     "elev_angle_cutoff"    : 7.5,
+  #     "solution_period"      : 300,
+  #     "generate_quaternions" : False,
+  #   }
+  #   self.assertEqual(
+  #     conn._Connection_APPS__updateUploadArgs(args),
+  #     [
+  #       None,
+  #       None,
+  #       True,
+  #       defines.Data.ACCESS_DEFAULT,
+  #       defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+  #       defines.GIPSYData.PRODUCT_DEFAULT,
+  #       defines.GIPSYData.TROP_GMF,
+  #       True,
+  #       True,
+  #       defines.GIPSYData.ROOT_SINE,
+  #       7.5,
+  #       300,
+  #       False
+  #     ]
+  #   )
 
-  def test_update_upload_args4(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    args = {
-      "pressure"             : "",
-      "attitude"             : "",
-      "email"                : "",
-      "access"               : "",
-      "processing_mode"      : "",
-      "product"              : "",
-      "troposphere_model"    : "",
-      "ocean_loading"        : "",
-      "model_tides"          : "",
-      "elev_dep_weighting"   : "",
-      "elev_angle_cutoff"    : "",
-      "solution_period"      : "",
-      "generate_quaternions" : ""
-    }
-    self.assertEqual(
-      conn._Connection_APPS__updateUploadArgs(args),
-      [
-        None,
-        None,
-        defines.Data.EMAIL_NOTIFY_DEFAULT,
-        defines.Data.ACCESS_DEFAULT,
-        defines.GIPSYData.PROCESSING_MODE_DEFAULT,
-        defines.GIPSYData.PRODUCT_DEFAULT,
-        defines.GIPSYData.TROP_GMF,
-        True,
-        True,
-        defines.GIPSYData.ROOT_SINE,
-        7.5,
-        300,
-        False
-      ]
-    )
+  # def test_update_upload_args4(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   args = {
+  #     "pressure"             : "",
+  #     "attitude"             : "",
+  #     "email"                : "",
+  #     "access"               : "",
+  #     "processing_mode"      : "",
+  #     "product"              : "",
+  #     "troposphere_model"    : "",
+  #     "ocean_loading"        : "",
+  #     "model_tides"          : "",
+  #     "elev_dep_weighting"   : "",
+  #     "elev_angle_cutoff"    : "",
+  #     "solution_period"      : "",
+  #     "generate_quaternions" : ""
+  #   }
+  #   self.assertEqual(
+  #     conn._Connection_APPS__updateUploadArgs(args),
+  #     [
+  #       None,
+  #       None,
+  #       defines.Data.EMAIL_NOTIFY_DEFAULT,
+  #       defines.Data.ACCESS_DEFAULT,
+  #       defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+  #       defines.GIPSYData.PRODUCT_DEFAULT,
+  #       defines.GIPSYData.TROP_GMF,
+  #       True,
+  #       True,
+  #       defines.GIPSYData.ROOT_SINE,
+  #       7.5,
+  #       300,
+  #       False
+  #     ]
+  #   )
 
-  def test_update_upload_args5(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    args = {
-      "pressure"             : "",
-      "attitude"             : "",
-      "email"                : "",
-      "access"               : "",
-      "processing_mode"      : "",
-      "product"              : "",
-      "troposphere_model"    : defines.GIPSYData.TROP_PROVIDED,
-      "ocean_loading"        : "",
-      "model_tides"          : "",
-      "elev_dep_weighting"   : "",
-      "elev_angle_cutoff"    : "",
-      "solution_period"      : "",
-      "generate_quaternions" : ""
-    }
-    self.assertEqual(
-      conn._Connection_APPS__updateUploadArgs(args),
-      [
-        None,
-        None,
-        defines.Data.EMAIL_NOTIFY_DEFAULT,
-        defines.Data.ACCESS_DEFAULT,
-        defines.GIPSYData.PROCESSING_MODE_DEFAULT,
-        defines.GIPSYData.PRODUCT_DEFAULT,
-        defines.GIPSYData.TROP_PROVIDED,
-        True,
-        True,
-        defines.GIPSYData.ROOT_SINE,
-        7.5,
-        300,
-        False
-      ]
-    )
+  # def test_update_upload_args5(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   args = {
+  #     "pressure"             : "",
+  #     "attitude"             : "",
+  #     "email"                : "",
+  #     "access"               : "",
+  #     "processing_mode"      : "",
+  #     "product"              : "",
+  #     "troposphere_model"    : defines.GIPSYData.TROP_PROVIDED,
+  #     "ocean_loading"        : "",
+  #     "model_tides"          : "",
+  #     "elev_dep_weighting"   : "",
+  #     "elev_angle_cutoff"    : "",
+  #     "solution_period"      : "",
+  #     "generate_quaternions" : ""
+  #   }
+  #   self.assertEqual(
+  #     conn._Connection_APPS__updateUploadArgs(args),
+  #     [
+  #       None,
+  #       None,
+  #       defines.Data.EMAIL_NOTIFY_DEFAULT,
+  #       defines.Data.ACCESS_DEFAULT,
+  #       defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+  #       defines.GIPSYData.PRODUCT_DEFAULT,
+  #       defines.GIPSYData.TROP_PROVIDED,
+  #       True,
+  #       True,
+  #       defines.GIPSYData.ROOT_SINE,
+  #       7.5,
+  #       300,
+  #       False
+  #     ]
+  #   )
 
   #def test_upload_file(self):
   #  args = {
@@ -514,15 +514,15 @@ class TestConnection(unittest.TestCase):
   #  conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
   #  conn.uploadFile("in/uploads_test/CVTY2720.21D","out/queue/queue",args)
 
-  def test_add_to_queue(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    conn._Connection_APPS__addUploadToQueue("00000000-0000-0000-0000-000000000000","arroz","out/queue/queue")
+  # def test_add_to_queue(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   conn._Connection_APPS__addUploadToQueue("00000000-0000-0000-0000-000000000000","arroz","out/queue/queue")
 
-  def test_remove_from_queue(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    conn._Connection_APPS__removeFromUploadQueue("00000000-0000-0000-0000-000000000000","arroz","out/queue/queue")
+  # def test_remove_from_queue(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   conn._Connection_APPS__removeFromUploadQueue("00000000-0000-0000-0000-000000000000","arroz","out/queue/queue")
 
   #def test_get_file_data(self):
   #  logger = Logs("logs/logTest.log",1000)
@@ -554,25 +554,25 @@ class TestConnection(unittest.TestCase):
     #conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
   #  conn.handleFileState("869c3e66-ee51-11ec-bd99-e0db5501adf2","out/queue/queue","out/downloads")
 
-  def test_convert_to_mb(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    print(conn._Connection_APPS__bytesToMB(102898948))
+  # def test_convert_to_mb(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   print(conn._Connection_APPS__bytesToMB(102898948))
 
-  def test_get_user_quota(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    print(conn.getQuotaLeft())
+  # def test_get_user_quota(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   print(conn.getQuotaLeft())
 
   #def test_update_queue_with_name(self):
   #  logger = Logs("logs/logTest.log",1000)
   #  conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
   #  conn.updateQueueWithName("4","lol","out/queue/uploadFilesQueue")
 
-  def test_update_queue_with_uuid(self):
-    logger = Logs("logs/logTest.log",1000)
-    conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    conn._Connection_APPS__addUploadToUploadQueue("a112-3344-112-445-11","vinagre","out/queue/uploadFilesQueue")
+  # def test_update_queue_with_uuid(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
+  #   conn._Connection_APPS__addUploadToUploadQueue("a112-3344-112-445-11","vinagre","out/queue/uploadFilesQueue")
   
 
 if __name__ == '__main__':

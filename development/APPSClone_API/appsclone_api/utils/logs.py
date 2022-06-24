@@ -14,13 +14,20 @@ class Logs:
     The minimum number of logs allowed
   MAX_NUM_LOGS : int
     The maximum number of logs allowed 
+  LOG_TYPE     : enum
+    The type of log. ROUTINE_START and ROUTINE_END mean that the log delimits the start and end
+    of a routine. SUBROUTINE_START and SUBROUTINE_END mean that the log delimits the start and end
+    of a subroutine. OTHER means it's a regular log.
   """
   # == Attributes ==
   SEVERITY     = Enum(
-    'SEVERITY', 'DEBUG INFO WARNING ERROR CRITICAL'
+    'SEVERITY','DEBUG INFO WARNING ERROR CRITICAL'
   )
   MIN_NUM_LOGS = 100
   MAX_NUM_LOGS = 100000
+  LOG_TYPE     = Enum(
+    "LOG_TYPE","ROUTINE_START ROUTINE_END SUBROUTINE_START SUBROUTINE_END OTHER"
+  )
   # == Methods ==
   def __init__(self,loggingFile,maxLogs):
     """Set the default configuration of the logging tool to write to a specific file with a specific format.
@@ -53,7 +60,7 @@ class Logs:
     message  : str
       The log message
     """
-    formattedMessage = self.__setLogMessage(severity,message)
+    formattedMessage = Logs._setLogMsg(severity,message)
     if severity   == Logs.SEVERITY.DEBUG:
       logging.debug(formattedMessage)
     elif severity == Logs.SEVERITY.INFO:
@@ -68,7 +75,8 @@ class Logs:
       logging.debug(formattedMessage)
     self.__sanitizeLogs()
 
-  def __setLogMessage(self,severity,message):
+  @staticmethod
+  def _setLogMsg(severity,message):
     """Format the logging message, so that it stays aligned. The date, severity and message are logged.
 
     Parameters
@@ -96,6 +104,33 @@ class Logs:
       newLoggingFile = "\n".join(logsList)
     with open(self.loggingFile,"w") as f:
       f.write(newLoggingFile)
+
+  @staticmethod
+  def getLogMsg(logType,message):
+    """Get the log message, according to its type.
+
+    Parameters
+    ----------
+    logType  : enum
+      The type of the log
+    message  : str
+      The log message
+    
+    Returns
+    ----------
+    str
+      The formatted log message, according to its type
+    """
+    if logType == Logs.LOG_TYPE.ROUTINE_START:
+      return "=== " + message + " ROUTINE (START) ==="
+    elif logType == Logs.LOG_TYPE.ROUTINE_END:
+      return "=== " + message + " ROUTINE (END) ==="
+    elif logType == Logs.LOG_TYPE.SUBROUTINE_START:
+      return "== " + message + " SUBROUTINE (START) =="
+    elif logType == Logs.LOG_TYPE.SUBROUTINE_END:
+      return "== " + message + " SUBROUTINE (END) =="
+    else:
+      return message
 
 # ✓    unit tested
 # ✓ feature tested

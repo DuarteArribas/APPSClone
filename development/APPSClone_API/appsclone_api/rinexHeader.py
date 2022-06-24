@@ -1,5 +1,5 @@
-from enum import Enum
 from appsclone_api.constants import *
+from enum                    import Enum
 
 class RinexHeader:
   """A rinex header. It's constituted by several mandatory header lines and several optional header lines.

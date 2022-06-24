@@ -4,12 +4,11 @@ from appsclone_api.utils.logs import *
 
 class TestLogs(unittest.TestCase):
   def test_format_message(self):
-    logger = Logs("logs/logTest.log",1000)
-    print(logger._Logs__setLogMessage(Logs.SEVERITY.DEBUG,"My message"))
-    print(logger._Logs__setLogMessage(Logs.SEVERITY.INFO,"My message2"))
-    print(logger._Logs__setLogMessage(Logs.SEVERITY.WARNING,"My message3"))
-    print(logger._Logs__setLogMessage(Logs.SEVERITY.ERROR,"My message4"))
-    print(logger._Logs__setLogMessage(Logs.SEVERITY.CRITICAL,"My message5"))
+    print(Logs._setLogMsg(Logs.SEVERITY.DEBUG,"My message"))
+    print(Logs._setLogMsg(Logs.SEVERITY.INFO,"My message2"))
+    print(Logs._setLogMsg(Logs.SEVERITY.WARNING,"My message3"))
+    print(Logs._setLogMsg(Logs.SEVERITY.ERROR,"My message4"))
+    print(Logs._setLogMsg(Logs.SEVERITY.CRITICAL,"My message5"))
 
   def test_logging(self):
     logger = Logs("logs/logTest.log",1000)
@@ -30,5 +29,7 @@ class TestLogs(unittest.TestCase):
   def test_log_regex3(self):
     self.assertFalse(re.search("^(\d\d\d\d-\d\d-\d\d)","arrozEstablishing client interface to https://pppx.gdgps.net//api/user"))
 
+  def test_get_log_msg(self):
+    self.assertEqual(Logs.getLogMsg(Logs.LOG_TYPE.SUBROUTINE_START,"arroz"),"== arroz SUBROUTINE (START) ==")
 if __name__ == '__main__':
   unittest.main()

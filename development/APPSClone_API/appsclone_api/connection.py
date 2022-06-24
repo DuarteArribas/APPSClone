@@ -1,12 +1,12 @@
+import os.path
 import gzip
 import os
-import os.path
-from vars.loggingStrings.connectionLoggingStrings import *
-from gdgps_apps.apps                              import APPS
-from gdgps_apps                                   import defines
-from gdgps_apps.exceptions                        import *
-from rinexHeader                                  import *
-from utils.logs                                   import *
+from appsclone_api.rinexHeader import *
+from appsclone_api.utils.logs  import *
+from appsclone_api.constants   import *
+from gdgps_apps.exceptions     import *
+from gdgps_apps.apps           import APPS
+from gdgps_apps                import defines
 
 class Connection_APPS:
   """A connection to APPS, which contains all functions to interact with its API.
@@ -99,7 +99,7 @@ class Connection_APPS:
   }
   # == Methods ==
   def __init__(self,settingsFile,downloadDirectory,logger):
-    """Connects to APPS and initalizes the logger.
+    """Connect to APPS and initalize the logger.
     
     Parameters
     ----------
@@ -128,17 +128,17 @@ class Connection_APPS:
       self.logger.writeLog(Logs.SEVERITY.INFO,connectionFailedLog)
     return connectionStatus
 
-  def uploadFile(self,file,uploadedFilesQueueFile,uploadArgs):
-    """Upload file to APPS and add it to uploaded queue.
+  def uploadFile(self,file,appsIDQueue,uploadArgs):
+    """Upload a file to APPS and add its id to the id queue.
 
     Parameters
     ----------
-    file                   : str
+    file        : str
       The file to upload
-    uploadedFilesQueueFile : str
-      The file, which contains the uploaded files queue
-    uploadArgs             : dict
-      Contains pairs of argumentName->argument
+    appsIDQueue : str
+      The file which contains the ids of the files that were uploaded to APPS
+    uploadArgs  : dict
+      Contains pairs of argumentName->argument for the upload
     """
     self.logger.writeLog(Logs.SEVERITY.INFO,uploadStartLog.format(file = file))
     isValid = self.__checkFileValidity(file)
@@ -161,7 +161,7 @@ class Connection_APPS:
         generate_quaternions = args[12]
       )
       self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccessLog.format(file = file))
-      self.__addUploadToQueue(fileResponseObject["id"],file,uploadedFilesQueueFile)
+      self.__addUploadToQueue(fileResponseObject["id"],file,appsIDQueue)
     self.logger.writeLog(Logs.SEVERITY.INFO,uploadEndLog.format(file = file))
 
   def getQuotaLeft(self):
