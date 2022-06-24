@@ -121,13 +121,13 @@ class Connection_APPS:
     bool
       True if it was able to connect and False otherwise
     """
-    self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,connectionTest,Logs.ROUTINE_STATUS.START)
+    self.logger.writeRoutineLog(Logs.SEVERITY.INFO,connectionTest,Logs.ROUTINE_STATUS.START)
     connectionStatus = self.apps.ping()[0]
     if connectionStatus:
       self.logger.writeRegularLog(Logs.SEVERITY.INFO,connectionSuccess)
     else:
       self.logger.writeRegularLog(Logs.SEVERITY.ERROR,connectionFailed)
-    self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,connectionTest,Logs.ROUTINE_STATUS.END)
+    self.logger.writeRoutineLog(Logs.SEVERITY.INFO,connectionTest,Logs.ROUTINE_STATUS.END)
     return connectionStatus
 
   def getQuotaLeft(self):
@@ -154,7 +154,7 @@ class Connection_APPS:
       Pairs of argumentName->argument for the upload
     """
     filename = Helper.getFileFromPath(filePath)
-    self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,rinexUpload.format(file = filename),Logs.ROUTINE_STATUS.START)
+    self.logger.writeRoutineLog(Logs.SEVERITY.INFO,rinexUpload.format(file = filename),Logs.ROUTINE_STATUS.START)
     isValid  = self.__checkFileValidity(filePath)
     if isValid:
       args               = self.__updateUploadArgs(uploadArgs)
@@ -176,7 +176,7 @@ class Connection_APPS:
       )
       self.logger.writeRegularLog(Logs.SEVERITY.INFO,uploadSuccess.format(file = filename))
       self.__addToIDQueue(fileResponseObject["id"],filePath,appsIDQueue)
-    self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,rinexUpload.format(file = filename),Logs.ROUTINE_STATUS.END)
+    self.logger.writeRoutineLog(Logs.SEVERITY.INFO,rinexUpload.format(file = filename),Logs.ROUTINE_STATUS.END)
 
   def __checkFileValidity(self,filePath):
     """Check file validity.
@@ -352,15 +352,15 @@ class Connection_APPS:
     else:
       self.logger.writeLog(Logs.SEVERITY.INFO,checkStateEndLog)
 
-  def __getFileData(self,uuid,uploadedFilesQueueFile):
+  def __getFileData(self,uuid,appsIDQueue):
     """Get details from the file in APPS.
 
     Parameters
     ----------
-    uuid                   : str
+    uuid        : str
       The id of the submission
-    uploadedFilesQueueFile : str
-      The file, which contains the uploaded files queue
+    appsIDQueue : str
+      The file which contains the ids of the files that were uploaded to APPS
 
     Returns
     ----------
@@ -369,21 +369,21 @@ class Connection_APPS:
     """
     fileData = None
     try:
-      self.logger.writeLog(Logs.SEVERITY.INFO,fileDataStartLog.format(uuid = uuid))
+      self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,fileDataGathering.format(uuid = uuid),Logs.ROUTINE_STATUS.START)
       fileData = self.apps.detail(uuid)
     except DataNotFound:
-      self.logger.writeLog(Logs.SEVERITY.ERROR,dataNotFoundLog.format(file = "Unknown"))
-      self.__removeFromUploadQueue(uuid,"Unknown",uploadedFilesQueueFile)
+      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,dataNotFound.format(uuid = uuid))
+      self.__removeFromIDQueue(uuid,"Unknown",appsIDQueue)
       fileData = None
     except InvalidIdentifier:
-      self.logger.writeLog(Logs.SEVERITY.ERROR,InvalidIdentifierLog.format(uuid = uuid))
-      self.__removeFromUploadQueue(uuid,"Unknown",uploadedFilesQueueFile)
+      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,invalidIdentifier.format(uuid = uuid))
+      self.__removeFromIDQueue(uuid,"Unknown",appsIDQueue)
       fileData = None
     except:
-      self.logger.writeLog(Logs.SEVERITY.CRITICAL,criticalExceptionLog.format(file = "Unknown"))
+      self.logger.writeRegularLog(Logs.SEVERITY.CRITICAL,criticalException.format(uuid = uuid))
       fileData = None
     finally:
-      self.logger.writeLog(Logs.SEVERITY.INFO,fileDataEndLog.format(uuid = uuid))
+      self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,fileDataGathering.format(uuid = uuid),Logs.ROUTINE_STATUS.END)
       return fileData
 
   def __approveSubmission(self,uuid,file,uploadedFilesQueueFile):

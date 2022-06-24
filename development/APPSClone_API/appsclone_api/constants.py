@@ -10,6 +10,7 @@ antennas      = set(antennasList)
 # = Routines =
 connectionTest          = "Connection test"
 rinexUpload             = "Upload on file '{file}'"
+fileDataGathering       = "Gathering data on uuid '{uuid}'"
 # = Other =
 connectionSuccess       = "The connection with APPS was successful"
 connectionFailed        = "The connection with APPS failed"
@@ -20,6 +21,9 @@ uploadSuccess           = "Successfully uploaded file '{file}' to APPS"
 addedToQueueSuccess     = "Successfully added file '{file}' to the apps ID queue"
 idNotInQueue            = "The file '{file}' was not in the apps ID queue, so cannot be removed from it"
 removedFromQueueSuccess = "Successfully removed file '{file}' from the apps ID queue"
+dataNotFound            = "The file with uuid '{uuid}' was not found on APPS"
+invalidIdentifier       = "The uuid '{uuid}' is not valid"
+criticalException       = "Something, that wasn't accounted for, happened. It's recommended to check what happened to file with uuid '{uuid}'"
 
 
 fileDoesNotExistLog        = "The {file} does not exist or has been removed."
@@ -35,11 +39,8 @@ downloadSuccessfullLog     = "The file {file}'s processed files have been succes
 downloadUnsuccessfullLog   = "The file {file}'s processed files could not be downloaded."
 dataDeletedSuccessfulLog   = "The file {file} has been deleted from APPS."
 dataDeletedUnsuccessfulLog = "Could not delete {file} from APPS."
-dataNotFoundLog            = "The file {file} was not found on APPS."
-InvalidIdentifierLog       = "The uuid {uuid} is not valid."
-criticalExceptionLog       = "Something that wasn't accounted for happened. It's recommended to check what happened to file {file}."
 errorFromAPPSLog           = "There was an error with the file {file} in APPS."
-fileDataStartLog           = "== GATHERING DATA START on uuid {uuid} =="
+
 fileDataEndLog             = "== GATHERING DATA END on uuid {uuid} =="
 approveStartLog            = "== APPROVAL START on file {file} =="
 approveEndLog              = "== APPROVAL END on file {file} =="
