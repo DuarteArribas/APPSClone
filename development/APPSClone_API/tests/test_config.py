@@ -1,5 +1,5 @@
-import unittest
 import appsclone_api
+import unittest
 from appsclone_api.utils.config import *
 
 class TestConfig(unittest.TestCase):

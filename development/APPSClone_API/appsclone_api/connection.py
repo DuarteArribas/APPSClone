@@ -140,7 +140,13 @@ class Connection_APPS:
     uploadArgs  : dict
       Contains pairs of argumentName->argument for the upload
     """
-    self.logger.writeLog(Logs.SEVERITY.INFO,uploadStartLog.format(file = file))
+    self.logger.writeLog(
+      Logs.SEVERITY.INFO,
+      Logs.getLogMsg(
+        Logs.LOG_TYPE.SUBROUTINE_START,
+        rinexUpload.format(file = file)
+      )
+    )
     isValid = self.__checkFileValidity(file)
     if isValid:
       args               = self.__updateUploadArgs(uploadArgs)
@@ -162,7 +168,13 @@ class Connection_APPS:
       )
       self.logger.writeLog(Logs.SEVERITY.INFO,uploadSuccessLog.format(file = file))
       self.__addUploadToQueue(fileResponseObject["id"],file,appsIDQueue)
-    self.logger.writeLog(Logs.SEVERITY.INFO,uploadEndLog.format(file = file))
+    self.logger.writeLog(
+      Logs.SEVERITY.INFO,
+      Logs.getLogMsg(
+        Logs.LOG_TYPE.SUBROUTINE_END,
+        rinexUpload.format(file = file)
+      )
+    )
 
   def getQuotaLeft(self):
     """Check the amount of space left in the user's quota.

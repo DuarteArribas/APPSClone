@@ -8,18 +8,7 @@ antennas      = set(antennasList)
 
 # == CONNECTION ==
 # = Routines =
-LOGS = {
-  ROUTINES : {
-    START : {
-      "RINEX_FILE_UPLOAD" : "=== UPLOAD START on file {file} ==="
-    }
-    END   : {
-
-    }
-  }  
-}
-
-rinexFileUploadRoutineStartLog =
+rinexUpload = "Upload on file '{file}'"
 
 connectionSuccessLog       = "An attempt to test the connection with APPS was made and the connection was successful."
 connectionFailedLog        = "An attempt to test the connection with APPS was made and the connection was failed."
