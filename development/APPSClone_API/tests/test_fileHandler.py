@@ -1,8 +1,16 @@
 import unittest
-from fileHandler import *
-from connection  import *
+import warnings
+from appsclone_api.fileHandler import *
+from appsclone_api.connection  import *
+from appsclone_api.utils.logs  import *
 
 class TestFileHandler(unittest.TestCase):
+  def test_handle_states_of_ids(self):
+    warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
+    logger = Logs("logs/logTest.log",1000)
+    conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
+    FileHandler.handleAllFileStates(conn,"queues/apps_id_queue_test","out/results_test")
+
   # def test_concatenate_file_to_path(self):
   #   self.assertEqual(FileHandler._concatenateFileToPath("arroz","aa/bb/cc"),"aa/bb/cc/arroz")
 
@@ -148,37 +156,37 @@ class TestFileHandler(unittest.TestCase):
   #  logger   = Logs("logs/logTest2.log",1000)
   #  password = input("Password:")
   #  user     = UserSSHClient("root",password)
-  #  FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.182",22,user,logger)
+  #  FileHandler._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.182",22,user,logger)
 
   #def test_download_rinex_file2(self):
   #  logger = Logs("logs/logTest2.log",1000)
   #  password = input("Password:")
   #  user = UserSSHClient("root",password)
-  #  FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.181",22,user,logger)
+  #  FileHandler._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.181",22,user,logger)
 
   #def test_download_rinex_file3(self):
   #  logger = Logs("logs/logTest2.log",1000)
   #  password = input("Password:")
   #  user = UserSSHClient("root",password)
-  #  FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.182",21,user,logger)
+  #  FileHandler._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.182",21,user,logger)
 
   #def test_download_rinex_file4(self):
   #  logger = Logs("logs/logTest2.log",1000)
   #  password = input("Password:")
   #  user = UserSSHClient("roota",password)
-  #  FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.182",22,user,logger)
+  #  FileHandler._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.182",22,user,logger)
 
   #def test_download_rinex_file5(self):
   #  logger = Logs("logs/logTest2.log",1000)
   #  password = input("Password (wrong):")
   #  user = UserSSHClient("root",password)
-  #  FileHandler._downloadRinexFile("~/arroz","out/downloads_test","138.68.128.182",22,user,logger)
+  #  FileHandler._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.182",22,user,logger)
 
   #def test_download_rinex_file6(self):
   #  logger = Logs("logs/logTest2.log",1000)
   #  password = input("Password:")
   #  user = UserSSHClient("root",password)
-  #  FileHandler._downloadRinexFile("~/arroza","out/downloads_test","138.68.128.182",22,user,logger)
+  #  FileHandler._downloadRinexFile("~/arroza","out/results_test_test","138.68.128.182",22,user,logger)
 
   #def test_add_to_queue(self):
   #  logger = Logs("logs/logTest2.log",1000)
@@ -186,12 +194,7 @@ class TestFileHandler(unittest.TestCase):
 
   #def test_download_files(self):
   #  logger = Logs("logs/logTest2.log",1000)
-  #  FileHandler.downloadRinexFiles("in/uploadFilesTest/1","out/downloads_test","out/queue/uploadFilesQueue",logger)
-
-  #def test_handle_states_of_uploaded_files_in_queue(self):
-  #  logger = Logs("logs/logTest2.log",1000)
-  #  conn=Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-  #  FileHandler.handleQueueFilesStates(conn,"out/queue/queue","out/downloads")
+  #  FileHandler.downloadRinexFiles("in/uploadFilesTest/1","out/results_test_test","out/queue/uploadFilesQueue",logger)
 
   #def test_get_line_from_queue(self):
   #  self.assertEqual(FileHandler._getFileLineFromQueueUploadFiles("out/queue/uploadFilesQueue","arroz_results.tar.gz"),"arroz ~ 138.68.128.181 22\n")
@@ -206,31 +209,31 @@ class TestFileHandler(unittest.TestCase):
   #  password = input("Password:")
   #  user     = UserSSHClient("root",password)
   #  logger   = Logs("logs/logTest2.log",1000)
-  #  FileHandler._uploadResultsFile("out/downloads_test/lol.tar.gz","~","138.68.128.182",22,user,logger)
+  #  FileHandler._uploadResultsFile("out/results_test_test/lol.tar.gz","~","138.68.128.182",22,user,logger)
 
   #def test_upload_all_results(self):
   #  logger   = Logs("logs/logTest2.log",1000)
   #  FileHandler.uploadBackResults("out/queue/uploadFilesQueue","out/resultsDir",logger)
 
-  def test_upload_all_rinex(self):
-    logger   = Logs("logs/logTest2.log",1000)
-    args = {
-      "pressure"             : None,
-      "attitude"             : None,
-      "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
-      "access"               : defines.Data.ACCESS_DEFAULT,
-      "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
-      "product"              : "arroz",
-      "troposphere_model"    : defines.GIPSYData.TROP_GMF,
-      "ocean_loading"        : True,
-      "model_tides"          : True,
-      "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
-      "elev_angle_cutoff"    : 7.5,
-      "solution_period"      : 300,
-      "generate_quaternions" : False,
-    }
-    conn = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/downloads",logger = logger)
-    FileHandler.uploadAllRinexToApps(conn,"in/test2","out/queue/queue",args,logger)
+  # def test_upload_all_rinex(self):
+  #   logger   = Logs("logs/logTest2.log",1000)
+  #   args = {
+  #     "pressure"             : None,
+  #     "attitude"             : None,
+  #     "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
+  #     "access"               : defines.Data.ACCESS_DEFAULT,
+  #     "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+  #     "product"              : "arroz",
+  #     "troposphere_model"    : defines.GIPSYData.TROP_GMF,
+  #     "ocean_loading"        : True,
+  #     "model_tides"          : True,
+  #     "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
+  #     "elev_angle_cutoff"    : 7.5,
+  #     "solution_period"      : 300,
+  #     "generate_quaternions" : False,
+  #   }
+  #   conn = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
+  #   FileHandler.uploadAllRinexToApps(conn,"in/test2","out/queue/queue",args,logger)
 
 if __name__ == '__main__':
   unittest.main()

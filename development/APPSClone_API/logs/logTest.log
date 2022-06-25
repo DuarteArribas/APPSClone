@@ -29,3 +29,55 @@
 2022-06-25 18:11:32.680728 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
 2022-06-25 18:11:37.673154 (ERROR)    | Could not establish a connection to the server, because the user 'root' is not valid or the password is incorrect.
 2022-06-25 18:11:37.679128 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
+2022-06-25 18:41:17.216056 (INFO)     | === State check ROUTINE (START) ===
+2022-06-25 18:41:17.221752 (INFO)     | == Gathering data on uuid '6027bb90-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (START) ==
+2022-06-25 18:41:22.285963 (INFO)     | == Gathering data on uuid '6027bb90-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (END) ==
+2022-06-25 18:41:22.291800 (INFO)     | Checking file 'arroz'.
+2022-06-25 18:41:22.296627 (INFO)     | The file 'arroz' is in the 'Available' state.
+2022-06-25 18:41:22.301701 (INFO)     | == Data retrival on file 'arroz' SUBROUTINE (START) ==
+2022-06-25 18:41:27.653782 (INFO)     | The file 'arroz''s processed files have been successfully downloaded.
+2022-06-25 18:41:27.659220 (INFO)     | == Data retrival on file 'arroz' SUBROUTINE (END) ==
+2022-06-25 18:41:27.663864 (INFO)     | == Data removal of file 'arroz' SUBROUTINE (START) ==
+2022-06-25 18:41:29.494009 (INFO)     | The file 'arroz' has been deleted from APPS.
+2022-06-25 18:41:29.501264 (INFO)     | Successfully removed file 'arroz' from the apps ID queue.
+2022-06-25 18:41:29.506506 (INFO)     | == Data removal of file 'arroz' SUBROUTINE (END) ==
+2022-06-25 18:41:29.511255 (INFO)     | === State check ROUTINE (START) ===
+2022-06-25 18:41:29.516147 (INFO)     | == Gathering data on uuid '66adec50-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (START) ==
+2022-06-25 18:41:32.848094 (INFO)     | == Gathering data on uuid '66adec50-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (END) ==
+2022-06-25 18:41:32.853750 (INFO)     | Checking file 'arroz (1)'.
+2022-06-25 18:41:32.855797 (INFO)     | The file 'arroz (1)' is in the 'Verified' state.
+2022-06-25 18:41:32.860653 (INFO)     | == Approval on file 'arroz (1)' SUBROUTINE (START) ==
+2022-06-25 18:41:34.527533 (CRITICAL) | Something, that wasn't accounted for, happened. It's recommended to check what happened to file with uuid '66adec50-f4ad-11ec-9078-e0db5501adf2'.
+2022-06-25 18:41:34.533147 (INFO)     | == Approval on file 'arroz (1)' SUBROUTINE (END) ==
+2022-06-25 18:41:34.535283 (INFO)     | === State check ROUTINE (START) ===
+2022-06-25 18:41:34.539772 (INFO)     | == Gathering data on uuid '70fd40d4-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (START) ==
+2022-06-25 18:41:37.879924 (INFO)     | == Gathering data on uuid '70fd40d4-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (END) ==
+2022-06-25 18:41:37.885650 (INFO)     | Checking file 'arroz (2)'.
+2022-06-25 18:41:37.887900 (INFO)     | The file 'arroz (2)' is in the 'Verified' state.
+2022-06-25 18:41:37.892785 (INFO)     | == Approval on file 'arroz (2)' SUBROUTINE (START) ==
+2022-06-25 18:41:39.034392 (CRITICAL) | Something, that wasn't accounted for, happened. It's recommended to check what happened to file with uuid '70fd40d4-f4ad-11ec-9078-e0db5501adf2'.
+2022-06-25 18:41:39.039986 (INFO)     | == Approval on file 'arroz (2)' SUBROUTINE (END) ==
+2022-06-25 18:42:23.429920 (INFO)     | === State check ROUTINE (START) ===
+2022-06-25 18:42:23.435743 (INFO)     | == Gathering data on uuid '66adec50-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (START) ==
+2022-06-25 18:42:28.390508 (INFO)     | == Gathering data on uuid '66adec50-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (END) ==
+2022-06-25 18:42:28.396535 (INFO)     | Checking file 'arroz (1)'.
+2022-06-25 18:42:28.401115 (INFO)     | The file 'arroz (1)' is in the 'Available' state.
+2022-06-25 18:42:28.405539 (INFO)     | == Data retrival on file 'arroz (1)' SUBROUTINE (START) ==
+2022-06-25 18:42:34.032402 (INFO)     | The file 'arroz (1)''s processed files have been successfully downloaded.
+2022-06-25 18:42:34.037963 (INFO)     | == Data retrival on file 'arroz (1)' SUBROUTINE (END) ==
+2022-06-25 18:42:34.042910 (INFO)     | == Data removal of file 'arroz (1)' SUBROUTINE (START) ==
+2022-06-25 18:42:35.861449 (INFO)     | The file 'arroz (1)' has been deleted from APPS.
+2022-06-25 18:42:35.870934 (INFO)     | Successfully removed file 'arroz (1)' from the apps ID queue.
+2022-06-25 18:42:35.878065 (INFO)     | == Data removal of file 'arroz (1)' SUBROUTINE (END) ==
+2022-06-25 18:42:35.883812 (INFO)     | === State check ROUTINE (START) ===
+2022-06-25 18:42:35.886116 (INFO)     | == Gathering data on uuid '70fd40d4-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (START) ==
+2022-06-25 18:42:39.247400 (INFO)     | == Gathering data on uuid '70fd40d4-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (END) ==
+2022-06-25 18:42:39.253299 (INFO)     | Checking file 'arroz (2)'.
+2022-06-25 18:42:39.255616 (INFO)     | The file 'arroz (2)' is in the 'Available' state.
+2022-06-25 18:42:39.260904 (INFO)     | == Data retrival on file 'arroz (2)' SUBROUTINE (START) ==
+2022-06-25 18:42:40.550816 (INFO)     | The file 'arroz (2)''s processed files have been successfully downloaded.
+2022-06-25 18:42:40.556342 (INFO)     | == Data retrival on file 'arroz (2)' SUBROUTINE (END) ==
+2022-06-25 18:42:40.561004 (INFO)     | == Data removal of file 'arroz (2)' SUBROUTINE (START) ==
+2022-06-25 18:42:42.348765 (INFO)     | The file 'arroz (2)' has been deleted from APPS.
+2022-06-25 18:42:42.356761 (INFO)     | Successfully removed file 'arroz (2)' from the apps ID queue.
+2022-06-25 18:42:42.360318 (INFO)     | == Data removal of file 'arroz (2)' SUBROUTINE (END) ==

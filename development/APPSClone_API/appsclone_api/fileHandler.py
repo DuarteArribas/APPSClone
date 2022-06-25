@@ -1,18 +1,36 @@
-
 import os.path
-import scp
 import re
-from vars.loggingStrings.fileHandlerLoggingStrings import *
-from userSSHClient                                 import *
-from utils.logs                                    import *
-from os                                            import listdir
-from connection                                    import *
+from appsclone_api.utils.sshConnection import *
+from appsclone_api.utils.helper        import *
+from appsclone_api.connection          import *
+from appsclone_api.utils.logs          import *
+from appsclone_api.constants           import *
+from os                                import listdir
 
 class FileHandler:
   """
   """
   # == Attributes ==
   # == Methods ==
+  @staticmethod
+  def handleAllFileStates(conn,appsIDQueue,resultsDir):
+    """Handle the state of all files in the apps id queue.
+
+    Parameters
+    ----------
+    conn                   : Connection_APPS
+      A connection to APPS object
+    appsIDQueue            : str
+      The file which contains the ids of the files that were uploaded to APPS
+    resultsDir             : str
+      The directory to which the results should be downloaded to
+    """
+    with open(appsIDQueue,"r") as f:
+      uuids = f.readlines()
+      uuids = [uuid.split("\n")[0] for uuid in uuids]
+      for uuid in uuids:
+        conn.handleFileState(uuid,appsIDQueue,resultsDir)
+
   @staticmethod
   def downloadRinexFiles(uploadFilesDirectory,downloadFolder,uploadFilesQueueFile,logger):
     """Download all files from the given upload files to the given directory.
@@ -406,25 +424,6 @@ class FileHandler:
           newFileLines += line
     with open(uploadFilesQueueFile,"w") as f: 
       f.write(newFileLines)
-
-  @staticmethod
-  def handleQueueFilesStates(conn,uploadedFilesQueueFile,resultsDir):
-    """Handle the state of all files in the in uploaded files queue.
-
-    Parameters
-    ----------
-    conn                   : Connection_APPS
-      A connection to APPS object
-    uploadedFilesQueueFile : str
-      The file, which contains the uploaded files queue
-    resultsDir             : str
-      The folder, to which the results ust be downloaded to
-    """
-    with open(uploadedFilesQueueFile,"r") as f:
-      uuids = f.readlines()
-      uuids = [uuid.split("\n")[0] for uuid in uuids]
-      for uuid in uuids:
-        conn.handleFileState(uuid,uploadedFilesQueueFile,resultsDir)
 
   @staticmethod
   def uploadBackResults(uploadFilesQueueFile,resultsDir,logger):
