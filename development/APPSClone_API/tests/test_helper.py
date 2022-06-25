@@ -76,7 +76,22 @@ class TestHelper(unittest.TestCase):
     self.assertEqual(Helper.compressUncompressGzip("in/test/arroz.gz",False),"in/test/arroz")
 
   def test_get_uncompressed_file(self):
-    self.assertEqual(Helper.getUncompressedFile("in/test/arroz.gz"),"in/test/arroz")  
+    self.assertEqual(Helper.getUncompressedFile("in/test/arroz.gz"),"in/test/arroz")
+
+  def test_clean_empty_strs_from_list(self):
+    self.assertEqual(Helper.cleanEmptyFieldsInList(["a","b","c"]),["a","b","c"])
+
+  def test_clean_empty_strs_from_list2(self):
+    self.assertEqual(Helper.cleanEmptyFieldsInList(["a","b"," "]),["a","b"])
+
+  def test_clean_empty_strs_from_list3(self):
+    self.assertEqual(Helper.cleanEmptyFieldsInList(["a","b"," ","c","   d","           "]),["a","b","c","   d"])
+
+  def test_clean_empty_strs_from_list4(self):
+    self.assertEqual(Helper.cleanEmptyFieldsInList([""]),[])
+
+  def test_clean_empty_strs_from_list5(self):
+    self.assertEqual(Helper.cleanEmptyFieldsInList([]),[]) 
 
 if __name__ == '__main__':
   unittest.main()

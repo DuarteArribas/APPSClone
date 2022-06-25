@@ -21,27 +21,12 @@ class TestAPPSCloneServer(unittest.TestCase):
     logger = Logs("logs/logTest.log",1000)
     APPSCloneServer._removeFileFromRinexQueue("queues/rinex_queue_test","feijao_results.tar.gz",logger)
 
-  def test_get_already_uploaded_files(self):
-    self.assertEqual(APPSCloneServer._getAlreadyUploadedFilenames("queues/rinex_queue_test"),["arro","arroz"])
-
   # def test_upload_back_all_results(self):
   #   logger   = Logs("logs/logTest.log",1000)
   #   APPSCloneServer.uploadBackResults("queues/rinex_queue_test","out/results_test","root","Pr0j#to_Spr1ng",logger)
 
-  # def test_clean_empty_strs_from_list(self):
-  #   self.assertEqual(APPSCloneServer._cleanEmptyFieldsInList(["a","b","c"]),["a","b","c"])
-
-  # def test_clean_empty_strs_from_list2(self):
-  #   self.assertEqual(APPSCloneServer._cleanEmptyFieldsInList(["a","b"," "]),["a","b"])
-
-  # def test_clean_empty_strs_from_list3(self):
-  #   self.assertEqual(APPSCloneServer._cleanEmptyFieldsInList(["a","b"," ","c","   d","           "]),["a","b","c","   d"])
-
-  # def test_clean_empty_strs_from_list4(self):
-  #   self.assertEqual(APPSCloneServer._cleanEmptyFieldsInList([""]),[])
-
-  # def test_clean_empty_strs_from_list5(self):
-  #   self.assertEqual(APPSCloneServer._cleanEmptyFieldsInList([]),[])
+  def test_get_already_uploaded_files(self):
+    self.assertEqual(APPSCloneServer._getAlreadyUploadedFilenames("queues/rinex_queue_test"),["arro","arroz"])
 
   # def test_is_valid_ipv4(self):
   #   self.assertFalse(APPSCloneServer._isValidIpv4(""))

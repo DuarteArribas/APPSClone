@@ -55,9 +55,9 @@ scpPutUnsuccessful            = "Could not copy local file '{file}' to remote di
 #routines
 handleAllFilesState           = "State updates"
 uploadBack                    = "Upload back of results"
+downloadRinex                 = "Download of rinex files from source"
 
 
-downloadRinexFilesRoutineStartLog   = "=== RINEX FILES DOWNLOAD ROUTINE (START) ==="
 downloadRinexFilesRoutineEndLog     = "=== RINEX FILES DOWNLOAD ROUTINE (END) ==="
 downloadRinexFileSubroutineStartLog = "== RINEX FILE '{file}' DOWNLOAD SUBROUTINE (START) =="
 downloadRinexFileSubroutineEndLog   = "== RINEX FILE '{file}' DOWNLOAD SUBROUTINE (END) =="

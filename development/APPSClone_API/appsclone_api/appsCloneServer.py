@@ -131,17 +131,16 @@ class APPSCloneServer:
       The log object to log to
     """
     logger.writeRoutineLog(downloadRinexFiles,Logs.ROUTINE_STATUS.START)
-    alreadyUploadedFileNames = []
-    alreadyUploadedFileNames.append(APPSCloneServer._getAlreadyUploadedFilenames(uploadFilesQueueFile))
+    alreadyUploadedFilenames = APPSCloneServer._getAlreadyUploadedFilenames(rinexQueue)
     for uploadFile in APPSCloneServer._getUploadFiles(uploadFilesDirectory,logger):
       pathToDownloadFrom,pathToUploadTo,ipToConnect = APPSCloneServer._parseUploadFile(
         APPSCloneServer._concatenateFileToPath(uploadFile,uploadFilesDirectory)
       )
       port = 22                                     #hardcode
       user = UserSSHClient("root","Pr0j#to_Spr1ng") #hardcode
-      if APPSCloneServer._getFileFromPath(pathToDownloadFrom) not in alreadyUploadedFileNames:
+      if APPSCloneServer._getFileFromPath(pathToDownloadFrom) not in alreadyUploadedFilenames:
         APPSCloneServer._downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user,logger)
-        alreadyUploadedFileNames.append(APPSCloneServer._getFileFromPath(pathToDownloadFrom))
+        alreadyUploadedFilenames.append(APPSCloneServer._getFileFromPath(pathToDownloadFrom))
         APPSCloneServer._addFileToQueueUploadFiles(
           uploadFilesQueueFile,
           APPSCloneServer._getFileFromPath(pathToDownloadFrom),
@@ -233,21 +232,7 @@ class APPSCloneServer:
       logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = file,reason = "Not a file"))
       return False
 
-  @staticmethod
-  def _cleanEmptyFieldsInList(lst):
-    """Clean the empty (stripped) fields in a list.
-
-    Parameters
-    ----------
-    lst : list
-      The list to cleanup
-
-    Returns
-    ----------
-    list
-      The list without any empty (stripped) fields
-    """
-    return [item for item in lst if item.strip()]
+  
 
   @staticmethod
   def _isValidIpv4(address):

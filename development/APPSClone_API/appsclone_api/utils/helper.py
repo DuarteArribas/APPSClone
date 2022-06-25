@@ -158,4 +158,20 @@ class Helper:
       fileToCompress.close()
       return uncompressedFilename
 
+  @staticmethod
+  def cleanEmptyFieldsInList(lst):
+    """Clean the empty (stripped) fields in a list.
+
+    Parameters
+    ----------
+    lst : list
+      The list to cleanup
+
+    Returns
+    ----------
+    list
+      The list without any empty (stripped) fields
+    """
+    return [item for item in lst if item.strip()]
+
 # ✓    unit tested
