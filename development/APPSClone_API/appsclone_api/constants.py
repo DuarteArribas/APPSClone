@@ -56,18 +56,18 @@ scpPutUnsuccessful            = "Could not copy local file '{file}' to remote di
 handleAllFilesState           = "State updates"
 uploadBack                    = "Upload back of results"
 downloadRinex                 = "Download of rinex files from source"
-
-
-downloadRinexFilesRoutineEndLog     = "=== RINEX FILES DOWNLOAD ROUTINE (END) ==="
-downloadRinexFileSubroutineStartLog = "== RINEX FILE '{file}' DOWNLOAD SUBROUTINE (START) =="
-downloadRinexFileSubroutineEndLog   = "== RINEX FILE '{file}' DOWNLOAD SUBROUTINE (END) =="
 #other
 resultUploadedBack            = "The result file '{file}' was uploaded back to '{uploadDir}' with success"
 resultNotInQueue              = "The result file '{file}' was not in the rinex queue. Removing it"
 removedFromRinexQueue         = "The result file '{file}' was successfully removed from the rinex queue"
+validUploadFile               = "The upload file '{file}' was validated"
+invalidUploadFileIP           = "The upload file '{file}' is invalid, because its ip '{ip}' is invalid"
+invalidUploadFileFields       = "The upload file '{file}' is invalid, because it contains invalid fields or there are missing fields"
+invalidUploadFileNotAFile     = "'{file}' is not a file; thus, is invalid"
+
+
+
 uploadFilesCheckingLog              = "Checking for upload files."
-invalidUploadFileLog                = "The upload file '{file}' is invalid. Reason: '{reason}'."
-validUploadFileLog                  = "The upload file '{file}' was validated."
 uploadFilesExistLog                 = "{numOfUploadFiles} upload files were found. Attempting to download corresponding rinex files."
 noUploadFilesLog                    = "No upload files were found."
 

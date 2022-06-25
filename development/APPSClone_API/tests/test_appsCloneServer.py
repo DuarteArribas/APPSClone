@@ -28,136 +28,132 @@ class TestAPPSCloneServer(unittest.TestCase):
   def test_get_already_uploaded_files(self):
     self.assertEqual(APPSCloneServer._getAlreadyUploadedFilenames("queues/rinex_queue_test"),["arro","arroz"])
 
-  # def test_is_valid_upload_file(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/arroz",logger))
+  def test_is_valid_upload_file(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/arroz",logger))
 
-  # def test_is_valid_upload_file2(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/lol",logger))
+  def test_is_valid_upload_file2(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/lol",logger))
 
-  # def test_is_valid_upload_file3(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile",logger))
+  def test_is_valid_upload_file3(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile",logger))
 
-  # def test_is_valid_upload_file4(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile2",logger))
+  def test_is_valid_upload_file4(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile2",logger))
 
-  # def test_is_valid_upload_file5(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile3",logger))
+  def test_is_valid_upload_file5(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile3",logger))
 
-  # def test_is_valid_upload_file6(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile4",logger))
+  def test_is_valid_upload_file6(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertTrue(APPSCloneServer._isValidUploadFile("in/test/uploadFile4",logger))
 
-  # def test_is_valid_upload_file7(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile5",logger))
+  def test_is_valid_upload_file7(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile5",logger))
 
-  # def test_is_valid_upload_file8(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile6",logger))
+  def test_is_valid_upload_file8(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile6",logger))
 
-  # def test_is_valid_upload_file9(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile7",logger))
+  def test_is_valid_upload_file9(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile7",logger))
 
-  # def test_is_valid_upload_file10(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertTrue(APPSCloneServer._isValidUploadFile("in/test/uploadFile8",logger))
+  def test_is_valid_upload_file10(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertTrue(APPSCloneServer._isValidUploadFile("in/test/uploadFile8",logger))
 
-  # def test_is_valid_upload_file11(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile9",logger))
+  def test_is_valid_upload_file11(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile9",logger))
 
-  # def test_is_valid_upload_file12(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile10",logger))
+  def test_is_valid_upload_file12(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile10",logger))
 
-  # def test_is_valid_upload_file13(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertTrue(APPSCloneServer._isValidUploadFile("in/test/uploadFile11",logger))
+  def test_is_valid_upload_file13(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertTrue(APPSCloneServer._isValidUploadFile("in/test/uploadFile11",logger))
 
-  # def test_is_valid_upload_file14(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertTrue(APPSCloneServer._isValidUploadFile("in/test/uploadFile12",logger))
+  def test_is_valid_upload_file14(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertTrue(APPSCloneServer._isValidUploadFile("in/test/uploadFile12",logger))
 
-  # def test_is_valid_upload_file15(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertTrue(APPSCloneServer._isValidUploadFile("in/test/uploadFile13",logger))
+  def test_is_valid_upload_file15(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertTrue(APPSCloneServer._isValidUploadFile("in/test/uploadFile13",logger))
 
-  # def test_is_valid_upload_file16(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile14",logger))
-
-  # def test_is_valid_upload_file17(self):
-  #   logger = Logs("logs/logTest2.log",1000)
-  #   self.assertTrue(APPSCloneServer._isValidUploadFile("in/uploadFilesTest/1/uploadFile1",logger))
+  def test_is_valid_upload_file16(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertTrue(APPSCloneServer._isValidUploadFile("in/test/uploadFile14",logger))
 
   # def test_get_validated_list_of_uploadFiles(self):
-  #   logger = Logs("logs/logTest2.log",1000)
+  #   logger = Logs("logs/logTest.log",1000)
   #   self.assertEqual(APPSCloneServer._getUploadFiles("in/uploadFilesTest/1",logger),["uploadFile1","uploadFile2","uploadFile3","uploadFile4","uploadFile5"])
 
   # def test_get_validated_list_of_uploadFiles2(self):
-  #   logger = Logs("logs/logTest2.log",1000)
+  #   logger = Logs("logs/logTest.log",1000)
   #   self.assertEqual(APPSCloneServer._getUploadFiles("in/uploadFilesTest/2",logger),["uploadFile1","uploadFile4"])
 
   #def test_parse_upload_file(self):
-  #  logger = Logs("logs/logTest2.log",1000)
+  #  logger = Logs("logs/logTest.log",1000)
   #  self.assertEqual(APPSCloneServer._parseUploadFile("in/uploadFilesTest/1/uploadFile1"),("~/arroz","~","138.68.128.182"))
 
   #def test_parse_upload_file2(self):
-  #  logger = Logs("logs/logTest2.log",1000)
+  #  logger = Logs("logs/logTest.log",1000)
   #  self.assertEqual(APPSCloneServer._parseUploadFile("in/uploadFilesTest/2/uploadFile4"),("aaa","massa","192.168.8.1"))
 
   #def test_download_rinex_file(self):
-  #  logger   = Logs("logs/logTest2.log",1000)
+  #  logger   = Logs("logs/logTest.log",1000)
   #  password = input("Password:")
   #  user     = UserSSHClient("root",password)
   #  APPSCloneServer._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.182",22,user,logger)
 
   #def test_download_rinex_file2(self):
-  #  logger = Logs("logs/logTest2.log",1000)
+  #  logger = Logs("logs/logTest.log",1000)
   #  password = input("Password:")
   #  user = UserSSHClient("root",password)
   #  APPSCloneServer._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.181",22,user,logger)
 
   #def test_download_rinex_file3(self):
-  #  logger = Logs("logs/logTest2.log",1000)
+  #  logger = Logs("logs/logTest.log",1000)
   #  password = input("Password:")
   #  user = UserSSHClient("root",password)
   #  APPSCloneServer._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.182",21,user,logger)
 
   #def test_download_rinex_file4(self):
-  #  logger = Logs("logs/logTest2.log",1000)
+  #  logger = Logs("logs/logTest.log",1000)
   #  password = input("Password:")
   #  user = UserSSHClient("roota",password)
   #  APPSCloneServer._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.182",22,user,logger)
 
   #def test_download_rinex_file5(self):
-  #  logger = Logs("logs/logTest2.log",1000)
+  #  logger = Logs("logs/logTest.log",1000)
   #  password = input("Password (wrong):")
   #  user = UserSSHClient("root",password)
   #  APPSCloneServer._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.182",22,user,logger)
 
   #def test_download_rinex_file6(self):
-  #  logger = Logs("logs/logTest2.log",1000)
+  #  logger = Logs("logs/logTest.log",1000)
   #  password = input("Password:")
   #  user = UserSSHClient("root",password)
   #  APPSCloneServer._downloadRinexFile("~/arroza","out/results_test_test","138.68.128.182",22,user,logger)
 
   #def test_add_to_queue(self):
-  #  logger = Logs("logs/logTest2.log",1000)
+  #  logger = Logs("logs/logTest.log",1000)
   #  APPSCloneServer._addFileToQueueUploadFiles("out/queue/uploadFilesQueue","arroz","aa/bb/cc","192.168.8.2",22,logger)
 
   #def test_download_files(self):
-  #  logger = Logs("logs/logTest2.log",1000)
+  #  logger = Logs("logs/logTest.log",1000)
   #  APPSCloneServer.downloadRinexFiles("in/uploadFilesTest/1","out/results_test_test","out/queue/uploadFilesQueue",logger)
 
   # def test_upload_all_rinex(self):
-  #   logger   = Logs("logs/logTest2.log",1000)
+  #   logger   = Logs("logs/logTest.log",1000)
   #   args = {
   #     "pressure"             : None,
   #     "attitude"             : None,

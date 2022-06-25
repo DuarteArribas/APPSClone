@@ -180,8 +180,8 @@ class APPSCloneServer:
     ----------
     uploadFilesDirectory : str
       The directory to read the upload files from
-    logger               : Logs
-      The Logs object that will be used to log several actions
+    logger        : Logs
+      The log object to log to
 
     Returns
     ----------
@@ -207,29 +207,28 @@ class APPSCloneServer:
     uploadFile : str
       The upload file to check
     logger     : Logs
-      The Logs object that will be used to log several actions
-
+      The log object to log to
     Returns
     ----------
     bool
       True if the upload file is valid and False otherwise
     """
-    file = APPSCloneServer._getFileFromPath(uploadFile)
+    filename = Helper.getFileFromPath(uploadFile)
     if os.path.isfile(uploadFile):
       with open(uploadFile,"r") as f:
         lines = f.readlines()
-        lines = APPSCloneServer._cleanEmptyFieldsInList(lines)
+        lines = Helper.cleanEmptyFieldsInList(lines)
         if len(lines) == 3 and lines[0].strip() != "" and lines[1].strip() != "" and lines[2].strip() != "":
-          validIpv4 = APPSCloneServer._isValidIpv4(lines[2])
+          validIpv4 = Helper.isValidIpv4(lines[2])
           if not validIpv4:
-            logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = file,reason = "Invalid ip"))
+            logger.writeRegularLog(Logs.SEVERITY.ERROR,invalidUploadFileIP.format(file = filename,ip = lines[2]))
           else:
-            logger.writeLog(Logs.SEVERITY.INFO,validUploadFileLog.format(file = file))
+            logger.writeRegularLog(Logs.SEVERITY.INFO,validUploadFile.format(file = filename))
           return validIpv4
         else:
-          logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = file,reason = "Invalid fields in file"))  
+          logger.writeRegularLog(Logs.SEVERITY.ERROR,invalidUploadFileFields.format(file = filename))  
     else:
-      logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = file,reason = "Not a file"))
+      logger.writeRegularLog(Logs.SEVERITY.ERROR,invalidUploadFileNotAFile.format(file = filename))
       return False
 
   @staticmethod
