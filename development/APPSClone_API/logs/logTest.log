@@ -1,105 +1,64 @@
-2022-06-25 18:11:20.386146 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
-2022-06-25 18:11:21.081934 (INFO)     | Successfully established a connection to the server.
-2022-06-25 18:11:21.087334 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
-2022-06-25 18:11:23.057087 (ERROR)    | Successfully copied remote file 'arroz' to local directory 'in/to_upload_test'.
-2022-06-25 18:11:23.062637 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
-2022-06-25 18:11:23.697712 (INFO)     | Successfully established a connection to the server.
-2022-06-25 18:11:23.702779 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
-2022-06-25 18:11:24.838862 (ERROR)    | Could not copy remote file 'arro' to local directory 'in/to_upload_test'.
-2022-06-25 18:11:24.844566 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
-2022-06-25 18:11:25.474715 (INFO)     | Successfully established a connection to the server.
-2022-06-25 18:11:25.480320 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
-2022-06-25 18:11:26.919966 (ERROR)    | Successfully copied local file 'file' to remote directory '~'.
-2022-06-25 18:11:26.925780 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
-2022-06-25 18:11:27.528777 (INFO)     | Successfully established a connection to the server.
-2022-06-25 18:11:27.534747 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
-2022-06-25 18:11:28.674912 (ERROR)    | Could not copy local file 'someFile' to remote directory '~'.
-2022-06-25 18:11:28.680462 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
-2022-06-25 18:11:29.395908 (INFO)     | Successfully established a connection to the server.
-2022-06-25 18:11:29.401296 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
-2022-06-25 18:11:29.405497 (INFO)     | === Connect to '138.68.128.181:22', with user 'root' ROUTINE (START) ===
-2022-06-25 18:11:30.069531 (ERROR)    | Could not establish a connection to the server, because the ip '138.68.128.181' is not valid or is unavailable.
-2022-06-25 18:11:30.075031 (INFO)     | === Connect to '138.68.128.181:22', with user 'root' ROUTINE (END) ===
-2022-06-25 18:11:30.079325 (INFO)     | === Connect to '138.68.128.182:21', with user 'root' ROUTINE (START) ===
-2022-06-25 18:11:30.153322 (ERROR)    | Could not establish a connection to the server, because the port '21' is not valid or is unavailable.
-2022-06-25 18:11:30.158704 (INFO)     | === Connect to '138.68.128.182:21', with user 'root' ROUTINE (END) ===
-2022-06-25 18:11:30.161094 (INFO)     | === Connect to '138.68.128.182:22', with user 'root2' ROUTINE (START) ===
-2022-06-25 18:11:32.670716 (ERROR)    | Could not establish a connection to the server, because the user 'root2' is not valid or the password is incorrect.
-2022-06-25 18:11:32.676163 (INFO)     | === Connect to '138.68.128.182:22', with user 'root2' ROUTINE (END) ===
-2022-06-25 18:11:32.680728 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
-2022-06-25 18:11:37.673154 (ERROR)    | Could not establish a connection to the server, because the user 'root' is not valid or the password is incorrect.
-2022-06-25 18:11:37.679128 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
-2022-06-25 18:41:17.216056 (INFO)     | === State check ROUTINE (START) ===
-2022-06-25 18:41:17.221752 (INFO)     | == Gathering data on uuid '6027bb90-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (START) ==
-2022-06-25 18:41:22.285963 (INFO)     | == Gathering data on uuid '6027bb90-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (END) ==
-2022-06-25 18:41:22.291800 (INFO)     | Checking file 'arroz'.
-2022-06-25 18:41:22.296627 (INFO)     | The file 'arroz' is in the 'Available' state.
-2022-06-25 18:41:22.301701 (INFO)     | == Data retrival on file 'arroz' SUBROUTINE (START) ==
-2022-06-25 18:41:27.653782 (INFO)     | The file 'arroz''s processed files have been successfully downloaded.
-2022-06-25 18:41:27.659220 (INFO)     | == Data retrival on file 'arroz' SUBROUTINE (END) ==
-2022-06-25 18:41:27.663864 (INFO)     | == Data removal of file 'arroz' SUBROUTINE (START) ==
-2022-06-25 18:41:29.494009 (INFO)     | The file 'arroz' has been deleted from APPS.
-2022-06-25 18:41:29.501264 (INFO)     | Successfully removed file 'arroz' from the apps ID queue.
-2022-06-25 18:41:29.506506 (INFO)     | == Data removal of file 'arroz' SUBROUTINE (END) ==
-2022-06-25 18:41:29.511255 (INFO)     | === State check ROUTINE (START) ===
-2022-06-25 18:41:29.516147 (INFO)     | == Gathering data on uuid '66adec50-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (START) ==
-2022-06-25 18:41:32.848094 (INFO)     | == Gathering data on uuid '66adec50-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (END) ==
-2022-06-25 18:41:32.853750 (INFO)     | Checking file 'arroz (1)'.
-2022-06-25 18:41:32.855797 (INFO)     | The file 'arroz (1)' is in the 'Verified' state.
-2022-06-25 18:41:32.860653 (INFO)     | == Approval on file 'arroz (1)' SUBROUTINE (START) ==
-2022-06-25 18:41:34.527533 (CRITICAL) | Something, that wasn't accounted for, happened. It's recommended to check what happened to file with uuid '66adec50-f4ad-11ec-9078-e0db5501adf2'.
-2022-06-25 18:41:34.533147 (INFO)     | == Approval on file 'arroz (1)' SUBROUTINE (END) ==
-2022-06-25 18:41:34.535283 (INFO)     | === State check ROUTINE (START) ===
-2022-06-25 18:41:34.539772 (INFO)     | == Gathering data on uuid '70fd40d4-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (START) ==
-2022-06-25 18:41:37.879924 (INFO)     | == Gathering data on uuid '70fd40d4-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (END) ==
-2022-06-25 18:41:37.885650 (INFO)     | Checking file 'arroz (2)'.
-2022-06-25 18:41:37.887900 (INFO)     | The file 'arroz (2)' is in the 'Verified' state.
-2022-06-25 18:41:37.892785 (INFO)     | == Approval on file 'arroz (2)' SUBROUTINE (START) ==
-2022-06-25 18:41:39.034392 (CRITICAL) | Something, that wasn't accounted for, happened. It's recommended to check what happened to file with uuid '70fd40d4-f4ad-11ec-9078-e0db5501adf2'.
-2022-06-25 18:41:39.039986 (INFO)     | == Approval on file 'arroz (2)' SUBROUTINE (END) ==
-2022-06-25 18:42:23.429920 (INFO)     | === State check ROUTINE (START) ===
-2022-06-25 18:42:23.435743 (INFO)     | == Gathering data on uuid '66adec50-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (START) ==
-2022-06-25 18:42:28.390508 (INFO)     | == Gathering data on uuid '66adec50-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (END) ==
-2022-06-25 18:42:28.396535 (INFO)     | Checking file 'arroz (1)'.
-2022-06-25 18:42:28.401115 (INFO)     | The file 'arroz (1)' is in the 'Available' state.
-2022-06-25 18:42:28.405539 (INFO)     | == Data retrival on file 'arroz (1)' SUBROUTINE (START) ==
-2022-06-25 18:42:34.032402 (INFO)     | The file 'arroz (1)''s processed files have been successfully downloaded.
-2022-06-25 18:42:34.037963 (INFO)     | == Data retrival on file 'arroz (1)' SUBROUTINE (END) ==
-2022-06-25 18:42:34.042910 (INFO)     | == Data removal of file 'arroz (1)' SUBROUTINE (START) ==
-2022-06-25 18:42:35.861449 (INFO)     | The file 'arroz (1)' has been deleted from APPS.
-2022-06-25 18:42:35.870934 (INFO)     | Successfully removed file 'arroz (1)' from the apps ID queue.
-2022-06-25 18:42:35.878065 (INFO)     | == Data removal of file 'arroz (1)' SUBROUTINE (END) ==
-2022-06-25 18:42:35.883812 (INFO)     | === State check ROUTINE (START) ===
-2022-06-25 18:42:35.886116 (INFO)     | == Gathering data on uuid '70fd40d4-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (START) ==
-2022-06-25 18:42:39.247400 (INFO)     | == Gathering data on uuid '70fd40d4-f4ad-11ec-9078-e0db5501adf2' SUBROUTINE (END) ==
-2022-06-25 18:42:39.253299 (INFO)     | Checking file 'arroz (2)'.
-2022-06-25 18:42:39.255616 (INFO)     | The file 'arroz (2)' is in the 'Available' state.
-2022-06-25 18:42:39.260904 (INFO)     | == Data retrival on file 'arroz (2)' SUBROUTINE (START) ==
-2022-06-25 18:42:40.550816 (INFO)     | The file 'arroz (2)''s processed files have been successfully downloaded.
-2022-06-25 18:42:40.556342 (INFO)     | == Data retrival on file 'arroz (2)' SUBROUTINE (END) ==
-2022-06-25 18:42:40.561004 (INFO)     | == Data removal of file 'arroz (2)' SUBROUTINE (START) ==
-2022-06-25 18:42:42.348765 (INFO)     | The file 'arroz (2)' has been deleted from APPS.
-2022-06-25 18:42:42.356761 (INFO)     | Successfully removed file 'arroz (2)' from the apps ID queue.
-2022-06-25 18:42:42.360318 (INFO)     | == Data removal of file 'arroz (2)' SUBROUTINE (END) ==
-2022-06-25 18:54:03.143076 (INFO)     | info lol
-2022-06-25 18:54:03.148152 (WARNING)  | warning lol
-2022-06-25 18:54:03.152865 (ERROR)    | error lol
-2022-06-25 18:54:03.157304 (CRITICAL) | critical lol
-2022-06-25 18:54:06.164836 (INFO)     | after 3 seconds
-2022-06-25 18:54:06.171037 (INFO)     | regularInfo.
-2022-06-25 18:54:06.176303 (INFO)     | === infoRoutineStart (START) ===
-2022-06-25 18:54:06.181647 (INFO)     | === infoRoutineEnd (END) ===
-2022-06-25 18:54:06.186841 (INFO)     | == infoSubroutineStart (START) ==
-2022-06-25 18:54:06.192326 (INFO)     | = infoSubsubroutineEnd (END) =
-2022-06-25 18:54:06.198067 (INFO)     | = infoSubsubroutineStart (START) =
-2022-06-25 18:54:24.341609 (INFO)     | info lol
-2022-06-25 18:54:24.346774 (WARNING)  | warning lol
-2022-06-25 18:54:24.351174 (ERROR)    | error lol
-2022-06-25 18:54:24.355991 (CRITICAL) | critical lol
-2022-06-25 18:54:27.363553 (INFO)     | after 3 seconds
-2022-06-25 18:54:27.369262 (INFO)     | regularInfo.
-2022-06-25 18:54:27.373694 (INFO)     | === infoRoutineStart (START) ===
-2022-06-25 18:54:27.378215 (INFO)     | === infoRoutineEnd (END) ===
-2022-06-25 18:54:27.382366 (INFO)     | == infoSubroutineStart (START) ==
-2022-06-25 18:54:27.386554 (INFO)     | = infoSubsubroutineEnd (END) =
-2022-06-25 18:54:27.390758 (INFO)     | = infoSubsubroutineStart (START) =
+2022-06-25 18:57:30.521652 (INFO)     | Successfully added file 'arroz' to the apps ID queue.
+2022-06-25 18:57:30.533226 (INFO)     | == Connection test (START) ==
+2022-06-25 18:57:32.201657 (INFO)     | The connection with APPS was successful.
+2022-06-25 18:57:32.208528 (INFO)     | == Connection test (END) ==
+2022-06-25 18:57:32.223057 (ERROR)    | The file 'file' is invalid - The version 'None' of the rinex file is invalid (Supported versions are 2.11, 3.02).
+2022-06-25 18:57:32.264648 (INFO)     | The file 'CVTY2720.21D' was validated and is being considered a valid file for uploading.
+2022-06-25 18:57:35.428001 (INFO)     | Successfully removed file 'arroz' from the apps ID queue.
+2022-06-25 18:57:35.450798 (WARNING)  | The value 'arroz' is invalid for argument 'access'. Using default value 'X'.
+2022-06-25 18:57:35.461746 (WARNING)  | The value '' is invalid for argument 'pressure'. Using default value 'None'.
+2022-06-25 18:57:35.467153 (WARNING)  | The value '' is invalid for argument 'attitude'. Using default value 'None'.
+2022-06-25 18:57:35.472459 (WARNING)  | The value '' is invalid for argument 'email'. Using default value 'None'.
+2022-06-25 18:57:35.476770 (WARNING)  | The value '' is invalid for argument 'access'. Using default value 'X'.
+2022-06-25 18:57:35.480948 (WARNING)  | The value '' is invalid for argument 'processing_mode'. Using default value 'S'.
+2022-06-25 18:57:35.484961 (WARNING)  | The value '' is invalid for argument 'product'. Using default value 'B'.
+2022-06-25 18:57:35.489267 (WARNING)  | The value '' is invalid for argument 'troposphere_model'. Using default value 'GMF'.
+2022-06-25 18:57:35.493489 (WARNING)  | The value '' is invalid for argument 'ocean_loading'. Using default value 'True'.
+2022-06-25 18:57:35.497418 (WARNING)  | The value '' is invalid for argument 'model_tides'. Using default value 'True'.
+2022-06-25 18:57:35.501984 (WARNING)  | The value '' is invalid for argument 'elev_dep_weighting'. Using default value 'SQRTSIN'.
+2022-06-25 18:57:35.505973 (WARNING)  | The value '' is invalid for argument 'elev_angle_cutoff'. Using default value '7.5'.
+2022-06-25 18:57:35.510265 (WARNING)  | The value '' is invalid for argument 'solution_period'. Using default value '300'.
+2022-06-25 18:57:35.514435 (WARNING)  | The value '' is invalid for argument 'generate_quaternions'. Using default value 'False'.
+2022-06-25 18:57:35.524159 (WARNING)  | The value '' is invalid for argument 'pressure'. Using default value 'None'.
+2022-06-25 18:57:35.529624 (WARNING)  | The value '' is invalid for argument 'attitude'. Using default value 'None'.
+2022-06-25 18:57:35.534808 (WARNING)  | The value '' is invalid for argument 'email'. Using default value 'None'.
+2022-06-25 18:57:35.539199 (WARNING)  | The value '' is invalid for argument 'access'. Using default value 'X'.
+2022-06-25 18:57:35.544047 (WARNING)  | The value '' is invalid for argument 'processing_mode'. Using default value 'S'.
+2022-06-25 18:57:35.548611 (WARNING)  | The value '' is invalid for argument 'product'. Using default value 'B'.
+2022-06-25 18:57:35.553450 (WARNING)  | The value '' is invalid for argument 'ocean_loading'. Using default value 'True'.
+2022-06-25 18:57:35.557721 (WARNING)  | The value '' is invalid for argument 'model_tides'. Using default value 'True'.
+2022-06-25 18:57:35.562436 (WARNING)  | The value '' is invalid for argument 'elev_dep_weighting'. Using default value 'SQRTSIN'.
+2022-06-25 18:57:35.566507 (WARNING)  | The value '' is invalid for argument 'elev_angle_cutoff'. Using default value '7.5'.
+2022-06-25 18:57:35.570663 (WARNING)  | The value '' is invalid for argument 'solution_period'. Using default value '300'.
+2022-06-25 18:57:35.574715 (WARNING)  | The value '' is invalid for argument 'generate_quaternions'. Using default value 'False'.
+2022-06-25 18:59:00.832363 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-25 18:59:01.570515 (INFO)     | Successfully established a connection to the server.
+2022-06-25 18:59:01.575959 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-25 18:59:04.376018 (ERROR)    | Successfully copied remote file 'arroz' to local directory 'in/to_upload_test'.
+2022-06-25 18:59:04.382188 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-25 18:59:05.053956 (INFO)     | Successfully established a connection to the server.
+2022-06-25 18:59:05.059570 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-25 18:59:06.264840 (ERROR)    | Could not copy remote file 'arro' to local directory 'in/to_upload_test'.
+2022-06-25 18:59:06.270454 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-25 18:59:06.955254 (INFO)     | Successfully established a connection to the server.
+2022-06-25 18:59:06.960910 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-25 18:59:08.357765 (ERROR)    | Successfully copied local file 'file' to remote directory '~'.
+2022-06-25 18:59:08.363239 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-25 18:59:08.986301 (INFO)     | Successfully established a connection to the server.
+2022-06-25 18:59:08.992096 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-25 18:59:10.087994 (ERROR)    | Could not copy local file 'someFile' to remote directory '~'.
+2022-06-25 18:59:10.093502 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-25 18:59:10.722191 (INFO)     | Successfully established a connection to the server.
+2022-06-25 18:59:10.727715 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-25 18:59:10.732908 (INFO)     | == Connect to '138.68.128.181:22', with user 'root' (START) ==
+2022-06-25 18:59:11.338623 (ERROR)    | Could not establish a connection to the server, because the ip '138.68.128.181' is not valid or is unavailable.
+2022-06-25 18:59:11.344173 (INFO)     | == Connect to '138.68.128.181:22', with user 'root' (END) ==
+2022-06-25 18:59:11.349241 (INFO)     | == Connect to '138.68.128.182:21', with user 'root' (START) ==
+2022-06-25 18:59:11.415636 (ERROR)    | Could not establish a connection to the server, because the port '21' is not valid or is unavailable.
+2022-06-25 18:59:11.422005 (INFO)     | == Connect to '138.68.128.182:21', with user 'root' (END) ==
+2022-06-25 18:59:11.424836 (INFO)     | == Connect to '138.68.128.182:22', with user 'root2' (START) ==
+2022-06-25 18:59:15.776349 (ERROR)    | Could not establish a connection to the server, because the user 'root2' is not valid or the password is incorrect.
+2022-06-25 18:59:15.781754 (INFO)     | == Connect to '138.68.128.182:22', with user 'root2' (END) ==
+2022-06-25 18:59:15.786603 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-25 18:59:20.959600 (ERROR)    | Could not establish a connection to the server, because the user 'root' is not valid or the password is incorrect.
+2022-06-25 18:59:20.965030 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==

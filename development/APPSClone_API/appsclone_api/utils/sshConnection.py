@@ -38,7 +38,7 @@ class SSHConnection:
     SSHClient:
       An ssh client object
     """
-    self.logger.writeRoutineLog(
+    self.logger.writeSubroutineLog(
       sshConnect.format(ip = self.ip,port = self.port,username = self.username),Logs.ROUTINE_STATUS.START
     )
     try:
@@ -60,7 +60,7 @@ class SSHConnection:
     except:
       self.logger.writeRegularLog(Logs.SEVERITY.CRITICAL,criticalSSHException)
     finally:
-      self.logger.writeRoutineLog(
+      self.logger.writeSubroutineLog(
         sshConnect.format(ip = self.ip,port = self.port,username = self.username),Logs.ROUTINE_STATUS.END
       )
   
