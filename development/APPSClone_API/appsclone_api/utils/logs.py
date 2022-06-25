@@ -28,7 +28,7 @@ class Logs:
   MIN_NUM_LOGS   = 100
   MAX_NUM_LOGS   = 100000
   LOG_TYPE       = Enum(
-    "LOG_TYPE","ROUTINE_START ROUTINE_END SUBROUTINE_START SUBROUTINE_END OTHER"
+    "LOG_TYPE","ROUTINE_START ROUTINE_END SUBROUTINE_START SUBROUTINE_END SUBSUBROUTINE_START SUBSUBROUTINE_END OTHER"
   )
   ROUTINE_STATUS = Enum(
     "ROUTINE_STATUS","START END"
@@ -83,6 +83,21 @@ class Logs:
       self.__writeLog(Logs.SEVERITY.INFO,Logs._getLogMsg(Logs.LOG_TYPE.SUBROUTINE_START,message))
     else:
       self.__writeLog(Logs.SEVERITY.INFO,Logs._getLogMsg(Logs.LOG_TYPE.SUBROUTINE_END,message))
+
+  def writeSubsubroutineLog(self,message,routineStatus):
+    """Write a subsubroutine log to a file, according to its routine status.
+
+    Parameters
+    ----------
+    message       : str
+      The log message
+    routineStatus : enum
+      START means the start of a subroutine and END means the end of a subroutine
+    """
+    if routineStatus == Logs.ROUTINE_STATUS.START:
+      self.__writeLog(Logs.SEVERITY.INFO,Logs._getLogMsg(Logs.LOG_TYPE.SUBSUBROUTINE_START,message))
+    else:
+      self.__writeLog(Logs.SEVERITY.INFO,Logs._getLogMsg(Logs.LOG_TYPE.SUBSUBROUTINE_END,message))
 
   def writeRegularLog(self,severity,message):
     """Write a regular log to a file, according to its severity.
@@ -169,13 +184,17 @@ class Logs:
       The formatted log message, according to its type
     """
     if logType == Logs.LOG_TYPE.ROUTINE_START:
-      return "=== " + message + " ROUTINE (START) ==="
+      return "=== " + message + " (START) ==="
     elif logType == Logs.LOG_TYPE.ROUTINE_END:
-      return "=== " + message + " ROUTINE (END) ==="
+      return "=== " + message + " (END) ==="
     elif logType == Logs.LOG_TYPE.SUBROUTINE_START:
-      return "== " + message + " SUBROUTINE (START) =="
+      return "== " + message + " (START) =="
     elif logType == Logs.LOG_TYPE.SUBROUTINE_END:
-      return "== " + message + " SUBROUTINE (END) =="
+      return "== " + message + " (END) =="
+    elif logType == Logs.LOG_TYPE.SUBSUBROUTINE_START:
+      return "= " + message + " (START) ="
+    elif logType == Logs.LOG_TYPE.SUBSUBROUTINE_END:
+      return "= " + message + " (END) ="
     else:
       return message + "."
 

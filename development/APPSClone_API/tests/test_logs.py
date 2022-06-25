@@ -30,7 +30,7 @@ class TestLogs(unittest.TestCase):
     self.assertFalse(re.search("^(\d\d\d\d-\d\d-\d\d)","arrozEstablishing client interface to https://pppx.gdgps.net//api/user"))
 
   def test_get_log_msg(self):
-    self.assertEqual(Logs._getLogMsg(Logs.LOG_TYPE.SUBROUTINE_START,"arroz"),"== arroz SUBROUTINE (START) ==")
+    self.assertEqual(Logs._getLogMsg(Logs.LOG_TYPE.SUBROUTINE_START,"arroz"),"== arroz (START) ==")
 
   def test_write_routine(self):
     logger = Logs("logs/logTest.log",1000)
@@ -47,6 +47,14 @@ class TestLogs(unittest.TestCase):
   def test_write_subroutine2(self):
     logger = Logs("logs/logTest.log",1000)
     logger.writeSubroutineLog("infoSubroutineEnd",Logs.ROUTINE_STATUS.END)
+
+  def test_write_subsubroutine(self):
+    logger = Logs("logs/logTest.log",1000)
+    logger.writeSubsubroutineLog("infoSubsubroutineStart",Logs.ROUTINE_STATUS.START)
+
+  def test_write_subroutine2(self):
+    logger = Logs("logs/logTest.log",1000)
+    logger.writeSubsubroutineLog("infoSubsubroutineEnd",Logs.ROUTINE_STATUS.END)
 
   def test_write_regular_log(self):
     logger = Logs("logs/logTest.log",1000)

@@ -18,11 +18,11 @@ class FileHandler:
 
     Parameters
     ----------
-    conn                   : Connection_APPS
+    conn        : Connection_APPS
       A connection to APPS object
-    appsIDQueue            : str
+    appsIDQueue : str
       The file which contains the ids of the files that were uploaded to APPS
-    resultsDir             : str
+    resultsDir  : str
       The directory to which the results should be downloaded to
     """
     with open(appsIDQueue,"r") as f:
@@ -30,6 +30,28 @@ class FileHandler:
       uuids = [uuid.split("\n")[0] for uuid in uuids]
       for uuid in uuids:
         conn.handleFileState(uuid,appsIDQueue,resultsDir)
+        
+  @staticmethod
+  def uploadBackResults(uploadFilesQueueFile,resultsDir,logger):
+    for result in os.listdir(resultsDir):
+      queueLine = FileHandler._getFileLineFromQueueUploadFiles(uploadFilesQueueFile,result)
+      if queueLine:
+        uploadPath = queueLine.split(" ")[1]
+        ip         = queueLine.split(" ")[2]
+        port       = queueLine.split(" ")[3]
+        user = UserSSHClient("root","Pr0j#to_Spr1ng")
+        FileHandler._uploadResultsFile(
+          FileHandler._concatenateFileToPath(result,resultsDir),
+          uploadPath,
+          ip,
+          int(port),
+          user,
+          logger
+        )
+        FileHandler._removeFileFromQueueUploadFiles(uploadFilesQueueFile,result)
+        os.remove(FileHandler._concatenateFileToPath(result,resultsDir))
+      else:
+        pass
 
   @staticmethod
   def downloadRinexFiles(uploadFilesDirectory,downloadFolder,uploadFilesQueueFile,logger):
@@ -424,28 +446,6 @@ class FileHandler:
           newFileLines += line
     with open(uploadFilesQueueFile,"w") as f: 
       f.write(newFileLines)
-
-  @staticmethod
-  def uploadBackResults(uploadFilesQueueFile,resultsDir,logger):
-    for result in os.listdir(resultsDir):
-      queueLine = FileHandler._getFileLineFromQueueUploadFiles(uploadFilesQueueFile,result)
-      if queueLine:
-        uploadPath = queueLine.split(" ")[1]
-        ip         = queueLine.split(" ")[2]
-        port       = queueLine.split(" ")[3]
-        user = UserSSHClient("root","Pr0j#to_Spr1ng")
-        FileHandler._uploadResultsFile(
-          FileHandler._concatenateFileToPath(result,resultsDir),
-          uploadPath,
-          ip,
-          int(port),
-          user,
-          logger
-        )
-        FileHandler._removeFileFromQueueUploadFiles(uploadFilesQueueFile,result)
-        os.remove(FileHandler._concatenateFileToPath(result,resultsDir))
-      else:
-        pass
 
   @staticmethod
   def uploadAllRinexToApps(conn,downloadFolder,uploadedFilesQueue,args,logger):

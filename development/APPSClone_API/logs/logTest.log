@@ -81,3 +81,25 @@
 2022-06-25 18:42:42.348765 (INFO)     | The file 'arroz (2)' has been deleted from APPS.
 2022-06-25 18:42:42.356761 (INFO)     | Successfully removed file 'arroz (2)' from the apps ID queue.
 2022-06-25 18:42:42.360318 (INFO)     | == Data removal of file 'arroz (2)' SUBROUTINE (END) ==
+2022-06-25 18:54:03.143076 (INFO)     | info lol
+2022-06-25 18:54:03.148152 (WARNING)  | warning lol
+2022-06-25 18:54:03.152865 (ERROR)    | error lol
+2022-06-25 18:54:03.157304 (CRITICAL) | critical lol
+2022-06-25 18:54:06.164836 (INFO)     | after 3 seconds
+2022-06-25 18:54:06.171037 (INFO)     | regularInfo.
+2022-06-25 18:54:06.176303 (INFO)     | === infoRoutineStart (START) ===
+2022-06-25 18:54:06.181647 (INFO)     | === infoRoutineEnd (END) ===
+2022-06-25 18:54:06.186841 (INFO)     | == infoSubroutineStart (START) ==
+2022-06-25 18:54:06.192326 (INFO)     | = infoSubsubroutineEnd (END) =
+2022-06-25 18:54:06.198067 (INFO)     | = infoSubsubroutineStart (START) =
+2022-06-25 18:54:24.341609 (INFO)     | info lol
+2022-06-25 18:54:24.346774 (WARNING)  | warning lol
+2022-06-25 18:54:24.351174 (ERROR)    | error lol
+2022-06-25 18:54:24.355991 (CRITICAL) | critical lol
+2022-06-25 18:54:27.363553 (INFO)     | after 3 seconds
+2022-06-25 18:54:27.369262 (INFO)     | regularInfo.
+2022-06-25 18:54:27.373694 (INFO)     | === infoRoutineStart (START) ===
+2022-06-25 18:54:27.378215 (INFO)     | === infoRoutineEnd (END) ===
+2022-06-25 18:54:27.382366 (INFO)     | == infoSubroutineStart (START) ==
+2022-06-25 18:54:27.386554 (INFO)     | = infoSubsubroutineEnd (END) =
+2022-06-25 18:54:27.390758 (INFO)     | = infoSubsubroutineStart (START) =
