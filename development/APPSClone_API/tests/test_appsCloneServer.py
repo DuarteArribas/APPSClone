@@ -135,7 +135,7 @@ class TestAPPSCloneServer(unittest.TestCase):
   #     "generate_quaternions" : False,
   #   }
   #   conn = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-  #   APPSCloneServer.uploadAllRinexToApps(conn,"in/test2","out/queue/queue",args,logger)
+  #   APPSCloneServer.uploadAllRinexToApps(conn,"in/to_upload_test","queues/apps_id_queue_test",args,logger)
 
 if __name__ == '__main__':
   unittest.main()

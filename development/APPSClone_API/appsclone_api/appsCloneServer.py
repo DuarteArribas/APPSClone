@@ -288,9 +288,34 @@ class APPSCloneServer:
     logger.writeRegularLog(Logs.SEVERITY.INFO,fileAddedToRinexQueue.format(file = rinexFile))
 
   @staticmethod
-  def uploadAllRinexToApps(conn,downloadFolder,uploadedFilesQueue,args,logger):
-    for rinex in os.listdir(downloadFolder):
-      if os.path.getsize(APPSCloneServer._concatenateFileToPath(rinex,downloadFolder)) / (1024 * 1024.0) < conn.getQuotaLeft():
-        conn.uploadFile(APPSCloneServer._concatenateFileToPath(rinex,downloadFolder),uploadedFilesQueue,args)
-        os.remove(APPSCloneServer._concatenateFileToPath(rinex,downloadFolder))
-        os.remove(APPSCloneServer._concatenateFileToPath(rinex,downloadFolder)+".gz")
+  def uploadAllRinexToApps(conn,toUploadDir,appsIDQueue,uploadArgs,logger):
+    """Upload all rinex files to APPS if the quota so allows it.
+
+    Parameters
+    ----------
+    conn        : Connection_APPS
+      A connection to APPS object
+    toUploadDir : str
+      The directory that contains the downloaded rinex file for upload 
+    appsIDQueue : str
+      The file which contains the ids of the files that were uploaded to APPS
+    uploadArgs  : dict
+      Pairs of argumentName->argument for the upload
+    logger      : Logs
+      The log object to log to
+    """
+    logger.writeRoutineLog(uploadAllRinex,Logs.ROUTINE_STATUS.START)
+    for rinex in os.listdir(toUploadDir):
+      rinexPath = Helper.joinPathFile(toUploadDir,rinex)
+      if os.path.getsize(rinexPath) / (1024 * 1024.0) < conn.getQuotaLeft():
+        logger.writeRegularLog(Logs.SEVERITY.INFO,canUploadQuota.format(file = rinex))
+        conn.uploadFile(rinexPath,appsIDQueue,uploadArgs)
+        os.remove(rinexPath)
+        os.remove(rinexPath+".gz")
+        logger.writeRegularLog(Logs.SEVERITY.INFO,removedRinex.format(file = rinex))
+      else:
+        logger.writeRegularLog(Logs.SEVERITY.ERROR,cannotUploadQuota.format(file = rinex))
+    logger.writeRoutineLog(uploadAllRinex,Logs.ROUTINE_STATUS.END)
+
+# ✓    unit tested
+# ✓ feature tested

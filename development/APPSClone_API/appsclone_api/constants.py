@@ -38,7 +38,7 @@ dataDownloadedUnsuccessful    = "The file '{file}''s processed files could not b
 errorFromAPPS                 = "There was an error with the file '{file}' in APPS"
 checkStateFile                = "Checking file '{file}'"
 state                         = "The file '{file}' is in the '{state}' state"
-# = SSH_Client =
+# = SSHConnection =
 #routines
 sshConnect                    = "Connect to '{ip}:{port}', with user '{username}'"
 #other
@@ -51,12 +51,13 @@ scpGetSuccessful              = "Successfully copied remote file '{file}' to loc
 scpGetUnsuccessful            = "Could not copy remote file '{file}' to local directory '{df}'"
 scpPutSuccessful              = "Successfully copied local file '{file}' to remote directory '{df}'"
 scpPutUnsuccessful            = "Could not copy local file '{file}' to remote directory '{df}'"
-# = File handler =
+# = APPSCloneServer =
 #routines
 handleAllFilesState           = "State updates"
 uploadBack                    = "Upload back of results"
 downloadRinex                 = "Download of rinex files from source"
 uploadFilesChecking           = "Upload files check"
+uploadAllRinex                = "Upload of all Rinex"
 #other
 resultUploadedBack            = "The result file '{file}' was uploaded back to '{uploadDir}' with success"
 resultNotInQueue              = "The result file '{file}' was not in the rinex queue. Removing it"
@@ -70,5 +71,6 @@ noUploadFiles                 = "No upload files were found"
 fileAddedToRinexQueue         = "The file '{file}' was added to the rinex queue"
 alreadyUploaded               = "The file '{file}' is already uploaded"
 removedUploadFile             = "The upload file '{file}' was removed"
-
-unexpectedErrorLog                  = "An unexpected error ocurred. Files were not downloaded."
+canUploadQuota                = "There is enough quota to upload file '{file}'"
+cannotUploadQuota             = "There isn't enough quota to upload file '{file}'"
+removedRinex                  = "The file '{file}' was removed"
