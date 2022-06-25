@@ -56,6 +56,7 @@ scpPutUnsuccessful            = "Could not copy local file '{file}' to remote di
 handleAllFilesState           = "State updates"
 uploadBack                    = "Upload back of results"
 downloadRinex                 = "Download of rinex files from source"
+uploadFilesChecking           = "Upload files check"
 #other
 resultUploadedBack            = "The result file '{file}' was uploaded back to '{uploadDir}' with success"
 resultNotInQueue              = "The result file '{file}' was not in the rinex queue. Removing it"
@@ -64,12 +65,11 @@ validUploadFile               = "The upload file '{file}' was validated"
 invalidUploadFileIP           = "The upload file '{file}' is invalid, because its ip '{ip}' is invalid"
 invalidUploadFileFields       = "The upload file '{file}' is invalid, because it contains invalid fields or there are missing fields"
 invalidUploadFileNotAFile     = "'{file}' is not a file; thus, is invalid"
+uploadFilesExist              = "{numOfUploadFiles} valid upload files were found. Attempting to download corresponding rinex files"
+noUploadFiles                 = "No upload files were found"
 
 
 
-uploadFilesCheckingLog              = "Checking for upload files."
-uploadFilesExistLog                 = "{numOfUploadFiles} upload files were found. Attempting to download corresponding rinex files."
-noUploadFilesLog                    = "No upload files were found."
 
 unexpectedErrorLog                  = "An unexpected error ocurred. Files were not downloaded."
 fileAddedToQueueLog                 = "The file {file} was added upload files queue file."

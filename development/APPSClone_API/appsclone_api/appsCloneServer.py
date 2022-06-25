@@ -173,12 +173,12 @@ class APPSCloneServer:
     return alreadyUploadedFilenames
 
   @staticmethod
-  def _getUploadFiles(uploadFilesDirectory,logger):
+  def _getUploadFiles(toDownloadDir,logger):
     """Get the list of upload files that are valid from the given directory.
 
     Parameters
     ----------
-    uploadFilesDirectory : str
+    toDownloadDir : str
       The directory to read the upload files from
     logger        : Logs
       The log object to log to
@@ -188,13 +188,19 @@ class APPSCloneServer:
     list
       The valid upload files
     """
-    logger.writeLog(Logs.SEVERITY.INFO,uploadFilesCheckingLog)
-    uploadFiles          = os.listdir(uploadFilesDirectory)
-    validatedUploadFiles = [uploadFile for uploadFile in uploadFiles if APPSCloneServer._isValidUploadFile(APPSCloneServer._concatenateFileToPath(uploadFile,uploadFilesDirectory),logger)]
+    logger.writeSubroutineLog(uploadFilesChecking,Logs.ROUTINE_STATUS.START)
+    uploadFiles          = os.listdir(toDownloadDir)
+    validatedUploadFiles = [
+      uploadFile for uploadFile in uploadFiles if APPSCloneServer._isValidUploadFile(
+        Helper.joinPathFile(toDownloadDir,uploadFile),
+        logger
+      )
+    ]
     if len(validatedUploadFiles) > 0:
-      logger.writeLog(Logs.SEVERITY.INFO,uploadFilesExistLog.format(numOfUploadFiles = len(validatedUploadFiles)))
+      logger.writeRegularLog(Logs.SEVERITY.INFO,uploadFilesExist.format(numOfUploadFiles = len(validatedUploadFiles)))
     else:
-      logger.writeLog(Logs.SEVERITY.INFO,noUploadFilesLog)
+      logger.writeRegularLog(Logs.SEVERITY.INFO,noUploadFiles)
+    logger.writeSubroutineLog(uploadFilesChecking,Logs.ROUTINE_STATUS.END)
     return validatedUploadFiles
 
   @staticmethod

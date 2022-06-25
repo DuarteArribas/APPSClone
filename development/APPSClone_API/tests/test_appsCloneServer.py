@@ -92,13 +92,9 @@ class TestAPPSCloneServer(unittest.TestCase):
     logger = Logs("logs/logTest.log",1000)
     self.assertTrue(APPSCloneServer._isValidUploadFile("in/test/uploadFile14",logger))
 
-  # def test_get_validated_list_of_uploadFiles(self):
-  #   logger = Logs("logs/logTest.log",1000)
-  #   self.assertEqual(APPSCloneServer._getUploadFiles("in/uploadFilesTest/1",logger),["uploadFile1","uploadFile2","uploadFile3","uploadFile4","uploadFile5"])
-
-  # def test_get_validated_list_of_uploadFiles2(self):
-  #   logger = Logs("logs/logTest.log",1000)
-  #   self.assertEqual(APPSCloneServer._getUploadFiles("in/uploadFilesTest/2",logger),["uploadFile1","uploadFile4"])
+  def test_get_validated_list_of_uploadFiles(self):
+    logger = Logs("logs/logTest.log",1000)
+    self.assertEqual(APPSCloneServer._getUploadFiles("in/to_download_test/1",logger),["uploadFile1","uploadFile2","uploadFile3","uploadFile4","uploadFile5"])
 
   #def test_parse_upload_file(self):
   #  logger = Logs("logs/logTest.log",1000)
