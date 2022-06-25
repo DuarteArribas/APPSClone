@@ -47,6 +47,8 @@ sshConnectUnsuccessfulBadIP   = "Could not establish a connection to the server,
 sshConnectUnsuccessfulBadPort = "Could not establish a connection to the server, because the port '{port}' is not valid or is unavailable"
 sshConnectUnsuccessfulBadUser = "Could not establish a connection to the server, because the user '{username}' is not valid or the password is incorrect"
 criticalSSHException          = "Could not establish a connection to the server, because of an unknown reason"
+scpSuccessful                 = "Successfully copied file '{file}' to '{df}'"
+scpUnsuccessful               = "Could not copy file '{file}' to '{df}'"
 # = File handler =
 #routines
 downloadRinexFilesRoutineStartLog   = "=== RINEX FILES DOWNLOAD ROUTINE (START) ==="
@@ -60,7 +62,5 @@ validUploadFileLog                  = "The upload file '{file}' was validated."
 uploadFilesExistLog                 = "{numOfUploadFiles} upload files were found. Attempting to download corresponding rinex files."
 noUploadFilesLog                    = "No upload files were found."
 
-scpSuccessful                       = "Successfully copied file '{file}' to '{downloadFolder}'."
-scpUnsuccessful                     = "Could not copy file '{file}' to '{downloadFolder}'."
 unexpectedErrorLog                  = "An unexpected error ocurred. Files were not downloaded."
 fileAddedToQueueLog                 = "The file {file} was added upload files queue file."

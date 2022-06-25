@@ -1,30 +1,46 @@
-2022-06-25 17:30:57.720903 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
-2022-06-25 17:30:58.364080 (INFO)     | Successfully established a connection to the server.
-2022-06-25 17:30:58.369222 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
-2022-06-25 17:30:58.373608 (INFO)     | === Connect to '138.68.128.181:22', with user 'root' ROUTINE (START) ===
-2022-06-25 17:30:58.980018 (ERROR)    | Could not establish a connection to the server, because the ip '138.68.128.181' is not valid or is unavailable.
-2022-06-25 17:30:58.985268 (INFO)     | === Connect to '138.68.128.181:22', with user 'root' ROUTINE (END) ===
-2022-06-25 17:30:58.989929 (INFO)     | === Connect to '138.68.128.182:21', with user 'root' ROUTINE (START) ===
-2022-06-25 17:30:59.062499 (ERROR)    | Could not establish a connection to the server, because the port '21' is not valid or is unavailable.
-2022-06-25 17:30:59.067836 (INFO)     | === Connect to '138.68.128.182:21', with user 'root' ROUTINE (END) ===
-2022-06-25 17:30:59.070377 (INFO)     | === Connect to '138.68.128.182:22', with user 'root2' ROUTINE (START) ===
-2022-06-25 17:31:01.641588 (ERROR)    | Could not establish a connection to the server, because the user 'root2' is not valid or the password is incorrect.
-2022-06-25 17:31:01.646938 (INFO)     | === Connect to '138.68.128.182:22', with user 'root2' ROUTINE (END) ===
-2022-06-25 17:31:01.651113 (INFO)     | === Connect to '138.68.128.182:22', with user 'root2' ROUTINE (START) ===
-2022-06-25 17:31:06.077462 (ERROR)    | Could not establish a connection to the server, because the user 'root2' is not valid or the password is incorrect.
-2022-06-25 17:31:06.083606 (INFO)     | === Connect to '138.68.128.182:22', with user 'root2' ROUTINE (END) ===
-2022-06-25 17:31:31.848824 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
-2022-06-25 17:31:32.569654 (INFO)     | Successfully established a connection to the server.
-2022-06-25 17:31:32.576082 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
-2022-06-25 17:31:32.581530 (INFO)     | === Connect to '138.68.128.181:22', with user 'root' ROUTINE (START) ===
-2022-06-25 17:31:33.269605 (ERROR)    | Could not establish a connection to the server, because the ip '138.68.128.181' is not valid or is unavailable.
-2022-06-25 17:31:33.275177 (INFO)     | === Connect to '138.68.128.181:22', with user 'root' ROUTINE (END) ===
-2022-06-25 17:31:33.279601 (INFO)     | === Connect to '138.68.128.182:21', with user 'root' ROUTINE (START) ===
-2022-06-25 17:31:33.348705 (ERROR)    | Could not establish a connection to the server, because the port '21' is not valid or is unavailable.
-2022-06-25 17:31:33.354136 (INFO)     | === Connect to '138.68.128.182:21', with user 'root' ROUTINE (END) ===
-2022-06-25 17:31:33.356468 (INFO)     | === Connect to '138.68.128.182:22', with user 'root2' ROUTINE (START) ===
-2022-06-25 17:31:37.783312 (ERROR)    | Could not establish a connection to the server, because the user 'root2' is not valid or the password is incorrect.
-2022-06-25 17:31:37.788681 (INFO)     | === Connect to '138.68.128.182:22', with user 'root2' ROUTINE (END) ===
-2022-06-25 17:31:37.792988 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
-2022-06-25 17:31:40.693529 (ERROR)    | Could not establish a connection to the server, because the user 'root' is not valid or the password is incorrect.
-2022-06-25 17:31:40.699054 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
+2022-06-25 18:00:32.498062 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
+2022-06-25 18:00:33.159047 (INFO)     | Successfully established a connection to the server.
+2022-06-25 18:00:33.164714 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
+2022-06-25 18:00:35.482573 (ERROR)    | Successfully copied file 'arroz' to 'in/to_upload_test'.
+2022-06-25 18:00:35.488067 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
+2022-06-25 18:00:36.199242 (INFO)     | Successfully established a connection to the server.
+2022-06-25 18:00:36.206063 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
+2022-06-25 18:00:37.533425 (ERROR)    | Could not copy file 'arro' to 'in/to_upload_test'.
+2022-06-25 18:00:37.539066 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
+2022-06-25 18:00:38.229029 (INFO)     | Successfully established a connection to the server.
+2022-06-25 18:00:38.234951 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
+2022-06-25 18:00:38.239765 (INFO)     | === Connect to '138.68.128.181:22', with user 'root' ROUTINE (START) ===
+2022-06-25 18:00:38.914315 (ERROR)    | Could not establish a connection to the server, because the ip '138.68.128.181' is not valid or is unavailable.
+2022-06-25 18:00:38.919809 (INFO)     | === Connect to '138.68.128.181:22', with user 'root' ROUTINE (END) ===
+2022-06-25 18:00:38.924170 (INFO)     | === Connect to '138.68.128.182:21', with user 'root' ROUTINE (START) ===
+2022-06-25 18:00:38.988182 (ERROR)    | Could not establish a connection to the server, because the port '21' is not valid or is unavailable.
+2022-06-25 18:00:38.994365 (INFO)     | === Connect to '138.68.128.182:21', with user 'root' ROUTINE (END) ===
+2022-06-25 18:00:38.996855 (INFO)     | === Connect to '138.68.128.182:22', with user 'root2' ROUTINE (START) ===
+2022-06-25 18:00:43.421662 (ERROR)    | Could not establish a connection to the server, because the user 'root2' is not valid or the password is incorrect.
+2022-06-25 18:00:43.427834 (INFO)     | === Connect to '138.68.128.182:22', with user 'root2' ROUTINE (END) ===
+2022-06-25 18:00:43.433411 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
+2022-06-25 18:00:46.289405 (ERROR)    | Could not establish a connection to the server, because the user 'root' is not valid or the password is incorrect.
+2022-06-25 18:00:46.295405 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
+2022-06-25 18:03:06.027597 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
+2022-06-25 18:03:06.836409 (INFO)     | Successfully established a connection to the server.
+2022-06-25 18:03:06.841845 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
+2022-06-25 18:03:08.653712 (ERROR)    | Successfully copied file 'arroz' to 'in/to_upload_test'.
+2022-06-25 18:03:08.659689 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
+2022-06-25 18:03:09.587744 (INFO)     | Successfully established a connection to the server.
+2022-06-25 18:03:09.594151 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
+2022-06-25 18:03:10.703978 (ERROR)    | Could not copy file 'arro' to 'in/to_upload_test'.
+2022-06-25 18:03:10.709956 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
+2022-06-25 18:03:11.277860 (INFO)     | Successfully established a connection to the server.
+2022-06-25 18:03:11.284204 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===
+2022-06-25 18:03:11.288673 (INFO)     | === Connect to '138.68.128.181:22', with user 'root' ROUTINE (START) ===
+2022-06-25 18:03:11.900690 (ERROR)    | Could not establish a connection to the server, because the ip '138.68.128.181' is not valid or is unavailable.
+2022-06-25 18:03:11.906310 (INFO)     | === Connect to '138.68.128.181:22', with user 'root' ROUTINE (END) ===
+2022-06-25 18:03:11.911438 (INFO)     | === Connect to '138.68.128.182:21', with user 'root' ROUTINE (START) ===
+2022-06-25 18:03:11.978011 (ERROR)    | Could not establish a connection to the server, because the port '21' is not valid or is unavailable.
+2022-06-25 18:03:11.984455 (INFO)     | === Connect to '138.68.128.182:21', with user 'root' ROUTINE (END) ===
+2022-06-25 18:03:11.987697 (INFO)     | === Connect to '138.68.128.182:22', with user 'root2' ROUTINE (START) ===
+2022-06-25 18:03:16.402448 (ERROR)    | Could not establish a connection to the server, because the user 'root2' is not valid or the password is incorrect.
+2022-06-25 18:03:16.408157 (INFO)     | === Connect to '138.68.128.182:22', with user 'root2' ROUTINE (END) ===
+2022-06-25 18:03:16.412694 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (START) ===
+2022-06-25 18:03:19.521251 (ERROR)    | Could not establish a connection to the server, because the user 'root' is not valid or the password is incorrect.
+2022-06-25 18:03:19.527204 (INFO)     | === Connect to '138.68.128.182:22', with user 'root' ROUTINE (END) ===

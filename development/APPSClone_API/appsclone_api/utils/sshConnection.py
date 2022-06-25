@@ -1,6 +1,8 @@
 import paramiko
-from appsclone_api.utils.logs import *
-from appsclone_api.constants  import *
+import scp
+from appsclone_api.utils.helper import *
+from appsclone_api.utils.logs   import *
+from appsclone_api.constants    import *
 
 class SSHConnection:
   """A client connection via ssh."""
@@ -62,4 +64,21 @@ class SSHConnection:
         sshConnect.format(ip = self.ip,port = self.port,username = self.username),Logs.ROUTINE_STATUS.END
       )
   
-  def getFile(self,)
+  def getFile(self,pathToDownloadFrom,pathToDownloadTo):
+    """Get a file from the given path in the server to the given local path.
+
+    Parameters
+    ----------
+    pathToDownloadFrom : str
+      The path of the server to download the file from
+    pathToDownloadTo   : str
+      The local path to download the file to
+    """
+    if self.client != None:
+      try:
+        filename = Helper.getFileFromPath(pathToDownloadFrom)
+        scpClient = scp.SCPClient(self.client.get_transport())
+        scpClient.get(pathToDownloadFrom,pathToDownloadTo)
+        self.logger.writeRegularLog(Logs.SEVERITY.ERROR,scpSuccessful.format(file = filename,df = pathToDownloadTo))
+      except:
+        self.logger.writeRegularLog(Logs.SEVERITY.ERROR,scpUnsuccessful.format(file = filename,df = pathToDownloadTo))
