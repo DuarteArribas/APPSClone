@@ -21,6 +21,9 @@ class TestAPPSCloneServer(unittest.TestCase):
     logger = Logs("logs/logTest.log",1000)
     APPSCloneServer._removeFileFromRinexQueue("queues/rinex_queue_test","feijao_results.tar.gz",logger)
 
+  def test_get_already_uploaded_files(self):
+    self.assertEqual(APPSCloneServer._getAlreadyUploadedFilenames("queues/rinex_queue_test"),["arro","arroz"])
+
   # def test_upload_back_all_results(self):
   #   logger   = Logs("logs/logTest.log",1000)
   #   APPSCloneServer.uploadBackResults("queues/rinex_queue_test","out/results_test","root","Pr0j#to_Spr1ng",logger)

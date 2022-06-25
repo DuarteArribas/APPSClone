@@ -18,3 +18,9 @@
 2022-06-25 20:09:37.145864 (INFO)     | The result file 'massa_results.tar.gz' was uploaded back to '~' with success.
 2022-06-25 20:09:37.152954 (INFO)     | The result file 'massa_results.tar.gz' was successfully removed from the rinex queue.
 2022-06-25 20:09:37.160583 (INFO)     | === Upload back of results (END) ===
+2022-06-25 22:27:39.161983 (INFO)     | === State updates (START) ===
+2022-06-25 22:27:39.168861 (INFO)     | === State updates (END) ===
+2022-06-25 22:27:52.169803 (INFO)     | === State updates (START) ===
+2022-06-25 22:27:52.176587 (INFO)     | === State updates (END) ===
+2022-06-25 22:28:02.445334 (INFO)     | === State updates (START) ===
+2022-06-25 22:28:02.452356 (INFO)     | === State updates (END) ===

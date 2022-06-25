@@ -116,21 +116,21 @@ class APPSCloneServer:
       logger.writeRegularLog(Logs.SEVERITY.INFO,removedFromRinexQueue.format(file = result))
 
   @staticmethod
-  def downloadRinexFiles(uploadFilesDirectory,downloadFolder,uploadFilesQueueFile,logger):
+  def downloadRinexFiles(toDownloadDir,toUploadDir,rinexQueue,logger):
     """Download all files from the given upload files to the given directory.
 
     Parameters
     ----------
-    uploadFilesDirectory : str
+    toDownloadDir : str
       The directory to read the upload files from
-    downloadFolder       : str
-      The directory to download the files to 
-    uploadFilesQueueFile : str
-      The file, which contains the queue of the upload files
-    logger               : Logs
-      The Logs object that will be used to log several actions
+    toUploadDir   : str
+      The directory that contains the downloaded rinex file for upload 
+    rinexQueue    : str
+      The file which contains the rinex queue
+    logger        : Logs
+      The log object to log to
     """
-    logger.writeLog(Logs.SEVERITY.INFO,downloadRinexFilesRoutineStartLog)
+    logger.writeRoutineLog(downloadRinexFiles,Logs.ROUTINE_STATUS.START)
     alreadyUploadedFileNames = []
     alreadyUploadedFileNames.append(APPSCloneServer._getAlreadyUploadedFilenames(uploadFilesQueueFile))
     for uploadFile in APPSCloneServer._getUploadFiles(uploadFilesDirectory,logger):
@@ -155,16 +155,23 @@ class APPSCloneServer:
         pass
       os.remove(APPSCloneServer._concatenateFileToPath(uploadFile,uploadFilesDirectory))
 
-    logger.writeLog(Logs.SEVERITY.INFO,downloadRinexFilesRoutineEndLog)
+    logger.writeRoutineLog(downloadRinexFiles,Logs.ROUTINE_STATUS.END)
 
   @staticmethod
-  def _getAlreadyUploadedFilenames(uploadFilesQueueFile):
-    alreadyUploadedFileNames = []
-    with open(uploadFilesQueueFile,"r") as f:
+  def _getAlreadyUploadedFilenames(rinexQueue):
+    """Get the filenames of already uploaded files to APPS.
+
+    Parameters
+    ----------
+    rinexQueue : str
+      The file which contains the rinex queue
+    """
+    alreadyUploadedFilenames = []
+    with open(rinexQueue,"r") as f:
       lines = f.readlines()
       for line in lines:
-       alreadyUploadedFileNames.append(line.split(" ")[0])
-    return alreadyUploadedFileNames
+       alreadyUploadedFilenames.append(line.split(" ")[0])
+    return alreadyUploadedFilenames
 
   @staticmethod
   def _getUploadFiles(uploadFilesDirectory,logger):
@@ -190,24 +197,6 @@ class APPSCloneServer:
     else:
       logger.writeLog(Logs.SEVERITY.INFO,noUploadFilesLog)
     return validatedUploadFiles
-
-  @staticmethod
-  def _concatenateFileToPath(file,path):
-    """Concatenate a file to a filepath, separating them by /
-
-    Parameters
-    ----------
-    file : str
-      The file to concatenate to the file path
-    path : str
-      The path to concatenate the file to
-
-    Returns
-    ----------
-    str
-      The file path, with the file included
-    """
-    return path+"/"+file
 
   @staticmethod
   def _isValidUploadFile(uploadFile,logger):
@@ -243,22 +232,6 @@ class APPSCloneServer:
     else:
       logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = file,reason = "Not a file"))
       return False
-
-  @staticmethod
-  def _getFileFromPath(path):
-    """Get a file, given its path.
-
-    Parameters
-    ----------
-    path : str
-      The path to gather the file from
-
-    Returns
-    ----------
-    str
-      The file from the file path
-    """
-    return path.split("/")[-1]
 
   @staticmethod
   def _cleanEmptyFieldsInList(lst):
