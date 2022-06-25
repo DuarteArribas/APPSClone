@@ -132,9 +132,9 @@ class APPSCloneServer:
     """
     logger.writeRoutineLog(downloadRinexFiles,Logs.ROUTINE_STATUS.START)
     alreadyUploadedFilenames = APPSCloneServer._getAlreadyUploadedFilenames(rinexQueue)
-    for uploadFile in APPSCloneServer._getUploadFiles(uploadFilesDirectory,logger):
+    for uploadFile in APPSCloneServer._getUploadFiles(toDownloadDir,logger):
       pathToDownloadFrom,pathToUploadTo,ipToConnect = APPSCloneServer._parseUploadFile(
-        APPSCloneServer._concatenateFileToPath(uploadFile,uploadFilesDirectory)
+        APPSCloneServer._concatenateFileToPath(uploadFile,toDownloadDir)
       )
       port = 22                                     #hardcode
       user = UserSSHClient("root","Pr0j#to_Spr1ng") #hardcode
@@ -249,16 +249,16 @@ class APPSCloneServer:
     Returns
     ----------
     tuple(str,str,str)
-      The path to download the rinex files from
-      The path to upload the results of the processed rinex files to
+      The path of the rinex file to download
+      The directory to upload the results of the processed rinex files to
       The IPV4 of the machine to donwload the rinex files from and upload the results to
     """
     with open(uploadFile,"r") as f:
       lines              = f.readlines()
       pathToDownloadFrom = lines[0].split("\n")[0]
-      pathToUploadTo     = lines[1].split("\n")[0]
-      ipToConnect        = lines[2].split("\n")[0]
-      return pathToDownloadFrom,pathToUploadTo,ipToConnect
+      dirToUploadTo      = lines[1].split("\n")[0]
+      ip                 = lines[2].split("\n")[0]
+      return pathToDownloadFrom,dirToUploadTo,ip
 
   @staticmethod
   def _downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user,logger):

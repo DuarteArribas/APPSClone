@@ -96,13 +96,11 @@ class TestAPPSCloneServer(unittest.TestCase):
     logger = Logs("logs/logTest.log",1000)
     self.assertEqual(APPSCloneServer._getUploadFiles("in/to_download_test/1",logger),["uploadFile1","uploadFile2","uploadFile3","uploadFile4","uploadFile5"])
 
-  #def test_parse_upload_file(self):
-  #  logger = Logs("logs/logTest.log",1000)
-  #  self.assertEqual(APPSCloneServer._parseUploadFile("in/uploadFilesTest/1/uploadFile1"),("~/arroz","~","138.68.128.182"))
+  def test_parse_upload_file(self):
+   self.assertEqual(APPSCloneServer._parseUploadFile("in/test/uploadFile1"),("arroz","massa","192.168.8.255"))
 
-  #def test_parse_upload_file2(self):
-  #  logger = Logs("logs/logTest.log",1000)
-  #  self.assertEqual(APPSCloneServer._parseUploadFile("in/uploadFilesTest/2/uploadFile4"),("aaa","massa","192.168.8.1"))
+  def test_parse_upload_file2(self):
+   self.assertEqual(APPSCloneServer._parseUploadFile("in/test/uploadFile4"),("aaa","massa","192.168.8.1"))
 
   #def test_download_rinex_file(self):
   #  logger   = Logs("logs/logTest.log",1000)
