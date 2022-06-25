@@ -7,9 +7,8 @@ from appsclone_api.utils.logs          import *
 from appsclone_api.constants           import *
 from os                                import listdir
 
-class FileHandler:
-  """
-  """
+class APPSCloneServer:
+  """TODOOOOOOOOOOO"""
   # == Attributes ==
   # == Methods ==
   @staticmethod
