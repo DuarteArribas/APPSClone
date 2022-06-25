@@ -1,70 +1,20 @@
-2022-06-25 18:57:30.521652 (INFO)     | Successfully added file 'arroz' to the apps ID queue.
-2022-06-25 18:57:30.533226 (INFO)     | == Connection test (START) ==
-2022-06-25 18:57:32.201657 (INFO)     | The connection with APPS was successful.
-2022-06-25 18:57:32.208528 (INFO)     | == Connection test (END) ==
-2022-06-25 18:57:32.223057 (ERROR)    | The file 'file' is invalid - The version 'None' of the rinex file is invalid (Supported versions are 2.11, 3.02).
-2022-06-25 18:57:32.264648 (INFO)     | The file 'CVTY2720.21D' was validated and is being considered a valid file for uploading.
-2022-06-25 18:57:35.428001 (INFO)     | Successfully removed file 'arroz' from the apps ID queue.
-2022-06-25 18:57:35.450798 (WARNING)  | The value 'arroz' is invalid for argument 'access'. Using default value 'X'.
-2022-06-25 18:57:35.461746 (WARNING)  | The value '' is invalid for argument 'pressure'. Using default value 'None'.
-2022-06-25 18:57:35.467153 (WARNING)  | The value '' is invalid for argument 'attitude'. Using default value 'None'.
-2022-06-25 18:57:35.472459 (WARNING)  | The value '' is invalid for argument 'email'. Using default value 'None'.
-2022-06-25 18:57:35.476770 (WARNING)  | The value '' is invalid for argument 'access'. Using default value 'X'.
-2022-06-25 18:57:35.480948 (WARNING)  | The value '' is invalid for argument 'processing_mode'. Using default value 'S'.
-2022-06-25 18:57:35.484961 (WARNING)  | The value '' is invalid for argument 'product'. Using default value 'B'.
-2022-06-25 18:57:35.489267 (WARNING)  | The value '' is invalid for argument 'troposphere_model'. Using default value 'GMF'.
-2022-06-25 18:57:35.493489 (WARNING)  | The value '' is invalid for argument 'ocean_loading'. Using default value 'True'.
-2022-06-25 18:57:35.497418 (WARNING)  | The value '' is invalid for argument 'model_tides'. Using default value 'True'.
-2022-06-25 18:57:35.501984 (WARNING)  | The value '' is invalid for argument 'elev_dep_weighting'. Using default value 'SQRTSIN'.
-2022-06-25 18:57:35.505973 (WARNING)  | The value '' is invalid for argument 'elev_angle_cutoff'. Using default value '7.5'.
-2022-06-25 18:57:35.510265 (WARNING)  | The value '' is invalid for argument 'solution_period'. Using default value '300'.
-2022-06-25 18:57:35.514435 (WARNING)  | The value '' is invalid for argument 'generate_quaternions'. Using default value 'False'.
-2022-06-25 18:57:35.524159 (WARNING)  | The value '' is invalid for argument 'pressure'. Using default value 'None'.
-2022-06-25 18:57:35.529624 (WARNING)  | The value '' is invalid for argument 'attitude'. Using default value 'None'.
-2022-06-25 18:57:35.534808 (WARNING)  | The value '' is invalid for argument 'email'. Using default value 'None'.
-2022-06-25 18:57:35.539199 (WARNING)  | The value '' is invalid for argument 'access'. Using default value 'X'.
-2022-06-25 18:57:35.544047 (WARNING)  | The value '' is invalid for argument 'processing_mode'. Using default value 'S'.
-2022-06-25 18:57:35.548611 (WARNING)  | The value '' is invalid for argument 'product'. Using default value 'B'.
-2022-06-25 18:57:35.553450 (WARNING)  | The value '' is invalid for argument 'ocean_loading'. Using default value 'True'.
-2022-06-25 18:57:35.557721 (WARNING)  | The value '' is invalid for argument 'model_tides'. Using default value 'True'.
-2022-06-25 18:57:35.562436 (WARNING)  | The value '' is invalid for argument 'elev_dep_weighting'. Using default value 'SQRTSIN'.
-2022-06-25 18:57:35.566507 (WARNING)  | The value '' is invalid for argument 'elev_angle_cutoff'. Using default value '7.5'.
-2022-06-25 18:57:35.570663 (WARNING)  | The value '' is invalid for argument 'solution_period'. Using default value '300'.
-2022-06-25 18:57:35.574715 (WARNING)  | The value '' is invalid for argument 'generate_quaternions'. Using default value 'False'.
-2022-06-25 18:59:00.832363 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
-2022-06-25 18:59:01.570515 (INFO)     | Successfully established a connection to the server.
-2022-06-25 18:59:01.575959 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
-2022-06-25 18:59:04.376018 (ERROR)    | Successfully copied remote file 'arroz' to local directory 'in/to_upload_test'.
-2022-06-25 18:59:04.382188 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
-2022-06-25 18:59:05.053956 (INFO)     | Successfully established a connection to the server.
-2022-06-25 18:59:05.059570 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
-2022-06-25 18:59:06.264840 (ERROR)    | Could not copy remote file 'arro' to local directory 'in/to_upload_test'.
-2022-06-25 18:59:06.270454 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
-2022-06-25 18:59:06.955254 (INFO)     | Successfully established a connection to the server.
-2022-06-25 18:59:06.960910 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
-2022-06-25 18:59:08.357765 (ERROR)    | Successfully copied local file 'file' to remote directory '~'.
-2022-06-25 18:59:08.363239 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
-2022-06-25 18:59:08.986301 (INFO)     | Successfully established a connection to the server.
-2022-06-25 18:59:08.992096 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
-2022-06-25 18:59:10.087994 (ERROR)    | Could not copy local file 'someFile' to remote directory '~'.
-2022-06-25 18:59:10.093502 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
-2022-06-25 18:59:10.722191 (INFO)     | Successfully established a connection to the server.
-2022-06-25 18:59:10.727715 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
-2022-06-25 18:59:10.732908 (INFO)     | == Connect to '138.68.128.181:22', with user 'root' (START) ==
-2022-06-25 18:59:11.338623 (ERROR)    | Could not establish a connection to the server, because the ip '138.68.128.181' is not valid or is unavailable.
-2022-06-25 18:59:11.344173 (INFO)     | == Connect to '138.68.128.181:22', with user 'root' (END) ==
-2022-06-25 18:59:11.349241 (INFO)     | == Connect to '138.68.128.182:21', with user 'root' (START) ==
-2022-06-25 18:59:11.415636 (ERROR)    | Could not establish a connection to the server, because the port '21' is not valid or is unavailable.
-2022-06-25 18:59:11.422005 (INFO)     | == Connect to '138.68.128.182:21', with user 'root' (END) ==
-2022-06-25 18:59:11.424836 (INFO)     | == Connect to '138.68.128.182:22', with user 'root2' (START) ==
-2022-06-25 18:59:15.776349 (ERROR)    | Could not establish a connection to the server, because the user 'root2' is not valid or the password is incorrect.
-2022-06-25 18:59:15.781754 (INFO)     | == Connect to '138.68.128.182:22', with user 'root2' (END) ==
-2022-06-25 18:59:15.786603 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
-2022-06-25 18:59:20.959600 (ERROR)    | Could not establish a connection to the server, because the user 'root' is not valid or the password is incorrect.
-2022-06-25 18:59:20.965030 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
-2022-06-25 19:13:05.804794 (INFO)     | === State updates (START) ===
-2022-06-25 19:13:05.811857 (INFO)     | === State updates (END) ===
-2022-06-25 19:37:01.734747 (INFO)     | === State updates (START) ===
-2022-06-25 19:37:01.741577 (INFO)     | === State updates (END) ===
-2022-06-25 19:46:35.829465 (INFO)     | === State updates (START) ===
-2022-06-25 19:46:35.836444 (INFO)     | === State updates (END) ===
+2022-06-25 20:05:32.754466 (INFO)     | === State updates (START) ===
+2022-06-25 20:05:32.760920 (INFO)     | === State updates (END) ===
+2022-06-25 20:05:32.767203 (INFO)     | The result file 'feijao_results.tar.gz' was successfully removed from the rinex queue.
+2022-06-25 20:08:56.620869 (INFO)     | === State updates (START) ===
+2022-06-25 20:08:56.627593 (INFO)     | === State updates (END) ===
+2022-06-25 20:08:56.634118 (INFO)     | The result file 'feijao_results.tar.gz' was successfully removed from the rinex queue.
+2022-06-25 20:08:56.638748 (INFO)     | === Upload back of results (START) ===
+2022-06-25 20:09:18.330894 (INFO)     | === State updates (START) ===
+2022-06-25 20:09:18.338376 (INFO)     | === State updates (END) ===
+2022-06-25 20:09:18.346108 (INFO)     | === Upload back of results (START) ===
+2022-06-25 20:09:34.675602 (INFO)     | === State updates (START) ===
+2022-06-25 20:09:34.682498 (INFO)     | === State updates (END) ===
+2022-06-25 20:09:34.689000 (INFO)     | === Upload back of results (START) ===
+2022-06-25 20:09:34.697264 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-25 20:09:35.437064 (INFO)     | Successfully established a connection to the server.
+2022-06-25 20:09:35.442270 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-25 20:09:37.139785 (ERROR)    | Successfully copied local file 'massa_results.tar.gz' to remote directory '~'.
+2022-06-25 20:09:37.145864 (INFO)     | The result file 'massa_results.tar.gz' was uploaded back to '~' with success.
+2022-06-25 20:09:37.152954 (INFO)     | The result file 'massa_results.tar.gz' was successfully removed from the rinex queue.
+2022-06-25 20:09:37.160583 (INFO)     | === Upload back of results (END) ===

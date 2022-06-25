@@ -36,17 +36,32 @@ class APPSCloneServer:
 
   @staticmethod
   def uploadBackResults(rinexQueue,resultsDir,username,password,logger):
+    """Upload back results to the client who asked for them.
+
+    Parameters
+    ----------
+    rinexQueue : str
+      The file which contains the rinex queue
+    resultsDir : str
+      The directory to which the results should be downloaded to
+    sername    : str
+      The username of the user to connect with
+    password   : str
+      The password of the user
+    logger     : Logs
+      The log object to log to
+    """
     logger.writeRoutineLog(uploadBack,Logs.ROUTINE_STATUS.START)
     for result in os.listdir(resultsDir):
-      queueLine = FileHandler._getResultLineFromRinexQueue(rinexQueue,result)
+      queueLine = APPSCloneServer._getResultLineFromRinexQueue(rinexQueue,result)
       if queueLine:
         uploadDir = queueLine.split(" ")[1]
         ip        = queueLine.split(" ")[2]
         port      = queueLine.split(" ")[3]
-        sshClient = SSHConnection(ip,port,username,password)
+        sshClient = SSHConnection(ip,port,username,password,logger)
         sshClient.putFile(Helper.joinPathFile(resultsDir,result),uploadDir)
         logger.writeRegularLog(Logs.SEVERITY.INFO,resultUploadedBack.format(file = result,uploadDir = uploadDir))
-        FileHandler._removeFileFromQueueUploadFiles(rinexQueue,result)
+        APPSCloneServer._removeFileFromRinexQueue(rinexQueue,result,logger)
       else:
         logger.writeRegularLog(Logs.SEVERITY.ERROR,resultNotInQueue.format(file = result))
       os.remove(Helper.joinPathFile(resultsDir,result))
@@ -76,7 +91,7 @@ class APPSCloneServer:
       return None
 
   @staticmethod
-  def _removeFileFromRinexQueue(rinexQueue,result):
+  def _removeFileFromRinexQueue(rinexQueue,result,logger):
     """Remove a line from the rinex queue.
 
     Parameters
@@ -87,13 +102,18 @@ class APPSCloneServer:
       The name of the results file
     """
     newFileLines = ""
+    queueChanged = False
     with open(rinexQueue,"r") as f:
       lines = f.readlines()
       for line in lines:
         if line.split(" ")[0] != result.split("_results")[0]:
           newFileLines += line
+        else:
+          queueChanged = True
     with open(rinexQueue,"w") as f: 
       f.write(newFileLines)
+    if queueChanged:
+      logger.writeRegularLog(Logs.SEVERITY.INFO,removedFromRinexQueue.format(file = result))
 
   @staticmethod
   def downloadRinexFiles(uploadFilesDirectory,downloadFolder,uploadFilesQueueFile,logger):
@@ -112,19 +132,19 @@ class APPSCloneServer:
     """
     logger.writeLog(Logs.SEVERITY.INFO,downloadRinexFilesRoutineStartLog)
     alreadyUploadedFileNames = []
-    alreadyUploadedFileNames.append(FileHandler._getAlreadyUploadedFilenames(uploadFilesQueueFile))
-    for uploadFile in FileHandler._getUploadFiles(uploadFilesDirectory,logger):
-      pathToDownloadFrom,pathToUploadTo,ipToConnect = FileHandler._parseUploadFile(
-        FileHandler._concatenateFileToPath(uploadFile,uploadFilesDirectory)
+    alreadyUploadedFileNames.append(APPSCloneServer._getAlreadyUploadedFilenames(uploadFilesQueueFile))
+    for uploadFile in APPSCloneServer._getUploadFiles(uploadFilesDirectory,logger):
+      pathToDownloadFrom,pathToUploadTo,ipToConnect = APPSCloneServer._parseUploadFile(
+        APPSCloneServer._concatenateFileToPath(uploadFile,uploadFilesDirectory)
       )
       port = 22                                     #hardcode
       user = UserSSHClient("root","Pr0j#to_Spr1ng") #hardcode
-      if FileHandler._getFileFromPath(pathToDownloadFrom) not in alreadyUploadedFileNames:
-        FileHandler._downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user,logger)
-        alreadyUploadedFileNames.append(FileHandler._getFileFromPath(pathToDownloadFrom))
-        FileHandler._addFileToQueueUploadFiles(
+      if APPSCloneServer._getFileFromPath(pathToDownloadFrom) not in alreadyUploadedFileNames:
+        APPSCloneServer._downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user,logger)
+        alreadyUploadedFileNames.append(APPSCloneServer._getFileFromPath(pathToDownloadFrom))
+        APPSCloneServer._addFileToQueueUploadFiles(
           uploadFilesQueueFile,
-          FileHandler._getFileFromPath(pathToDownloadFrom),
+          APPSCloneServer._getFileFromPath(pathToDownloadFrom),
           pathToUploadTo,
           ipToConnect,
           port,
@@ -133,7 +153,7 @@ class APPSCloneServer:
       else:
         #TODO: log
         pass
-      os.remove(FileHandler._concatenateFileToPath(uploadFile,uploadFilesDirectory))
+      os.remove(APPSCloneServer._concatenateFileToPath(uploadFile,uploadFilesDirectory))
 
     logger.writeLog(Logs.SEVERITY.INFO,downloadRinexFilesRoutineEndLog)
 
@@ -164,7 +184,7 @@ class APPSCloneServer:
     """
     logger.writeLog(Logs.SEVERITY.INFO,uploadFilesCheckingLog)
     uploadFiles          = os.listdir(uploadFilesDirectory)
-    validatedUploadFiles = [uploadFile for uploadFile in uploadFiles if FileHandler._isValidUploadFile(FileHandler._concatenateFileToPath(uploadFile,uploadFilesDirectory),logger)]
+    validatedUploadFiles = [uploadFile for uploadFile in uploadFiles if APPSCloneServer._isValidUploadFile(APPSCloneServer._concatenateFileToPath(uploadFile,uploadFilesDirectory),logger)]
     if len(validatedUploadFiles) > 0:
       logger.writeLog(Logs.SEVERITY.INFO,uploadFilesExistLog.format(numOfUploadFiles = len(validatedUploadFiles)))
     else:
@@ -206,13 +226,13 @@ class APPSCloneServer:
     bool
       True if the upload file is valid and False otherwise
     """
-    file = FileHandler._getFileFromPath(uploadFile)
+    file = APPSCloneServer._getFileFromPath(uploadFile)
     if os.path.isfile(uploadFile):
       with open(uploadFile,"r") as f:
         lines = f.readlines()
-        lines = FileHandler._cleanEmptyFieldsInList(lines)
+        lines = APPSCloneServer._cleanEmptyFieldsInList(lines)
         if len(lines) == 3 and lines[0].strip() != "" and lines[1].strip() != "" and lines[2].strip() != "":
-          validIpv4 = FileHandler._isValidIpv4(lines[2])
+          validIpv4 = APPSCloneServer._isValidIpv4(lines[2])
           if not validIpv4:
             logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = file,reason = "Invalid ip"))
           else:
@@ -321,20 +341,20 @@ class APPSCloneServer:
     """
     logger.writeLog(
       Logs.SEVERITY.INFO,
-      downloadRinexFileSubroutineStartLog.format(file = FileHandler._getFileFromPath(pathToDownloadFrom))
+      downloadRinexFileSubroutineStartLog.format(file = APPSCloneServer._getFileFromPath(pathToDownloadFrom))
     )
     try:
       logger.writeLog(
         Logs.SEVERITY.INFO,
         sshConnectAttemptLog.format(ip = ipToConnect,port = port,username = user.username)
       )
-      ssh = FileHandler._createSSHClient(ipToConnect,port,user.username,user.password)
+      ssh = APPSCloneServer._createSSHClient(ipToConnect,port,user.username,user.password)
       logger.writeLog(Logs.SEVERITY.INFO,connectAttemptSuccessfulLog)
       scpClient = scp.SCPClient(ssh.get_transport())
       scpClient.get(pathToDownloadFrom,downloadFolder)
       logger.writeLog(
         Logs.SEVERITY.INFO,
-        scpSuccessful.format(file = FileHandler._getFileFromPath(pathToDownloadFrom),downloadFolder = downloadFolder)
+        scpSuccessful.format(file = APPSCloneServer._getFileFromPath(pathToDownloadFrom),downloadFolder = downloadFolder)
       )
     except paramiko.ssh_exception.BadAuthenticationType:
       logger.writeLog(
@@ -357,7 +377,7 @@ class APPSCloneServer:
     except scp.SCPException:
       logger.writeLog(
         Logs.SEVERITY.ERROR,
-        scpUnsuccessful.format(file = FileHandler._getFileFromPath(pathToDownloadFrom),downloadFolder = downloadFolder)
+        scpUnsuccessful.format(file = APPSCloneServer._getFileFromPath(pathToDownloadFrom),downloadFolder = downloadFolder)
       )
       return
     except:
@@ -366,7 +386,7 @@ class APPSCloneServer:
     finally:
       logger.writeLog(
         Logs.SEVERITY.INFO,
-        downloadRinexFileSubroutineEndLog.format(file = FileHandler._getFileFromPath(pathToDownloadFrom))
+        downloadRinexFileSubroutineEndLog.format(file = APPSCloneServer._getFileFromPath(pathToDownloadFrom))
       )
 
   @staticmethod
@@ -395,7 +415,7 @@ class APPSCloneServer:
   @staticmethod
   def uploadAllRinexToApps(conn,downloadFolder,uploadedFilesQueue,args,logger):
     for rinex in os.listdir(downloadFolder):
-      if os.path.getsize(FileHandler._concatenateFileToPath(rinex,downloadFolder)) / (1024 * 1024.0) < conn.getQuotaLeft():
-        conn.uploadFile(FileHandler._concatenateFileToPath(rinex,downloadFolder),uploadedFilesQueue,args)
-        os.remove(FileHandler._concatenateFileToPath(rinex,downloadFolder))
-        os.remove(FileHandler._concatenateFileToPath(rinex,downloadFolder)+".gz")
+      if os.path.getsize(APPSCloneServer._concatenateFileToPath(rinex,downloadFolder)) / (1024 * 1024.0) < conn.getQuotaLeft():
+        conn.uploadFile(APPSCloneServer._concatenateFileToPath(rinex,downloadFolder),uploadedFilesQueue,args)
+        os.remove(APPSCloneServer._concatenateFileToPath(rinex,downloadFolder))
+        os.remove(APPSCloneServer._concatenateFileToPath(rinex,downloadFolder)+".gz")

@@ -64,6 +64,7 @@ downloadRinexFileSubroutineEndLog   = "== RINEX FILE '{file}' DOWNLOAD SUBROUTIN
 #other
 resultUploadedBack            = "The result file '{file}' was uploaded back to '{uploadDir}' with success"
 resultNotInQueue              = "The result file '{file}' was not in the rinex queue. Removing it"
+removedFromRinexQueue         = "The result file '{file}' was successfully removed from the rinex queue"
 uploadFilesCheckingLog              = "Checking for upload files."
 invalidUploadFileLog                = "The upload file '{file}' is invalid. Reason: '{reason}'."
 validUploadFileLog                  = "The upload file '{file}' was validated."

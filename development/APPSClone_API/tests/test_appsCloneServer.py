@@ -18,7 +18,12 @@ class TestAPPSCloneServer(unittest.TestCase):
     self.assertEqual(APPSCloneServer._getResultLineFromRinexQueue("queues/rinex_queue_test","aarroz_results.tar.gz"),None)
 
   def test_remove_line_from_queue(self):
-    APPSCloneServer._removeFileFromRinexQueue("queues/rinex_queue_test","feijao_results.tar.gz")
+    logger = Logs("logs/logTest.log",1000)
+    APPSCloneServer._removeFileFromRinexQueue("queues/rinex_queue_test","feijao_results.tar.gz",logger)
+
+  # def test_upload_back_all_results(self):
+  #   logger   = Logs("logs/logTest.log",1000)
+  #   APPSCloneServer.uploadBackResults("queues/rinex_queue_test","out/results_test","root","Pr0j#to_Spr1ng",logger)
 
   # def test_clean_empty_strs_from_list(self):
   #   self.assertEqual(APPSCloneServer._cleanEmptyFieldsInList(["a","b","c"]),["a","b","c"])
@@ -189,16 +194,6 @@ class TestAPPSCloneServer(unittest.TestCase):
   #def test_download_files(self):
   #  logger = Logs("logs/logTest2.log",1000)
   #  APPSCloneServer.downloadRinexFiles("in/uploadFilesTest/1","out/results_test_test","out/queue/uploadFilesQueue",logger)
-
-  #def test_upload_results_file(self):
-  #  password = input("Password:")
-  #  user     = UserSSHClient("root",password)
-  #  logger   = Logs("logs/logTest2.log",1000)
-  #  APPSCloneServer._uploadResultsFile("out/results_test_test/lol.tar.gz","~","138.68.128.182",22,user,logger)
-
-  #def test_upload_all_results(self):
-  #  logger   = Logs("logs/logTest2.log",1000)
-  #  APPSCloneServer.uploadBackResults("out/queue/uploadFilesQueue","out/resultsDir",logger)
 
   # def test_upload_all_rinex(self):
   #   logger   = Logs("logs/logTest2.log",1000)
