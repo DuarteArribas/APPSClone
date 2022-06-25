@@ -64,21 +64,43 @@ class SSHConnection:
         sshConnect.format(ip = self.ip,port = self.port,username = self.username),Logs.ROUTINE_STATUS.END
       )
   
-  def getFile(self,pathToDownloadFrom,pathToDownloadTo):
-    """Get a file from the given path in the server to the given local path.
+  def getFile(self,pathToDownloadFrom,downloadDir):
+    """Download a file from the given path in the server to the given local path.
 
     Parameters
     ----------
     pathToDownloadFrom : str
       The path of the server to download the file from
-    pathToDownloadTo   : str
-      The local path to download the file to
+    downloadDir        : str
+      The local directory to download the file to
     """
     if self.client != None:
       try:
         filename = Helper.getFileFromPath(pathToDownloadFrom)
         scpClient = scp.SCPClient(self.client.get_transport())
-        scpClient.get(pathToDownloadFrom,pathToDownloadTo)
-        self.logger.writeRegularLog(Logs.SEVERITY.ERROR,scpSuccessful.format(file = filename,df = pathToDownloadTo))
+        scpClient.get(pathToDownloadFrom,downloadDir)
+        self.logger.writeRegularLog(Logs.SEVERITY.ERROR,scpGetSuccessful.format(file = filename,df = downloadDir))
       except:
-        self.logger.writeRegularLog(Logs.SEVERITY.ERROR,scpUnsuccessful.format(file = filename,df = pathToDownloadTo))
+        self.logger.writeRegularLog(Logs.SEVERITY.ERROR,scpGetUnsuccessful.format(file = filename,df = downloadDir))
+
+  def putFile(self,pathToUpload,uploadDir):
+    """Upload the given file to the given upload directory on the server.
+
+    Parameters
+    ----------
+    pathToUpload : str
+      The path of the file to upload
+    uploadDir    : str
+      The directory to upload the file to
+    """
+    if self.client != None:
+      try:
+        filename = Helper.getFileFromPath(pathToUpload)
+        scpClient = scp.SCPClient(self.client.get_transport())
+        scpClient.put(pathToUpload,uploadDir)
+        self.logger.writeRegularLog(Logs.SEVERITY.ERROR,scpPutSuccessful.format(file = filename,df = uploadDir))
+      except:
+        self.logger.writeRegularLog(Logs.SEVERITY.ERROR,scpPutUnsuccessful.format(file = filename,df = uploadDir))
+
+# ✓    unit tested
+# ✓ feature tested

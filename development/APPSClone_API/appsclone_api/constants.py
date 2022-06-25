@@ -47,8 +47,10 @@ sshConnectUnsuccessfulBadIP   = "Could not establish a connection to the server,
 sshConnectUnsuccessfulBadPort = "Could not establish a connection to the server, because the port '{port}' is not valid or is unavailable"
 sshConnectUnsuccessfulBadUser = "Could not establish a connection to the server, because the user '{username}' is not valid or the password is incorrect"
 criticalSSHException          = "Could not establish a connection to the server, because of an unknown reason"
-scpSuccessful                 = "Successfully copied file '{file}' to '{df}'"
-scpUnsuccessful               = "Could not copy file '{file}' to '{df}'"
+scpGetSuccessful              = "Successfully copied remote file '{file}' to local directory '{df}'"
+scpGetUnsuccessful            = "Could not copy remote file '{file}' to local directory '{df}'"
+scpPutSuccessful              = "Successfully copied local file '{file}' to remote directory '{df}'"
+scpPutUnsuccessful            = "Could not copy local file '{file}' to remote directory '{df}'"
 # = File handler =
 #routines
 downloadRinexFilesRoutineStartLog   = "=== RINEX FILES DOWNLOAD ROUTINE (START) ==="

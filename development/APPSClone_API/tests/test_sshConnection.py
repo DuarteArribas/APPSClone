@@ -38,5 +38,15 @@ class TestSSHConnection(unittest.TestCase):
     logger = Logs("logs/logTest.log",1000)
     conn   = SSHConnection("138.68.128.182","22","root","Pr0j#to_Spr1ng",logger)
     conn.getFile("~/arro","in/to_upload_test")
+
+  def test_put_file(self):
+    logger = Logs("logs/logTest.log",1000)
+    conn   = SSHConnection("138.68.128.182","22","root","Pr0j#to_Spr1ng",logger)
+    conn.putFile("in/test/file","~")
+
+  def test_put_file2(self):
+    logger = Logs("logs/logTest.log",1000)
+    conn   = SSHConnection("138.68.128.182","22","root","Pr0j#to_Spr1ng",logger)
+    conn.putFile("in/test/someFile","~")
 if __name__ == '__main__':
   unittest.main()
