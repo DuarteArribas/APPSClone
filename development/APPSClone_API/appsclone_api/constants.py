@@ -55,11 +55,15 @@ scpPutUnsuccessful            = "Could not copy local file '{file}' to remote di
 #routines
 handleAllFilesState           = "State updates"
 uploadBack                    = "Upload back of results"
+
+
 downloadRinexFilesRoutineStartLog   = "=== RINEX FILES DOWNLOAD ROUTINE (START) ==="
 downloadRinexFilesRoutineEndLog     = "=== RINEX FILES DOWNLOAD ROUTINE (END) ==="
 downloadRinexFileSubroutineStartLog = "== RINEX FILE '{file}' DOWNLOAD SUBROUTINE (START) =="
 downloadRinexFileSubroutineEndLog   = "== RINEX FILE '{file}' DOWNLOAD SUBROUTINE (END) =="
 #other
+resultUploadedBack            = "The result file '{file}' was uploaded back to '{uploadDir}' with success"
+resultNotInQueue              = "The result file '{file}' was not in the rinex queue. Removing it"
 uploadFilesCheckingLog              = "Checking for upload files."
 invalidUploadFileLog                = "The upload file '{file}' is invalid. Reason: '{reason}'."
 validUploadFileLog                  = "The upload file '{file}' was validated."

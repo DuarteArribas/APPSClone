@@ -17,20 +17,8 @@ class TestFileHandler(unittest.TestCase):
   def test_get_line_from_queue2(self):
     self.assertEqual(FileHandler._getResultLineFromRinexQueue("queues/rinex_queue_test","aarroz_results.tar.gz"),None)
 
-  # def test_concatenate_file_to_path(self):
-  #   self.assertEqual(FileHandler._concatenateFileToPath("arroz","aa/bb/cc"),"aa/bb/cc/arroz")
-
-  # def test_get_file_from_path(self):
-  #   self.assertEqual(FileHandler._getFileFromPath("arroz/massa/feijao"),"feijao")
-
-  # def test_get_file_from_path2(self):
-  #   self.assertEqual(FileHandler._getFileFromPath("arroz"),"arroz")
-
-  # def test_get_file_from_path3(self):
-  #   self.assertEqual(FileHandler._getFileFromPath("arroz/"),"")
-
-  # def test_get_file_from_path4(self):
-  #   self.assertEqual(FileHandler._getFileFromPath(""),"")
+  def test_remove_line_from_queue(self):
+    FileHandler._removeFileFromRinexQueue("queues/rinex_queue_test","feijao_results.tar.gz")
 
   # def test_clean_empty_strs_from_list(self):
   #   self.assertEqual(FileHandler._cleanEmptyFieldsInList(["a","b","c"]),["a","b","c"])
@@ -201,9 +189,6 @@ class TestFileHandler(unittest.TestCase):
   #def test_download_files(self):
   #  logger = Logs("logs/logTest2.log",1000)
   #  FileHandler.downloadRinexFiles("in/uploadFilesTest/1","out/results_test_test","out/queue/uploadFilesQueue",logger)
-
-  #def test_remove_line_from_queue(self):
-  #  FileHandler._removeFileFromQueueUploadFiles("out/queue/uploadFilesQueue","massaaaa")
 
   #def test_upload_results_file(self):
   #  password = input("Password:")

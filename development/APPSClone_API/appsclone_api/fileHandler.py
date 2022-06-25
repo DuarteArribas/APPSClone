@@ -36,27 +36,21 @@ class FileHandler:
     logger.writeRoutineLog(handleAllFilesState,Logs.ROUTINE_STATUS.END)
 
   @staticmethod
-  def uploadBackResults(uploadFilesQueueFile,resultsDir,logger):
+  def uploadBackResults(rinexQueue,resultsDir,username,password,logger):
     logger.writeRoutineLog(uploadBack,Logs.ROUTINE_STATUS.START)
     for result in os.listdir(resultsDir):
-      queueLine = FileHandler._getFileLineFromQueueUploadFiles(uploadFilesQueueFile,result)
+      queueLine = FileHandler._getResultLineFromRinexQueue(rinexQueue,result)
       if queueLine:
-        uploadPath = queueLine.split(" ")[1]
-        ip         = queueLine.split(" ")[2]
-        port       = queueLine.split(" ")[3]
-        user = UserSSHClient("root","Pr0j#to_Spr1ng")
-        FileHandler._uploadResultsFile(
-          FileHandler._concatenateFileToPath(result,resultsDir),
-          uploadPath,
-          ip,
-          int(port),
-          user,
-          logger
-        )
-        FileHandler._removeFileFromQueueUploadFiles(uploadFilesQueueFile,result)
-        os.remove(FileHandler._concatenateFileToPath(result,resultsDir))
+        uploadDir = queueLine.split(" ")[1]
+        ip        = queueLine.split(" ")[2]
+        port      = queueLine.split(" ")[3]
+        sshClient = SSHConnection(ip,port,username,password)
+        sshClient.putFile(Helper.joinPathFile(resultsDir,result),uploadDir)
+        logger.writeRegularLog(Logs.SEVERITY.INFO,resultUploadedBack.format(file = result,uploadDir = uploadDir))
+        FileHandler._removeFileFromQueueUploadFiles(rinexQueue,result)
       else:
-        pass
+        logger.writeRegularLog(Logs.SEVERITY.ERROR,resultNotInQueue.format(file = result))
+      os.remove(Helper.joinPathFile(resultsDir,result))
     logger.writeRoutineLog(uploadBack,Logs.ROUTINE_STATUS.END)
 
   @staticmethod
@@ -81,6 +75,26 @@ class FileHandler:
         if line.split(" ")[0] == result.split("_results")[0]:
           return line
       return None
+
+  @staticmethod
+  def _removeFileFromRinexQueue(rinexQueue,result):
+    """Remove a line from the rinex queue.
+
+    Parameters
+    ----------
+    rinexQueue : str
+      The file which contains the rinex queue
+    result     : str
+      The name of the results file
+    """
+    newFileLines = ""
+    with open(rinexQueue,"r") as f:
+      lines = f.readlines()
+      for line in lines:
+        if line.split(" ")[0] != result.split("_results")[0]:
+          newFileLines += line
+    with open(rinexQueue,"w") as f: 
+      f.write(newFileLines)
 
   @staticmethod
   def downloadRinexFiles(uploadFilesDirectory,downloadFolder,uploadFilesQueueFile,logger):
@@ -357,60 +371,6 @@ class FileHandler:
       )
 
   @staticmethod
-  def _uploadResultsFile(resultFile,uploadDir,ipToConnect,port,user,logger):
-    """Download a rinex file from the given server.
-
-    Parameters
-    ----------
-    resultFile         : str
-      The result file to upload
-    uploadDir          : str
-      The directory to upload the files to 
-    ipToConnect        : str
-      The IP of the server
-    port               : int
-      The port to connect to the server on
-    user               : UserSSHClient
-      A user representation of the user that connects via ssh
-    logger     : Logs
-      The Logs object that will be used to log several actions
-    """
-    try:
-      logger.writeLog(
-        Logs.SEVERITY.INFO,
-        sshConnectAttemptLog.format(ip = ipToConnect,port = port,username = user.username)
-      )
-      ssh = FileHandler._createSSHClient(ipToConnect,port,user.username,user.password)
-      logger.writeLog(Logs.SEVERITY.INFO,connectAttemptSuccessfulLog)
-      scpClient = scp.SCPClient(ssh.get_transport())
-      scpClient.put(resultFile,uploadDir)
-    except paramiko.ssh_exception.BadAuthenticationType:
-      logger.writeLog(
-        Logs.SEVERITY.ERROR,
-        connectAttemptUnsuccessfulLog.format(reason = f"Could not connect to ip {ipToConnect}")
-      )
-      return
-    except paramiko.ssh_exception.NoValidConnectionsError:
-      logger.writeLog(
-        Logs.SEVERITY.ERROR,
-        connectAttemptUnsuccessfulLog.format(reason = f"The port {port} is not available")
-      )
-      return
-    except paramiko.ssh_exception.AuthenticationException:
-      logger.writeLog(
-        Logs.SEVERITY.ERROR,
-        connectAttemptUnsuccessfulLog.format(reason = "Could not authenticate user. The username or password may be invalid")
-      )
-      return      
-    except scp.SCPException:
-      return
-    except:
-      logger.writeLog(Logs.SEVERITY.CRITICAL,unexpectedErrorLog)
-      return
-    finally:
-      pass
-
-  @staticmethod
   def _addFileToQueueUploadFiles(uploadFilesQueueFile,rinexFile,pathToUploadTo,ipToConnect,port,logger):
     """Add the rinex file, its upload path and its ip and port to the upload files queue file.
 
@@ -432,26 +392,6 @@ class FileHandler:
     with open(uploadFilesQueueFile,"a") as f:
       f.write(rinexFile + " " + pathToUploadTo + " " + ipToConnect + " " + str(port) + "\n")
     logger.writeLog(Logs.SEVERITY.INFO,fileAddedToQueueLog.format(file = rinexFile))
-
-  @staticmethod
-  def _removeFileFromQueueUploadFiles(uploadFilesQueueFile,result):
-    """Remove a line from the upload files queue.
-
-    Parameters
-    ----------
-    uploadFilesQueueFile : str
-      The file, which contains the queue of the upload files
-    result               : str
-      The name of the results file
-    """
-    newFileLines = ""
-    with open(uploadFilesQueueFile,"r") as f:
-      lines = f.readlines()
-      for line in lines:
-        if line.split(" ")[0] != result.split("_results")[0]:
-          newFileLines += line
-    with open(uploadFilesQueueFile,"w") as f: 
-      f.write(newFileLines)
 
   @staticmethod
   def uploadAllRinexToApps(conn,downloadFolder,uploadedFilesQueue,args,logger):
