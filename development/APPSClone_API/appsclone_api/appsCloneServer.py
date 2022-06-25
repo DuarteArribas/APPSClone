@@ -134,30 +134,30 @@ class APPSCloneServer:
     logger        : Logs
       The log object to log to
     """
-    logger.writeRoutineLog(downloadRinexFiles,Logs.ROUTINE_STATUS.START)
+    logger.writeRoutineLog(downloadRinex,Logs.ROUTINE_STATUS.START)
     alreadyUploadedFilenames = APPSCloneServer._getAlreadyUploadedFilenames(rinexQueue)
     for uploadFile in APPSCloneServer._getUploadFiles(toDownloadDir,logger):
       pathToDownloadFrom,dirToUploadTo,ip = APPSCloneServer._parseUploadFile(
         Helper.joinPathFile(toDownloadDir,uploadFile)
       )
-      if Helper.getFileFromPath(pathToDownloadFrom) not in alreadyUploadedFilenames:
+      rinexFile = Helper.getFileFromPath(pathToDownloadFrom)
+      if rinexFile not in alreadyUploadedFilenames:
         sshClient = SSHConnection(ip,22,username,password,logger)
         sshClient.getFile(pathToDownloadFrom,toUploadDir)
-        alreadyUploadedFilenames.append(Helper.getFileFromPath(pathToDownloadFrom))
+        alreadyUploadedFilenames.append(rinexFile)
         APPSCloneServer._addFileToRinexQueue(
           rinexQueue,
-          Helper.getFileFromPath(pathToDownloadFrom),
+          rinexFile,
           dirToUploadTo,
           ip,
           22,
           logger
         )
       else:
-        #TODO: log
-        pass
-      os.remove(APPSCloneServer._concatenateFileToPath(uploadFile,uploadFilesDirectory))
-
-    logger.writeRoutineLog(downloadRinexFiles,Logs.ROUTINE_STATUS.END)
+        logger.writeRegularLog(Logs.SEVERITY.ERROR,alreadyUploaded.format(file = rinexFile))
+      os.remove(Helper.joinPathFile(toDownloadDir,uploadFile))
+      logger.writeRegularLog(Logs.SEVERITY.INFO,removedUploadFile.format(file = uploadFile))
+    logger.writeRoutineLog(downloadRinex,Logs.ROUTINE_STATUS.END)
 
   @staticmethod
   def _getAlreadyUploadedFilenames(rinexQueue):

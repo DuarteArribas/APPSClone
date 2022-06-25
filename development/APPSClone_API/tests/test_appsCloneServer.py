@@ -107,8 +107,15 @@ class TestAPPSCloneServer(unittest.TestCase):
   #   APPSCloneServer._addFileToRinexQueue("queues/rinex_queue_test","arroz","aa/bb/cc","192.168.8.2",22,logger)
 
   # def test_download_files(self):
-  #  logger = Logs("logs/logTest.log",1000)
-  #  APPSCloneServer.downloadRinexFiles("in/uploadFilesTest/1","out/results_test_test","out/queue/uploadFilesQueue",logger)
+  #   logger = Logs("logs/logTest.log",1000)
+  #   APPSCloneServer.downloadRinexFiles(
+  #     "in/to_download_test",
+  #     "in/to_upload_test",
+  #     "queues/rinex_queue_test",
+  #     "root",
+  #     "Pr0j#to_Spr1ng",
+  #     logger
+  #   )
 
   # def test_upload_all_rinex(self):
   #   logger   = Logs("logs/logTest.log",1000)

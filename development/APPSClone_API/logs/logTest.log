@@ -1,291 +1,37 @@
-2022-06-25 20:05:32.754466 (INFO)     | === State updates (START) ===
-2022-06-25 20:05:32.760920 (INFO)     | === State updates (END) ===
-2022-06-25 20:05:32.767203 (INFO)     | The result file 'feijao_results.tar.gz' was successfully removed from the rinex queue.
-2022-06-25 20:08:56.620869 (INFO)     | === State updates (START) ===
-2022-06-25 20:08:56.627593 (INFO)     | === State updates (END) ===
-2022-06-25 20:08:56.634118 (INFO)     | The result file 'feijao_results.tar.gz' was successfully removed from the rinex queue.
-2022-06-25 20:08:56.638748 (INFO)     | === Upload back of results (START) ===
-2022-06-25 20:09:18.330894 (INFO)     | === State updates (START) ===
-2022-06-25 20:09:18.338376 (INFO)     | === State updates (END) ===
-2022-06-25 20:09:18.346108 (INFO)     | === Upload back of results (START) ===
-2022-06-25 20:09:34.675602 (INFO)     | === State updates (START) ===
-2022-06-25 20:09:34.682498 (INFO)     | === State updates (END) ===
-2022-06-25 20:09:34.689000 (INFO)     | === Upload back of results (START) ===
-2022-06-25 20:09:34.697264 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
-2022-06-25 20:09:35.437064 (INFO)     | Successfully established a connection to the server.
-2022-06-25 20:09:35.442270 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
-2022-06-25 20:09:37.139785 (ERROR)    | Successfully copied local file 'massa_results.tar.gz' to remote directory '~'.
-2022-06-25 20:09:37.145864 (INFO)     | The result file 'massa_results.tar.gz' was uploaded back to '~' with success.
-2022-06-25 20:09:37.152954 (INFO)     | The result file 'massa_results.tar.gz' was successfully removed from the rinex queue.
-2022-06-25 20:09:37.160583 (INFO)     | === Upload back of results (END) ===
-2022-06-25 22:27:39.161983 (INFO)     | === State updates (START) ===
-2022-06-25 22:27:39.168861 (INFO)     | === State updates (END) ===
-2022-06-25 22:27:52.169803 (INFO)     | === State updates (START) ===
-2022-06-25 22:27:52.176587 (INFO)     | === State updates (END) ===
-2022-06-25 22:28:02.445334 (INFO)     | === State updates (START) ===
-2022-06-25 22:28:02.452356 (INFO)     | === State updates (END) ===
-2022-06-25 22:43:56.396827 (INFO)     | === State updates (START) ===
-2022-06-25 22:43:56.403953 (INFO)     | === State updates (END) ===
-2022-06-25 22:43:56.409723 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:43:56.431883 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:43:56.443005 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:43:56.482657 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:43:56.493392 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 22:43:56.504496 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:43:56.514871 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:43:56.534545 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:43:56.545356 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 22:43:56.555918 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:44:14.063625 (INFO)     | === State updates (START) ===
-2022-06-25 22:44:14.070736 (INFO)     | === State updates (END) ===
-2022-06-25 22:44:14.077020 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:44:14.085660 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-25 22:44:14.093902 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:44:14.103045 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:44:14.111617 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-25 22:44:14.120709 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-25 22:44:14.129476 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-25 22:44:14.138246 (INFO)     | The upload file 'uploadFile14' was validated.
-2022-06-25 22:44:14.149471 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:44:14.158458 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 22:44:14.167034 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:44:14.175707 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:44:14.183955 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 22:44:14.194226 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:44:14.203135 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 22:44:14.211881 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:44:49.084639 (INFO)     | === State updates (START) ===
-2022-06-25 22:44:49.092061 (INFO)     | === State updates (END) ===
-2022-06-25 22:44:49.098647 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:44:49.107983 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-25 22:44:49.116712 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:44:49.125543 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:44:49.133944 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-25 22:44:49.142780 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-25 22:44:49.151828 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-25 22:44:49.160186 (INFO)     | The upload file 'uploadFile14' was validated.
-2022-06-25 22:44:49.171892 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:44:49.180751 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 22:44:49.189663 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:44:49.200395 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:44:49.209657 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 22:44:49.219902 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:44:49.228680 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 22:44:49.237593 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:45:04.054773 (INFO)     | === State updates (START) ===
-2022-06-25 22:45:04.062008 (INFO)     | === State updates (END) ===
-2022-06-25 22:45:04.068735 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:04.077017 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-25 22:45:04.085903 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:04.095077 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:04.103804 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-25 22:45:04.113214 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-25 22:45:04.121648 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-25 22:45:04.130975 (INFO)     | The upload file 'uploadFile14' was validated.
-2022-06-25 22:45:04.142482 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:04.151679 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 22:45:04.160247 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:45:04.170121 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:04.178870 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 22:45:04.188798 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:04.198695 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 22:45:04.208947 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:45:30.115560 (INFO)     | === State updates (START) ===
-2022-06-25 22:45:30.122181 (INFO)     | === State updates (END) ===
-2022-06-25 22:45:30.128222 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:30.133173 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-25 22:45:30.137754 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:30.142123 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:30.147245 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-25 22:45:30.155036 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-25 22:45:30.159394 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-25 22:45:30.164799 (INFO)     | The upload file 'uploadFile14' was validated.
-2022-06-25 22:45:30.169445 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:30.174302 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 22:45:30.180000 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:45:30.187670 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:30.192477 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 22:45:30.197396 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:30.205267 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 22:45:30.210226 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:45:33.859860 (INFO)     | === State updates (START) ===
-2022-06-25 22:45:33.867405 (INFO)     | === State updates (END) ===
-2022-06-25 22:45:33.873935 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:33.882371 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-25 22:45:33.891580 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:33.900117 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:33.909426 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-25 22:45:33.918329 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-25 22:45:33.927773 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-25 22:45:33.936639 (INFO)     | The upload file 'uploadFile14' was validated.
-2022-06-25 22:45:33.945535 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:33.954015 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 22:45:33.963610 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:45:33.972624 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:33.981600 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 22:45:33.990143 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:45:33.999268 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 22:45:34.008114 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:54:56.118931 (INFO)     | == Upload files check (START) ==
-2022-06-25 22:54:56.130904 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-25 22:54:56.140471 (INFO)     | The upload file 'uploadFile2' was validated.
-2022-06-25 22:54:56.150936 (INFO)     | The upload file 'uploadFile3' was validated.
-2022-06-25 22:54:56.160583 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 22:54:56.169991 (INFO)     | The upload file 'uploadFile5' was validated.
-2022-06-25 22:54:56.179449 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '138.68.128.256' is invalid.
-2022-06-25 22:54:56.185237 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
-2022-06-25 22:54:56.189428 (INFO)     | == Upload files check (END) ==
-2022-06-25 22:54:56.204161 (INFO)     | === State updates (START) ===
-2022-06-25 22:54:56.211391 (INFO)     | === State updates (END) ===
-2022-06-25 22:54:56.218092 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:54:56.227302 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-25 22:54:56.236714 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:54:56.245538 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:54:56.255258 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-25 22:54:56.265298 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-25 22:54:56.274548 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-25 22:54:56.284241 (INFO)     | The upload file 'uploadFile14' was validated.
-2022-06-25 22:54:56.293071 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:54:56.302679 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 22:54:56.314644 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:54:56.324590 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:54:56.334876 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 22:54:56.345187 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:54:56.356270 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 22:54:56.366218 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:55:02.243298 (INFO)     | == Upload files check (START) ==
-2022-06-25 22:55:02.255073 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-25 22:55:02.264661 (INFO)     | The upload file 'uploadFile2' was validated.
-2022-06-25 22:55:02.274270 (INFO)     | The upload file 'uploadFile3' was validated.
-2022-06-25 22:55:02.283964 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 22:55:02.293824 (INFO)     | The upload file 'uploadFile5' was validated.
-2022-06-25 22:55:02.303356 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '138.68.128.256' is invalid.
-2022-06-25 22:55:02.309584 (INFO)     | 5 upload files were found. Attempting to download corresponding rinex files.
-2022-06-25 22:55:02.313928 (INFO)     | == Upload files check (END) ==
-2022-06-25 22:55:02.325888 (INFO)     | === State updates (START) ===
-2022-06-25 22:55:02.333239 (INFO)     | === State updates (END) ===
-2022-06-25 22:55:02.339897 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:55:02.349357 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-25 22:55:02.359153 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:55:02.368910 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:55:02.378107 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-25 22:55:02.388546 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-25 22:55:02.398816 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-25 22:55:02.409191 (INFO)     | The upload file 'uploadFile14' was validated.
-2022-06-25 22:55:02.418703 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:55:02.427992 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 22:55:02.437274 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:55:02.446582 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:55:02.455298 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 22:55:02.465265 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:55:02.474843 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 22:55:02.484480 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:56:06.956505 (INFO)     | == Upload files check (START) ==
-2022-06-25 22:56:06.968902 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-25 22:56:06.978468 (INFO)     | The upload file 'uploadFile2' was validated.
-2022-06-25 22:56:06.988409 (INFO)     | The upload file 'uploadFile3' was validated.
-2022-06-25 22:56:06.998084 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 22:56:07.007558 (INFO)     | The upload file 'uploadFile5' was validated.
-2022-06-25 22:56:07.017051 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '138.68.128.256' is invalid.
-2022-06-25 22:56:07.022836 (INFO)     | 5 valid upload files were found. Attempting to download corresponding rinex files.
-2022-06-25 22:56:07.027165 (INFO)     | == Upload files check (END) ==
-2022-06-25 22:56:07.038692 (INFO)     | === State updates (START) ===
-2022-06-25 22:56:07.046160 (INFO)     | === State updates (END) ===
-2022-06-25 22:56:07.053064 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:56:07.062807 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-25 22:56:07.073497 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:56:07.083161 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:56:07.092814 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-25 22:56:07.101758 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-25 22:56:07.111115 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-25 22:56:07.120049 (INFO)     | The upload file 'uploadFile14' was validated.
-2022-06-25 22:56:07.129185 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:56:07.138359 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 22:56:07.148023 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 22:56:07.157899 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:56:07.168320 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 22:56:07.178341 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 22:56:07.188779 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 22:56:07.198606 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 23:02:22.508924 (INFO)     | == Upload files check (START) ==
-2022-06-25 23:02:22.521134 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-25 23:02:22.531032 (INFO)     | The upload file 'uploadFile2' was validated.
-2022-06-25 23:02:22.541244 (INFO)     | The upload file 'uploadFile3' was validated.
-2022-06-25 23:02:22.551313 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 23:02:22.560967 (INFO)     | The upload file 'uploadFile5' was validated.
-2022-06-25 23:02:22.570855 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '138.68.128.256' is invalid.
-2022-06-25 23:02:22.576888 (INFO)     | 5 valid upload files were found. Attempting to download corresponding rinex files.
-2022-06-25 23:02:22.581443 (INFO)     | == Upload files check (END) ==
-2022-06-25 23:02:22.593411 (INFO)     | === State updates (START) ===
-2022-06-25 23:02:22.600549 (INFO)     | === State updates (END) ===
-2022-06-25 23:02:22.607691 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:02:22.617239 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-25 23:02:22.627143 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:02:22.636970 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:02:22.646111 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-25 23:02:22.656086 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-25 23:02:22.665496 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-25 23:02:22.674628 (INFO)     | The upload file 'uploadFile14' was validated.
-2022-06-25 23:02:22.684870 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:02:22.696100 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 23:02:22.708266 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 23:02:22.719376 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:02:22.730425 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 23:02:22.741585 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:02:22.752233 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 23:02:22.763889 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 23:16:50.158324 (INFO)     | The file 'arroz' was added to the rinex queue.
-2022-06-25 23:16:50.170315 (INFO)     | == Upload files check (START) ==
-2022-06-25 23:16:50.179856 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-25 23:16:50.188313 (INFO)     | The upload file 'uploadFile2' was validated.
-2022-06-25 23:16:50.196360 (INFO)     | The upload file 'uploadFile3' was validated.
-2022-06-25 23:16:50.205056 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 23:16:50.213442 (INFO)     | The upload file 'uploadFile5' was validated.
-2022-06-25 23:16:50.221918 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '138.68.128.256' is invalid.
-2022-06-25 23:16:50.227107 (INFO)     | 5 valid upload files were found. Attempting to download corresponding rinex files.
-2022-06-25 23:16:50.231267 (INFO)     | == Upload files check (END) ==
-2022-06-25 23:16:50.241812 (INFO)     | === State updates (START) ===
-2022-06-25 23:16:50.248470 (INFO)     | === State updates (END) ===
-2022-06-25 23:16:50.254200 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:16:50.259180 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-25 23:16:50.267331 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:16:50.272526 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:16:50.277755 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-25 23:16:50.284820 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-25 23:16:50.293795 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-25 23:16:50.299971 (INFO)     | The upload file 'uploadFile14' was validated.
-2022-06-25 23:16:50.304824 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:16:50.310734 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 23:16:50.316375 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 23:16:50.322068 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:16:50.328281 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 23:16:50.333360 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:16:50.339187 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 23:16:50.347444 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 23:17:22.005969 (INFO)     | == Upload files check (START) ==
-2022-06-25 23:17:22.019619 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-25 23:17:22.029470 (INFO)     | The upload file 'uploadFile2' was validated.
-2022-06-25 23:17:22.040702 (INFO)     | The upload file 'uploadFile3' was validated.
-2022-06-25 23:17:22.051261 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 23:17:22.062745 (INFO)     | The upload file 'uploadFile5' was validated.
-2022-06-25 23:17:22.073314 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '138.68.128.256' is invalid.
-2022-06-25 23:17:22.081101 (INFO)     | 5 valid upload files were found. Attempting to download corresponding rinex files.
-2022-06-25 23:17:22.086581 (INFO)     | == Upload files check (END) ==
-2022-06-25 23:17:22.101042 (INFO)     | === State updates (START) ===
-2022-06-25 23:17:22.109475 (INFO)     | === State updates (END) ===
-2022-06-25 23:17:22.119047 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:17:22.130524 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-25 23:17:22.142870 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:17:22.154248 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:17:22.165558 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-25 23:17:22.178454 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-25 23:17:22.189610 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-25 23:17:22.202026 (INFO)     | The upload file 'uploadFile14' was validated.
-2022-06-25 23:17:22.212931 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:17:22.224972 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 23:17:22.235440 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 23:17:22.246693 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:17:22.258723 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 23:17:22.269492 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:17:22.280367 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 23:17:22.290501 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
+2022-06-25 23:28:26.246683 (INFO)     | === Download of rinex files from source (START) ===
+2022-06-25 23:28:26.253925 (INFO)     | == Upload files check (START) ==
+2022-06-25 23:28:26.261578 (ERROR)    | '1' is not a file; thus, is invalid.
+2022-06-25 23:28:26.269151 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-25 23:28:26.277066 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-25 23:28:26.284839 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-25 23:28:26.292860 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-25 23:28:26.301283 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-25 23:28:26.307307 (INFO)     | 5 valid upload files were found. Attempting to download corresponding rinex files.
+2022-06-25 23:28:26.311757 (INFO)     | == Upload files check (END) ==
+2022-06-25 23:28:26.316853 (ERROR)    | The file 'arroz' is already uploaded.
+2022-06-25 23:28:26.323272 (INFO)     | The upload file 'uploadFile1' was removed.
+2022-06-25 23:28:26.330811 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-25 23:28:27.053808 (INFO)     | Successfully established a connection to the server.
+2022-06-25 23:28:27.059008 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-25 23:28:29.146867 (ERROR)    | Successfully copied remote file 'massa' to local directory 'in/to_upload_test'.
+2022-06-25 23:28:29.154052 (INFO)     | The file 'massa' was added to the rinex queue.
+2022-06-25 23:28:29.161857 (INFO)     | The upload file 'uploadFile2' was removed.
+2022-06-25 23:28:29.170145 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-25 23:28:29.803040 (INFO)     | Successfully established a connection to the server.
+2022-06-25 23:28:29.809222 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-25 23:28:31.667252 (ERROR)    | Successfully copied remote file 'feijao' to local directory 'in/to_upload_test'.
+2022-06-25 23:28:31.674981 (INFO)     | The file 'feijao' was added to the rinex queue.
+2022-06-25 23:28:31.681865 (INFO)     | The upload file 'uploadFile3' was removed.
+2022-06-25 23:28:31.689872 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-25 23:28:32.317303 (INFO)     | Successfully established a connection to the server.
+2022-06-25 23:28:32.324245 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-25 23:28:34.402856 (ERROR)    | Successfully copied remote file 'grao' to local directory 'in/to_upload_test'.
+2022-06-25 23:28:34.409851 (INFO)     | The file 'grao' was added to the rinex queue.
+2022-06-25 23:28:34.416174 (INFO)     | The upload file 'uploadFile4' was removed.
+2022-06-25 23:28:34.423423 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-25 23:28:35.041632 (INFO)     | Successfully established a connection to the server.
+2022-06-25 23:28:35.047751 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-25 23:28:37.194984 (ERROR)    | Successfully copied remote file 'vinagre' to local directory 'in/to_upload_test'.
+2022-06-25 23:28:37.202353 (INFO)     | The file 'vinagre' was added to the rinex queue.
+2022-06-25 23:28:37.209456 (INFO)     | The upload file 'uploadFile5' was removed.
+2022-06-25 23:28:37.214691 (INFO)     | === Download of rinex files from source (END) ===
