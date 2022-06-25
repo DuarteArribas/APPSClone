@@ -36,9 +36,9 @@ testPrint:
 	$(PYTHON) -m unittest $(testDir)/test_$(tf).py
 
 clean:
-	@rm $(toDownloadPath)/*
-	@rm $(toUploadPath)/*
-	@rm $(resultsPath)/*
+	@rm -f $(toDownloadPath)/* 
+	@rm -f $(toUploadPath)/*
+	@rm -f $(resultsPath)/*
 	@echo -n "" > $(appsIdQueuePath)
 	@echo -n "" > $(rinexQueuePath)
 
