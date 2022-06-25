@@ -34,19 +34,19 @@ class TestLogs(unittest.TestCase):
 
   def test_write_routine(self):
     logger = Logs("logs/logTest.log",1000)
-    logger.writeRoutineLog(Logs.SEVERITY.INFO,"infoRoutineStart",Logs.ROUTINE_STATUS.START)
+    logger.writeRoutineLog("infoRoutineStart",Logs.ROUTINE_STATUS.START)
 
   def test_write_routine2(self):
     logger = Logs("logs/logTest.log",1000)
-    logger.writeRoutineLog(Logs.SEVERITY.INFO,"infoRoutineEnd",Logs.ROUTINE_STATUS.END)
+    logger.writeRoutineLog("infoRoutineEnd",Logs.ROUTINE_STATUS.END)
 
   def test_write_subroutine(self):
     logger = Logs("logs/logTest.log",1000)
-    logger.writeSubroutineLog(Logs.SEVERITY.INFO,"infoSubroutineStart",Logs.ROUTINE_STATUS.START)
+    logger.writeSubroutineLog("infoSubroutineStart",Logs.ROUTINE_STATUS.START)
 
   def test_write_subroutine2(self):
     logger = Logs("logs/logTest.log",1000)
-    logger.writeSubroutineLog(Logs.SEVERITY.INFO,"infoSubroutineEnd",Logs.ROUTINE_STATUS.END)
+    logger.writeSubroutineLog("infoSubroutineEnd",Logs.ROUTINE_STATUS.END)
 
   def test_write_regular_log(self):
     logger = Logs("logs/logTest.log",1000)

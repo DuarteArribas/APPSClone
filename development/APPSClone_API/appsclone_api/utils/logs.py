@@ -54,39 +54,35 @@ class Logs:
       self.maxLogs = maxLogs
     logging.basicConfig(level = logging.INFO,filename = loggingFile,format = "%(message)s")
 
-  def writeRoutineLog(self,severity,message,routineStatus):
-    """Write a routine log to a file, according to its severity and routine status.
+  def writeRoutineLog(self,message,routineStatus):
+    """Write a routine log to a file, according to its routine status.
 
     Parameters
     ----------
-    severity      : enum
-      The severity of the log
     message       : str
       The log message
     routineStatus : enum
       START means the start of a routine and END means the end of a routine
     """
     if routineStatus == Logs.ROUTINE_STATUS.START:
-      self.__writeLog(severity,Logs._getLogMsg(Logs.LOG_TYPE.ROUTINE_START,message))
+      self.__writeLog(Logs.SEVERITY.INFO,Logs._getLogMsg(Logs.LOG_TYPE.ROUTINE_START,message))
     else:
-      self.__writeLog(severity,Logs._getLogMsg(Logs.LOG_TYPE.ROUTINE_END,message))
+      self.__writeLog(Logs.SEVERITY.INFO,Logs._getLogMsg(Logs.LOG_TYPE.ROUTINE_END,message))
 
-  def writeSubroutineLog(self,severity,message,routineStatus):
-    """Write a subroutine log to a file, according to its severity and routine status.
+  def writeSubroutineLog(self,message,routineStatus):
+    """Write a subroutine log to a file, according to its routine status.
 
     Parameters
     ----------
-    severity      : enum
-      The severity of the log
     message       : str
       The log message
     routineStatus : enum
       START means the start of a subroutine and END means the end of a subroutine
     """
     if routineStatus == Logs.ROUTINE_STATUS.START:
-      self.__writeLog(severity,Logs._getLogMsg(Logs.LOG_TYPE.SUBROUTINE_START,message))
+      self.__writeLog(Logs.SEVERITY.INFO,Logs._getLogMsg(Logs.LOG_TYPE.SUBROUTINE_START,message))
     else:
-      self.__writeLog(severity,Logs._getLogMsg(Logs.LOG_TYPE.SUBROUTINE_END,message))
+      self.__writeLog(Logs.SEVERITY.INFO,Logs._getLogMsg(Logs.LOG_TYPE.SUBROUTINE_END,message))
 
   def writeRegularLog(self,severity,message):
     """Write a regular log to a file, according to its severity.

@@ -108,7 +108,7 @@ class Connection_APPS:
     downloadDirectory : str
       The directory to download the processed results to
     logger            : Logs
-      The logger object to log to
+      The log object to log to
     """
     self.apps   = APPS(settings_file = settingsFile,download_directory = downloadDirectory)
     self.logger = logger
@@ -121,13 +121,13 @@ class Connection_APPS:
     bool
       True if it was able to connect and False otherwise
     """
-    self.logger.writeRoutineLog(Logs.SEVERITY.INFO,connectionTest,Logs.ROUTINE_STATUS.START)
+    self.logger.writeRoutineLog(connectionTest,Logs.ROUTINE_STATUS.START)
     connectionStatus = self.apps.ping()[0]
     if connectionStatus:
       self.logger.writeRegularLog(Logs.SEVERITY.INFO,connectionSuccess)
     else:
       self.logger.writeRegularLog(Logs.SEVERITY.ERROR,connectionFailed)
-    self.logger.writeRoutineLog(Logs.SEVERITY.INFO,connectionTest,Logs.ROUTINE_STATUS.END)
+    self.logger.writeRoutineLog(connectionTest,Logs.ROUTINE_STATUS.END)
     return connectionStatus
 
   def getQuotaLeft(self):
@@ -154,7 +154,7 @@ class Connection_APPS:
       Pairs of argumentName->argument for the upload
     """
     filename = Helper.getFileFromPath(filePath)
-    self.logger.writeRoutineLog(Logs.SEVERITY.INFO,rinexUpload.format(file = filename),Logs.ROUTINE_STATUS.START)
+    self.logger.writeRoutineLog(rinexUpload.format(file = filename),Logs.ROUTINE_STATUS.START)
     isValid  = self.__checkFileValidity(filePath)
     if isValid:
       args               = self.__updateUploadArgs(uploadArgs)
@@ -176,7 +176,7 @@ class Connection_APPS:
       )
       self.logger.writeRegularLog(Logs.SEVERITY.INFO,uploadSuccess.format(file = filename))
       self.__addToIDQueue(fileResponseObject["id"],filePath,appsIDQueue)
-    self.logger.writeRoutineLog(Logs.SEVERITY.INFO,rinexUpload.format(file = filename),Logs.ROUTINE_STATUS.END)
+    self.logger.writeRoutineLog(rinexUpload.format(file = filename),Logs.ROUTINE_STATUS.END)
 
   def __checkFileValidity(self,filePath):
     """Check file validity.
@@ -199,8 +199,8 @@ class Connection_APPS:
     if isValid:
       self.logger.writeRegularLog(Logs.SEVERITY.INFO,fileValidated.format(file = filename))
     else:
-      validityErrorString = RinexHeader.validityErrorToString(validity[0],validity[1])
-      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,fileNotValidated.format(file = filename,validity = validityErrorString))
+      validityErrorStr = RinexHeader.validityErrorToString(validity[0],validity[1])
+      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,fileNotValidated.format(file = filename,validity = validityErrorStr))
     return isValid
 
   def __updateUploadArgs(self,uploadArgs):
@@ -318,7 +318,7 @@ class Connection_APPS:
     resultsDir  : str
       The directory to which the results should be downloaded to
     """
-    self.logger.writeRoutineLog(Logs.SEVERITY.INFO,checkState,Logs.ROUTINE_STATUS.START)
+    self.logger.writeRoutineLog(checkState,Logs.ROUTINE_STATUS.START)
     fileDetails = self.__getFileData(uuid,appsIDQueue)
     if fileDetails != None:
       fileState = fileDetails["state"]
@@ -349,7 +349,7 @@ class Connection_APPS:
         self.logger.writeRegularLog(Logs.SEVERITY.INFO,state.format(file = filename,state = "Error"))
         self.__handleError(uuid,filename,appsIDQueue)
     else:
-      self.logger.writeRoutineLog(Logs.SEVERITY.INFO,checkState,Logs.ROUTINE_STATUS.END)
+      self.logger.writeRoutineLog(checkState,Logs.ROUTINE_STATUS.END)
 
   def __getFileData(self,uuid,appsIDQueue):
     """Get details from the file in APPS.
@@ -368,7 +368,7 @@ class Connection_APPS:
     """
     fileData = None
     try:
-      self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,fileDataGathering.format(uuid = uuid),Logs.ROUTINE_STATUS.START)
+      self.logger.writeSubroutineLog(fileDataGathering.format(uuid = uuid),Logs.ROUTINE_STATUS.START)
       fileData = self.apps.detail(uuid)
     except DataNotFound:
       self.logger.writeRegularLog(Logs.SEVERITY.ERROR,dataNotFound.format(uuid = uuid))
@@ -382,7 +382,7 @@ class Connection_APPS:
       self.logger.writeRegularLog(Logs.SEVERITY.CRITICAL,criticalException.format(uuid = uuid))
       fileData = None
     finally:
-      self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,fileDataGathering.format(uuid = uuid),Logs.ROUTINE_STATUS.END)
+      self.logger.writeSubroutineLog(fileDataGathering.format(uuid = uuid),Logs.ROUTINE_STATUS.END)
       return fileData
 
   def __approveSubmission(self,uuid,filename,appsIDQueue):
@@ -398,7 +398,7 @@ class Connection_APPS:
       The file which contains the ids of the files that were uploaded to APPS
     """
     try:
-      self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,approveFile.format(file = filename),Logs.ROUTINE_STATUS.START)
+      self.logger.writeSubroutineLog(approveFile.format(file = filename),Logs.ROUTINE_STATUS.START)
       self.apps.approve(uuid)
       self.logger.writeLog(Logs.SEVERITY.INFO,approveSuccessful.format(file = filename))
     except DataNotFound:
@@ -414,7 +414,7 @@ class Connection_APPS:
     except:
       self.logger.writeRegularLog(Logs.SEVERITY.CRITICAL,criticalException.format(uuid = uuid))
     finally:
-      self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,approveFile.format(file = filename),Logs.ROUTINE_STATUS.END)
+      self.logger.writeSubroutineLog(approveFile.format(file = filename),Logs.ROUTINE_STATUS.END)
 
   def __removeData(self,uuid,filename,appsIDQueue):
     """Remove both source and result data from APPS and from apps ID queue.
@@ -429,7 +429,7 @@ class Connection_APPS:
       The file which contains the ids of the files that were uploaded to APPS
     """
     try:
-      self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,removeData.format(file = filename),Logs.ROUTINE_STATUS.START)
+      self.logger.writeSubroutineLog(removeData.format(file = filename),Logs.ROUTINE_STATUS.START)
       self.apps.delete_data(uuid)
       self.logger.writeRegularLog(Logs.SEVERITY.INFO,dataDeletedSuccessful.format(file = filename))
     except DataNotFound:
@@ -442,7 +442,7 @@ class Connection_APPS:
       self.logger.writeRegularLog(Logs.SEVERITY.CRITICAL,criticalException.format(uuid = uuid))
     finally:
       self.__removeFromIDQueue(uuid,filename,appsIDQueue)
-      self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,removeData.format(file = filename),Logs.ROUTINE_STATUS.END)
+      self.logger.writeSubroutineLog(removeData.format(file = filename),Logs.ROUTINE_STATUS.END)
 
   def __retrieveData(self,uuid,filename,appsIDQueue,resultsDir):
     """Retrieve results from APPS.
@@ -459,7 +459,7 @@ class Connection_APPS:
       The directory to which the results should be downloaded to
     """
     try:
-      self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,retrieveData.format(file = filename),Logs.ROUTINE_STATUS.START)
+      self.logger.writeSubroutineLog(retrieveData.format(file = filename),Logs.ROUTINE_STATUS.START)
       self.apps.download_result(uuid = uuid,dr = resultsDir)
       self.logger.writeRegularLog(Logs.SEVERITY.INFO,dataDownloadedSuccessful.format(file = filename))
     except DataNotFound:
@@ -475,7 +475,7 @@ class Connection_APPS:
     except:
       self.logger.writeLog(Logs.SEVERITY.CRITICAL,criticalExceptionLog.format(file = filename))
     finally:
-      self.logger.writeSubroutineLog(Logs.SEVERITY.INFO,retrieveData.format(file = filename),Logs.ROUTINE_STATUS.END)
+      self.logger.writeSubroutineLog(retrieveData.format(file = filename),Logs.ROUTINE_STATUS.END)
 
   def __handleError(self,uuid,filename,appsIDQueue):
     """Handler error from APPS.
@@ -491,3 +491,6 @@ class Connection_APPS:
     """
     self.logger.writeRegularLog(Logs.SEVERITY.ERROR,errorFromAPPS.format(file = filename))
     self.__removeData(uuid,filename,appsIDQueue)
+
+# ✓    unit tested
+# ✓ feature tested

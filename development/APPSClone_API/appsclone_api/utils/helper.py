@@ -157,3 +157,5 @@ class Helper:
       fileToCompress.write(compressedFile.read())
       fileToCompress.close()
       return uncompressedFilename
+
+# ✓    unit tested

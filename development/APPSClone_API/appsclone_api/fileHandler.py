@@ -1,4 +1,4 @@
-import paramiko
+
 import os.path
 import scp
 import re
@@ -340,32 +340,6 @@ class FileHandler:
       return
     finally:
       pass
-
-  @staticmethod
-  def _createSSHClient(ip,port,user,password):
-    """Create ssh client.
-
-    Parameters
-    ----------
-    ip       : str
-      The ip of the server to connect to
-    port     : int
-      The port of the server to connect to
-    user     : str
-      The user to connect to the server with
-    password : str
-      The password of the user
-
-    Returns
-    ----------
-    SSHClient
-      An ssh client object
-    """
-    client = paramiko.SSHClient()
-    client.load_system_host_keys()
-    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect(ip,port,user,password)
-    return client
 
   @staticmethod
   def _addFileToQueueUploadFiles(uploadFilesQueueFile,rinexFile,pathToUploadTo,ipToConnect,port,logger):

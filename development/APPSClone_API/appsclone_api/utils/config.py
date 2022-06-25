@@ -91,5 +91,4 @@ class Config:
     """
     return self.config.get("SETTINGS",key)
 
-
 # ✓    unit tested
