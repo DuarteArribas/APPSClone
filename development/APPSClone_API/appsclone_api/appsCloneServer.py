@@ -232,29 +232,6 @@ class APPSCloneServer:
       logger.writeLog(Logs.SEVERITY.ERROR,invalidUploadFileLog.format(file = file,reason = "Not a file"))
       return False
 
-  
-
-  @staticmethod
-  def _isValidIpv4(address):
-    """Check if an IPV4 address is valid.
-
-    Parameters
-    ----------
-    address : str
-      The ipv4 address to check
-
-    Returns
-    ----------
-    bool
-      True if the IPV4 address is valid and False otherwise
-    """
-    try:
-      addressBytes      = address.split('.')
-      validAddressBytes = [b for b in addressBytes if int(b) >= 0 and int(b) <= 255]
-      return len(addressBytes) == 4 and len(validAddressBytes) == 4
-    except:
-      return False
-
   @staticmethod
   def _parseUploadFile(uploadFile):
     """Parse an upload file to get its properties.
