@@ -102,47 +102,11 @@ class TestAPPSCloneServer(unittest.TestCase):
   def test_parse_upload_file2(self):
    self.assertEqual(APPSCloneServer._parseUploadFile("in/test/uploadFile4"),("aaa","massa","192.168.8.1"))
 
-  #def test_download_rinex_file(self):
-  #  logger   = Logs("logs/logTest.log",1000)
-  #  password = input("Password:")
-  #  user     = UserSSHClient("root",password)
-  #  APPSCloneServer._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.182",22,user,logger)
+  # def test_add_to_queue(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   APPSCloneServer._addFileToRinexQueue("queues/rinex_queue_test","arroz","aa/bb/cc","192.168.8.2",22,logger)
 
-  #def test_download_rinex_file2(self):
-  #  logger = Logs("logs/logTest.log",1000)
-  #  password = input("Password:")
-  #  user = UserSSHClient("root",password)
-  #  APPSCloneServer._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.181",22,user,logger)
-
-  #def test_download_rinex_file3(self):
-  #  logger = Logs("logs/logTest.log",1000)
-  #  password = input("Password:")
-  #  user = UserSSHClient("root",password)
-  #  APPSCloneServer._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.182",21,user,logger)
-
-  #def test_download_rinex_file4(self):
-  #  logger = Logs("logs/logTest.log",1000)
-  #  password = input("Password:")
-  #  user = UserSSHClient("roota",password)
-  #  APPSCloneServer._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.182",22,user,logger)
-
-  #def test_download_rinex_file5(self):
-  #  logger = Logs("logs/logTest.log",1000)
-  #  password = input("Password (wrong):")
-  #  user = UserSSHClient("root",password)
-  #  APPSCloneServer._downloadRinexFile("~/arroz","out/results_test_test","138.68.128.182",22,user,logger)
-
-  #def test_download_rinex_file6(self):
-  #  logger = Logs("logs/logTest.log",1000)
-  #  password = input("Password:")
-  #  user = UserSSHClient("root",password)
-  #  APPSCloneServer._downloadRinexFile("~/arroza","out/results_test_test","138.68.128.182",22,user,logger)
-
-  #def test_add_to_queue(self):
-  #  logger = Logs("logs/logTest.log",1000)
-  #  APPSCloneServer._addFileToQueueUploadFiles("out/queue/uploadFilesQueue","arroz","aa/bb/cc","192.168.8.2",22,logger)
-
-  #def test_download_files(self):
+  # def test_download_files(self):
   #  logger = Logs("logs/logTest.log",1000)
   #  APPSCloneServer.downloadRinexFiles("in/uploadFilesTest/1","out/results_test_test","out/queue/uploadFilesQueue",logger)
 

@@ -67,9 +67,9 @@ invalidUploadFileFields       = "The upload file '{file}' is invalid, because it
 invalidUploadFileNotAFile     = "'{file}' is not a file; thus, is invalid"
 uploadFilesExist              = "{numOfUploadFiles} valid upload files were found. Attempting to download corresponding rinex files"
 noUploadFiles                 = "No upload files were found"
+fileAddedToRinexQueue         = "The file '{file}' was added to the rinex queue"
 
 
 
 
 unexpectedErrorLog                  = "An unexpected error ocurred. Files were not downloaded."
-fileAddedToQueueLog                 = "The file {file} was added upload files queue file."

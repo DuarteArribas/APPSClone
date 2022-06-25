@@ -44,7 +44,7 @@ class APPSCloneServer:
       The file which contains the rinex queue
     resultsDir : str
       The directory to which the results should be downloaded to
-    sername    : str
+    username   : str
       The username of the user to connect with
     password   : str
       The password of the user
@@ -116,7 +116,7 @@ class APPSCloneServer:
       logger.writeRegularLog(Logs.SEVERITY.INFO,removedFromRinexQueue.format(file = result))
 
   @staticmethod
-  def downloadRinexFiles(toDownloadDir,toUploadDir,rinexQueue,logger):
+  def downloadRinexFiles(toDownloadDir,toUploadDir,rinexQueue,username,password,logger):
     """Download all files from the given upload files to the given directory.
 
     Parameters
@@ -127,26 +127,29 @@ class APPSCloneServer:
       The directory that contains the downloaded rinex file for upload 
     rinexQueue    : str
       The file which contains the rinex queue
+    username      : str
+      The username of the user to connect with
+    password      : str
+      The password of the user
     logger        : Logs
       The log object to log to
     """
     logger.writeRoutineLog(downloadRinexFiles,Logs.ROUTINE_STATUS.START)
     alreadyUploadedFilenames = APPSCloneServer._getAlreadyUploadedFilenames(rinexQueue)
     for uploadFile in APPSCloneServer._getUploadFiles(toDownloadDir,logger):
-      pathToDownloadFrom,pathToUploadTo,ipToConnect = APPSCloneServer._parseUploadFile(
-        APPSCloneServer._concatenateFileToPath(uploadFile,toDownloadDir)
+      pathToDownloadFrom,dirToUploadTo,ip = APPSCloneServer._parseUploadFile(
+        Helper.joinPathFile(toDownloadDir,uploadFile)
       )
-      port = 22                                     #hardcode
-      user = UserSSHClient("root","Pr0j#to_Spr1ng") #hardcode
-      if APPSCloneServer._getFileFromPath(pathToDownloadFrom) not in alreadyUploadedFilenames:
-        APPSCloneServer._downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user,logger)
-        alreadyUploadedFilenames.append(APPSCloneServer._getFileFromPath(pathToDownloadFrom))
-        APPSCloneServer._addFileToQueueUploadFiles(
-          uploadFilesQueueFile,
-          APPSCloneServer._getFileFromPath(pathToDownloadFrom),
-          pathToUploadTo,
-          ipToConnect,
-          port,
+      if Helper.getFileFromPath(pathToDownloadFrom) not in alreadyUploadedFilenames:
+        sshClient = SSHConnection(ip,22,username,password,logger)
+        sshClient.getFile(pathToDownloadFrom,toUploadDir)
+        alreadyUploadedFilenames.append(Helper.getFileFromPath(pathToDownloadFrom))
+        APPSCloneServer._addFileToRinexQueue(
+          rinexQueue,
+          Helper.getFileFromPath(pathToDownloadFrom),
+          dirToUploadTo,
+          ip,
+          22,
           logger
         )
       else:
@@ -214,6 +217,7 @@ class APPSCloneServer:
       The upload file to check
     logger     : Logs
       The log object to log to
+
     Returns
     ----------
     bool
@@ -261,96 +265,27 @@ class APPSCloneServer:
       return pathToDownloadFrom,dirToUploadTo,ip
 
   @staticmethod
-  def _downloadRinexFile(pathToDownloadFrom,downloadFolder,ipToConnect,port,user,logger):
-    """Download a rinex file from the given server.
-
-    Parameters
-    ----------
-    pathToDownloadFrom : str
-      The path to the file on the server
-    downloadFolder     : str
-      The directory to download the files to 
-    ipToConnect        : str
-      The IP of the server
-    port               : int
-      The port to connect to the server on
-    user               : UserSSHClient
-      A user representation of the user that connects via ssh
-    logger     : Logs
-      The Logs object that will be used to log several actions
-    """
-    logger.writeLog(
-      Logs.SEVERITY.INFO,
-      downloadRinexFileSubroutineStartLog.format(file = APPSCloneServer._getFileFromPath(pathToDownloadFrom))
-    )
-    try:
-      logger.writeLog(
-        Logs.SEVERITY.INFO,
-        sshConnectAttemptLog.format(ip = ipToConnect,port = port,username = user.username)
-      )
-      ssh = APPSCloneServer._createSSHClient(ipToConnect,port,user.username,user.password)
-      logger.writeLog(Logs.SEVERITY.INFO,connectAttemptSuccessfulLog)
-      scpClient = scp.SCPClient(ssh.get_transport())
-      scpClient.get(pathToDownloadFrom,downloadFolder)
-      logger.writeLog(
-        Logs.SEVERITY.INFO,
-        scpSuccessful.format(file = APPSCloneServer._getFileFromPath(pathToDownloadFrom),downloadFolder = downloadFolder)
-      )
-    except paramiko.ssh_exception.BadAuthenticationType:
-      logger.writeLog(
-        Logs.SEVERITY.ERROR,
-        connectAttemptUnsuccessfulLog.format(reason = f"Could not connect to ip {ipToConnect}")
-      )
-      return
-    except paramiko.ssh_exception.NoValidConnectionsError:
-      logger.writeLog(
-        Logs.SEVERITY.ERROR,
-        connectAttemptUnsuccessfulLog.format(reason = f"The port {port} is not available")
-      )
-      return
-    except paramiko.ssh_exception.AuthenticationException:
-      logger.writeLog(
-        Logs.SEVERITY.ERROR,
-        connectAttemptUnsuccessfulLog.format(reason = "Could not authenticate user. The username or password may be invalid")
-      )
-      return      
-    except scp.SCPException:
-      logger.writeLog(
-        Logs.SEVERITY.ERROR,
-        scpUnsuccessful.format(file = APPSCloneServer._getFileFromPath(pathToDownloadFrom),downloadFolder = downloadFolder)
-      )
-      return
-    except:
-      logger.writeLog(Logs.SEVERITY.CRITICAL,unexpectedErrorLog)
-      return
-    finally:
-      logger.writeLog(
-        Logs.SEVERITY.INFO,
-        downloadRinexFileSubroutineEndLog.format(file = APPSCloneServer._getFileFromPath(pathToDownloadFrom))
-      )
-
-  @staticmethod
-  def _addFileToQueueUploadFiles(uploadFilesQueueFile,rinexFile,pathToUploadTo,ipToConnect,port,logger):
+  def _addFileToRinexQueue(rinexQueue,rinexFile,dirToUploadTo,ip,port,logger):
     """Add the rinex file, its upload path and its ip and port to the upload files queue file.
 
     Parameters
     ----------
-    uploadFilesQueueFile : str
-      The file, which contains the queue of the upload files
-    rinexFile            : str
+    rinexQueue    : str
+      The file which contains the rinex queue
+    rinexFile     : str
       The rinex file to add to the queue
-    pathToUploadTo       : str
-      The path to which the results must be uploaded to
-    ipToConnect          : str
+    dirToUploadTo : str
+      The directory to upload the results to
+    ip            : str
       The ip of the server to connect to
-    port                 : int
+    port          : int
       The port of the server to connect to
-    logger     : Logs
-      The Logs object that will be used to log several actions
+    logger        : Logs
+      The log object to log to
     """
-    with open(uploadFilesQueueFile,"a") as f:
-      f.write(rinexFile + " " + pathToUploadTo + " " + ipToConnect + " " + str(port) + "\n")
-    logger.writeLog(Logs.SEVERITY.INFO,fileAddedToQueueLog.format(file = rinexFile))
+    with open(rinexQueue,"a") as f:
+      f.write(rinexFile + " " + dirToUploadTo + " " + ip + " " + str(port) + "\n")
+    logger.writeRegularLog(Logs.SEVERITY.INFO,fileAddedToRinexQueue.format(file = rinexFile))
 
   @staticmethod
   def uploadAllRinexToApps(conn,downloadFolder,uploadedFilesQueue,args,logger):
