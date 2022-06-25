@@ -13,7 +13,7 @@ class FileHandler:
   # == Attributes ==
   # == Methods ==
   @staticmethod
-  def handleAllFileStates(conn,appsIDQueue,resultsDir):
+  def handleAllFileStates(conn,appsIDQueue,resultsDir,logger):
     """Handle the state of all files in the apps id queue.
 
     Parameters
@@ -24,15 +24,20 @@ class FileHandler:
       The file which contains the ids of the files that were uploaded to APPS
     resultsDir  : str
       The directory to which the results should be downloaded to
+    logger      : Logs
+      The log object to log to
     """
+    logger.writeRoutineLog(handleAllFilesState,Logs.ROUTINE_STATUS.START)
     with open(appsIDQueue,"r") as f:
       uuids = f.readlines()
       uuids = [uuid.split("\n")[0] for uuid in uuids]
       for uuid in uuids:
         conn.handleFileState(uuid,appsIDQueue,resultsDir)
-        
+    logger.writeRoutineLog(handleAllFilesState,Logs.ROUTINE_STATUS.END)
+
   @staticmethod
   def uploadBackResults(uploadFilesQueueFile,resultsDir,logger):
+    logger.writeRoutineLog(uploadBack,Logs.ROUTINE_STATUS.START)
     for result in os.listdir(resultsDir):
       queueLine = FileHandler._getFileLineFromQueueUploadFiles(uploadFilesQueueFile,result)
       if queueLine:
@@ -52,6 +57,30 @@ class FileHandler:
         os.remove(FileHandler._concatenateFileToPath(result,resultsDir))
       else:
         pass
+    logger.writeRoutineLog(uploadBack,Logs.ROUTINE_STATUS.END)
+
+  @staticmethod
+  def _getResultLineFromRinexQueue(rinexQueue,result):
+    """Get a line from the rinex queue.
+
+    Parameters
+    ----------
+    rinexQueue : str
+      The file which contains the rinex queue
+    result     : str
+      The name of the results file
+
+    Returns
+    ----------
+    str or None
+      The line, which contains the given result or None if no line contains the given result
+    """
+    with open(rinexQueue,"r") as f:
+      lines = f.readlines()
+      for line in lines:
+        if line.split(" ")[0] == result.split("_results")[0]:
+          return line
+      return None
 
   @staticmethod
   def downloadRinexFiles(uploadFilesDirectory,downloadFolder,uploadFilesQueueFile,logger):
@@ -403,29 +432,6 @@ class FileHandler:
     with open(uploadFilesQueueFile,"a") as f:
       f.write(rinexFile + " " + pathToUploadTo + " " + ipToConnect + " " + str(port) + "\n")
     logger.writeLog(Logs.SEVERITY.INFO,fileAddedToQueueLog.format(file = rinexFile))
-
-  @staticmethod
-  def _getFileLineFromQueueUploadFiles(uploadFilesQueueFile,result):
-    """Get a line from the upload files queue.
-
-    Parameters
-    ----------
-    uploadFilesQueueFile : str
-      The file, which contains the queue of the upload files
-    result               : str
-      The name of the results file
-
-    Returns
-    ----------
-    str or None
-      The line, which contains the given result or None if no line contains the given result
-    """
-    with open(uploadFilesQueueFile,"r") as f:
-      lines = f.readlines()
-      for line in lines:
-        if line.split(" ")[0] == result.split("_results")[0]:
-          return line
-      return None
 
   @staticmethod
   def _removeFileFromQueueUploadFiles(uploadFilesQueueFile,result):

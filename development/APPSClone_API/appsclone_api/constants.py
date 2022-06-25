@@ -53,6 +53,8 @@ scpPutSuccessful              = "Successfully copied local file '{file}' to remo
 scpPutUnsuccessful            = "Could not copy local file '{file}' to remote directory '{df}'"
 # = File handler =
 #routines
+handleAllFilesState           = "State updates"
+uploadBack                    = "Upload back of results"
 downloadRinexFilesRoutineStartLog   = "=== RINEX FILES DOWNLOAD ROUTINE (START) ==="
 downloadRinexFilesRoutineEndLog     = "=== RINEX FILES DOWNLOAD ROUTINE (END) ==="
 downloadRinexFileSubroutineStartLog = "== RINEX FILE '{file}' DOWNLOAD SUBROUTINE (START) =="

@@ -9,7 +9,13 @@ class TestFileHandler(unittest.TestCase):
     warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
     logger = Logs("logs/logTest.log",1000)
     conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-    FileHandler.handleAllFileStates(conn,"queues/apps_id_queue_test","out/results_test")
+    FileHandler.handleAllFileStates(conn,"queues/apps_id_queue_test","out/results_test",logger)
+
+  def test_get_line_from_queue(self):
+    self.assertEqual(FileHandler._getResultLineFromRinexQueue("queues/rinex_queue_test","arroz_results.tar.gz"),"arroz ~ 138.68.128.183 22\n")
+
+  def test_get_line_from_queue2(self):
+    self.assertEqual(FileHandler._getResultLineFromRinexQueue("queues/rinex_queue_test","aarroz_results.tar.gz"),None)
 
   # def test_concatenate_file_to_path(self):
   #   self.assertEqual(FileHandler._concatenateFileToPath("arroz","aa/bb/cc"),"aa/bb/cc/arroz")
@@ -195,12 +201,6 @@ class TestFileHandler(unittest.TestCase):
   #def test_download_files(self):
   #  logger = Logs("logs/logTest2.log",1000)
   #  FileHandler.downloadRinexFiles("in/uploadFilesTest/1","out/results_test_test","out/queue/uploadFilesQueue",logger)
-
-  #def test_get_line_from_queue(self):
-  #  self.assertEqual(FileHandler._getFileLineFromQueueUploadFiles("out/queue/uploadFilesQueue","arroz_results.tar.gz"),"arroz ~ 138.68.128.181 22\n")
-
-  #def test_get_line_from_queue2(self):
-  #  self.assertEqual(FileHandler._getFileLineFromQueueUploadFiles("out/queue/uploadFilesQueue","aarroz_results.tar.gz"),None)
 
   #def test_remove_line_from_queue(self):
   #  FileHandler._removeFileFromQueueUploadFiles("out/queue/uploadFilesQueue","massaaaa")
