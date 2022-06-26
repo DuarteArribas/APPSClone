@@ -76,4 +76,19 @@ class Config:
     """
     return self.config.get("OUT",key)
 
+  def getQueuesConfig(self,key):
+    """Get a config from the QUEUES section on the config file.
+
+    Parameters
+    ----------
+    key : str
+      The key corresponding to the wanted configuration
+
+    Returns
+    ----------
+    str
+      The corresponding configuration
+    """
+    return self.config.get("QUEUES",key)
+
 # ✓    unit tested
