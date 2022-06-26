@@ -11,5 +11,13 @@ class TestConfig(unittest.TestCase):
     c = Config("config/appsclone.cfg")
     self.assertEqual(c.getSettingsConfig("APPS_SETTINGS_FILE"),"config/apps_settings")
 
+  def test_get_in(self):
+    c = Config("config/appsclone.cfg")
+    self.assertEqual(c.getInConfig("TO_UPLOAD_DIR"),"in/to_upload")
+
+  def test_get_out(self):
+    c = Config("config/appsclone.cfg")
+    self.assertEqual(c.getOutConfig("RESULTS_DIR"),"out/results")
+
 if __name__ == '__main__':
   unittest.main()

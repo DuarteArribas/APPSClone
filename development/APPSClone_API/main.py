@@ -14,7 +14,7 @@ def main():
   #initialize connection object
   conn   = Connection_APPS(
     settingsFile      = cfg.getSettingsConfig("APPS_SETTINGS_FILE"),
-    downloadDirectory = "out/downloads",
+    downloadDirectory = cfg.getSettingsConfig("APPS_SETTINGS_FILE"),
     logger            = logger
   )
   # #check for state updates (if any) on APPS uploaded files (if any) and handle them
