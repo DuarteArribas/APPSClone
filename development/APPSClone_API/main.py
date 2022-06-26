@@ -1,15 +1,15 @@
-from utils.config import *
-from utils.logs   import *
-from fileHandler  import *
-from connection   import *
+from appsclone_api.appsCloneServer import *
+from appsclone_api.utils.config    import *
+from appsclone_api.utils.logs      import *
+from appsclone_api.connection      import *
 
-if __name__ == '__main__':
-  #read configuration from config file
-  appsCloneConfig = Config("config/appsclone.cfg")
-  #initialize logs
-  logger          = Logs(
-    "logs/logTest.log",
-    int(appsCloneConfig.getLogConfig("MAX_NUM_LOGS"))
+def main():
+  # read configuration from config file
+  cfg    = Config("config/appsclone.cfg")
+  # initialize logs
+  logger = Logs(
+    cfg.getLogConfig("LOGS_FILE_PATH"),
+    int(cfg.getLogConfig("MAX_NUM_LOGS"))
   )
   #initialize connection object
   conn            = Connection_APPS(
@@ -59,3 +59,6 @@ if __name__ == '__main__':
     args,
     logger
   )
+
+if __name__ == '__main__':
+  main()
