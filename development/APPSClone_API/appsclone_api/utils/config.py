@@ -92,3 +92,4 @@ class Config:
     return self.config.get("QUEUES",key)
 
 # ✓    unit tested
+# ✓ feature tested

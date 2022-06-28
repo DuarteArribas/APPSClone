@@ -21,7 +21,7 @@ class TestConfig(unittest.TestCase):
 
   def test_get_queues(self):
     c = Config("config/appsclone.cfg")
-    self.assertEqual(c.getQueuesConfig("APPS_IDS_QUEUE"),"queues/apps_id_queue")
+    self.assertEqual(c.getQueuesConfig("APPS_IDS"),"queues/apps_id_queue")
 
 if __name__ == '__main__':
   unittest.main()
