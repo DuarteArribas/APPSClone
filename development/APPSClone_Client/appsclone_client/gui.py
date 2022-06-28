@@ -20,7 +20,7 @@ class GUI:
     curses.echo()
     curses.endwin() 
 
-  def getInput(self,title):
+  def getInput(self,title,errorMsg):
     """Get an input from the stdin.
 
     Parameters
@@ -36,6 +36,8 @@ class GUI:
     self.stdscr.erase()
     self.__printTitle(title)
     self.__printCtrlG()
+    if errorMsg:
+      self.__printInputError(errorMsg)
     return self.__getInputBoxInput()
 
   def __printTitle(self,title):
@@ -70,7 +72,7 @@ class GUI:
     box.edit()
     return box.gather().strip().replace("\n","")
 
-  def printInputError(self,errorMsg):
+  def __printInputError(self,errorMsg):
     """Print an error message for the input.
 
     Parameters

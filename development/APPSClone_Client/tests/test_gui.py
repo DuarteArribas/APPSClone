@@ -18,13 +18,17 @@ class TestGUI(unittest.TestCase):
   #   g._GUI__getInputBoxInput() 
   #   g.waitTest()
 
-  # def test_get_input(self):
-  #   g = GUI()
-  #   self.assertEqual(g.getInput("What's your favorite color?"),"green")
-
   # def test_showInputError(self):
   #   g = GUI()
-  #   g.printInputError("arroz lol")
+  #   g._GUI__printInputError("arroz lol")
+
+  # def test_get_input_no_error(self):
+  #   g = GUI()
+  #   self.assertEqual(g.getInput("What's your favorite color?",None),"green")
+
+  def test_get_input_error(self):
+    g = GUI()
+    self.assertEqual(g.getInput("What's your favorite color?","Please choose a real color!"),"green")
 
 if __name__ == '__main__':
   unittest.main()
