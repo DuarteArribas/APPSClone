@@ -90,3 +90,5 @@ class Helper:
       return len(addressBytes) == 4 and len(validAddressBytes) == 4
     except:
       return False
+
+# ✓    unit tested
