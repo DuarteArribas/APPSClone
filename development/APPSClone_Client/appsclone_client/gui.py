@@ -4,6 +4,7 @@ from pick           import pick
 
 class GUI:
   """GUI interface using curses."""
+  # == Methods ==
   def __init__(self):
     """Initialize curses."""
     self.stdscr = curses.initscr()
