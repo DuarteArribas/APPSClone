@@ -107,3 +107,6 @@ class GUI:
       The input picked up
     """
     return pick(options,title,indicator = "->")[0]
+
+# ✓    unit tested
+# ✓ feature tested

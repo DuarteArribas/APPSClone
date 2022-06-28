@@ -2,8 +2,8 @@ class Helper:
   """Helper methods to other classes."""
   # == Methods ==
   @staticmethod
-  def isValidAbsolutePath(path):
-    """Validate an absolute path.
+  def isValidAbsolutePathToFile(path):
+    """Validate an absolute path to a file.
 
     Parameters
     ----------
@@ -13,13 +13,34 @@ class Helper:
     Returns
     ----------
     bool
-      True if the absolute path is valid and False otherwise
+      True if the absolute path to a file is valid and False otherwise
     """
     if path:
       startWithSlash = True if path[0] == "/" else False
       endWithSlash   = True if path[-1] == "/" else False
       validLength    = all([True if len(file) <= 255 else False for file in path.split("/")]) and len(path) < 4096
       return startWithSlash and not endWithSlash and validLength
+    else:
+      return False
+
+  @staticmethod
+  def isValidAbsolutePathToDir(path):
+    """Validate an absolute path to a directory.
+
+    Parameters
+    ----------
+    path : str
+      The path to validate
+
+    Returns
+    ----------
+    bool
+      True if the absolute path to a directory is valid and False otherwise
+    """
+    if path:
+      startWithSlash = True if path[0] == "/" else False
+      validLength    = all([True if len(file) <= 255 else False for file in path.split("/")]) and len(path) < 4096
+      return startWithSlash and validLength
     else:
       return False
 
