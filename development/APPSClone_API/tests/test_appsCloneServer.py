@@ -12,14 +12,14 @@ class TestAPPSCloneServer(unittest.TestCase):
     APPSCloneServer.handleAllFileStates(conn,"queues/apps_id_queue_test","out/results_test",logger)
 
   def test_get_line_from_queue(self):
-    self.assertEqual(APPSCloneServer._getResultLineFromRinexQueue("queues/rinex_queue_test","arroz_results.tar.gz"),"arroz ~ 138.68.128.183 22\n")
+    self.assertEqual(APPSCloneServer._getResultLineFromRinexQueue("queues/rinex_queue_test","arroz_results.tar.gz"),"arroz ~ 138.68.128.183 22 aa bb\n")
 
   def test_get_line_from_queue2(self):
     self.assertEqual(APPSCloneServer._getResultLineFromRinexQueue("queues/rinex_queue_test","aarroz_results.tar.gz"),None)
 
-  def test_remove_line_from_queue(self):
-    logger = Logs("logs/logTest.log",1000)
-    APPSCloneServer._removeFileFromRinexQueue("queues/rinex_queue_test","feijao_results.tar.gz",logger)
+  # def test_remove_line_from_queue(self):
+  #   logger = Logs("logs/logTest.log",1000)
+  #   APPSCloneServer._removeFileFromRinexQueue("queues/rinex_queue_test","feijao_results.tar.gz",logger)
 
   # def test_upload_back_all_results(self):
   #   logger   = Logs("logs/logTest.log",1000)
@@ -46,7 +46,7 @@ class TestAPPSCloneServer(unittest.TestCase):
 
   def test_is_valid_upload_file5(self):
     logger = Logs("logs/logTest.log",1000)
-    self.assertFalse(APPSCloneServer._isValidUploadFile("in/test/uploadFile3",logger))
+    self.assertTrue(APPSCloneServer._isValidUploadFile("in/test/uploadFile3",logger))
 
   def test_is_valid_upload_file6(self):
     logger = Logs("logs/logTest.log",1000)
@@ -97,14 +97,14 @@ class TestAPPSCloneServer(unittest.TestCase):
     self.assertEqual(APPSCloneServer._getUploadFiles("in/to_download_test/1",logger),["uploadFile1","uploadFile2","uploadFile3","uploadFile4","uploadFile5"])
 
   def test_parse_upload_file(self):
-   self.assertEqual(APPSCloneServer._parseUploadFile("in/test/uploadFile1"),("arroz","massa","192.168.8.255"))
+   self.assertEqual(APPSCloneServer._parseUploadFile("in/test/uploadFile1"),("arroz","massa","192.168.8.255","root","Pr0j#to_Spr1ng"))
 
   def test_parse_upload_file2(self):
-   self.assertEqual(APPSCloneServer._parseUploadFile("in/test/uploadFile4"),("aaa","massa","192.168.8.1"))
+   self.assertEqual(APPSCloneServer._parseUploadFile("in/test/uploadFile4"),("aaa","massa","192.168.8.1","aa","bb"))
 
   # def test_add_to_queue(self):
   #   logger = Logs("logs/logTest.log",1000)
-  #   APPSCloneServer._addFileToRinexQueue("queues/rinex_queue_test","arroz","aa/bb/cc","192.168.8.2",22,logger)
+  #   APPSCloneServer._addFileToRinexQueue("queues/rinex_queue_test","arroz","aa/bb/cc","192.168.8.2",22,"aa","bb",logger)
 
   # def test_download_files(self):
   #   logger = Logs("logs/logTest.log",1000)

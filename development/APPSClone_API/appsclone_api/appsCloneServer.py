@@ -35,7 +35,7 @@ class APPSCloneServer:
     logger.writeRoutineLog(handleAllFilesState,Logs.ROUTINE_STATUS.END)
 
   @staticmethod
-  def uploadBackResults(rinexQueue,resultsDir,username,password,logger):
+  def uploadBackResults(rinexQueue,resultsDir,logger):
     """Upload back results to the client who asked for them.
 
     Parameters
@@ -44,10 +44,6 @@ class APPSCloneServer:
       The file which contains the rinex queue
     resultsDir : str
       The directory to which the results should be downloaded to
-    username   : str
-      The username of the user to connect with
-    password   : str
-      The password of the user
     logger     : Logs
       The log object to log to
     """
@@ -58,6 +54,8 @@ class APPSCloneServer:
         uploadDir = queueLine.split(" ")[1]
         ip        = queueLine.split(" ")[2]
         port      = queueLine.split(" ")[3]
+        username  = queueLine.split(" ")[4]
+        password  = queueLine.split(" ")[5]
         sshClient = SSHConnection(ip,port,username,password,logger)
         sshClient.putFile(Helper.joinPathFile(resultsDir,result),uploadDir)
         logger.writeRegularLog(Logs.SEVERITY.INFO,resultUploadedBack.format(file = result,uploadDir = uploadDir))
@@ -116,7 +114,7 @@ class APPSCloneServer:
       logger.writeRegularLog(Logs.SEVERITY.INFO,removedFromRinexQueue.format(file = result))
 
   @staticmethod
-  def downloadRinexFiles(toDownloadDir,toUploadDir,rinexQueue,username,password,logger):
+  def downloadRinexFiles(toDownloadDir,toUploadDir,rinexQueue,logger):
     """Download all files from the given upload files to the given directory.
 
     Parameters
@@ -127,17 +125,13 @@ class APPSCloneServer:
       The directory that contains the downloaded rinex file for upload 
     rinexQueue    : str
       The file which contains the rinex queue
-    username      : str
-      The username of the user to connect with
-    password      : str
-      The password of the user
     logger        : Logs
       The log object to log to
     """
     logger.writeRoutineLog(downloadRinex,Logs.ROUTINE_STATUS.START)
     alreadyUploadedFilenames = APPSCloneServer._getAlreadyUploadedFilenames(rinexQueue)
     for uploadFile in APPSCloneServer._getUploadFiles(toDownloadDir,logger):
-      pathToDownloadFrom,dirToUploadTo,ip = APPSCloneServer._parseUploadFile(
+      pathToDownloadFrom,dirToUploadTo,ip,username,password = APPSCloneServer._parseUploadFile(
         Helper.joinPathFile(toDownloadDir,uploadFile)
       )
       rinexFile = Helper.getFileFromPath(pathToDownloadFrom)
@@ -151,6 +145,8 @@ class APPSCloneServer:
           dirToUploadTo,
           ip,
           22,
+          username,
+          password,
           logger
         )
       else:
@@ -228,7 +224,7 @@ class APPSCloneServer:
       with open(uploadFile,"r") as f:
         lines = f.readlines()
         lines = Helper.cleanEmptyFieldsInList(lines)
-        if len(lines) == 3 and lines[0].strip() != "" and lines[1].strip() != "" and lines[2].strip() != "":
+        if len(lines) >= 5 and all([True if lines[lineNumber].strip() != "" else False for lineNumber in range(5)]):
           validIpv4 = Helper.isValidIpv4(lines[2])
           if not validIpv4:
             logger.writeRegularLog(Logs.SEVERITY.ERROR,invalidUploadFileIP.format(file = filename,ip = lines[2]))
@@ -252,20 +248,24 @@ class APPSCloneServer:
 
     Returns
     ----------
-    tuple(str,str,str)
+    tuple(str,str,str,str,str)
       The path of the rinex file to download
       The directory to upload the results of the processed rinex files to
       The IPV4 of the machine to donwload the rinex files from and upload the results to
+      The username of the user to log in to the server
+      The password of the user to log in to the server
     """
     with open(uploadFile,"r") as f:
       lines              = f.readlines()
       pathToDownloadFrom = lines[0].split("\n")[0]
       dirToUploadTo      = lines[1].split("\n")[0]
       ip                 = lines[2].split("\n")[0]
-      return pathToDownloadFrom,dirToUploadTo,ip
+      username           = lines[3].split("\n")[0]
+      password           = lines[4].split("\n")[0]
+      return pathToDownloadFrom,dirToUploadTo,ip,username,password
 
   @staticmethod
-  def _addFileToRinexQueue(rinexQueue,rinexFile,dirToUploadTo,ip,port,logger):
+  def _addFileToRinexQueue(rinexQueue,rinexFile,dirToUploadTo,ip,port,username,password,logger):
     """Add the rinex file, its upload path and its ip and port to the upload files queue file.
 
     Parameters
@@ -280,11 +280,15 @@ class APPSCloneServer:
       The ip of the server to connect to
     port          : int
       The port of the server to connect to
+    username      : str
+      The username of the user to connect with
+    password      : str
+      The password of the user
     logger        : Logs
       The log object to log to
     """
     with open(rinexQueue,"a") as f:
-      f.write(rinexFile + " " + dirToUploadTo + " " + ip + " " + str(port) + "\n")
+      f.write(rinexFile + " " + dirToUploadTo + " " + ip + " " + str(port) + " " + username + " " + password + "\n")
     logger.writeRegularLog(Logs.SEVERITY.INFO,fileAddedToRinexQueue.format(file = rinexFile))
 
   @staticmethod
