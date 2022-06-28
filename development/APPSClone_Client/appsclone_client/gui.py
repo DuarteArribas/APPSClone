@@ -3,7 +3,6 @@ from curses.textpad import Textbox,rectangle
 
 class GUI:
   def __init__(self):
-    # init
     self.stdscr = curses.initscr()
     curses.start_color()
     curses.cbreak()
@@ -38,9 +37,7 @@ class GUI:
   def wait(self):
     self.stdscr.getch()
 
-a = GUI()
-a.getInput("Please choose the color:")
-curses.nocbreak()
-curses.echo()
-curses.endwin()
-
+  def __del__(self):
+    curses.nocbreak()
+    curses.echo()
+    curses.endwin()
