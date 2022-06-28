@@ -1,5 +1,6 @@
 import curses
 from curses.textpad import Textbox,rectangle
+from pick           import pick
 
 class GUI:
   """GUI interface using curses."""
@@ -9,7 +10,8 @@ class GUI:
     curses.start_color()
     curses.cbreak()
     curses.echo(False)
-    curses.init_pair(1,curses.COLOR_GREEN,curses.COLOR_BLACK)
+    curses.use_default_colors()
+    curses.init_pair(1,curses.COLOR_GREEN,-1)
     curses.init_pair(2,curses.COLOR_WHITE,curses.COLOR_RED)
     self.greenBlack = curses.color_pair(1)   
     self.whiteRed = curses.color_pair(2)
@@ -18,7 +20,7 @@ class GUI:
     """Return the terminal to a santizied state."""
     curses.nocbreak()
     curses.echo()
-    curses.endwin() 
+    curses.endwin()
 
   def getInput(self,title,errorMsg):
     """Get an input from the stdin.
@@ -87,3 +89,20 @@ class GUI:
   def waitTest(self):
     """Wait for input. Only used for testing purposes."""
     self.stdscr.getch()
+
+  def getPickInput(self,title,options):
+    """Get an input from the given options list.
+
+    Parameters
+    ----------
+    title   : str
+      The title to show at the top of the input list
+    options : list
+      The list of possible input options
+
+    Returns
+    ----------
+    str
+      The input picked up
+    """
+    return pick(options,title,indicator = "->")[0]

@@ -26,9 +26,14 @@ class TestGUI(unittest.TestCase):
   #   g = GUI()
   #   self.assertEqual(g.getInput("What's your favorite color?",None),"green")
 
-  def test_get_input_error(self):
-    g = GUI()
-    self.assertEqual(g.getInput("What's your favorite color?","Please choose a real color!"),"green")
+  # def test_get_input_error(self):
+  #   g = GUI()
+  #   self.assertEqual(g.getInput("What's your favorite color?","Please choose a real color!"),"green")
+
+  def test_get_pick_option(self):
+    g   = GUI()
+    lst = ["a","b","c"]
+    self.assertEqual(g.getPickInput("What item do you want?",lst),"a")
 
 if __name__ == '__main__':
   unittest.main()
