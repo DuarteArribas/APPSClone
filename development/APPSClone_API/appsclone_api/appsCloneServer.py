@@ -55,7 +55,7 @@ class APPSCloneServer:
         ip        = queueLine.split(" ")[2]
         port      = queueLine.split(" ")[3]
         username  = queueLine.split(" ")[4]
-        password  = queueLine.split(" ")[5]
+        password  = queueLine.split(" ")[5].split("\n")[0]
         sshClient = SSHConnection(ip,port,username,password,logger)
         sshClient.putFile(Helper.joinPathFile(resultsDir,result),uploadDir)
         logger.writeRegularLog(Logs.SEVERITY.INFO,resultUploadedBack.format(file = result,uploadDir = uploadDir))

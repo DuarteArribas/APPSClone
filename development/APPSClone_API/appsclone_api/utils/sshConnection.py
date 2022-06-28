@@ -79,7 +79,7 @@ class SSHConnection:
         filename = Helper.getFileFromPath(pathToDownloadFrom)
         scpClient = scp.SCPClient(self.client.get_transport())
         scpClient.get(pathToDownloadFrom,downloadDir)
-        self.logger.writeRegularLog(Logs.SEVERITY.ERROR,scpGetSuccessful.format(file = filename,df = downloadDir))
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,scpGetSuccessful.format(file = filename,df = downloadDir))
       except:
         self.logger.writeRegularLog(Logs.SEVERITY.ERROR,scpGetUnsuccessful.format(file = filename,df = downloadDir))
 
@@ -98,7 +98,7 @@ class SSHConnection:
         filename = Helper.getFileFromPath(pathToUpload)
         scpClient = scp.SCPClient(self.client.get_transport())
         scpClient.put(pathToUpload,uploadDir)
-        self.logger.writeRegularLog(Logs.SEVERITY.ERROR,scpPutSuccessful.format(file = filename,df = uploadDir))
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,scpPutSuccessful.format(file = filename,df = uploadDir))
       except:
         self.logger.writeRegularLog(Logs.SEVERITY.ERROR,scpPutUnsuccessful.format(file = filename,df = uploadDir))
 
