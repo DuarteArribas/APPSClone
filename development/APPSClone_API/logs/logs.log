@@ -1,1 +1,94 @@
-Establishing client interface to https://pppx.gdgps.net//api/user
+2022-06-28 13:14:17.101343 (INFO)     | === State updates (START) ===
+2022-06-28 13:14:17.108097 (INFO)     | === State updates (END) ===
+2022-06-28 13:14:17.110867 (INFO)     | === Upload back of results (START) ===
+2022-06-28 13:14:17.116548 (INFO)     | === Upload back of results (END) ===
+2022-06-28 13:14:17.119317 (INFO)     | === Download of rinex files from source (START) ===
+2022-06-28 13:14:17.124622 (INFO)     | == Upload files check (START) ==
+2022-06-28 13:14:17.132417 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-28 13:14:17.141715 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-28 13:14:17.150821 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-28 13:14:17.159639 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-28 13:14:17.168035 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-28 13:14:17.173208 (INFO)     | 5 valid upload files were found. Attempting to download corresponding rinex files.
+2022-06-28 13:14:17.177805 (INFO)     | == Upload files check (END) ==
+2022-06-28 13:14:17.182309 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-28 13:14:17.809596 (INFO)     | Successfully established a connection to the server.
+2022-06-28 13:14:17.815179 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-28 13:14:19.765076 (ERROR)    | Successfully copied remote file 'arroz' to local directory 'in/to_upload'.
+2022-06-28 13:14:19.772348 (INFO)     | The file 'arroz' was added to the rinex queue.
+2022-06-28 13:14:19.778670 (INFO)     | The upload file 'uploadFile1' was removed.
+2022-06-28 13:14:19.785590 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-28 13:14:20.349138 (INFO)     | Successfully established a connection to the server.
+2022-06-28 13:14:20.354750 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-28 13:14:21.949842 (ERROR)    | Successfully copied remote file 'massa' to local directory 'in/to_upload'.
+2022-06-28 13:14:21.956763 (INFO)     | The file 'massa' was added to the rinex queue.
+2022-06-28 13:14:21.962963 (INFO)     | The upload file 'uploadFile2' was removed.
+2022-06-28 13:14:21.970341 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-28 13:14:22.622095 (INFO)     | Successfully established a connection to the server.
+2022-06-28 13:14:22.627469 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-28 13:14:24.511613 (ERROR)    | Successfully copied remote file 'feijao' to local directory 'in/to_upload'.
+2022-06-28 13:14:24.518523 (INFO)     | The file 'feijao' was added to the rinex queue.
+2022-06-28 13:14:24.524679 (INFO)     | The upload file 'uploadFile3' was removed.
+2022-06-28 13:14:24.532483 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-28 13:14:25.221649 (INFO)     | Successfully established a connection to the server.
+2022-06-28 13:14:25.227348 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-28 13:14:27.002942 (ERROR)    | Successfully copied remote file 'grao' to local directory 'in/to_upload'.
+2022-06-28 13:14:27.009954 (INFO)     | The file 'grao' was added to the rinex queue.
+2022-06-28 13:14:27.016227 (INFO)     | The upload file 'uploadFile4' was removed.
+2022-06-28 13:14:27.023134 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-28 13:14:27.635165 (INFO)     | Successfully established a connection to the server.
+2022-06-28 13:14:27.641137 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-28 13:14:29.541100 (ERROR)    | Successfully copied remote file 'vinagre' to local directory 'in/to_upload'.
+2022-06-28 13:14:29.547575 (INFO)     | The file 'vinagre' was added to the rinex queue.
+2022-06-28 13:14:29.553536 (INFO)     | The upload file 'uploadFile5' was removed.
+2022-06-28 13:14:29.558101 (INFO)     | === Download of rinex files from source (END) ===
+2022-06-28 13:14:29.559869 (INFO)     | === Upload of all Rinex (START) ===
+2022-06-28 13:14:32.810050 (INFO)     | There is enough quota to upload file 'arroz'.
+2022-06-28 13:14:32.816182 (INFO)     | == Upload on file 'arroz' (START) ==
+2022-06-28 13:14:32.849946 (INFO)     | The file 'arroz' was validated and is being considered a valid file for uploading.
+2022-06-28 13:14:32.855635 (WARNING)  | The value 'arroz' is invalid for argument 'product'. Using default value 'B'.
+2022-06-28 13:14:40.725165 (INFO)     | Successfully uploaded file 'arroz' to APPS.
+2022-06-28 13:14:40.733512 (INFO)     | Successfully added file 'in/to_upload/arroz' to the apps ID queue.
+2022-06-28 13:14:40.737825 (INFO)     | == Upload on file 'arroz' (END) ==
+2022-06-28 13:14:40.746186 (INFO)     | The file 'arroz' was removed.
+2022-06-28 13:14:42.392240 (INFO)     | There is enough quota to upload file 'feijao'.
+2022-06-28 13:14:42.398891 (INFO)     | == Upload on file 'feijao' (START) ==
+2022-06-28 13:14:42.439026 (INFO)     | The file 'feijao' was validated and is being considered a valid file for uploading.
+2022-06-28 13:14:42.446215 (WARNING)  | The value 'arroz' is invalid for argument 'product'. Using default value 'B'.
+2022-06-28 13:14:50.296344 (INFO)     | Successfully uploaded file 'feijao' to APPS.
+2022-06-28 13:14:50.305839 (INFO)     | Successfully added file 'in/to_upload/feijao' to the apps ID queue.
+2022-06-28 13:14:50.311428 (INFO)     | == Upload on file 'feijao' (END) ==
+2022-06-28 13:14:50.321040 (INFO)     | The file 'feijao' was removed.
+2022-06-28 13:14:52.022007 (INFO)     | There is enough quota to upload file 'grao'.
+2022-06-28 13:14:52.029051 (INFO)     | == Upload on file 'grao' (START) ==
+2022-06-28 13:14:52.063609 (INFO)     | The file 'grao' was validated and is being considered a valid file for uploading.
+2022-06-28 13:14:52.070079 (WARNING)  | The value 'arroz' is invalid for argument 'product'. Using default value 'B'.
+2022-06-28 13:14:59.870456 (INFO)     | Successfully uploaded file 'grao' to APPS.
+2022-06-28 13:14:59.880995 (INFO)     | Successfully added file 'in/to_upload/grao' to the apps ID queue.
+2022-06-28 13:14:59.886839 (INFO)     | == Upload on file 'grao' (END) ==
+2022-06-28 13:14:59.896900 (INFO)     | The file 'grao' was removed.
+2022-06-28 13:15:01.551033 (INFO)     | There is enough quota to upload file 'massa'.
+2022-06-28 13:15:01.557668 (INFO)     | == Upload on file 'massa' (START) ==
+2022-06-28 13:15:01.594863 (INFO)     | The file 'massa' was validated and is being considered a valid file for uploading.
+2022-06-28 13:15:01.601807 (WARNING)  | The value 'arroz' is invalid for argument 'product'. Using default value 'B'.
+2022-06-28 13:15:09.487287 (INFO)     | Successfully uploaded file 'massa' to APPS.
+2022-06-28 13:15:09.496043 (INFO)     | Successfully added file 'in/to_upload/massa' to the apps ID queue.
+2022-06-28 13:15:09.501420 (INFO)     | == Upload on file 'massa' (END) ==
+2022-06-28 13:15:09.509973 (INFO)     | The file 'massa' was removed.
+2022-06-28 13:15:11.198969 (INFO)     | There is enough quota to upload file 'vinagre'.
+2022-06-28 13:15:11.206953 (INFO)     | == Upload on file 'vinagre' (START) ==
+2022-06-28 13:15:11.249565 (INFO)     | The file 'vinagre' was validated and is being considered a valid file for uploading.
+2022-06-28 13:15:11.255987 (WARNING)  | The value 'arroz' is invalid for argument 'product'. Using default value 'B'.
+2022-06-28 13:15:19.124638 (INFO)     | Successfully uploaded file 'vinagre' to APPS.
+2022-06-28 13:15:19.133973 (INFO)     | Successfully added file 'in/to_upload/vinagre' to the apps ID queue.
+2022-06-28 13:15:19.140844 (INFO)     | == Upload on file 'vinagre' (END) ==
+2022-06-28 13:15:19.151088 (INFO)     | The file 'vinagre' was removed.
+2022-06-28 13:15:19.158499 (INFO)     | === Upload of all Rinex (END) ===
+2022-06-28 13:15:39.684727 (INFO)     | === State updates (START) ===
+2022-06-28 13:15:39.692263 (INFO)     | == State check (START) ==
+2022-06-28 13:15:39.695962 (INFO)     | = Gathering data on uuid 'e2bef264-f6db-11ec-95e0-e0db5501adf2' (START) =
+2022-06-28 13:15:44.462072 (INFO)     | = Gathering data on uuid 'e2bef264-f6db-11ec-95e0-e0db5501adf2' (END) =
+2022-06-28 13:15:44.468805 (INFO)     | Checking file 'arroz'.
+2022-06-28 13:15:44.473994 (INFO)     | The file 'arroz' is in the 'Verified' state.
+2022-06-28 13:15:44.479439 (INFO)     | = Approval on file 'arroz' (START) =
+2022-06-28 13:15:46.062632 (INFO)     | = Approval on file 'arroz' (END) =

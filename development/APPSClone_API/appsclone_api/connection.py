@@ -400,7 +400,7 @@ class Connection_APPS:
     try:
       self.logger.writeSubsubroutineLog(approveFile.format(file = filename),Logs.ROUTINE_STATUS.START)
       self.apps.approve(uuid)
-      self.logger.writeLog(Logs.SEVERITY.INFO,approveSuccessful.format(file = filename))
+      self.logger.writeRegularLog(Logs.SEVERITY.INFO,approveSuccessful.format(file = filename))
     except DataNotFound:
       self.logger.writeRegularLog(Logs.SEVERITY.ERROR,dataNotFound.format(uuid = uuid))
       self.__removeFromIDQueue(uuid,filename,appsIDQueue)
@@ -473,7 +473,7 @@ class Connection_APPS:
       self.__removeData(uuid,filename,appsIDQueue)
       self.__removeFromIDQueue(uuid,filename,appsIDQueue)
     except:
-      self.logger.writeLog(Logs.SEVERITY.CRITICAL,criticalExceptionLog.format(file = filename))
+      self.logger.writeRegularLog(Logs.SEVERITY.CRITICAL,criticalExceptionLog.format(file = filename))
     finally:
       self.logger.writeSubsubroutineLog(retrieveData.format(file = filename),Logs.ROUTINE_STATUS.END)
 

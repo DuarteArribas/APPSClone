@@ -39,7 +39,7 @@ def main():
     "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
     "elev_angle_cutoff"    : 7.5,
     "solution_period"      : 300,
-    "generate_quaternions" : False,
+    "generate_quaternions" : False
   }
   APPSCloneServer.uploadAllRinexToApps(conn,cfg.getInConfig("TO_UPLOAD_DIR"),cfg.getQueuesConfig("APPS_IDS"),args,logger)
 
