@@ -23,5 +23,9 @@ class TestConfig(unittest.TestCase):
     c = Config("config/appsclone.cfg")
     self.assertEqual(c.getQueuesConfig("APPS_IDS"),"queues/apps_id_queue")
 
+  def test_get_ip(self):
+    c = Config("config/appsclone.cfg")
+    self.assertEqual(c.getServerConfig("IP"),"localhost")
+
 if __name__ == '__main__':
   unittest.main()

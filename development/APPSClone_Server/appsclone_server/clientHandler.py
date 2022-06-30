@@ -1,37 +1,39 @@
+from appsclone_server.connection import *
+import os.path
+
 class ClientHandler:
   """Handle clients' operations."""
-  def __init__(self,serverObject):
+  def __init__(self,conn):
     """Initalize handler."""
     self.CLIENT_HANDLER_METHOD = {
-      0: self.exitProgram,
-      1: self.loginUser,
-      2: self.registerUser,
-      3: self.generateTickets,
-      4: self.sendUserData,
-      5: self.updateUserMoney
+      1: self.requestFileUpload,
     }
+    self.conn = conn
 
   def process(self,option,args = None):
-    """Process an option received by the client and calls the appropriate client handler method.
+    """Process an option received by the client and call the appropriate client handler method.
     
     Parameters
     ----------
     option : int
       The chosen menu option
-    args   : tuple (default: None)
+    args   : tuple
       The arguments sent by the client
 
     Return
     ----------
     dict
-      A dictionary containing the code to be treated by the client and the respective arguments
+      The code to be treated by the client and the respective arguments
     """
     if args == None:
       return self.CLIENT_HANDLER_METHOD[option]()
     else:
       return self.CLIENT_HANDLER_METHOD[option](args)
   
-  def updateUserMoney(self, args):
-    self.database.updateUserMoney(args[0],args[1])
-    print(f"Money info updated for user:{args[0]} money:{args[1]}")
-    return {"code":-1,"args":("Money updated!",)}
+  def requestFileUpload(self,args):
+    rinexPath = Helper.joinPathFile("in/to_upload_regular",args[0])
+    if os.path.exists(rinexPath):
+      if os.path.getsize(rinexPath) / (1024 * 1024.0) < self.conn.getQuotaLeft():
+        conn.uploadFile(rinexPath,appsIDQueue,APPSCloneServer.DEFAULT_UPLOAD_ARGS)
+        os.remove(rinexPath)
+        os.remove(rinexPath+".gz")

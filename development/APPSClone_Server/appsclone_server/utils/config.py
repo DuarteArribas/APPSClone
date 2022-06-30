@@ -16,6 +16,21 @@ class Config:
       print("Could not read config file. Exiting...")
       exit(-1)
 
+  def getServerConfig(self,key):
+    """Get a config from the SERVER section on the config file.
+
+    Parameters
+    ----------
+    key : str
+      The key corresponding to the wanted configuration
+
+    Returns
+    ----------
+    str
+      The corresponding configuration
+    """
+    return self.config.get("SERVER",key)
+
   def getLogConfig(self,key):
     """Get a config from the LOGS section on the config file.
 

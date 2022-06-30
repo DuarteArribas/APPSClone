@@ -1,29 +1,33 @@
 #variables
-PYTHON          := python3
-PIP             := pip3
-MAIN_FILE       := main.py
+PYTHON            := python3
+PIP               := pip3
+MAIN_FILE         := main.py
+MAIN_FILE_SPECIAL := mainSpecialUser.py
 #files
-appsIdQueue     := apps_id_queue
-rinexQueue      := rinex_queue
-logs            := logs.log
+appsIdQueue       := apps_id_queue
+rinexQueue        := rinex_queue
+logs              := logs.log
 #directories
-testDir         := tests
-inDir           := in
-outDir          := out
-toDownloadDir   := to_download
-toUploadDir     := to_upload
-resultsDir      := results
-queuesDir       := queues
-logsDir         := logs
+testDir           := tests
+inDir             := in
+outDir            := out
+toDownloadDir     := to_download
+toUploadDir       := to_upload
+resultsDir        := results
+queuesDir         := queues
+logsDir           := logs
 #paths
-toDownloadPath  := $(inDir)/$(toDownloadDir)
-toUploadPath    := $(inDir)/$(toUploadDir)
-resultsPath     := $(outDir)/$(resultsDir)
-appsIdQueuePath := $(queuesDir)/$(appsIdQueue)
-rinexQueuePath  := $(queuesDir)/$(rinexQueue)
-logsPath        := $(logsDir)/$(logs)
+toDownloadPath    := $(inDir)/$(toDownloadDir)
+toUploadPath      := $(inDir)/$(toUploadDir)
+resultsPath       := $(outDir)/$(resultsDir)
+appsIdQueuePath   := $(queuesDir)/$(appsIdQueue)
+rinexQueuePath    := $(queuesDir)/$(rinexQueue)
+logsPath          := $(logsDir)/$(logs)
 
 run:
+	$(PYTHON) $(MAIN_FILE)
+
+runSpecial:
 	$(PYTHON) $(MAIN_FILE)
 
 setup:

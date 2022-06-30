@@ -319,7 +319,7 @@ class Connection_APPS:
       The directory to which the results should be downloaded to
     """
     self.logger.writeSubroutineLog(checkState,Logs.ROUTINE_STATUS.START)
-    fileDetails = self.__getFileData(uuid,appsIDQueue)
+    fileDetails = self.getFileData(uuid,appsIDQueue)
     if fileDetails != None:
       fileState = fileDetails["state"]
       filename  = fileDetails["name"]
@@ -351,7 +351,7 @@ class Connection_APPS:
     else:
       self.logger.writeSubroutineLog(checkState,Logs.ROUTINE_STATUS.END)
 
-  def __getFileData(self,uuid,appsIDQueue):
+  def getFileData(self,uuid,appsIDQueue):
     """Get details from the file in APPS.
 
     Parameters

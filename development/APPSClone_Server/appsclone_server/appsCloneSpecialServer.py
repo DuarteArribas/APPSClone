@@ -33,7 +33,7 @@ class APPSCloneSpecialServer:
   }
   # == Methods ==
   @staticmethod
-  def handleAllFileStates(conn,appsIDQueue,resultsDir,logger):
+  def handleAllFileStates(conn,appsIDQueue,resultsDir,resultsRegularDir,rinexQueue,logger):
     """Handle the state of all files in the apps id queue.
 
     Parameters
@@ -52,7 +52,13 @@ class APPSCloneSpecialServer:
       uuids = f.readlines()
       uuids = [uuid.split("\n")[0] for uuid in uuids]
       for uuid in uuids:
-        conn.handleFileState(uuid,appsIDQueue,resultsDir)
+        rinexData = conn.getFileData(uuid)
+        if rinexData:
+          queueLine = APPSCloneSpecialServer._getResultLineFromRinexQueue(rinexQueue,rinexData["name"])
+          if queueLine:
+            conn.handleFileState(uuid,appsIDQueue,resultsDir)
+          else:
+            conn.handleFileState(uuid,appsIDQueue,resultsRegularDir)
     logger.writeRoutineLog(handleAllFilesState,Logs.ROUTINE_STATUS.END)
 
   @staticmethod
