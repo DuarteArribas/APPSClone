@@ -802,3 +802,105 @@
 2022-06-29 16:29:53.284770 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
 2022-06-29 16:29:58.381389 (ERROR)    | Could not establish a connection to the server, because the user 'root' is not valid or the password is incorrect.
 2022-06-29 16:29:58.388960 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-30 15:33:09.121731 (INFO)     | == Upload files check (START) ==
+2022-06-30 15:33:09.135368 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-06-30 15:33:09.147054 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-06-30 15:33:09.158697 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-30 15:33:09.170366 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-30 15:33:09.181884 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-06-30 15:33:09.194062 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '138.68.128.256
+2022-06-30 15:33:09.207177 (INFO)     | 5 valid upload files were found. Attempting to download corresponding rinex files.
+2022-06-30 15:33:09.213521 (INFO)     | == Upload files check (END) ==
+2022-06-30 15:33:09.227041 (INFO)     | === State updates (START) ===
+2022-06-30 15:33:09.235632 (INFO)     | === State updates (END) ===
+2022-06-30 15:33:09.244358 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
+2022-06-30 15:33:09.255482 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-06-30 15:33:09.266271 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
+2022-06-30 15:33:09.277115 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
+2022-06-30 15:33:09.284394 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-06-30 15:33:09.295802 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-06-30 15:33:09.307419 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-06-30 15:33:09.315199 (INFO)     | The upload file 'uploadFile14' was validated.
+2022-06-30 15:33:09.326347 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
+2022-06-30 15:33:09.337627 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip
+2022-06-30 15:33:09.354103 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256
+2022-06-30 15:33:09.371161 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-06-30 15:33:09.382201 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-06-30 15:33:09.389473 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
+2022-06-30 15:33:09.400346 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333
+2022-06-30 15:33:09.416968 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256
+2022-06-30 15:33:09.449976 (INFO)     | Successfully added file 'arroz' to the apps ID queue.
+2022-06-30 15:33:09.464230 (INFO)     | == Connection test (START) ==
+2022-06-30 15:33:12.165005 (INFO)     | The connection with APPS was successful.
+2022-06-30 15:33:12.173648 (INFO)     | == Connection test (END) ==
+2022-06-30 15:33:12.192110 (ERROR)    | The file 'file' is invalid - The version 'None' of the rinex file is invalid (Supported versions are 2.11, 3.02).
+2022-06-30 15:33:12.239667 (INFO)     | The file 'CVTY2720.21D' was validated and is being considered a valid file for uploading.
+2022-06-30 15:33:15.427216 (INFO)     | Successfully removed file 'arroz' from the apps ID queue.
+2022-06-30 15:33:15.450815 (WARNING)  | The value 'arroz' is invalid for argument 'access'. Using default value 'X'.
+2022-06-30 15:33:15.463805 (WARNING)  | The value '' is invalid for argument 'pressure'. Using default value 'None'.
+2022-06-30 15:33:15.471269 (WARNING)  | The value '' is invalid for argument 'attitude'. Using default value 'None'.
+2022-06-30 15:33:15.478273 (WARNING)  | The value '' is invalid for argument 'email'. Using default value 'None'.
+2022-06-30 15:33:15.485364 (WARNING)  | The value '' is invalid for argument 'access'. Using default value 'X'.
+2022-06-30 15:33:15.492266 (WARNING)  | The value '' is invalid for argument 'processing_mode'. Using default value 'S'.
+2022-06-30 15:33:15.499238 (WARNING)  | The value '' is invalid for argument 'product'. Using default value 'B'.
+2022-06-30 15:33:15.505983 (WARNING)  | The value '' is invalid for argument 'troposphere_model'. Using default value 'GMF'.
+2022-06-30 15:33:15.512949 (WARNING)  | The value '' is invalid for argument 'ocean_loading'. Using default value 'True'.
+2022-06-30 15:33:15.519755 (WARNING)  | The value '' is invalid for argument 'model_tides'. Using default value 'True'.
+2022-06-30 15:33:15.526651 (WARNING)  | The value '' is invalid for argument 'elev_dep_weighting'. Using default value 'SQRTSIN'.
+2022-06-30 15:33:15.533661 (WARNING)  | The value '' is invalid for argument 'elev_angle_cutoff'. Using default value '7.5'.
+2022-06-30 15:33:15.540661 (WARNING)  | The value '' is invalid for argument 'solution_period'. Using default value '300'.
+2022-06-30 15:33:15.548788 (WARNING)  | The value '' is invalid for argument 'generate_quaternions'. Using default value 'False'.
+2022-06-30 15:33:15.562569 (WARNING)  | The value '' is invalid for argument 'pressure'. Using default value 'None'.
+2022-06-30 15:33:15.570978 (WARNING)  | The value '' is invalid for argument 'attitude'. Using default value 'None'.
+2022-06-30 15:33:15.578401 (WARNING)  | The value '' is invalid for argument 'email'. Using default value 'None'.
+2022-06-30 15:33:15.585613 (WARNING)  | The value '' is invalid for argument 'access'. Using default value 'X'.
+2022-06-30 15:33:15.593455 (WARNING)  | The value '' is invalid for argument 'processing_mode'. Using default value 'S'.
+2022-06-30 15:33:15.601195 (WARNING)  | The value '' is invalid for argument 'product'. Using default value 'B'.
+2022-06-30 15:33:15.608727 (WARNING)  | The value '' is invalid for argument 'ocean_loading'. Using default value 'True'.
+2022-06-30 15:33:15.615922 (WARNING)  | The value '' is invalid for argument 'model_tides'. Using default value 'True'.
+2022-06-30 15:33:15.623170 (WARNING)  | The value '' is invalid for argument 'elev_dep_weighting'. Using default value 'SQRTSIN'.
+2022-06-30 15:33:15.630609 (WARNING)  | The value '' is invalid for argument 'elev_angle_cutoff'. Using default value '7.5'.
+2022-06-30 15:33:15.638003 (WARNING)  | The value '' is invalid for argument 'solution_period'. Using default value '300'.
+2022-06-30 15:33:15.645375 (WARNING)  | The value '' is invalid for argument 'generate_quaternions'. Using default value 'False'.
+2022-06-30 15:33:15.683310 (INFO)     | info lol
+2022-06-30 15:33:15.691536 (WARNING)  | warning lol
+2022-06-30 15:33:15.699341 (ERROR)    | error lol
+2022-06-30 15:33:15.707768 (CRITICAL) | critical lol
+2022-06-30 15:33:18.718190 (INFO)     | after 3 seconds
+2022-06-30 15:33:18.726217 (INFO)     | regularInfo.
+2022-06-30 15:33:18.732961 (INFO)     | === infoRoutineStart (START) ===
+2022-06-30 15:33:18.739607 (INFO)     | === infoRoutineEnd (END) ===
+2022-06-30 15:33:18.746427 (INFO)     | == infoSubroutineStart (START) ==
+2022-06-30 15:33:18.752998 (INFO)     | = infoSubsubroutineEnd (END) =
+2022-06-30 15:33:18.760889 (INFO)     | = infoSubsubroutineStart (START) =
+2022-06-30 15:33:19.436472 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-30 15:33:20.091019 (INFO)     | Successfully established a connection to the server.
+2022-06-30 15:33:20.098887 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-30 15:33:22.499823 (INFO)     | Successfully copied remote file 'arroz' to local directory 'in/to_upload_test'.
+2022-06-30 15:33:22.507204 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-30 15:33:23.135459 (INFO)     | Successfully established a connection to the server.
+2022-06-30 15:33:23.142687 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-30 15:33:24.166776 (ERROR)    | Could not copy remote file 'arro' to local directory 'in/to_upload_test'.
+2022-06-30 15:33:24.175208 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-30 15:33:24.808333 (INFO)     | Successfully established a connection to the server.
+2022-06-30 15:33:24.815770 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-30 15:33:25.986893 (INFO)     | Successfully copied local file 'file' to remote directory '~'.
+2022-06-30 15:33:25.994121 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-30 15:33:26.701916 (INFO)     | Successfully established a connection to the server.
+2022-06-30 15:33:26.709158 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-30 15:33:27.749685 (ERROR)    | Could not copy local file 'someFile' to remote directory '~'.
+2022-06-30 15:33:27.757122 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-30 15:33:28.436418 (INFO)     | Successfully established a connection to the server.
+2022-06-30 15:33:28.443625 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-06-30 15:33:28.450084 (INFO)     | == Connect to '138.68.128.181:22', with user 'root' (START) ==
+2022-06-30 15:33:29.065794 (ERROR)    | Could not establish a connection to the server, because the ip '138.68.128.181' is not valid or is unavailable.
+2022-06-30 15:33:29.073059 (INFO)     | == Connect to '138.68.128.181:22', with user 'root' (END) ==
+2022-06-30 15:33:29.079588 (INFO)     | == Connect to '138.68.128.182:21', with user 'root' (START) ==
+2022-06-30 15:33:29.152523 (ERROR)    | Could not establish a connection to the server, because the port '21' is not valid or is unavailable.
+2022-06-30 15:33:29.159966 (INFO)     | == Connect to '138.68.128.182:21', with user 'root' (END) ==
+2022-06-30 15:33:29.166581 (INFO)     | == Connect to '138.68.128.182:22', with user 'root2' (START) ==
+2022-06-30 15:33:33.542069 (ERROR)    | Could not establish a connection to the server, because the user 'root2' is not valid or the password is incorrect.
+2022-06-30 15:33:33.549706 (INFO)     | == Connect to '138.68.128.182:22', with user 'root2' (END) ==
+2022-06-30 15:33:33.557276 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-06-30 15:33:36.376565 (ERROR)    | Could not establish a connection to the server, because the user 'root' is not valid or the password is incorrect.
+2022-06-30 15:33:36.384025 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==

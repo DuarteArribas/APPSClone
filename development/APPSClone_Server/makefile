@@ -35,6 +35,12 @@ test:
 testPrint:
 	$(PYTHON) -m unittest $(testDir)/test_$(tf).py
 
+testAll:
+	$(PYTHON) -m unittest $(testDir)/test_* > /dev/null
+
+testAllPrint:
+	$(PYTHON) -m unittest $(testDir)/test_*
+
 clean:
 	@rm -f $(toDownloadPath)/* 
 	@rm -f $(toUploadPath)/*
@@ -45,4 +51,4 @@ clean:
 clearLogs:
 	@echo -n "" > $(logsPath)
 
-.PHONY: run setup test clean clearLogs
+.PHONY: run setup test testPrint testAll testAllPrint clean clearLogs

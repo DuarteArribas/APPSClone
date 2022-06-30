@@ -8,7 +8,7 @@ from appsclone_server.constants           import *
 from os                                   import listdir
 
 class APPSCloneSpecialServer:
-  """The APPSClone server for special users, who whish to automate their uploads to APPS.
+  """The APPSClone server for special users, who wish to automate their uploads to APPS.
 
   Attributes
   ----------
