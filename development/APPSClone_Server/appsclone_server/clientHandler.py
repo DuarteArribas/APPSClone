@@ -7,6 +7,7 @@ class ClientHandler:
     """Initalize handler."""
     self.CLIENT_HANDLER_METHOD = {
       1: self.requestFileUpload,
+      2: self.requestFileDownload,
     }
     self.conn = conn
 
@@ -34,6 +35,42 @@ class ClientHandler:
     rinexPath = Helper.joinPathFile("in/to_upload_regular",args[0])
     if os.path.exists(rinexPath):
       if os.path.getsize(rinexPath) / (1024 * 1024.0) < self.conn.getQuotaLeft():
-        conn.uploadFile(rinexPath,appsIDQueue,APPSCloneServer.DEFAULT_UPLOAD_ARGS)
+        error = conn.uploadFile(rinexPath,appsIDQueue,APPSCloneServer.DEFAULT_UPLOAD_ARGS)
         os.remove(rinexPath)
         os.remove(rinexPath+".gz")
+        if error == -1:
+          return {"code":-1,"args":(f"Invalid file",)}
+        newID = 0
+        with open("queues/idQueue","r") as f:
+          lines = f.readlines()
+          if len(lines) < 1:
+            newID = 1
+          else:
+            newID = int(lines[0]) + 1
+
+        with open("queues/idQueue","w") as f:
+          f.write(newID)
+
+        with open("queues/regularUsersIDQueue","a") as f:
+          f.write(f"{newID} {Helper.getFileFromPath(rinexPath)}")
+        return {"code":newID,"args":(f"OK",)}
+      else:
+        return {"code":-1,"args":(f"There isn't any quota available",)}
+    else:
+      return {"code":-1,"args":(f"An unknown error happened",)}
+
+  def requestFileDownload(self,args):
+    fileToDownload = ""
+    with open("queues/regularUsersIDQueue","r") as f:
+      lines = f.readlines()
+      for line in lines:
+        if line[0] == args[0]:
+          fileToDownload = line[1]
+    if fileToDownload:
+      for result in os.listdir("out/results_regular"):
+        if result.split("_results")[0] == fileToDownload:
+          return {"code":0,"args":(f"Results downloaded successfully",)}
+        else:
+          return {"code":-1,"args":(f"There isn't yet a result for that file",)}
+    else:
+      return {"code":-1,"args":(f"There isn't any uploaded file with that id!",)}

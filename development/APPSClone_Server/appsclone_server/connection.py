@@ -153,6 +153,7 @@ class Connection_APPS:
     uploadArgs  : dict
       Pairs of argumentName->argument for the upload
     """
+    returnValue = 0
     filename = Helper.getFileFromPath(filePath)
     self.logger.writeSubroutineLog(rinexUpload.format(file = filename),Logs.ROUTINE_STATUS.START)
     isValid  = self.__checkFileValidity(filePath)
@@ -176,7 +177,10 @@ class Connection_APPS:
       )
       self.logger.writeRegularLog(Logs.SEVERITY.INFO,uploadSuccess.format(file = filename))
       self.__addToIDQueue(fileResponseObject["id"],filePath,appsIDQueue)
+    else:
+      returnValue = -1
     self.logger.writeSubroutineLog(rinexUpload.format(file = filename),Logs.ROUTINE_STATUS.END)
+    return returnValue
 
   def __checkFileValidity(self,filePath):
     """Check file validity.
