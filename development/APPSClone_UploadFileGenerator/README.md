@@ -85,7 +85,7 @@ make testAllPrint
 ```
 ## Demo
 
-<img src="https://user-images.githubusercontent.com/61360702/177223351-5778b7ad-9336-4bf5-8fe6-5b03f3999a0a.gif" width="1920" height="1080" />
+<img src="https://user-images.githubusercontent.com/61360702/177223351-5778b7ad-9336-4bf5-8fe6-5b03f3999a0a.gif" width="1000" height="500" />
 
 
 ## Documentation
