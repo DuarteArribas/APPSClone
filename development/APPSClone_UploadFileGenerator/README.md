@@ -85,8 +85,7 @@ make testAllPrint
 ```
 ## Demo
 
-<img src="https://user-images.githubusercontent.com/61360702/177223351-5778b7ad-9336-4bf5-8fe6-5b03f3999a0a.gif" width="1000" height="500" />
-
+![APPSClone upload file generator demo](https://user-images.githubusercontent.com/61360702/177223633-9581f65f-6a6e-40a3-a6ad-e1ed74700f12.gif)
 
 ## Documentation
 
