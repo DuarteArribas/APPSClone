@@ -4,7 +4,15 @@ from appsclone_client.gui          import *
 from enum                          import Enum
 
 class UploadFileGenerator:
-  """"""
+  """Generator for upload files.
+
+  Attributes
+  ----------
+  INPUT_TYPES          : enum
+    The type of input that is being asked for
+  PICKUP_INPUT_OPTIONS : enum
+    The type of pick up input that is being asked for
+  """
   # == Attributes ==
   INPUT_TYPES          = Enum(
     "INPUT_TYPES","TEXT_INPUT PICK_INPUT"
@@ -14,6 +22,7 @@ class UploadFileGenerator:
   )
   # == Methods ==
   def __init__(self):
+    """Assign default arguments for upload file."""
     self.uploadFileName     = None
     self.downloadFromPath   = None
     self.uploadTopath       = None
@@ -30,6 +39,13 @@ class UploadFileGenerator:
     self.solution_period    = None
 
   def askUploadFileInputs(self,generateToDir):
+    """Ask the arguments for the upload file, saving them to the instance variables of the class.
+
+    Parameters
+    ----------
+    generateToDir : str
+      The directory to generate the upload file to
+    """
     currentInput       = UploadFileGenerator.INPUT_TYPES.TEXT_INPUT
     currentPickupInput = UploadFileGenerator.PICKUP_INPUT_OPTIONS.PROCESSING_MODE
     gui = GUI()
@@ -198,7 +214,17 @@ class UploadFileGenerator:
             break
 
   def generateUploadFile(self,generateToDir):
+    """Generate an upload file from the asked input.
+
+    Parameters
+    ----------
+    generateToDir : str
+      The directory to generate the upload file to
+    """
     with open(Helper.joinPathFile(generateToDir,self.uploadFileName),"w") as f:
       for arg in zip(self.__dict__.keys(),self.__dict__.values()):
         if arg[0] != "uploadFileName":
           f.write(f"{arg[1]}\n")
+
+# ✓    unit tested
+# ✓ feature tested

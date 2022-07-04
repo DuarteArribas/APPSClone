@@ -1,15 +1,21 @@
 #variables
-PYTHON          := python3
-PIP             := pip3
-MAIN_FILE       := main.py
+PYTHON         := python3
+PIP            := pip3
+MAIN_FILE      := main.py
 #directories
-testDir         := tests
+testDir        := tests
+outDir         := out
+uploadFilesDir := uploadFiles
+#paths
+uploadFiles    := $(outDir)/$(uploadFilesDir)
 
 run:
 	$(PYTHON) $(MAIN_FILE)
 
 setup:
 	$(PIP) install -r requirements.txt
+	@mkdir $(outDir)
+	@mkdir $(uploadFiles)
 
 test:
 	$(PYTHON) -m unittest $(testDir)/test_$(tf).py > /dev/null
