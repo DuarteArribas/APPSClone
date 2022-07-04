@@ -1,0 +1,13 @@
+~
+~
+1.1.1.1
+myUsername
+myPassword123
+defines.GIPSYData.PROCESSING_MODE_DEFAULT
+defines.OrbitClockProduct.ULTRA
+defines.GIPSYData.TROP_GMF
+False
+True
+defines.GIPSYData.ROOT_SINE
+7.5
+300
