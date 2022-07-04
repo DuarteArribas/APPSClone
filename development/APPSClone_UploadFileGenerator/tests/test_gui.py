@@ -1,6 +1,6 @@
-import appsclone_client
+import appsclone_uploadFileGenerator
 import unittest
-from appsclone_client.gui import *
+from appsclone_uploadFileGenerator.gui import *
 
 class TestGUI(unittest.TestCase):
   def test_print_title(self):

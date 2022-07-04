@@ -1,5 +1,5 @@
-from appsclone_client.uploadFileGenerator import *
-from appsclone_client.utils.config        import *
+from appsclone_uploadFileGenerator.uploadFileGenerator import *
+from appsclone_uploadFileGenerator.utils.config        import *
 
 def main():
   # read configuration from config file

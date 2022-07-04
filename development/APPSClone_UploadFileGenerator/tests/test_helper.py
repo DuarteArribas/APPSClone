@@ -1,6 +1,6 @@
-import appsclone_client
+import appsclone_uploadFileGenerator
 import unittest
-from appsclone_client.utils.helper import *
+from appsclone_uploadFileGenerator.utils.helper import *
 
 class TestHelper(unittest.TestCase):
   def test_validate_file_path(self):

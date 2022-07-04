@@ -1,6 +1,6 @@
-import appsclone_client
+import appsclone_uploadFileGenerator
 import unittest
-from appsclone_client.uploadFileGenerator import *
+from appsclone_uploadFileGenerator.uploadFileGenerator import *
 
 class TestUploadFileGenerator(unittest.TestCase):
   #def test_ask_inputs(self):

@@ -1,7 +1,7 @@
 import os.path
-from appsclone_client.utils.helper import *
-from appsclone_client.gui          import *
-from enum                          import Enum
+from appsclone_uploadFileGenerator.utils.helper import *
+from appsclone_uploadFileGenerator.gui          import *
+from enum                                       import Enum
 
 class UploadFileGenerator:
   """Generator for upload files.
