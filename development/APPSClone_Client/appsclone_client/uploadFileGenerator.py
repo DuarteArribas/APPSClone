@@ -1,3 +1,4 @@
+import os.path
 from appsclone_client.utils.helper import *
 from appsclone_client.gui          import *
 from enum                          import Enum
@@ -5,7 +6,6 @@ from enum                          import Enum
 class UploadFileGenerator:
   """"""
   # == Attributes ==
-  
   INPUT_TYPES          = Enum(
     "INPUT_TYPES","TEXT_INPUT PICK_INPUT"
   )
@@ -13,33 +13,40 @@ class UploadFileGenerator:
     "PICKUP_INPUT_OPTIONS","PROCESSING_MODE PRODUCT TROPOSPHERE_MODEL OCEAN_LOADING MODEL_TIDES ELEV_DEP_WEIGHTING ELEV_ANGLE_CUTOFF SOLUTION_PERIOD"
   )
   # == Methods ==
-  def __init__(self,generateToDir):
-    self.downloadFromPath     = None
-    self.uploadTopath         = None
-    self.ip                   = None
-    self.username             = None
-    self.password             = None
-    self.processing_mode      = None
-    self.product              = None
-    self.troposphere_model    = None
-    self.ocean_loading        = None
-    self.model_tides          = None
-    self.elev_dep_weighting   = None
-    self.elev_angle_cutoff    = None
-    self.solution_period      = None
-    self.generateToDir = generateToDir
+  def __init__(self):
+    self.uploadFileName     = None
+    self.downloadFromPath   = None
+    self.uploadTopath       = None
+    self.ip                 = None
+    self.username           = None
+    self.password           = None
+    self.processing_mode    = None
+    self.product            = None
+    self.troposphere_model  = None
+    self.ocean_loading      = None
+    self.model_tides        = None
+    self.elev_dep_weighting = None
+    self.elev_angle_cutoff  = None
+    self.solution_period    = None
 
-  def __askUploadFileInputs(self):
+  def askUploadFileInputs(self,generateToDir):
     currentInput       = UploadFileGenerator.INPUT_TYPES.TEXT_INPUT
     currentPickupInput = UploadFileGenerator.PICKUP_INPUT_OPTIONS.PROCESSING_MODE
     gui = GUI()
     while True:
       if currentInput == UploadFileGenerator.INPUT_TYPES.TEXT_INPUT:
+        self.uploadFileName   = ""
         self.downloadFromPath = ""
         self.uploadTopath     = ""
         self.ip               = ""
         self.username         = ""
         self.password         = ""
+        self.uploadFileName = gui.getInput("What is the name of the upload file?",None)
+        while os.path.isfile(Helper.joinPathFile(generateToDir,self.uploadFileName)):
+          self.uploadFileName = gui.getInput(
+            "What is the name of the upload file?",
+            "A file with that name already exists!"
+          )
         self.downloadFromPath = gui.getInput("What is the absolute path of the rinex file that you want to upload?",None)
         while not Helper.isValidAbsolutePathToFile(self.downloadFromPath):
           self.downloadFromPath = gui.getInput(
@@ -189,3 +196,9 @@ class UploadFileGenerator:
             break
           else:
             break
+
+  def generateUploadFile(self,generateToDir):
+    with open(Helper.joinPathFile(generateToDir,self.uploadFileName),"w") as f:
+      for arg in zip(self.__dict__.keys(),self.__dict__.values()):
+        if arg[0] != "uploadFileName":
+          f.write(f"{arg[1]}\n")
