@@ -33,6 +33,9 @@ class TestHelper(unittest.TestCase):
   def test_validate_file_path10(self):
     self.assertTrue(Helper.isValidAbsolutePathToFile("/arroz/massa//c"))
 
+  def test_validate_file_path11(self):
+    self.assertTrue(Helper.isValidAbsolutePathToFile("~/arroz/massa//c"))
+
   def test_validate_file_path_to_dir_(self):
     self.assertFalse(Helper.isValidAbsolutePathToDir(""))
 
@@ -62,6 +65,9 @@ class TestHelper(unittest.TestCase):
 
   def test_validate_file_path_to_dir_10(self):
     self.assertTrue(Helper.isValidAbsolutePathToDir("/arroz/massa//c"))
+
+  def test_validate_file_path_to_dir_11(self):
+    self.assertTrue(Helper.isValidAbsolutePathToDir("~/arroz/massa//c"))
 
 if __name__ == '__main__':
   unittest.main()

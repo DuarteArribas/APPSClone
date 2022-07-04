@@ -16,10 +16,10 @@ class Helper:
       True if the absolute path to a file is valid and False otherwise
     """
     if path:
-      startWithSlash = True if path[0] == "/" else False
-      endWithSlash   = True if path[-1] == "/" else False
-      validLength    = all([True if len(file) <= 255 else False for file in path.split("/")]) and len(path) < 4096
-      return startWithSlash and not endWithSlash and validLength
+      startWithSlashOrHome = True if path[0] == "/" or path[0] == "~" else False
+      endWithSlash         = True if path[-1] == "/" else False
+      validLength          = all([True if len(file) <= 255 else False for file in path.split("/")]) and len(path) < 4096
+      return startWithSlashOrHome and not endWithSlash and validLength
     else:
       return False
 
@@ -38,9 +38,9 @@ class Helper:
       True if the absolute path to a directory is valid and False otherwise
     """
     if path:
-      startWithSlash = True if path[0] == "/" else False
+      startWithSlashOrHome = True if path[0] == "/" or path[0] == "~" else False
       validLength    = all([True if len(file) <= 255 else False for file in path.split("/")]) and len(path) < 4096
-      return startWithSlash and validLength
+      return startWithSlashOrHome and validLength
     else:
       return False
 

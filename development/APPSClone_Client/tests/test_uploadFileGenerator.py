@@ -9,6 +9,8 @@ class TestUploadFileGenerator(unittest.TestCase):
     self.assertTrue(uploadFile.downloadFromPath)
     self.assertTrue(uploadFile.uploadTopath)
     self.assertTrue(uploadFile.ip)
+    for item in zip(uploadFile.__dict__.keys(),uploadFile.__dict__.values()):
+      print(item)
 
 if __name__ == '__main__':
   unittest.main()

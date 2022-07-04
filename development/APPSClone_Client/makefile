@@ -17,4 +17,10 @@ test:
 testPrint:
 	$(PYTHON) -m unittest $(testDir)/test_$(tf).py
 
-.PHONY: run setup test
+testAll:
+	$(PYTHON) -m unittest $(testDir)/test_* > /dev/null
+
+testAllPrint:
+	$(PYTHON) -m unittest $(testDir)/test_*
+
+.PHONY: run setup test testPrint testAll testAllPrint

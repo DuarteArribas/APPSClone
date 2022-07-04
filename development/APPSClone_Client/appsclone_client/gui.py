@@ -7,17 +7,34 @@ class GUI:
   # == Methods ==
   def __init__(self):
     """Initialize curses."""
-    self.stdscr = curses.initscr()
+    self.stdscr,self.greenBlack,self.whiteRed = self.initCurses()
+
+  def __del__(self):
+    """Destructor for curses windows."""
+    self.delCurses()
+
+  def initCurses(self):
+    """Initialize curses.
+
+    Returns
+    ----------
+    tuple(cursesObject,cursesColorPair,cursesColorPair)
+      An instance of curses.
+      A color pair of green and black.
+      A color pair of white and red.
+    """
+    stdscr = curses.initscr()
     curses.start_color()
     curses.cbreak()
     curses.echo(False)
     curses.use_default_colors()
     curses.init_pair(1,curses.COLOR_GREEN,-1)
     curses.init_pair(2,curses.COLOR_WHITE,curses.COLOR_RED)
-    self.greenBlack = curses.color_pair(1)   
-    self.whiteRed = curses.color_pair(2)
+    greenBlack = curses.color_pair(1)   
+    whiteRed   = curses.color_pair(2)
+    return stdscr,greenBlack,whiteRed
 
-  def __del__(self):
+  def delCurses(self):
     """Return the terminal to a santizied state."""
     curses.nocbreak()
     curses.echo()
@@ -36,6 +53,8 @@ class GUI:
     str
       The input stripped and without any new line characters
     """
+    self.delCurses()
+    self.stdscr,self.greenBlack,self.whiteRed = self.initCurses()
     self.stdscr.erase()
     self.__printTitle(title)
     self.__printCtrlG()
@@ -106,6 +125,7 @@ class GUI:
     str
       The input picked up
     """
+    self.delCurses()
     return pick(options,title,indicator = "->")[0]
 
 # ✓    unit tested
