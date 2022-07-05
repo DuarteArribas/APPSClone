@@ -1,8 +1,9 @@
+
 # APPSClone - Generate upload files
 
-This subproject corresponds to the generation of upload files to be used by the **APPSClone** server.
+This subproject corresponds to the generation of upload files used by the **APPSClone** server.
 
-An *upload file* is an ascii-based file that is sent to the server, so that it can, automatically, download Receiver Independent Exchange Format (**RINEX**) files from your server, process them and return the results back. It contains the following information:
+An *upload file* is an ASCII-based file that s an ASCII-based file sent to the server so that it can automatically download Receiver Independent Exchange Format (**RINEX**) files from your server, process them and return the results. It contains the following information:
 
 ```
 The 'path' of the RINEX file of your server (absolute or home path)
@@ -21,6 +22,7 @@ The 'solution period'
 ```
 
 This program generates upload files by asking the user for this information in an interactive graphical user interface (GUI).
+
 ## Features
 
 This project contains the following features:
@@ -34,7 +36,8 @@ This project contains the following features:
 Possible future implementations include:
 
 * Argument checking in case of elevation angle cutoff and solution period);
-* GUI improving with real GUI.
+* GUI improving with actual GUI.
+
 ## Installation
 
 Setup the project by installing its dependencies and creating initial directories:
@@ -53,7 +56,6 @@ To run the project, type:
 make run
 ```
 
-
 ## Testing
 
 To run a specific test, run:
@@ -71,7 +73,7 @@ To run a specific test and print the output, run:
 make testPrint tf=nameOfTestFile
 ```
 
-This is the recommended testing type for this project, because the GUI will only be shown if printing is active.
+This is the recommended testing type for this project because the GUI will only be shown if printing is active.
 
 To run all tests, run:
 
@@ -83,18 +85,22 @@ To run all tests and print the output, run:
 ```bash
 make testAllPrint
 ```
+
 ## Demo
+
+![APPSClone upload file generator demo](https://user-images.githubusercontent.com/61360702/177223633-9581f65f-6a6e-40a3-a6ad-e1ed74700f12.gif)
+
 ## Documentation
 
-The documentation for APPSClone upload file generator can be found [here](https://github.com/DuarteArribas/APPSClone/tree/main/development/APPSClone_UploadFileGenerator/docs).
+The documentation for the APPSClone upload file generator can be found [here](https://github.com/DuarteArribas/APPSClone/tree/main/development/APPSClone_UploadFileGenerator/docs).
 
 
 ## FAQ
 
 #### Why not write the upload file without this tool?
 
-You can! In fact, if automation is wished, it should be done without this tool. The problem is for people who don't know the exact upload arguments, e.g., and wish to use this tool as a means to not fail to write them.
+You can! In fact, if automation is wished, it should be done without this tool. The problem is for people who don't know the exact upload arguments, e.g. and wish to use this tool, not to fail to write them.
 
 ## Lessons Learned
 
-Working with [curses](https://docs.python.org/3/howto/curses.html) was a new experience and, while using [pick](https://pypi.org/project/pick/), resetting windows was a must. The tool revealed to be very important in not making mistakes when creating upload files for [APPSClone](https://github.com/DuarteArribas/APPSClone).
+Working with [curses](https://docs.python.org/3/howto/curses.html) was a new experienc, and, while using [pick](https://pypi.org/project/pick/), resetting windows were a must. The tool was revealed to be very important in not making mistakes when creating upload files for [APPSClone](https://github.com/DuarteArribas/APPSClone).
