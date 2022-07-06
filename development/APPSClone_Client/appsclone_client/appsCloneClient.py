@@ -8,40 +8,74 @@ class APPSCloneClient:
   
   Attributes
   ----------
-  MAX_TRIES               : int
-    The maximum tries a client can fail to connect
   NUMBER_BYTES_TO_RECEIVE : int
     The max number of bytes to receive
   """
   # == Attributes ==
   NUMBER_BYTES_TO_RECEIVE = 16384
-  def __init__(self,ip,port,username,password,toUploadDir,rinexDir,rinexFile):
-    """The ip and port that the client will connect to."""
-    self.ip                = ip
-    self.port              = port
-    self.username          = username
-    self.password          = password
-    self.toUploadDir       = toUploadDir
-    self.rinexDir          = rinexDir
-    self.rinexFile         = rinexFile
+  # == Methods ==
+  def __init__(self,ip,port,username,password,toUploadDir,rinexDir):
+    """Initialize a socket connection with the APPSClone server.
 
-  def runClient(self,option,args):
-    """Run the client."""
+    Parameters
+    ----------
+    ip          : str
+      The ip of the server
+    port        : int
+      The port of the server
+    username    : str
+      The username to connect to the server with
+    password    : str
+      The password of the user
+    toUploadDir : str
+      The directory of the server to upload with
+    rinexDir    : str
+      The directory where the rinex files must be put to be uploaded
+    """
+    self.ip          = ip
+    self.port        = int(port)
+    self.username    = username
+    self.password    = password
+    self.toUploadDir = toUploadDir
+    self.rinexDir    = rinexDir
+
+  def runClient(self,arguments):
+    """Run the client.
+    
+    Parameters
+    ----------
+    arguments : list
+      The list of command-line arguments. arguments[0] is the option
+    """
     with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as s:
       self.socket = s
       s.connect((self.ip,self.port))
-      self.__handleClientActions(option,args)
+      self.__handleClientActions(arguments[0],arguments[1:])
 
   def __handleClientActions(self,option,args):
-    """Handle client actions."""
-    if option == 1:
+    """Handle client actions.
+
+    Parameters
+    ----------
+    option : str
+      Upload | Download
+    args   : list
+      The upload arguments
+    """
+    if option == "u":
       # sshClient = SSHConnection(self.ip,self.port,self.username,self.password)
       # sshClient.putFile(Helper.joinPathFile(self.rinexDir,self.rinexFile),self.toUploadDir)
-      self.socket.send(pickle.dumps(OptionArgs(option,(self.rinexFile,))))
+      self.socket.send(pickle.dumps(OptionArgs(1,(args))))
       response = pickle.loads(self.socket.recv(APPSCloneClient.NUMBER_BYTES_TO_RECEIVE))
       response_code,response_args = response["code"],response["args"]
-      print(response_code)
-      print(response_args)
-    elif option == 2:
-      pass
-    
+      if response_code == -1:
+        print(response_args[0])
+    elif option == "d":
+      self.socket.send(pickle.dumps(OptionArgs(2,(args[0],))))
+      response = pickle.loads(self.socket.recv(APPSCloneClient.NUMBER_BYTES_TO_RECEIVE))
+      response_code,response_args = response["code"],response["args"]
+      if response_code == -1:
+        print(response_args[0])
+      else:
+        # sshClient = SSHConnection(self.ip,self.port,self.username,self.password)
+        # sshClient.putFile(Helper.joinPathFile(self.rinexDir,self.rinexFile),self.toUploadDir)

@@ -10,9 +10,14 @@ class ArgumentParser:
       description="The APPSClone client. Upload RINEX files to the server and download back the results!"
     )
     self.parser.add_argument(
-      "rinexFile",
+      "option",
       type = str,
-      help = "The name of the RINEX file to upload."
+      help = "upload | download."
+    )
+    self.parser.add_argument(
+      "rinexFileOrId",
+      type = str,
+      help = "The name of the RINEX file to upload or the id of the results to download."
     )
     self.parser.add_argument(
       "-m",
@@ -56,8 +61,13 @@ class ArgumentParser:
     )
     self.args = self.parser.parse_args()
   
-  def getOptions(self):
+  def getOptions(self,to_upload_rinex_dir):
     """Get the options for each argument.
+    
+    Parameters
+    ----------
+    to_upload_rinex_dir : str
+      The directory where the rinex files must be put to be uploaded
 
     Returns
     ----------
@@ -65,8 +75,19 @@ class ArgumentParser:
       The list of upload arguments for APPS. None means that the argument is not available
     """
     toUploadArgs = []
-    if os.path.exists(self.args.rinexFile):
-      toUploadArgs.append(self.args.rinexFile)
+    if self.args.option.lower() == "upload":
+      toUploadArgs.append("u")
+    elif self.args.option.lower() == "download":
+      toUploadArgs.append("d")
+    else:
+      toUploadArgs.append(None)
+    if self.args.option.lower() == "upload":
+      if os.path.exists(Helper.joinPathFile(to_upload_rinex_dir,self.args.rinexFileOrId)):
+        toUploadArgs.append(self.args.rinexFileOrId)
+      else:
+        toUploadArgs.append(None)
+    elif self.args.option.lower() == "download":
+      toUploadArgs.append(self.args.rinexFileOrId)
     else:
       toUploadArgs.append(None)
     if self.args.m and self.args.m > 0 and self.args.m < 3:

@@ -5,15 +5,27 @@ import sys
 
 def main():
   # read configuration from config file
-  cfg = Config("config/client.cfg")
-  ap  = ArgumentParser()
-  arguments = ap.getOptions()
+  cfg       = Config("config/client.cfg")
+  # initialize arguments
+  ap        = ArgumentParser()
+  # get command-line arguments
+  arguments = ap.getOptions(cfg.getLocalConfig("RINEX_DIR"))
+  # if the file doesn't exist, exit; if it exists, proceed to the connection
   if not arguments[0]:
-    print("The rinex file doesn't exist!")
+    print("The given option is invalid")
   else:
-    client = APPSCloneClient("localhost",12346,"arroz","massa","toUploadDir","rinexDir","rr1")
-    client.runClient(1,None)
-
+    if not arguments[1]:
+      print("Could not find the given RINEX file")
+    else:
+      client = APPSCloneClient(
+        cfg.getConnectionConfig("APPS_IP"),
+        cfg.getConnectionConfig("APPS_PORT"),
+        cfg.getConnectionConfig("USERNAME"),
+        cfg.getConnectionConfig("PASSWORD"),
+        cfg.getConnectionConfig("TO_UPLOAD_DIR"),
+        cfg.getLocalConfig("RINEX_DIR")
+      )
+      client.runClient(arguments)
 
 if __name__ == '__main__':
   main()

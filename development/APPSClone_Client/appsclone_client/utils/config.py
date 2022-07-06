@@ -16,5 +16,35 @@ class Config:
       print("Could not read config file. Exiting...")
       exit(-1)
 
+  def getConnectionConfig(self,key):
+    """Get a config from the CONNECTION section on the config file.
+
+    Parameters
+    ----------
+    key : str
+      The key corresponding to the wanted configuration
+
+    Returns
+    ----------
+    str
+      The corresponding configuration
+    """
+    return self.config.get("CONNECTION",key)
+
+  def getLocalConfig(self,key):
+    """Get a config from the LOCAL section on the config file.
+
+    Parameters
+    ----------
+    key : str
+      The key corresponding to the wanted configuration
+
+    Returns
+    ----------
+    str
+      The corresponding configuration
+    """
+    return self.config.get("LOCAL",key)
+
 # ✓    unit tested
 # ✓ feature tested
