@@ -2,7 +2,10 @@ import argparse
 import os.path
 
 class ArgumentParser:
+  """The parser for the command line arguments."""
+  # == Methods ==
   def __init__(self):
+    """Initalize the possible arguments."""
     self.parser = argparse.ArgumentParser(
       description="The APPSClone client. Upload RINEX files to the server and download back the results!"
     )
@@ -51,60 +54,67 @@ class ArgumentParser:
       type = int,
       help = "The solution period. An integer."
     )
+    self.args = self.parser.parse_args()
   
   def getOptions(self):
-    args = self.parser.parse_args()
+    """Get the options for each argument.
+
+    Returns
+    ----------
+    list
+      The list of upload arguments for APPS. None means that the argument is not available
+    """
     toUploadArgs = []
-    if os.path.exists(args.rinexFile):
-      toUploadArgs.append(args.rinexFile)
+    if os.path.exists(self.args.rinexFile):
+      toUploadArgs.append(self.args.rinexFile)
     else:
       toUploadArgs.append(None)
-    if args.m and args.m > 0 and args.m < 3:
-      if args.m == 1:
+    if self.args.m and self.args.m > 0 and self.args.m < 3:
+      if self.args.m == 1:
         toUploadArgs.append("defines.GIPSYData.STATIC")
-      elif args.m == 2:
+      elif self.args.m == 2:
         toUploadArgs.append("defines.GIPSYData.KINEMATIC")
     else:
       toUploadArgs.append(None)
-    if args.p and args.p > 0 and args.p < 6:
-      if args.p == 1:
+    if self.args.p and self.args.p > 0 and self.args.p < 6:
+      if self.args.p == 1:
         toUploadArgs.append("defines.OrbitClockProduct.REAL_TIME")
-      elif args.p == 2:
+      elif self.args.p == 2:
         toUploadArgs.append("defines.OrbitClockProduct.ULTRA")
-      elif args.p == 3:
+      elif self.args.p == 3:
         toUploadArgs.append("defines.OrbitClockProduct.RAPID")
-      elif args.p == 4:
+      elif self.args.p == 4:
         toUploadArgs.append("defines.OrbitClockProduct.FINAL")
-      elif args.p == 5:
+      elif self.args.p == 5:
         toUploadArgs.append("defines.GIPSYData.BEST")
     else:
       toUploadArgs.append(None)
-    if args.t and args.t > 0 and args.t < 4:
-      if args.t == 1:
+    if self.args.t and self.args.t > 0 and self.args.t < 4:
+      if self.args.t == 1:
         toUploadArgs.append("defines.GIPSYData.TROP_VMF1")
-      elif args.t == 2:
+      elif self.args.t == 2:
         toUploadArgs.append("defines.GIPSYData.TROP_GMF")
-      elif args.t == 3:
+      elif self.args.t == 3:
         toUploadArgs.append("defines.GIPSYData.TROP_GPT2")
     else:
       toUploadArgs.append(None)
-    toUploadArgs.append(args.ocean_loading)
-    toUploadArgs.append(args.model_tides)
-    if args.w and args.w > 0 and args.w < 4:
-      if args.w == 1:
+    toUploadArgs.append(self.args.ocean_loading)
+    toUploadArgs.append(self.args.model_tides)
+    if self.args.w and self.args.w > 0 and self.args.w < 4:
+      if self.args.w == 1:
         toUploadArgs.append("defines.GIPSYData.FLAT")
-      elif args.w == 2:
+      elif self.args.w == 2:
         toUploadArgs.append("defines.GIPSYData.SINE")
-      elif args.w == 3:
+      elif self.args.w == 3:
         toUploadArgs.append("defines.GIPSYData.ROOT_SINE")
     else:
       toUploadArgs.append(None)
-    if args.a:
-      toUploadArgs.append(args.a)
+    if self.args.a:
+      toUploadArgs.append(self.args.a)
     else:
       toUploadArgs.append(None)
-    if args.s:
-      toUploadArgs.append(args.s)
+    if self.args.s:
+      toUploadArgs.append(self.args.s)
     else:
       toUploadArgs.append(None)
     return toUploadArgs
