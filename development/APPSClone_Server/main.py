@@ -15,7 +15,7 @@ def main():
     logger            = logger
   )
   # run server
-  server = APPSCloneServer(cfg.getServerConfig("IP"),cfg.getServerConfig("PORT"))
+  server = APPSCloneServer(cfg.getServerConfig("IP"),cfg.getServerConfig("PORT"),conn)
   server.runServer()
 
 if __name__ == '__main__':

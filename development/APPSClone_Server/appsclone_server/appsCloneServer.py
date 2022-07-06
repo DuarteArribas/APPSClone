@@ -1,9 +1,10 @@
 import socket
 import pickle
-from appsclone_server.clientHandler import *
-from appsclone_server.utils.logs    import *
-from appsclone_server.constants     import *
-from _thread                        import *
+from appsclone_client.utils.optionArgs import *
+from appsclone_server.clientHandler    import *
+from appsclone_server.utils.logs       import *
+from appsclone_server.constants        import *
+from _thread                           import *
 
 class APPSCloneServer:
   """The APPSClone server for regular users, who wish to manually upload and retrieve to and from APPS.
@@ -18,23 +19,8 @@ class APPSCloneServer:
   # == Attributes ==
   MAX_TRIES               = 5
   NUMBER_BYTES_TO_RECEIVE = 16384
-  DEFAULT_UPLOAD_ARGS = {
-    "pressure"             : None,
-    "attitude"             : None,
-    "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
-    "access"               : defines.Data.ACCESS_DEFAULT,
-    "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
-    "product"              : defines.GIPSYData.PRODUCT_DEFAULT,
-    "troposphere_model"    : defines.GIPSYData.TROP_GMF,
-    "ocean_loading"        : True,
-    "model_tides"          : True,
-    "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
-    "elev_angle_cutoff"    : 7.5,
-    "solution_period"      : 300,
-    "generate_quaternions" : False
-  }
   # == Methods ==
-  def __init__(self,ip,port):
+  def __init__(self,ip,port,conn):
     """Server initialization.
     
     Parameters
@@ -46,7 +32,7 @@ class APPSCloneServer:
     """
     self.ip            = ip
     self.port          = int(port)
-    self.clientHandler = ClientHandler()
+    self.clientHandler = ClientHandler(conn)
 
   def runServer(self):
     """Run the server."""

@@ -3,6 +3,21 @@ import os.path
 
 class ClientHandler:
   """Handle clients' operations."""
+  DEFAULT_UPLOAD_ARGS = {
+    "pressure"             : None,
+    "attitude"             : None,
+    "email"                : defines.Data.EMAIL_NOTIFY_DEFAULT,
+    "access"               : defines.Data.ACCESS_DEFAULT,
+    "processing_mode"      : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
+    "product"              : defines.GIPSYData.PRODUCT_DEFAULT,
+    "troposphere_model"    : defines.GIPSYData.TROP_GMF,
+    "ocean_loading"        : True,
+    "model_tides"          : True,
+    "elev_dep_weighting"   : defines.GIPSYData.ROOT_SINE,
+    "elev_angle_cutoff"    : 7.5,
+    "solution_period"      : 300,
+    "generate_quaternions" : False
+  }
   def __init__(self,conn):
     """Initalize handler."""
     self.CLIENT_HANDLER_METHOD = {
@@ -33,9 +48,10 @@ class ClientHandler:
   
   def requestFileUpload(self,args):
     rinexPath = Helper.joinPathFile("in/to_upload_regular",args[0])
+    print(rinexPath)
     if os.path.exists(rinexPath):
       if os.path.getsize(rinexPath) / (1024 * 1024.0) < self.conn.getQuotaLeft():
-        error = conn.uploadFile(rinexPath,appsIDQueue,APPSCloneServer.DEFAULT_UPLOAD_ARGS)
+        error = self.conn.uploadFile(rinexPath,"queues/apps_id_queue",ClientHandler.DEFAULT_UPLOAD_ARGS)
         os.remove(rinexPath)
         os.remove(rinexPath+".gz")
         if error == -1:
@@ -49,10 +65,10 @@ class ClientHandler:
             newID = int(lines[0]) + 1
 
         with open("queues/idQueue","w") as f:
-          f.write(newID)
+          f.write(f"{newID}")
 
         with open("queues/regularUsersIDQueue","a") as f:
-          f.write(f"{newID} {Helper.getFileFromPath(rinexPath)}")
+          f.write(f"{newID} {Helper.getFileFromPath(rinexPath)}\n")
         return {"code":newID,"args":(f"OK",)}
       else:
         return {"code":-1,"args":(f"There isn't any quota available",)}

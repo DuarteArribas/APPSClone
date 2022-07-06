@@ -28,7 +28,7 @@ run:
 	$(PYTHON) $(MAIN_FILE)
 
 runSpecial:
-	$(PYTHON) $(MAIN_FILE)
+	$(PYTHON) $(MAIN_FILE_SPECIAL)
 
 setup:
 	$(PIP) install -r requirements.txt

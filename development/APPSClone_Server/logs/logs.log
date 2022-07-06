@@ -1,8 +1,20 @@
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
+2022-07-05 23:40:33.774644 (INFO)     | == Upload on file 'rr1' (START) ==
+2022-07-05 23:40:33.815552 (INFO)     | The file 'rr1' was validated and is being considered a valid file for uploading.
+2022-07-05 23:40:42.612926 (INFO)     | Successfully uploaded file 'rr1' to APPS.
+2022-07-05 23:40:42.619898 (INFO)     | Successfully added file 'in/to_upload_regular/rr1' to the apps ID queue.
+2022-07-05 23:40:42.625807 (INFO)     | == Upload on file 'rr1' (END) ==
+2022-07-05 23:42:04.398879 (INFO)     | == Upload on file 'rr1' (START) ==
+2022-07-05 23:42:04.437307 (INFO)     | The file 'rr1' was validated and is being considered a valid file for uploading.
+2022-07-05 23:42:12.459075 (INFO)     | Successfully uploaded file 'rr1' to APPS.
+2022-07-05 23:42:12.464607 (INFO)     | Successfully added file 'in/to_upload_regular/rr1' to the apps ID queue.
+2022-07-05 23:42:12.468197 (INFO)     | == Upload on file 'rr1' (END) ==
+2022-07-05 23:43:05.789406 (INFO)     | == Upload on file 'rr1' (START) ==
+2022-07-05 23:43:05.831097 (INFO)     | The file 'rr1' was validated and is being considered a valid file for uploading.
+2022-07-05 23:43:13.850242 (INFO)     | Successfully uploaded file 'rr1' to APPS.
+2022-07-05 23:43:13.857166 (INFO)     | Successfully added file 'in/to_upload_regular/rr1' to the apps ID queue.
+2022-07-05 23:43:13.862373 (INFO)     | == Upload on file 'rr1' (END) ==
+2022-07-05 23:44:24.371476 (INFO)     | == Upload on file 'rr1' (START) ==
+2022-07-05 23:44:24.447377 (INFO)     | The file 'rr1' was validated and is being considered a valid file for uploading.
+2022-07-05 23:44:37.664831 (INFO)     | Successfully uploaded file 'rr1' to APPS.
+2022-07-05 23:44:37.673959 (INFO)     | Successfully added file 'in/to_upload_regular/rr1' to the apps ID queue.
+2022-07-05 23:44:37.679261 (INFO)     | == Upload on file 'rr1' (END) ==
