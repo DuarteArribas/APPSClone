@@ -8,6 +8,9 @@ testDir        := tests
 run:
 	$(PYTHON) $(MAIN_FILE)
 
+runArgs:
+	$(PYTHON) $(MAIN_FILE) $(a)
+
 setup:
 	$(PIP) install -r requirements.txt
 
@@ -23,4 +26,4 @@ testAll:
 testAllPrint:
 	$(PYTHON) -m unittest $(testDir)/test_*
 
-.PHONY: run setup test testPrint testAll testAllPrint
+.PHONY: run runArgs setup test testPrint testArgs testArgsPrint testAll testAllPrint
