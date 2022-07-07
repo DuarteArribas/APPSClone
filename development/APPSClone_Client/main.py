@@ -23,7 +23,8 @@ def main():
         cfg.getConnectionConfig("USERNAME"),
         cfg.getConnectionConfig("PASSWORD"),
         cfg.getConnectionConfig("TO_UPLOAD_DIR"),
-        cfg.getLocalConfig("RINEX_DIR")
+        cfg.getLocalConfig("RINEX_DIR"),
+        cfg.getLocalConfig("ID_QUEUE")
       )
       client.runClient(arguments)
 

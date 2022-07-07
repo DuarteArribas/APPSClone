@@ -48,7 +48,6 @@ class ClientHandler:
   
   def requestFileUpload(self,args):
     rinexPath = Helper.joinPathFile("in/to_upload_regular",args[0])
-    print(rinexPath)
     if os.path.exists(rinexPath):
       if os.path.getsize(rinexPath) / (1024 * 1024.0) < self.conn.getQuotaLeft():
         error = self.conn.uploadFile(rinexPath,"queues/apps_id_queue",ClientHandler.DEFAULT_UPLOAD_ARGS)
