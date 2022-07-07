@@ -14,7 +14,7 @@ def main():
   if not arguments[0]:
     print("The given option is invalid")
   else:
-    if not arguments[1]:
+    if arguments[0] == "u" and not arguments[1]:
       print("Could not find the given RINEX file")
     else:
       client = APPSCloneClient(

@@ -67,7 +67,8 @@ class ClientHandler:
           f.write(f"{newID}")
 
         with open("queues/regularUsersIDQueue","a") as f:
-          f.write(f"{newID} {Helper.getFileFromPath(rinexPath)}\n")
+          uuid = self.conn.getFileData(error,"queues/apps_id_queue")["name"]
+          f.write(f"{newID} {uuid}\n")
         return {"code":newID,"args":(f"OK",)}
       else:
         return {"code":-1,"args":(f"There isn't any quota available",)}
@@ -79,13 +80,20 @@ class ClientHandler:
     with open("queues/regularUsersIDQueue","r") as f:
       lines = f.readlines()
       for line in lines:
-        if line[0] == args[0]:
-          fileToDownload = line[1]
+        if line.split(" ")[0] == args[0]:
+          fileToDownload = " ".join(line.split(" ")[1:]).split("\n")[0]
     if fileToDownload:
       for result in os.listdir("out/results_regular"):
         if result.split("_results")[0] == fileToDownload:
+          newLines = ""
+          with open("queues/regularUsersIDQueue","r") as f:
+            lines = f.readlines()
+            for line in lines:
+              if line.split(" ")[0] != args[0]:
+                newLines += line
+          with open("queues/regularUsersIDQueue","w") as f:
+            f.writelines(newLines)
           return {"code":0,"args":(f"Results downloaded successfully",)}
-        else:
-          return {"code":-1,"args":(f"There isn't yet a result for that file",)}
+      return {"code":-1,"args":(f"There isn't yet a result for that file",)}
     else:
       return {"code":-1,"args":(f"There isn't any uploaded file with that id!",)}

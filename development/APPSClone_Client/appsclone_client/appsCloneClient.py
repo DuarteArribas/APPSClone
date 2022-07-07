@@ -1,5 +1,6 @@
 import socket
 import pickle
+import os
 from appsclone_client.utils.sshConnection import *
 from appsclone_client.utils.optionArgs    import *
 
@@ -75,6 +76,7 @@ class APPSCloneClient:
         print(respondeArgs[0])
       else:
         self.__addIdToQueue(respondeCode)
+        os.remove(Helper.joinPathFile(self.rinexDir,args[0]))
     elif option == "d":
       for rinexId in self.__getAllIdsFromQueue():
         self.socket.send(pickle.dumps(OptionArgs(2,(rinexId,))))

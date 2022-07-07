@@ -177,6 +177,7 @@ class Connection_APPS:
       )
       self.logger.writeRegularLog(Logs.SEVERITY.INFO,uploadSuccess.format(file = filename))
       self.__addToIDQueue(fileResponseObject["id"],filePath,appsIDQueue)
+      returnValue = fileResponseObject["id"]
     else:
       returnValue = -1
     self.logger.writeSubroutineLog(rinexUpload.format(file = filename),Logs.ROUTINE_STATUS.END)

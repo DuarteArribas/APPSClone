@@ -18,3 +18,42 @@
 2022-07-05 23:44:37.664831 (INFO)     | Successfully uploaded file 'rr1' to APPS.
 2022-07-05 23:44:37.673959 (INFO)     | Successfully added file 'in/to_upload_regular/rr1' to the apps ID queue.
 2022-07-05 23:44:37.679261 (INFO)     | == Upload on file 'rr1' (END) ==
+2022-07-07 02:47:53.050862 (INFO)     | == Upload on file 'up1' (START) ==
+2022-07-07 02:47:53.100016 (INFO)     | The file 'up1' was validated and is being considered a valid file for uploading.
+2022-07-07 02:48:02.968943 (INFO)     | Successfully uploaded file 'up1' to APPS.
+2022-07-07 02:48:02.976204 (INFO)     | Successfully added file 'in/to_upload_regular/up1' to the apps ID queue.
+2022-07-07 02:48:02.980782 (INFO)     | == Upload on file 'up1' (END) ==
+2022-07-07 02:50:16.105380 (INFO)     | == Upload on file 'up1' (START) ==
+2022-07-07 02:50:16.140049 (INFO)     | The file 'up1' was validated and is being considered a valid file for uploading.
+2022-07-07 02:50:23.866648 (INFO)     | Successfully uploaded file 'up1' to APPS.
+2022-07-07 02:50:23.872411 (INFO)     | Successfully added file 'in/to_upload_regular/up1' to the apps ID queue.
+2022-07-07 02:50:23.876179 (INFO)     | == Upload on file 'up1' (END) ==
+2022-07-07 02:52:01.306801 (INFO)     | == Upload on file 'up1' (START) ==
+2022-07-07 02:52:01.352431 (INFO)     | The file 'up1' was validated and is being considered a valid file for uploading.
+2022-07-07 02:52:09.016993 (INFO)     | Successfully uploaded file 'up1' to APPS.
+2022-07-07 02:52:09.023979 (INFO)     | Successfully added file 'in/to_upload_regular/up1' to the apps ID queue.
+2022-07-07 02:52:09.028024 (INFO)     | == Upload on file 'up1' (END) ==
+2022-07-07 03:14:00.354607 (INFO)     | == Upload on file 'anUpload' (START) ==
+2022-07-07 03:14:00.397666 (INFO)     | The file 'anUpload' was validated and is being considered a valid file for uploading.
+2022-07-07 03:14:08.170497 (INFO)     | Successfully uploaded file 'anUpload' to APPS.
+2022-07-07 03:14:08.178344 (INFO)     | Successfully added file 'in/to_upload_regular/anUpload' to the apps ID queue.
+2022-07-07 03:14:08.183731 (INFO)     | == Upload on file 'anUpload' (END) ==
+2022-07-07 03:14:08.196248 (INFO)     | = Gathering data on uuid '7bd23f1e-fd9a-11ec-92fe-e0db5501adf2' (START) =
+2022-07-07 03:14:11.628708 (INFO)     | = Gathering data on uuid '7bd23f1e-fd9a-11ec-92fe-e0db5501adf2' (END) =
+2022-07-07 03:15:00.992948 (INFO)     | == Upload on file 'aSecondUpload' (START) ==
+2022-07-07 03:15:01.042582 (INFO)     | The file 'aSecondUpload' was validated and is being considered a valid file for uploading.
+2022-07-07 03:15:10.518260 (INFO)     | Successfully uploaded file 'aSecondUpload' to APPS.
+2022-07-07 03:15:10.525289 (INFO)     | Successfully added file 'in/to_upload_regular/aSecondUpload' to the apps ID queue.
+2022-07-07 03:15:10.530125 (INFO)     | == Upload on file 'aSecondUpload' (END) ==
+2022-07-07 03:15:10.542684 (INFO)     | = Gathering data on uuid 'a0faafb0-fd9a-11ec-a201-e0db5501adf2' (START) =
+2022-07-07 03:15:13.856867 (INFO)     | = Gathering data on uuid 'a0faafb0-fd9a-11ec-a201-e0db5501adf2' (END) =
+2022-07-07 03:16:11.478914 (INFO)     | == Upload on file 'anUpload' (START) ==
+2022-07-07 03:16:11.552557 (INFO)     | The file 'anUpload' was validated and is being considered a valid file for uploading.
+2022-07-07 03:16:24.346116 (INFO)     | Successfully uploaded file 'anUpload' to APPS.
+2022-07-07 03:16:24.354339 (INFO)     | Successfully added file 'in/to_upload_regular/anUpload' to the apps ID queue.
+2022-07-07 03:16:24.359986 (INFO)     | == Upload on file 'anUpload' (END) ==
+2022-07-07 03:16:24.374583 (INFO)     | = Gathering data on uuid 'ccfcd9a8-fd9a-11ec-86bf-e0db5501adf2' (START) =
+2022-07-07 03:16:27.778968 (INFO)     | = Gathering data on uuid 'ccfcd9a8-fd9a-11ec-86bf-e0db5501adf2' (END) =
+Establishing client interface to https://pppx.gdgps.net//api/user
+Establishing client interface to https://pppx.gdgps.net//api/user
+Establishing client interface to https://pppx.gdgps.net//api/user
