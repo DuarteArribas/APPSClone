@@ -11,5 +11,9 @@ class TestAppsCloneClient(unittest.TestCase):
     client = APPSCloneClient("localhost",11,"username","password","dir","dir","queues/idQueueTest")
     client._APPSCloneClient__removeIdFromQueue(15)
 
+  def test_get_all_ids_from_queue(self):
+    client = APPSCloneClient("localhost",11,"username","password","dir","dir","queues/idQueueTest")
+    print(client._APPSCloneClient__getAllIdsFromQueue())
+
 if __name__ == '__main__':
   unittest.main()

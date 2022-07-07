@@ -76,15 +76,16 @@ class APPSCloneClient:
       else:
         self.__addIdToQueue(respondeCode)
     elif option == "d":
-      self.socket.send(pickle.dumps(OptionArgs(2,(args[0],))))
-      response = pickle.loads(self.socket.recv(APPSCloneClient.NUMBER_BYTES_TO_RECEIVE))
-      respondeCode,respondeArgs = response["code"],response["args"]
-      if respondeCode == -1:
-        print(respondeArgs[0])
-      else:
-        pass
-        # sshClient = SSHConnection(self.ip,self.port,self.username,self.password)
-        # sshClient.putFile(Helper.joinPathFile(self.rinexDir,self.rinexFile),self.toUploadDir)
+      for rinexId in self.__getAllIdsFromQueue():
+        self.socket.send(pickle.dumps(OptionArgs(2,(rinexId,))))
+        response = pickle.loads(self.socket.recv(APPSCloneClient.NUMBER_BYTES_TO_RECEIVE))
+        respondeCode,respondeArgs = response["code"],response["args"]
+        if respondeCode == -1:
+          print(respondeArgs[0])
+        else:
+          self.__removeIdFromQueue(rinexId)
+          # sshClient = SSHConnection(self.ip,self.port,self.username,self.password)
+          # sshClient.putFile(Helper.joinPathFile(self.rinexDir,self.rinexFile),self.toUploadDir)
 
   def __addIdToQueue(self,rinexId):
     """Add the id of the upload to the queue of uploaded ids.
@@ -114,3 +115,15 @@ class APPSCloneClient:
 
     with open(self.idQueue,"w") as f:
       f.write(newQueue)
+
+  def __getAllIdsFromQueue(self):
+    """Get all ids from the queue of uploaded ids.
+
+    Returns
+    ----------
+    list
+      All ids of uploaded files in the queue
+    """
+    with open(self.idQueue,"r") as f:
+      lines = f.readlines()
+      return [line.split("\n")[0] for line in lines]

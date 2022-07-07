@@ -15,9 +15,9 @@ class ArgumentParser:
       help = "upload | download."
     )
     self.parser.add_argument(
-      "rinexFileOrId",
+      "-r",
       type = str,
-      help = "The name of the RINEX file to upload or the id of the results to download."
+      help = "The name of the RINEX file to upload."
     )
     self.parser.add_argument(
       "-m",
@@ -82,12 +82,10 @@ class ArgumentParser:
     else:
       toUploadArgs.append(None)
     if self.args.option.lower() == "upload":
-      if os.path.exists(Helper.joinPathFile(to_upload_rinex_dir,self.args.rinexFileOrId)):
-        toUploadArgs.append(self.args.rinexFileOrId)
+      if self.args.r and os.path.exists(Helper.joinPathFile(to_upload_rinex_dir,self.args.r)):
+        toUploadArgs.append(self.args.r)
       else:
         toUploadArgs.append(None)
-    elif self.args.option.lower() == "download":
-      toUploadArgs.append(self.args.rinexFileOrId)
     else:
       toUploadArgs.append(None)
     if self.args.m and self.args.m > 0 and self.args.m < 3:
