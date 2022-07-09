@@ -103,4 +103,4 @@ You can! In fact, if automation is wished, it should be done without this tool. 
 
 ## Lessons Learned
 
-Working with [curses](https://docs.python.org/3/howto/curses.html) was a new experienc, and, while using [pick](https://pypi.org/project/pick/), resetting windows were a must. The tool was revealed to be very important in not making mistakes when creating upload files for [APPSClone](https://github.com/DuarteArribas/APPSClone).
+Working with [curses](https://docs.python.org/3/howto/curses.html) was a new experience, and, while using [pick](https://pypi.org/project/pick/), resetting windows were a must. The tool was revealed to be very important in not making mistakes when creating upload files for [APPSClone](https://github.com/DuarteArribas/APPSClone).
