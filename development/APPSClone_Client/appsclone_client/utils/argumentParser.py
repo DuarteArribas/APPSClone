@@ -3,6 +3,7 @@ import os.path
 from appsclone_client.utils.helper import *
 from appsclone_client.utils.logs   import *
 from appsclone_client.constants    import *
+from gdgps_apps                    import defines
 
 class ArgumentParser:
   """The parser for the command line arguments."""
@@ -116,44 +117,44 @@ class ArgumentParser:
       toUploadArgs.append(None)
     if self.args.m and self.args.m > 0 and self.args.m < 3:
       if self.args.m == 1:
-        toUploadArgs.append("defines.GIPSYData.STATIC")
+        toUploadArgs.append(defines.GIPSYData.STATIC)
       elif self.args.m == 2:
-        toUploadArgs.append("defines.GIPSYData.KINEMATIC")
+        toUploadArgs.append(defines.GIPSYData.KINEMATIC)
     else:
       toUploadArgs.append(None)
     self.logger.writeRegularLog(
       Logs.SEVERITY.INFO,
-      upArg.format(arg = "processing mode",argValue = toUploadArgs[-1].rsplit(".",1)[1] if self.args.m else "default")
+      upArg.format(arg = "processing mode",argValue = toUploadArgs[-1] if self.args.m else "default")
     )
     if self.args.p and self.args.p > 0 and self.args.p < 6:
       if self.args.p == 1:
-        toUploadArgs.append("defines.OrbitClockProduct.REAL_TIME")
+        toUploadArgs.append(defines.OrbitClockProduct.REAL_TIME)
       elif self.args.p == 2:
-        toUploadArgs.append("defines.OrbitClockProduct.ULTRA")
+        toUploadArgs.append(defines.OrbitClockProduct.ULTRA)
       elif self.args.p == 3:
-        toUploadArgs.append("defines.OrbitClockProduct.RAPID")
+        toUploadArgs.append(defines.OrbitClockProduct.RAPID)
       elif self.args.p == 4:
-        toUploadArgs.append("defines.OrbitClockProduct.FINAL")
+        toUploadArgs.append(defines.OrbitClockProduct.FINAL)
       elif self.args.p == 5:
-        toUploadArgs.append("defines.GIPSYData.BEST")
+        toUploadArgs.append(defines.GIPSYData.BEST)
     else:
       toUploadArgs.append(None)
     self.logger.writeRegularLog(
       Logs.SEVERITY.INFO,
-      upArg.format(arg = "product",argValue = toUploadArgs[-1].rsplit(".",1)[1] if self.args.p else "default")
+      upArg.format(arg = "product",argValue = toUploadArgs[-1] if self.args.p else "default")
     )
     if self.args.t and self.args.t > 0 and self.args.t < 4:
       if self.args.t == 1:
-        toUploadArgs.append("defines.GIPSYData.TROP_VMF1")
+        toUploadArgs.append(defines.GIPSYData.TROP_VMF1)
       elif self.args.t == 2:
-        toUploadArgs.append("defines.GIPSYData.TROP_GMF")
+        toUploadArgs.append(defines.GIPSYData.TROP_GMF)
       elif self.args.t == 3:
-        toUploadArgs.append("defines.GIPSYData.TROP_GPT2")
+        toUploadArgs.append(defines.GIPSYData.TROP_GPT2)
     else:
       toUploadArgs.append(None)
     self.logger.writeRegularLog(
       Logs.SEVERITY.INFO,
-      upArg.format(arg = "troposphere model",argValue = toUploadArgs[-1].rsplit(".",1)[1] if self.args.t else "default")
+      upArg.format(arg = "troposphere model",argValue = toUploadArgs[-1] if self.args.t else "default")
     )
     toUploadArgs.append(self.args.ocean_loading)
     self.logger.writeRegularLog(
@@ -167,18 +168,18 @@ class ArgumentParser:
     )
     if self.args.w and self.args.w > 0 and self.args.w < 4:
       if self.args.w == 1:
-        toUploadArgs.append("defines.GIPSYData.FLAT")
+        toUploadArgs.append(defines.GIPSYData.FLAT)
       elif self.args.w == 2:
-        toUploadArgs.append("defines.GIPSYData.SINE")
+        toUploadArgs.append(defines.GIPSYData.SINE)
       elif self.args.w == 3:
-        toUploadArgs.append("defines.GIPSYData.ROOT_SINE")
+        toUploadArgs.append(defines.GIPSYData.ROOT_SINE)
     else:
       toUploadArgs.append(None)
     self.logger.writeRegularLog(
       Logs.SEVERITY.INFO,
-      upArg.format(arg = "elevation dep weighting",argValue = toUploadArgs[-1].rsplit(".",1)[1] if self.args.w else "default")
+      upArg.format(arg = "elevation dep weighting",argValue = toUploadArgs[-1] if self.args.w else "default")
     )
-    if self.args.a:
+    if self.args.a and (isinstance(self.args.a,int) or isinstance(self.args.a,float)):
       toUploadArgs.append(self.args.a)
     else:
       toUploadArgs.append(None)
@@ -186,7 +187,7 @@ class ArgumentParser:
       Logs.SEVERITY.INFO,
       upArg.format(arg = "elevation angle cutoff",argValue = self.args.a)
     )
-    if self.args.s:
+    if self.args.s and (isinstance(self.args.s,int)):
       toUploadArgs.append(self.args.s)
     else:
       toUploadArgs.append(None)

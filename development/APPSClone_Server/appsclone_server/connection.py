@@ -261,9 +261,15 @@ class Connection_APPS:
     if argName   == "pressure" or argName == "attitude":
       return arg == None or os.path.isfile(arg)
     elif argName == "elev_angle_cutoff":
-      return arg > Connection_APPS.DEFAULT_ARGS[argName][1][0] and arg < Connection_APPS.DEFAULT_ARGS[argName][1][1]
+      if not isinstance(arg,float) and not isinstance(arg,int):
+        return False
+      else:
+        return arg > Connection_APPS.DEFAULT_ARGS[argName][1][0] and arg < Connection_APPS.DEFAULT_ARGS[argName][1][1]
     elif argName == "solution_period":
-      return arg > Connection_APPS.DEFAULT_ARGS[argName][1]
+      if not isinstance(arg,int):
+        return False
+      else:
+        return arg > Connection_APPS.DEFAULT_ARGS[argName][1]
     else:
       return arg in Connection_APPS.DEFAULT_ARGS[argName][1]
 

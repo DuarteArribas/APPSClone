@@ -10,7 +10,7 @@ class TestAPPSCloneSpecialServer(unittest.TestCase):
     warnings.filterwarnings(action = "ignore",message = "unclosed",category = ResourceWarning)
     logger = Logs("logs/logTest.log",1000)
     conn   = Connection_APPS(settingsFile = "config/apps_settings",downloadDirectory = "out/results_test",logger = logger)
-    APPSCloneSpecialServer.handleAllFileStates(conn,"queues/apps_id_queue_test","out/results_test",logger)
+    APPSCloneSpecialServer.handleAllFileStates(conn,"queues/apps_id_queue_test","out/results_test","out/results_regular_test","rinex_queue_test",logger)
 
   def test_get_line_from_queue(self):
     self.assertEqual(APPSCloneSpecialServer._getResultLineFromRinexQueue("queues/rinex_queue_test","arroz_results.tar.gz"),"arroz ~ 138.68.128.183 22 aa bb\n")

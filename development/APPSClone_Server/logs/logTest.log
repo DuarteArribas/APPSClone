@@ -1,212 +1,3 @@
-2022-06-25 23:28:26.246683 (INFO)     | === Download of rinex files from source (START) ===
-2022-06-25 23:28:26.253925 (INFO)     | == Upload files check (START) ==
-2022-06-25 23:28:26.261578 (ERROR)    | '1' is not a file; thus, is invalid.
-2022-06-25 23:28:26.269151 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-25 23:28:26.277066 (INFO)     | The upload file 'uploadFile2' was validated.
-2022-06-25 23:28:26.284839 (INFO)     | The upload file 'uploadFile3' was validated.
-2022-06-25 23:28:26.292860 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 23:28:26.301283 (INFO)     | The upload file 'uploadFile5' was validated.
-2022-06-25 23:28:26.307307 (INFO)     | 5 valid upload files were found. Attempting to download corresponding rinex files.
-2022-06-25 23:28:26.311757 (INFO)     | == Upload files check (END) ==
-2022-06-25 23:28:26.316853 (ERROR)    | The file 'arroz' is already uploaded.
-2022-06-25 23:28:26.323272 (INFO)     | The upload file 'uploadFile1' was removed.
-2022-06-25 23:28:26.330811 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
-2022-06-25 23:28:27.053808 (INFO)     | Successfully established a connection to the server.
-2022-06-25 23:28:27.059008 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
-2022-06-25 23:28:29.146867 (ERROR)    | Successfully copied remote file 'massa' to local directory 'in/to_upload_test'.
-2022-06-25 23:28:29.154052 (INFO)     | The file 'massa' was added to the rinex queue.
-2022-06-25 23:28:29.161857 (INFO)     | The upload file 'uploadFile2' was removed.
-2022-06-25 23:28:29.170145 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
-2022-06-25 23:28:29.803040 (INFO)     | Successfully established a connection to the server.
-2022-06-25 23:28:29.809222 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
-2022-06-25 23:28:31.667252 (ERROR)    | Successfully copied remote file 'feijao' to local directory 'in/to_upload_test'.
-2022-06-25 23:28:31.674981 (INFO)     | The file 'feijao' was added to the rinex queue.
-2022-06-25 23:28:31.681865 (INFO)     | The upload file 'uploadFile3' was removed.
-2022-06-25 23:28:31.689872 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
-2022-06-25 23:28:32.317303 (INFO)     | Successfully established a connection to the server.
-2022-06-25 23:28:32.324245 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
-2022-06-25 23:28:34.402856 (ERROR)    | Successfully copied remote file 'grao' to local directory 'in/to_upload_test'.
-2022-06-25 23:28:34.409851 (INFO)     | The file 'grao' was added to the rinex queue.
-2022-06-25 23:28:34.416174 (INFO)     | The upload file 'uploadFile4' was removed.
-2022-06-25 23:28:34.423423 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
-2022-06-25 23:28:35.041632 (INFO)     | Successfully established a connection to the server.
-2022-06-25 23:28:35.047751 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
-2022-06-25 23:28:37.194984 (ERROR)    | Successfully copied remote file 'vinagre' to local directory 'in/to_upload_test'.
-2022-06-25 23:28:37.202353 (INFO)     | The file 'vinagre' was added to the rinex queue.
-2022-06-25 23:28:37.209456 (INFO)     | The upload file 'uploadFile5' was removed.
-2022-06-25 23:28:37.214691 (INFO)     | === Download of rinex files from source (END) ===
-2022-06-25 23:44:37.761369 (INFO)     | == Upload files check (START) ==
-2022-06-25 23:44:37.771414 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-25 23:44:37.779307 (INFO)     | The upload file 'uploadFile2' was validated.
-2022-06-25 23:44:37.787372 (INFO)     | The upload file 'uploadFile3' was validated.
-2022-06-25 23:44:37.795440 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 23:44:37.803338 (INFO)     | The upload file 'uploadFile5' was validated.
-2022-06-25 23:44:37.811320 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '138.68.128.256' is invalid.
-2022-06-25 23:44:37.816939 (INFO)     | 5 valid upload files were found. Attempting to download corresponding rinex files.
-2022-06-25 23:44:37.821795 (INFO)     | == Upload files check (END) ==
-2022-06-25 23:44:37.831353 (INFO)     | === State updates (START) ===
-2022-06-25 23:44:37.837966 (INFO)     | === State updates (END) ===
-2022-06-25 23:44:37.844233 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:44:37.852597 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-25 23:44:37.860976 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:44:37.870612 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:44:37.879765 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-25 23:44:37.888888 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-25 23:44:37.898098 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-25 23:44:37.906790 (INFO)     | The upload file 'uploadFile14' was validated.
-2022-06-25 23:44:37.915527 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:44:37.924615 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 23:44:37.934893 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 23:44:37.945137 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:44:37.955089 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 23:44:37.964878 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:44:37.975185 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 23:44:37.985593 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 23:44:38.007522 (INFO)     | === Upload of all Rinex (START) ===
-2022-06-25 23:45:08.805262 (INFO)     | == Upload files check (START) ==
-2022-06-25 23:45:08.817175 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-25 23:45:08.827097 (INFO)     | The upload file 'uploadFile2' was validated.
-2022-06-25 23:45:08.837040 (INFO)     | The upload file 'uploadFile3' was validated.
-2022-06-25 23:45:08.846412 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 23:45:08.855823 (INFO)     | The upload file 'uploadFile5' was validated.
-2022-06-25 23:45:08.864993 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '138.68.128.256' is invalid.
-2022-06-25 23:45:08.870923 (INFO)     | 5 valid upload files were found. Attempting to download corresponding rinex files.
-2022-06-25 23:45:08.875874 (INFO)     | == Upload files check (END) ==
-2022-06-25 23:45:08.885043 (INFO)     | === State updates (START) ===
-2022-06-25 23:45:08.891872 (INFO)     | === State updates (END) ===
-2022-06-25 23:45:08.898675 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:45:08.907692 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-25 23:45:08.916936 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:45:08.927024 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:45:08.936534 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-25 23:45:08.945870 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-25 23:45:08.955329 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-25 23:45:08.964551 (INFO)     | The upload file 'uploadFile14' was validated.
-2022-06-25 23:45:08.973495 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:45:08.983325 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 23:45:08.993675 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 23:45:09.004331 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:45:09.013882 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 23:45:09.023416 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:45:09.032895 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 23:45:09.042061 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 23:45:09.062356 (INFO)     | === Upload of all Rinex (START) ===
-2022-06-25 23:45:13.441373 (INFO)     | There is enough quota to upload file 'arroz'.
-2022-06-25 23:45:13.447371 (INFO)     | == Upload on file 'arroz' (START) ==
-2022-06-25 23:45:13.484008 (INFO)     | The file 'arroz' was validated and is being considered a valid file for uploading.
-2022-06-25 23:45:13.489647 (WARNING)  | The value 'arroz' is invalid for argument 'product'. Using default value 'B'.
-2022-06-25 23:45:21.708779 (INFO)     | Successfully uploaded file 'arroz' to APPS.
-2022-06-25 23:45:21.716097 (INFO)     | Successfully added file 'in/to_upload_test/arroz' to the apps ID queue.
-2022-06-25 23:45:21.720577 (INFO)     | == Upload on file 'arroz' (END) ==
-2022-06-25 23:45:21.728616 (INFO)     | The file 'arroz' was removed.
-2022-06-25 23:45:23.402625 (INFO)     | There is enough quota to upload file 'feijao'.
-2022-06-25 23:45:23.409145 (INFO)     | == Upload on file 'feijao' (START) ==
-2022-06-25 23:45:23.453446 (INFO)     | The file 'feijao' was validated and is being considered a valid file for uploading.
-2022-06-25 23:45:23.459867 (WARNING)  | The value 'arroz' is invalid for argument 'product'. Using default value 'B'.
-2022-06-25 23:45:31.354068 (INFO)     | Successfully uploaded file 'feijao' to APPS.
-2022-06-25 23:45:31.361708 (INFO)     | Successfully added file 'in/to_upload_test/feijao' to the apps ID queue.
-2022-06-25 23:45:31.366460 (INFO)     | == Upload on file 'feijao' (END) ==
-2022-06-25 23:45:31.374607 (INFO)     | The file 'feijao' was removed.
-2022-06-25 23:45:32.995922 (INFO)     | There is enough quota to upload file 'grao'.
-2022-06-25 23:45:33.001994 (INFO)     | == Upload on file 'grao' (START) ==
-2022-06-25 23:45:33.038493 (INFO)     | The file 'grao' was validated and is being considered a valid file for uploading.
-2022-06-25 23:45:33.044689 (WARNING)  | The value 'arroz' is invalid for argument 'product'. Using default value 'B'.
-2022-06-25 23:45:40.868649 (INFO)     | Successfully uploaded file 'grao' to APPS.
-2022-06-25 23:45:40.875894 (INFO)     | Successfully added file 'in/to_upload_test/grao' to the apps ID queue.
-2022-06-25 23:45:40.880783 (INFO)     | == Upload on file 'grao' (END) ==
-2022-06-25 23:45:40.888606 (INFO)     | The file 'grao' was removed.
-2022-06-25 23:45:42.529753 (INFO)     | There is enough quota to upload file 'massa'.
-2022-06-25 23:45:42.536116 (INFO)     | == Upload on file 'massa' (START) ==
-2022-06-25 23:45:42.574561 (INFO)     | The file 'massa' was validated and is being considered a valid file for uploading.
-2022-06-25 23:45:42.580955 (WARNING)  | The value 'arroz' is invalid for argument 'product'. Using default value 'B'.
-2022-06-25 23:45:50.477648 (INFO)     | Successfully uploaded file 'massa' to APPS.
-2022-06-25 23:45:50.486079 (INFO)     | Successfully added file 'in/to_upload_test/massa' to the apps ID queue.
-2022-06-25 23:45:50.491470 (INFO)     | == Upload on file 'massa' (END) ==
-2022-06-25 23:45:50.500720 (INFO)     | The file 'massa' was removed.
-2022-06-25 23:45:52.183467 (INFO)     | There is enough quota to upload file 'vinagre'.
-2022-06-25 23:45:52.190111 (INFO)     | == Upload on file 'vinagre' (START) ==
-2022-06-25 23:45:52.230399 (INFO)     | The file 'vinagre' was validated and is being considered a valid file for uploading.
-2022-06-25 23:45:52.237235 (WARNING)  | The value 'arroz' is invalid for argument 'product'. Using default value 'B'.
-2022-06-25 23:46:00.102914 (INFO)     | Successfully uploaded file 'vinagre' to APPS.
-2022-06-25 23:46:00.110293 (INFO)     | Successfully added file 'in/to_upload_test/vinagre' to the apps ID queue.
-2022-06-25 23:46:00.115042 (INFO)     | == Upload on file 'vinagre' (END) ==
-2022-06-25 23:46:00.123022 (INFO)     | The file 'vinagre' was removed.
-2022-06-25 23:46:00.128565 (INFO)     | === Upload of all Rinex (END) ===
-2022-06-25 23:47:17.662354 (INFO)     | == Upload files check (START) ==
-2022-06-25 23:47:17.672741 (INFO)     | The upload file 'uploadFile1' was validated.
-2022-06-25 23:47:17.681062 (INFO)     | The upload file 'uploadFile2' was validated.
-2022-06-25 23:47:17.689092 (INFO)     | The upload file 'uploadFile3' was validated.
-2022-06-25 23:47:17.697574 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 23:47:17.702886 (INFO)     | The upload file 'uploadFile5' was validated.
-2022-06-25 23:47:17.707954 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '138.68.128.256' is invalid.
-2022-06-25 23:47:17.710301 (INFO)     | 5 valid upload files were found. Attempting to download corresponding rinex files.
-2022-06-25 23:47:17.714721 (INFO)     | == Upload files check (END) ==
-2022-06-25 23:47:17.725313 (INFO)     | === State updates (START) ===
-2022-06-25 23:47:17.731840 (INFO)     | == State check (START) ==
-2022-06-25 23:47:17.735557 (INFO)     | = Gathering data on uuid '7ee28350-f4d8-11ec-a201-e0db5501adf2' (START) =
-2022-06-25 23:47:22.655812 (INFO)     | = Gathering data on uuid '7ee28350-f4d8-11ec-a201-e0db5501adf2' (END) =
-2022-06-25 23:47:22.662480 (INFO)     | Checking file 'arroz'.
-2022-06-25 23:47:22.668498 (INFO)     | The file 'arroz' is in the 'Verified' state.
-2022-06-25 23:47:22.674365 (INFO)     | = Approval on file 'arroz' (START) =
-2022-06-25 23:47:24.329346 (CRITICAL) | Something, that wasn't accounted for, happened. It's recommended to check what happened to file with uuid '7ee28350-f4d8-11ec-a201-e0db5501adf2'.
-2022-06-25 23:47:24.335188 (INFO)     | = Approval on file 'arroz' (END) =
-2022-06-25 23:47:24.340165 (INFO)     | == State check (START) ==
-2022-06-25 23:47:24.344817 (INFO)     | = Gathering data on uuid '84a31548-f4d8-11ec-8d6a-e0db5501adf2' (START) =
-2022-06-25 23:47:27.676221 (INFO)     | = Gathering data on uuid '84a31548-f4d8-11ec-8d6a-e0db5501adf2' (END) =
-2022-06-25 23:47:27.682245 (INFO)     | Checking file 'feijao'.
-2022-06-25 23:47:27.687034 (INFO)     | The file 'feijao' is in the 'Verified' state.
-2022-06-25 23:47:27.692069 (INFO)     | = Approval on file 'feijao' (START) =
-2022-06-25 23:47:28.840009 (CRITICAL) | Something, that wasn't accounted for, happened. It's recommended to check what happened to file with uuid '84a31548-f4d8-11ec-8d6a-e0db5501adf2'.
-2022-06-25 23:47:28.846274 (INFO)     | = Approval on file 'feijao' (END) =
-2022-06-25 23:47:28.851134 (INFO)     | == State check (START) ==
-2022-06-25 23:47:28.856106 (INFO)     | = Gathering data on uuid '8a4fe98a-f4d8-11ec-8d6a-e0db5501adf2' (START) =
-2022-06-25 23:47:32.205564 (INFO)     | = Gathering data on uuid '8a4fe98a-f4d8-11ec-8d6a-e0db5501adf2' (END) =
-2022-06-25 23:47:32.211975 (INFO)     | Checking file 'grao'.
-2022-06-25 23:47:32.217045 (INFO)     | The file 'grao' is in the 'Verified' state.
-2022-06-25 23:47:32.221860 (INFO)     | = Approval on file 'grao' (START) =
-2022-06-25 23:47:33.364923 (CRITICAL) | Something, that wasn't accounted for, happened. It's recommended to check what happened to file with uuid '8a4fe98a-f4d8-11ec-8d6a-e0db5501adf2'.
-2022-06-25 23:47:33.371605 (INFO)     | = Approval on file 'grao' (END) =
-2022-06-25 23:47:33.376996 (INFO)     | == State check (START) ==
-2022-06-25 23:47:33.381807 (INFO)     | = Gathering data on uuid '9008e174-f4d8-11ec-8d6a-e0db5501adf2' (START) =
-2022-06-25 23:47:36.814459 (INFO)     | = Gathering data on uuid '9008e174-f4d8-11ec-8d6a-e0db5501adf2' (END) =
-2022-06-25 23:47:36.821027 (INFO)     | Checking file 'massa'.
-2022-06-25 23:47:36.826060 (INFO)     | The file 'massa' is in the 'Verified' state.
-2022-06-25 23:47:36.830950 (INFO)     | = Approval on file 'massa' (START) =
-2022-06-25 23:47:37.953790 (CRITICAL) | Something, that wasn't accounted for, happened. It's recommended to check what happened to file with uuid '9008e174-f4d8-11ec-8d6a-e0db5501adf2'.
-2022-06-25 23:47:37.959836 (INFO)     | = Approval on file 'massa' (END) =
-2022-06-25 23:47:37.964851 (INFO)     | == State check (START) ==
-2022-06-25 23:47:37.970000 (INFO)     | = Gathering data on uuid '95c4fc9c-f4d8-11ec-a201-e0db5501adf2' (START) =
-2022-06-25 23:47:41.292301 (INFO)     | = Gathering data on uuid '95c4fc9c-f4d8-11ec-a201-e0db5501adf2' (END) =
-2022-06-25 23:47:41.298913 (INFO)     | Checking file 'vinagre'.
-2022-06-25 23:47:41.304946 (INFO)     | The file 'vinagre' is in the 'Verified' state.
-2022-06-25 23:47:41.311295 (INFO)     | = Approval on file 'vinagre' (START) =
-2022-06-25 23:47:42.452802 (CRITICAL) | Something, that wasn't accounted for, happened. It's recommended to check what happened to file with uuid '95c4fc9c-f4d8-11ec-a201-e0db5501adf2'.
-2022-06-25 23:47:42.458975 (INFO)     | = Approval on file 'vinagre' (END) =
-2022-06-25 23:47:42.464147 (INFO)     | === State updates (END) ===
-2022-06-25 23:47:42.472649 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:47:42.481432 (INFO)     | The upload file 'uploadFile8' was validated.
-2022-06-25 23:47:42.486336 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:47:42.491887 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:47:42.497422 (INFO)     | The upload file 'uploadFile11' was validated.
-2022-06-25 23:47:42.503138 (INFO)     | The upload file 'uploadFile12' was validated.
-2022-06-25 23:47:42.508885 (INFO)     | The upload file 'uploadFile13' was validated.
-2022-06-25 23:47:42.514110 (INFO)     | The upload file 'uploadFile14' was validated.
-2022-06-25 23:47:42.519604 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:47:42.526092 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip' is invalid.
-2022-06-25 23:47:42.531262 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 23:47:42.535826 (ERROR)    | The upload file 'uploadFile3' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:47:42.541607 (INFO)     | The upload file 'uploadFile4' was validated.
-2022-06-25 23:47:42.549901 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
-2022-06-25 23:47:42.558089 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333' is invalid.
-2022-06-25 23:47:42.563182 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256' is invalid.
-2022-06-25 23:47:42.576874 (INFO)     | === Upload of all Rinex (START) ===
-2022-06-25 23:47:47.443817 (INFO)     | There is enough quota to upload file 'arroz'.
-2022-06-25 23:47:47.450097 (INFO)     | == Upload on file 'arroz' (START) ==
-2022-06-25 23:47:47.483519 (INFO)     | The file 'arroz' was validated and is being considered a valid file for uploading.
-2022-06-25 23:47:47.489293 (WARNING)  | The value 'arroz' is invalid for argument 'product'. Using default value 'B'.
-2022-06-25 23:47:55.367844 (INFO)     | Successfully uploaded file 'arroz' to APPS.
-2022-06-25 23:47:55.374506 (INFO)     | Successfully added file 'in/to_upload_test/arroz' to the apps ID queue.
-2022-06-25 23:47:55.379268 (INFO)     | == Upload on file 'arroz' (END) ==
 2022-06-25 23:47:55.386005 (INFO)     | The file 'arroz' was removed.
 2022-06-25 23:47:58.670755 (INFO)     | There is enough quota to upload file 'feijao'.
 2022-06-25 23:47:58.676886 (INFO)     | == Upload on file 'feijao' (START) ==
@@ -904,3 +695,305 @@
 2022-06-30 15:33:33.557276 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
 2022-06-30 15:33:36.376565 (ERROR)    | Could not establish a connection to the server, because the user 'root' is not valid or the password is incorrect.
 2022-06-30 15:33:36.384025 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:45:43.322851 (INFO)     | == Upload files check (START) ==
+2022-07-09 22:45:43.337716 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-07-09 22:45:43.350995 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-07-09 22:45:43.363799 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-07-09 22:45:43.376301 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-07-09 22:45:43.390117 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-07-09 22:45:43.403259 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '138.68.128.256
+2022-07-09 22:45:43.417977 (INFO)     | 5 valid upload files were found. Attempting to download corresponding rinex files.
+2022-07-09 22:45:43.424657 (INFO)     | == Upload files check (END) ==
+2022-07-09 22:45:43.447239 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:45:43.461456 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-07-09 22:45:43.473591 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:45:43.486078 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:45:43.498548 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-07-09 22:45:43.511014 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-07-09 22:45:43.523547 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-07-09 22:45:43.535559 (INFO)     | The upload file 'uploadFile14' was validated.
+2022-07-09 22:45:43.547131 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:45:43.556148 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip
+2022-07-09 22:45:43.575019 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256
+2022-07-09 22:45:43.593513 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-07-09 22:45:43.606111 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-07-09 22:45:43.618835 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:45:43.631806 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333
+2022-07-09 22:45:43.650606 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256
+2022-07-09 22:45:43.690316 (INFO)     | Successfully added file 'arroz' to the apps ID queue.
+2022-07-09 22:45:43.706522 (INFO)     | == Connection test (START) ==
+2022-07-09 22:45:45.390391 (INFO)     | The connection with APPS was successful.
+2022-07-09 22:45:45.398750 (INFO)     | == Connection test (END) ==
+2022-07-09 22:45:45.417079 (ERROR)    | The file 'file' is invalid - The version 'None' of the rinex file is invalid (Supported versions are 2.11, 3.02).
+2022-07-09 22:45:45.466989 (INFO)     | The file 'CVTY2720.21D' was validated and is being considered a valid file for uploading.
+2022-07-09 22:45:48.683010 (INFO)     | Successfully removed file 'arroz' from the apps ID queue.
+2022-07-09 22:45:48.709533 (WARNING)  | The value 'arroz' is invalid for argument 'access'. Using default value 'X'.
+2022-07-09 22:45:48.724800 (WARNING)  | The value '' is invalid for argument 'pressure'. Using default value 'None'.
+2022-07-09 22:45:48.734040 (WARNING)  | The value '' is invalid for argument 'attitude'. Using default value 'None'.
+2022-07-09 22:45:48.742242 (WARNING)  | The value '' is invalid for argument 'email'. Using default value 'None'.
+2022-07-09 22:45:48.750749 (WARNING)  | The value '' is invalid for argument 'access'. Using default value 'X'.
+2022-07-09 22:45:48.759039 (WARNING)  | The value '' is invalid for argument 'processing_mode'. Using default value 'S'.
+2022-07-09 22:45:48.767098 (WARNING)  | The value '' is invalid for argument 'product'. Using default value 'B'.
+2022-07-09 22:45:48.775336 (WARNING)  | The value '' is invalid for argument 'troposphere_model'. Using default value 'GMF'.
+2022-07-09 22:45:48.783981 (WARNING)  | The value '' is invalid for argument 'ocean_loading'. Using default value 'True'.
+2022-07-09 22:45:48.792456 (WARNING)  | The value '' is invalid for argument 'model_tides'. Using default value 'True'.
+2022-07-09 22:45:48.801470 (WARNING)  | The value '' is invalid for argument 'elev_dep_weighting'. Using default value 'SQRTSIN'.
+2022-07-09 22:45:48.810502 (WARNING)  | The value '' is invalid for argument 'elev_angle_cutoff'. Using default value '7.5'.
+2022-07-09 22:45:48.820523 (WARNING)  | The value '' is invalid for argument 'solution_period'. Using default value '300'.
+2022-07-09 22:45:48.829365 (WARNING)  | The value '' is invalid for argument 'generate_quaternions'. Using default value 'False'.
+2022-07-09 22:45:48.843785 (WARNING)  | The value '' is invalid for argument 'pressure'. Using default value 'None'.
+2022-07-09 22:45:48.852790 (WARNING)  | The value '' is invalid for argument 'attitude'. Using default value 'None'.
+2022-07-09 22:45:48.861397 (WARNING)  | The value '' is invalid for argument 'email'. Using default value 'None'.
+2022-07-09 22:45:48.870111 (WARNING)  | The value '' is invalid for argument 'access'. Using default value 'X'.
+2022-07-09 22:45:48.878744 (WARNING)  | The value '' is invalid for argument 'processing_mode'. Using default value 'S'.
+2022-07-09 22:45:48.887227 (WARNING)  | The value '' is invalid for argument 'product'. Using default value 'B'.
+2022-07-09 22:45:48.896059 (WARNING)  | The value '' is invalid for argument 'ocean_loading'. Using default value 'True'.
+2022-07-09 22:45:48.904447 (WARNING)  | The value '' is invalid for argument 'model_tides'. Using default value 'True'.
+2022-07-09 22:45:48.913086 (WARNING)  | The value '' is invalid for argument 'elev_dep_weighting'. Using default value 'SQRTSIN'.
+2022-07-09 22:45:48.922395 (WARNING)  | The value '' is invalid for argument 'elev_angle_cutoff'. Using default value '7.5'.
+2022-07-09 22:45:48.930549 (WARNING)  | The value '' is invalid for argument 'solution_period'. Using default value '300'.
+2022-07-09 22:45:48.938678 (WARNING)  | The value '' is invalid for argument 'generate_quaternions'. Using default value 'False'.
+2022-07-09 22:45:48.979342 (INFO)     | info lol
+2022-07-09 22:45:48.987362 (WARNING)  | warning lol
+2022-07-09 22:45:48.995578 (ERROR)    | error lol
+2022-07-09 22:45:49.003819 (CRITICAL) | critical lol
+2022-07-09 22:45:52.015105 (INFO)     | after 3 seconds
+2022-07-09 22:45:52.024024 (INFO)     | regularInfo.
+2022-07-09 22:45:52.032190 (INFO)     | === infoRoutineStart (START) ===
+2022-07-09 22:45:52.040563 (INFO)     | === infoRoutineEnd (END) ===
+2022-07-09 22:45:52.048877 (INFO)     | == infoSubroutineStart (START) ==
+2022-07-09 22:45:52.057319 (INFO)     | = infoSubsubroutineEnd (END) =
+2022-07-09 22:45:52.067805 (INFO)     | = infoSubsubroutineStart (START) =
+2022-07-09 22:45:52.850406 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:45:53.437654 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:45:53.446652 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:45:55.123566 (INFO)     | Successfully copied remote file 'arroz' to local directory 'in/to_upload_test'.
+2022-07-09 22:45:55.132522 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:45:55.822756 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:45:55.831484 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:45:56.734205 (ERROR)    | Could not copy remote file 'arro' to local directory 'in/to_upload_test'.
+2022-07-09 22:45:56.743026 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:45:57.398225 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:45:57.407423 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:45:58.567372 (INFO)     | Successfully copied local file 'file' to remote directory '~'.
+2022-07-09 22:45:58.577265 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:45:59.151362 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:45:59.160117 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:46:00.033216 (ERROR)    | Could not copy local file 'someFile' to remote directory '~'.
+2022-07-09 22:46:00.042681 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:46:00.646075 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:46:00.654497 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:46:00.662432 (INFO)     | == Connect to '138.68.128.181:22', with user 'root' (START) ==
+2022-07-09 22:46:01.284072 (ERROR)    | Could not establish a connection to the server, because the ip '138.68.128.181' is not valid or is unavailable.
+2022-07-09 22:46:01.292928 (INFO)     | == Connect to '138.68.128.181:22', with user 'root' (END) ==
+2022-07-09 22:46:01.301095 (INFO)     | == Connect to '138.68.128.182:21', with user 'root' (START) ==
+2022-07-09 22:46:01.377861 (ERROR)    | Could not establish a connection to the server, because the port '21' is not valid or is unavailable.
+2022-07-09 22:46:01.386617 (INFO)     | == Connect to '138.68.128.182:21', with user 'root' (END) ==
+2022-07-09 22:46:01.395008 (INFO)     | == Connect to '138.68.128.182:22', with user 'root2' (START) ==
+2022-07-09 22:46:05.779113 (ERROR)    | Could not establish a connection to the server, because the user 'root2' is not valid, or the password is incorrect.
+2022-07-09 22:46:05.788022 (INFO)     | == Connect to '138.68.128.182:22', with user 'root2' (END) ==
+2022-07-09 22:46:05.795989 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:46:08.638532 (ERROR)    | Could not establish a connection to the server, because the user 'root' is not valid, or the password is incorrect.
+2022-07-09 22:46:08.647635 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:48:00.814710 (INFO)     | == Upload files check (START) ==
+2022-07-09 22:48:00.828753 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-07-09 22:48:00.840135 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-07-09 22:48:00.847675 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-07-09 22:48:00.859033 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-07-09 22:48:00.866342 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-07-09 22:48:00.873355 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '138.68.128.256
+2022-07-09 22:48:00.878169 (INFO)     | 5 valid upload files were found. Attempting to download corresponding rinex files.
+2022-07-09 22:48:00.884857 (INFO)     | == Upload files check (END) ==
+2022-07-09 22:48:00.903179 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:48:00.913433 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-07-09 22:48:00.921946 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:48:00.932493 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:48:00.939612 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-07-09 22:48:00.946393 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-07-09 22:48:00.953998 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-07-09 22:48:00.961446 (INFO)     | The upload file 'uploadFile14' was validated.
+2022-07-09 22:48:00.969653 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:48:00.980071 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip
+2022-07-09 22:48:00.988008 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256
+2022-07-09 22:48:01.004675 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-07-09 22:48:01.012094 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-07-09 22:48:01.019764 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:48:01.027123 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333
+2022-07-09 22:48:01.035519 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256
+2022-07-09 22:48:01.059246 (INFO)     | Successfully added file 'arroz' to the apps ID queue.
+2022-07-09 22:48:01.072138 (INFO)     | == Connection test (START) ==
+2022-07-09 22:48:02.739176 (INFO)     | The connection with APPS was successful.
+2022-07-09 22:48:02.747482 (INFO)     | == Connection test (END) ==
+2022-07-09 22:48:02.762845 (ERROR)    | The file 'file' is invalid - The version 'None' of the rinex file is invalid (Supported versions are 2.11, 3.02).
+2022-07-09 22:48:02.811387 (INFO)     | The file 'CVTY2720.21D' was validated and is being considered a valid file for uploading.
+2022-07-09 22:48:06.003117 (INFO)     | Successfully removed file 'arroz' from the apps ID queue.
+2022-07-09 22:48:06.023750 (WARNING)  | The value 'arroz' is invalid for argument 'access'. Using default value 'X'.
+2022-07-09 22:48:06.036064 (WARNING)  | The value '' is invalid for argument 'pressure'. Using default value 'None'.
+2022-07-09 22:48:06.043984 (WARNING)  | The value '' is invalid for argument 'attitude'. Using default value 'None'.
+2022-07-09 22:48:06.051399 (WARNING)  | The value '' is invalid for argument 'email'. Using default value 'None'.
+2022-07-09 22:48:06.058920 (WARNING)  | The value '' is invalid for argument 'access'. Using default value 'X'.
+2022-07-09 22:48:06.066296 (WARNING)  | The value '' is invalid for argument 'processing_mode'. Using default value 'S'.
+2022-07-09 22:48:06.073956 (WARNING)  | The value '' is invalid for argument 'product'. Using default value 'B'.
+2022-07-09 22:48:06.082388 (WARNING)  | The value '' is invalid for argument 'troposphere_model'. Using default value 'GMF'.
+2022-07-09 22:48:06.090410 (WARNING)  | The value '' is invalid for argument 'ocean_loading'. Using default value 'True'.
+2022-07-09 22:48:06.098594 (WARNING)  | The value '' is invalid for argument 'model_tides'. Using default value 'True'.
+2022-07-09 22:48:06.106202 (WARNING)  | The value '' is invalid for argument 'elev_dep_weighting'. Using default value 'SQRTSIN'.
+2022-07-09 22:48:06.113380 (WARNING)  | The value '' is invalid for argument 'elev_angle_cutoff'. Using default value '7.5'.
+2022-07-09 22:48:06.121622 (WARNING)  | The value '' is invalid for argument 'solution_period'. Using default value '300'.
+2022-07-09 22:48:06.129496 (WARNING)  | The value '' is invalid for argument 'generate_quaternions'. Using default value 'False'.
+2022-07-09 22:48:06.141544 (WARNING)  | The value '' is invalid for argument 'pressure'. Using default value 'None'.
+2022-07-09 22:48:06.148673 (WARNING)  | The value '' is invalid for argument 'attitude'. Using default value 'None'.
+2022-07-09 22:48:06.155740 (WARNING)  | The value '' is invalid for argument 'email'. Using default value 'None'.
+2022-07-09 22:48:06.163012 (WARNING)  | The value '' is invalid for argument 'access'. Using default value 'X'.
+2022-07-09 22:48:06.170832 (WARNING)  | The value '' is invalid for argument 'processing_mode'. Using default value 'S'.
+2022-07-09 22:48:06.178270 (WARNING)  | The value '' is invalid for argument 'product'. Using default value 'B'.
+2022-07-09 22:48:06.186122 (WARNING)  | The value '' is invalid for argument 'ocean_loading'. Using default value 'True'.
+2022-07-09 22:48:06.193324 (WARNING)  | The value '' is invalid for argument 'model_tides'. Using default value 'True'.
+2022-07-09 22:48:06.201004 (WARNING)  | The value '' is invalid for argument 'elev_dep_weighting'. Using default value 'SQRTSIN'.
+2022-07-09 22:48:06.208109 (WARNING)  | The value '' is invalid for argument 'elev_angle_cutoff'. Using default value '7.5'.
+2022-07-09 22:48:06.215010 (WARNING)  | The value '' is invalid for argument 'solution_period'. Using default value '300'.
+2022-07-09 22:48:06.222682 (WARNING)  | The value '' is invalid for argument 'generate_quaternions'. Using default value 'False'.
+2022-07-09 22:48:06.255454 (INFO)     | info lol
+2022-07-09 22:48:06.262995 (WARNING)  | warning lol
+2022-07-09 22:48:06.270288 (ERROR)    | error lol
+2022-07-09 22:48:06.278533 (CRITICAL) | critical lol
+2022-07-09 22:48:09.288907 (INFO)     | after 3 seconds
+2022-07-09 22:48:09.296836 (INFO)     | regularInfo.
+2022-07-09 22:48:09.303940 (INFO)     | === infoRoutineStart (START) ===
+2022-07-09 22:48:09.311081 (INFO)     | === infoRoutineEnd (END) ===
+2022-07-09 22:48:09.318172 (INFO)     | == infoSubroutineStart (START) ==
+2022-07-09 22:48:09.325389 (INFO)     | = infoSubsubroutineEnd (END) =
+2022-07-09 22:48:09.332964 (INFO)     | = infoSubsubroutineStart (START) =
+2022-07-09 22:48:09.970287 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:48:10.618556 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:48:10.626212 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:48:12.380813 (INFO)     | Successfully copied remote file 'arroz' to local directory 'in/to_upload_test'.
+2022-07-09 22:48:12.388855 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:48:13.057070 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:48:13.064810 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:48:14.117283 (ERROR)    | Could not copy remote file 'arro' to local directory 'in/to_upload_test'.
+2022-07-09 22:48:14.124808 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:48:14.778054 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:48:14.785905 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:48:15.920912 (INFO)     | Successfully copied local file 'file' to remote directory '~'.
+2022-07-09 22:48:15.928739 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:48:16.546700 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:48:16.554351 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:48:17.468566 (ERROR)    | Could not copy local file 'someFile' to remote directory '~'.
+2022-07-09 22:48:17.476251 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:48:18.068439 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:48:18.076121 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:48:18.083677 (INFO)     | == Connect to '138.68.128.181:22', with user 'root' (START) ==
+2022-07-09 22:48:18.793072 (ERROR)    | Could not establish a connection to the server, because the ip '138.68.128.181' is not valid or is unavailable.
+2022-07-09 22:48:18.801177 (INFO)     | == Connect to '138.68.128.181:22', with user 'root' (END) ==
+2022-07-09 22:48:18.808282 (INFO)     | == Connect to '138.68.128.182:21', with user 'root' (START) ==
+2022-07-09 22:48:18.882726 (ERROR)    | Could not establish a connection to the server, because the port '21' is not valid or is unavailable.
+2022-07-09 22:48:18.890540 (INFO)     | == Connect to '138.68.128.182:21', with user 'root' (END) ==
+2022-07-09 22:48:18.897783 (INFO)     | == Connect to '138.68.128.182:22', with user 'root2' (START) ==
+2022-07-09 22:48:21.384321 (ERROR)    | Could not establish a connection to the server, because the user 'root2' is not valid, or the password is incorrect.
+2022-07-09 22:48:21.392222 (INFO)     | == Connect to '138.68.128.182:22', with user 'root2' (END) ==
+2022-07-09 22:48:21.399675 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:48:24.275193 (ERROR)    | Could not establish a connection to the server, because the user 'root' is not valid, or the password is incorrect.
+2022-07-09 22:48:24.283549 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:49:13.893606 (INFO)     | == Upload files check (START) ==
+2022-07-09 22:49:13.906402 (INFO)     | The upload file 'uploadFile1' was validated.
+2022-07-09 22:49:13.917312 (INFO)     | The upload file 'uploadFile2' was validated.
+2022-07-09 22:49:13.924381 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-07-09 22:49:13.935565 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-07-09 22:49:13.946149 (INFO)     | The upload file 'uploadFile5' was validated.
+2022-07-09 22:49:13.956465 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '138.68.128.256
+2022-07-09 22:49:13.970159 (INFO)     | 5 valid upload files were found. Attempting to download corresponding rinex files.
+2022-07-09 22:49:13.976899 (INFO)     | == Upload files check (END) ==
+2022-07-09 22:49:13.990171 (INFO)     | === State updates (START) ===
+2022-07-09 22:49:13.998611 (INFO)     | === State updates (END) ===
+2022-07-09 22:49:14.008000 (ERROR)    | The upload file 'arroz' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:49:14.015170 (INFO)     | The upload file 'uploadFile8' was validated.
+2022-07-09 22:49:14.025670 (ERROR)    | The upload file 'uploadFile9' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:49:14.032271 (ERROR)    | The upload file 'uploadFile10' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:49:14.039429 (INFO)     | The upload file 'uploadFile11' was validated.
+2022-07-09 22:49:14.047384 (INFO)     | The upload file 'uploadFile12' was validated.
+2022-07-09 22:49:14.054656 (INFO)     | The upload file 'uploadFile13' was validated.
+2022-07-09 22:49:14.061411 (INFO)     | The upload file 'uploadFile14' was validated.
+2022-07-09 22:49:14.068720 (ERROR)    | The upload file 'lol' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:49:14.075799 (ERROR)    | The upload file 'uploadFile' is invalid, because its ip 'ip
+2022-07-09 22:49:14.082556 (ERROR)    | The upload file 'uploadFile2' is invalid, because its ip '192.168.8.256
+2022-07-09 22:49:14.089647 (INFO)     | The upload file 'uploadFile3' was validated.
+2022-07-09 22:49:14.096781 (INFO)     | The upload file 'uploadFile4' was validated.
+2022-07-09 22:49:14.104669 (ERROR)    | The upload file 'uploadFile5' is invalid, because it contains invalid fields or there are missing fields.
+2022-07-09 22:49:14.111643 (ERROR)    | The upload file 'uploadFile6' is invalid, because its ip '222.222.222.111.333
+2022-07-09 22:49:14.119313 (ERROR)    | The upload file 'uploadFile7' is invalid, because its ip '192.168.8.256
+2022-07-09 22:49:14.143035 (INFO)     | Successfully added file 'arroz' to the apps ID queue.
+2022-07-09 22:49:14.155997 (INFO)     | == Connection test (START) ==
+2022-07-09 22:49:15.811562 (INFO)     | The connection with APPS was successful.
+2022-07-09 22:49:15.819057 (INFO)     | == Connection test (END) ==
+2022-07-09 22:49:15.834096 (ERROR)    | The file 'file' is invalid - The version 'None' of the rinex file is invalid (Supported versions are 2.11, 3.02).
+2022-07-09 22:49:15.874952 (INFO)     | The file 'CVTY2720.21D' was validated and is being considered a valid file for uploading.
+2022-07-09 22:49:19.075733 (INFO)     | Successfully removed file 'arroz' from the apps ID queue.
+2022-07-09 22:49:19.096326 (WARNING)  | The value 'arroz' is invalid for argument 'access'. Using default value 'X'.
+2022-07-09 22:49:19.108513 (WARNING)  | The value '' is invalid for argument 'pressure'. Using default value 'None'.
+2022-07-09 22:49:19.115912 (WARNING)  | The value '' is invalid for argument 'attitude'. Using default value 'None'.
+2022-07-09 22:49:19.123293 (WARNING)  | The value '' is invalid for argument 'email'. Using default value 'None'.
+2022-07-09 22:49:19.130904 (WARNING)  | The value '' is invalid for argument 'access'. Using default value 'X'.
+2022-07-09 22:49:19.137754 (WARNING)  | The value '' is invalid for argument 'processing_mode'. Using default value 'S'.
+2022-07-09 22:49:19.144877 (WARNING)  | The value '' is invalid for argument 'product'. Using default value 'B'.
+2022-07-09 22:49:19.151565 (WARNING)  | The value '' is invalid for argument 'troposphere_model'. Using default value 'GMF'.
+2022-07-09 22:49:19.158220 (WARNING)  | The value '' is invalid for argument 'ocean_loading'. Using default value 'True'.
+2022-07-09 22:49:19.164846 (WARNING)  | The value '' is invalid for argument 'model_tides'. Using default value 'True'.
+2022-07-09 22:49:19.171694 (WARNING)  | The value '' is invalid for argument 'elev_dep_weighting'. Using default value 'SQRTSIN'.
+2022-07-09 22:49:19.178324 (WARNING)  | The value '' is invalid for argument 'elev_angle_cutoff'. Using default value '7.5'.
+2022-07-09 22:49:19.185332 (WARNING)  | The value '' is invalid for argument 'solution_period'. Using default value '300'.
+2022-07-09 22:49:19.192673 (WARNING)  | The value '' is invalid for argument 'generate_quaternions'. Using default value 'False'.
+2022-07-09 22:49:19.204515 (WARNING)  | The value '' is invalid for argument 'pressure'. Using default value 'None'.
+2022-07-09 22:49:19.211562 (WARNING)  | The value '' is invalid for argument 'attitude'. Using default value 'None'.
+2022-07-09 22:49:19.218430 (WARNING)  | The value '' is invalid for argument 'email'. Using default value 'None'.
+2022-07-09 22:49:19.225027 (WARNING)  | The value '' is invalid for argument 'access'. Using default value 'X'.
+2022-07-09 22:49:19.232071 (WARNING)  | The value '' is invalid for argument 'processing_mode'. Using default value 'S'.
+2022-07-09 22:49:19.238938 (WARNING)  | The value '' is invalid for argument 'product'. Using default value 'B'.
+2022-07-09 22:49:19.245731 (WARNING)  | The value '' is invalid for argument 'ocean_loading'. Using default value 'True'.
+2022-07-09 22:49:19.252682 (WARNING)  | The value '' is invalid for argument 'model_tides'. Using default value 'True'.
+2022-07-09 22:49:19.259766 (WARNING)  | The value '' is invalid for argument 'elev_dep_weighting'. Using default value 'SQRTSIN'.
+2022-07-09 22:49:19.268115 (WARNING)  | The value '' is invalid for argument 'elev_angle_cutoff'. Using default value '7.5'.
+2022-07-09 22:49:19.274686 (WARNING)  | The value '' is invalid for argument 'solution_period'. Using default value '300'.
+2022-07-09 22:49:19.281434 (WARNING)  | The value '' is invalid for argument 'generate_quaternions'. Using default value 'False'.
+2022-07-09 22:49:19.314706 (INFO)     | info lol
+2022-07-09 22:49:19.321602 (WARNING)  | warning lol
+2022-07-09 22:49:19.328935 (ERROR)    | error lol
+2022-07-09 22:49:19.335695 (CRITICAL) | critical lol
+2022-07-09 22:49:22.345678 (INFO)     | after 3 seconds
+2022-07-09 22:49:22.353454 (INFO)     | regularInfo.
+2022-07-09 22:49:22.360201 (INFO)     | === infoRoutineStart (START) ===
+2022-07-09 22:49:22.367689 (INFO)     | === infoRoutineEnd (END) ===
+2022-07-09 22:49:22.374870 (INFO)     | == infoSubroutineStart (START) ==
+2022-07-09 22:49:22.382647 (INFO)     | = infoSubsubroutineEnd (END) =
+2022-07-09 22:49:22.390437 (INFO)     | = infoSubsubroutineStart (START) =
+2022-07-09 22:49:23.015954 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:49:23.701570 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:49:23.710079 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:49:25.556627 (INFO)     | Successfully copied remote file 'arroz' to local directory 'in/to_upload_test'.
+2022-07-09 22:49:25.564396 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:49:26.230486 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:49:26.238097 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:49:27.286201 (ERROR)    | Could not copy remote file 'arro' to local directory 'in/to_upload_test'.
+2022-07-09 22:49:27.294301 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:49:27.943174 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:49:27.950863 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:49:29.114159 (INFO)     | Successfully copied local file 'file' to remote directory '~'.
+2022-07-09 22:49:29.123129 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:49:29.774295 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:49:29.783214 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:49:30.761479 (ERROR)    | Could not copy local file 'someFile' to remote directory '~'.
+2022-07-09 22:49:30.769478 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:49:31.368020 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:49:31.376180 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:49:31.384017 (INFO)     | == Connect to '138.68.128.181:22', with user 'root' (START) ==
+2022-07-09 22:49:32.059232 (ERROR)    | Could not establish a connection to the server, because the ip '138.68.128.181' is not valid or is unavailable.
+2022-07-09 22:49:32.067338 (INFO)     | == Connect to '138.68.128.181:22', with user 'root' (END) ==
+2022-07-09 22:49:32.075405 (INFO)     | == Connect to '138.68.128.182:21', with user 'root' (START) ==
+2022-07-09 22:49:32.154190 (ERROR)    | Could not establish a connection to the server, because the port '21' is not valid or is unavailable.
+2022-07-09 22:49:32.163889 (INFO)     | == Connect to '138.68.128.182:21', with user 'root' (END) ==
+2022-07-09 22:49:32.172136 (INFO)     | == Connect to '138.68.128.182:22', with user 'root2' (START) ==
+2022-07-09 22:49:36.594194 (ERROR)    | Could not establish a connection to the server, because the user 'root2' is not valid, or the password is incorrect.
+2022-07-09 22:49:36.602370 (INFO)     | == Connect to '138.68.128.182:22', with user 'root2' (END) ==
+2022-07-09 22:49:36.609638 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:49:39.394526 (ERROR)    | Could not establish a connection to the server, because the user 'root' is not valid, or the password is incorrect.
+2022-07-09 22:49:39.402329 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
