@@ -85,14 +85,20 @@ class APPSCloneClient:
       self.logger.writeRegularLog(Logs.SEVERITY.INFO,responseReceived)
       respondeCode,respondeArgs = response["code"],response["args"]
       if respondeCode == -1:
-        self.logger.writeRegularLog(Logs.SEVERITY.INFO,responseError.format(errorMsg = respondeArgs[0]))
-        print(respondeArgs[0])
+        self.logger.writeRegularLog(Logs.SEVERITY.ERROR,responseError.format(errorMsg = respondeArgs[0]))
+        print("An error ocurred. Check logs to learn more.")
       else:
         self.logger.writeRegularLog(Logs.SEVERITY.INFO,responseUploadSuccess.format(file = args[0]))
         self.__addIdToQueue(respondeCode)
         os.remove(Helper.joinPathFile(self.rinexDir,args[0]))
         self.logger.writeRegularLog(Logs.SEVERITY.INFO,fileRemovedSuccess.format(file = args[0]))
     elif option == "d":
+      numOfIds = len(self.__getAllIdsFromQueue())
+      if numOfIds == 0:
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,noIds)
+      else:
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,someIds.format(numIds = numOfIds))
+      errorOcurred = False
       for rinexId in self.__getAllIdsFromQueue():
         self.socket.send(pickle.dumps(OptionArgs(2,(rinexId,))))
         self.logger.writeRegularLog(Logs.SEVERITY.INFO,downloadInfoSent.format(id = rinexId))
@@ -100,12 +106,14 @@ class APPSCloneClient:
         self.logger.writeRegularLog(Logs.SEVERITY.INFO,responseReceived)
         respondeCode,respondeArgs = response["code"],response["args"]
         if respondeCode == -1:
-          self.logger.writeRegularLog(Logs.SEVERITY.INFO,responseError.format(errorMsg = respondeArgs[0]))
-          print(respondeArgs[0])
+          self.logger.writeRegularLog(Logs.SEVERITY.ERROR,responseError.format(errorMsg = respondeArgs[0]))
+          errorOcurred = True
         else:
+          self.__removeIdFromQueue(rinexId)
           # sshClient = SSHConnection(self.ip,self.port,self.username,self.password)
           # sshClient.putFile(Helper.joinPathFile(self.rinexDir,self.rinexFile),self.toUploadDir)
-          self.__removeIdFromQueue(rinexId)
+      if errorOcurred:
+        print("An error ocurred. Check logs to learn more.")
 
   def __addIdToQueue(self,rinexId):
     """Add the id of the upload to the queue of uploaded ids.

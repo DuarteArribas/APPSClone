@@ -9,6 +9,7 @@ def main():
   cfg       = Config("config/client.cfg")
   # initialize logs
   logger    = Logs(cfg.getLogConfig("LOGS_FILE"),int(cfg.getLogConfig("MAX_NUM_LOGS")))
+  logger.writeNewRunLog("======= RUN ON APPSClone CLIENT =======")
   # initialize arguments
   ap        = ArgumentParser(logger)
   # get command-line arguments
@@ -27,7 +28,8 @@ def main():
         cfg.getConnectionConfig("PASSWORD"),
         cfg.getConnectionConfig("TO_UPLOAD_DIR"),
         cfg.getLocalConfig("RINEX_DIR"),
-        cfg.getLocalConfig("ID_QUEUE")
+        cfg.getLocalConfig("ID_QUEUE"),
+        logger
       )
       client.runClient(arguments)
 

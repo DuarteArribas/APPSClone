@@ -68,3 +68,10 @@
 2022-07-07 16:20:13.652463 (INFO)     | == Upload on file 'testUpload' (END) ==
 2022-07-07 16:20:13.671814 (INFO)     | = Gathering data on uuid '4c9df170-fe08-11ec-92fe-e0db5501adf2' (START) =
 2022-07-07 16:20:17.026347 (INFO)     | = Gathering data on uuid '4c9df170-fe08-11ec-92fe-e0db5501adf2' (END) =
+2022-07-09 18:25:04.602297 (INFO)     | == Upload on file 'arroz' (START) ==
+2022-07-09 18:25:04.648073 (INFO)     | The file 'arroz' was validated and is being considered a valid file for uploading.
+2022-07-09 18:25:12.593321 (INFO)     | Successfully uploaded file 'arroz' to APPS.
+2022-07-09 18:25:12.600590 (INFO)     | Successfully added file 'in/to_upload_regular/arroz' to the apps ID queue.
+2022-07-09 18:25:12.604977 (INFO)     | == Upload on file 'arroz' (END) ==
+2022-07-09 18:25:12.618660 (INFO)     | = Gathering data on uuid '16da2af4-ffac-11ec-a0ef-e0db5501adf2' (START) =
+2022-07-09 18:25:15.980540 (INFO)     | = Gathering data on uuid '16da2af4-ffac-11ec-a0ef-e0db5501adf2' (END) =

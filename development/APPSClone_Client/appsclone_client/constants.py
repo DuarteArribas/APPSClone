@@ -3,8 +3,8 @@
 # Routines
 getOptions                    = "Options for command line-arguments"
 # Other
-uploadArg                     = "Attempting to upload file"
-downloadArg                   = "Attempting to download file"
+uploadArg                     = "Upload argument recognized"
+downloadArg                   = "Download argument recognized"
 unknownUploadOrDownloadArg    = "The argument '{arg}' is unknown"
 rinexArg                      = "The file to upload is '{file}'"
 unknownRinexArg               = "The file '{file}' does not exist. Please move the file to the correct upload folder (defined in config/client.cfg)"
@@ -36,3 +36,5 @@ addToQueueSuccess             = "The id {id} was added to the queue successfully
 removeFromQueueSuccess        = "The id {id} was removed from the queue successfully"
 fileRemovedSuccess            = "The file {file} was removed with success"
 downloadInfoSent              = "Asking to download results of file with id {id} from APPSClone server"
+noIds                         = "There are no ids to check"
+someIds                       = "There are {numIds} ids in the queue"
