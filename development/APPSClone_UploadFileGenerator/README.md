@@ -3,7 +3,7 @@
 
 This subproject corresponds to the generation of upload files used by the **APPSClone** server.
 
-An *upload file* is an ASCII-based file that s an ASCII-based file sent to the server so that it can automatically download Receiver Independent Exchange Format (**RINEX**) files from your server, process them and return the results. It contains the following information:
+An *upload file* is an ASCII-based file that is sent to the server so that it can automatically download Receiver Independent Exchange Format (**RINEX**) files from your server, process them and return the results. It contains the following information:
 
 ```
 The 'path' of the RINEX file of your server (absolute or home path)
