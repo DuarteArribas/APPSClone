@@ -9,3 +9,50 @@
 2022-07-09 15:49:30.100608 (INFO)     | === Options for command line-arguments (START) ===
 2022-07-09 15:49:30.106283 (ERROR)    | The argument 'uploaad' is unknown.
 2022-07-09 15:49:30.108681 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-09 15:59:49.266850 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-09 15:59:49.272532 (ERROR)    | The argument 'uploaad' is unknown.
+2022-07-09 15:59:49.277925 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-09 15:59:56.452896 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-09 15:59:56.458333 (INFO)     | Attempting to upload file.
+2022-07-09 15:59:56.460932 (ERROR)    | There isn't an input file in the arguments.
+2022-07-09 15:59:56.465553 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-09 16:00:45.368417 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-09 16:00:45.374094 (INFO)     | Attempting to upload file.
+2022-07-09 16:00:45.377358 (ERROR)    | The file 'arroz' does not exist. Please move the file to the correct upload folder (defined in config/client.cfg).
+2022-07-09 16:00:45.381181 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-09 16:01:35.795992 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-09 16:01:35.801471 (INFO)     | Attempting to upload file.
+2022-07-09 16:01:35.804451 (INFO)     | The file to upload is 'arroz'.
+2022-07-09 16:01:35.807974 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-09 16:01:35.813310 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-09 16:01:35.817614 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-09 16:01:35.822192 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-09 16:01:35.827170 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-09 16:01:35.832292 (INFO)     | The value for the argument 'elevation dep weighting' is 'FLAT'.
+2022-07-09 16:01:35.837077 (INFO)     | The value for the argument 'elevation angle cutoff' is '1.0'.
+2022-07-09 16:01:35.842038 (INFO)     | The value for the argument 'solution period' is '400'.
+2022-07-09 16:01:35.847024 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-09 16:01:48.300247 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-09 16:01:48.305902 (INFO)     | Attempting to upload file.
+2022-07-09 16:01:48.309173 (INFO)     | The file to upload is 'arroz'.
+2022-07-09 16:01:48.313409 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-09 16:01:48.318351 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-09 16:01:48.322798 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-09 16:01:48.329271 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-09 16:01:48.334794 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-09 16:01:48.339748 (INFO)     | The value for the argument 'elevation dep weighting' is 'FLAT'.
+2022-07-09 16:01:48.345353 (INFO)     | The value for the argument 'elevation angle cutoff' is '1.0'.
+2022-07-09 16:01:48.350470 (INFO)     | The value for the argument 'solution period' is '400'.
+2022-07-09 16:01:48.355768 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-09 16:01:55.086732 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-09 16:01:55.092551 (INFO)     | Attempting to upload file.
+2022-07-09 16:01:55.097190 (INFO)     | The file to upload is 'arroz'.
+2022-07-09 16:01:55.100941 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-09 16:01:55.106466 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-09 16:01:55.112304 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-09 16:01:55.117649 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-09 16:01:55.122991 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-09 16:01:55.128434 (INFO)     | The value for the argument 'elevation dep weighting' is 'FLAT'.
+2022-07-09 16:01:55.134111 (INFO)     | The value for the argument 'elevation angle cutoff' is '1.0'.
+2022-07-09 16:01:55.139236 (INFO)     | The value for the argument 'solution period' is '400'.
+2022-07-09 16:01:55.144372 (INFO)     | === Options for command line-arguments (END) ===

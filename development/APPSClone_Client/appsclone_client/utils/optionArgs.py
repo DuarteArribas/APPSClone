@@ -12,3 +12,6 @@ class OptionArgs:
     """
     self.option = option
     self.args   = args
+
+# ✓    unit tested
+# ✓ feature tested

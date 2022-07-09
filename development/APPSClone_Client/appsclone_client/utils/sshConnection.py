@@ -1,8 +1,8 @@
 import paramiko
 import scp
-from appsclone_server.utils.helper import *
-from appsclone_server.utils.logs   import *
-from appsclone_server.constants    import *
+from appsclone_client.utils.helper import *
+from appsclone_client.utils.logs   import *
+from appsclone_client.constants    import *
 
 class SSHConnection:
   """A client connection via ssh."""

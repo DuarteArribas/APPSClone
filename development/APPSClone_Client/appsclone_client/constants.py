@@ -7,7 +7,7 @@ uploadArg                     = "Attempting to upload file"
 downloadArg                   = "Attempting to download file"
 unknownUploadOrDownloadArg    = "The argument '{arg}' is unknown"
 rinexArg                      = "The file to upload is '{file}'"
-unknownRinexArg               = "The file '{file}' does not exist"
+unknownRinexArg               = "The file '{file}' does not exist. Please move the file to the correct upload folder (defined in config/client.cfg)"
 noRinexArg                    = "There isn't an input file in the arguments"
 upArg                         = "The value for the argument '{arg}' is '{argValue}'"
 # = SSHConnection =
@@ -23,3 +23,16 @@ scpGetSuccessful              = "Successfully copied remote file '{file}' to loc
 scpGetUnsuccessful            = "Could not copy remote file '{file}' to local directory '{df}'"
 scpPutSuccessful              = "Successfully copied local file '{file}' to remote directory '{df}'"
 scpPutUnsuccessful            = "Could not copy local file '{file}' to remote directory '{df}'"
+# = APPSClone client =
+# Routines
+clientRun                     = "APPSClone client socket connection"
+# Other
+criticalSocket                = "Could not connect to socket on '{ip}:{port}'"
+uploadInfoSent                = "Upload info of file {file} sent to APPSClone server"
+responseReceived              = "A response has been received from the APPSClone server"
+responseError                 = "The server responded with an error - '{errorMsg}'"
+responseUploadSuccess         = "The upload of the file {file} was a success"
+addToQueueSuccess             = "The id {id} was added to the queue successfully"
+removeFromQueueSuccess        = "The id {id} was removed from the queue successfully"
+fileRemovedSuccess            = "The file {file} was removed with success"
+downloadInfoSent              = "Asking to download results of file with id {id} from APPSClone server"

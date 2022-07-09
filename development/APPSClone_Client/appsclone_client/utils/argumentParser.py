@@ -196,3 +196,6 @@ class ArgumentParser:
     )
     self.logger.writeRoutineLog(getOptions,Logs.ROUTINE_STATUS.END)
     return toUploadArgs
+
+# ✓    unit tested
+# ✓ feature tested
