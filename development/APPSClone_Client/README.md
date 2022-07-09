@@ -25,7 +25,7 @@ Possible future implementations include:
 
 ## Installation
 
-Setup the project by installing its dependencies and creating initial directories:
+Set up the project by installing its dependencies and creating initial directories:
 
 ```bash
 make setup
@@ -41,7 +41,7 @@ To run the project, type:
 make run a="arguments"
 ```
 
-The `a` variable will contain command-line arguments, which will specify what the program will do. The following shows the usage of the program (can also be shown by running `make run a="-h"`:
+The `a` variable will contain command-line arguments, which will specify what the program will do. The following shows the usage of the program (can also be shown by running `make run a="-h"`):
 
 ```
 usage: runClient.py [-h] [-r R] [-m M] [-p P] [-t T] [--ocean_loading] [--model_tides] [-w W] [-a A] [-s S] option
