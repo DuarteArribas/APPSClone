@@ -31,6 +31,21 @@ class Config:
     """
     return self.config.get("CONNECTION",key)
 
+  def getLogConfig(self,key):
+    """Get a config from the LOGS section on the config file.
+
+    Parameters
+    ----------
+    key : str
+      The key corresponding to the wanted configuration
+
+    Returns
+    ----------
+    str
+      The corresponding configuration
+    """
+    return self.config.get("LOGS",key)
+
   def getLocalConfig(self,key):
     """Get a config from the LOCAL section on the config file.
 

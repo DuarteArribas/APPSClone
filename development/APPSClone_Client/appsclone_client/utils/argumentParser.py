@@ -1,12 +1,14 @@
 import argparse
 import os.path
 from appsclone_client.utils.helper import *
+from appsclone_client.utils.logs   import *
 
 class ArgumentParser:
   """The parser for the command line arguments."""
   # == Methods ==
-  def __init__(self):
+  def __init__(self,logger):
     """Initalize the possible arguments."""
+    self.logger = logger
     self.parser = argparse.ArgumentParser(
       description="The APPSClone client. Upload RINEX files to the server and download back the results!"
     )
@@ -23,42 +25,42 @@ class ArgumentParser:
     self.parser.add_argument(
       "-m",
       type = int,
-      help = "The processing mode. 1 means static, 2 means kinematic."
+      help = "The processing mode. 1 means static, 2 means kinematic. Default is static."
     )
     self.parser.add_argument(
       "-p",
       type = int,
-      help = "The product. 1 means real time, 2 means ultra, 3 means rapid, 4 means final, 5 means best."
+      help = "The product. 1 means real time, 2 means ultra, 3 means rapid, 4 means final, 5 means best. Default is best."
     )
     self.parser.add_argument(
       "-t",
       type = int,
-      help = "The troposphere model. 1 means vmf1, 2 means gmf, 3 means gpt2."
+      help = "The troposphere model. 1 means vmf1, 2 means gmf, 3 means gpt2. Default is gmf."
     )
     self.parser.add_argument(
       "--ocean_loading",
       action = 'store_true',
-      help   = "To load or not the ocean."
+      help   = "To load or not the ocean model. Default is true."
     )
     self.parser.add_argument(
       "--model_tides",
       action = 'store_true',
-      help   = "To model or not the tides."
+      help   = "To model or not the tides. Default is true."
     )
     self.parser.add_argument(
       "-w",
       type = int,
-      help = "The elevation dep weighting. 1 means flat, 2 means sine, 3 means root sine."
+      help = "The elevation dep weighting. 1 means flat, 2 means sine, 3 means root sine. Default is root sine."
     )
     self.parser.add_argument(
       "-a",
       type = float,
-      help = "The elevation angle cutoff. A floating-point number."
+      help = "The elevation angle cutoff. A floating-point number. Default is 7.5."
     )
     self.parser.add_argument(
       "-s",
       type = int,
-      help = "The solution period. An integer."
+      help = "The solution period. An integer. Default is 300."
     )
     self.args = self.parser.parse_args()
   
@@ -75,17 +77,27 @@ class ArgumentParser:
     list
       The list of upload arguments for APPS. None means that the argument is not available
     """
+    self.logger.writeRoutineLog(getOptions,Logs.ROUTINE_STATUS.START)
     toUploadArgs = []
     if self.args.option.lower() == "upload":
+      self.logger.writeRegularLog(Logs.SEVERITY.INFO,uploadArg)
       toUploadArgs.append("u")
     elif self.args.option.lower() == "download":
+      self.logger.writeRegularLog(Logs.SEVERITY.INFO,downloadArg)
       toUploadArgs.append("d")
     else:
+      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,unknownUploadOrDownloadArg.format(arg = self.args.option.lower()))
       toUploadArgs.append(None)
     if self.args.option.lower() == "upload":
-      if self.args.r and os.path.exists(Helper.joinPathFile(to_upload_rinex_dir,self.args.r)):
-        toUploadArgs.append(self.args.r)
+      if self.args.r:
+        if os.path.exists(Helper.joinPathFile(to_upload_rinex_dir,self.args.r)):
+          self.logger.writeRegularLog(Logs.SEVERITY.INFO,rinexArg.format(file = self.args.r))
+          toUploadArgs.append(self.args.r)
+        else:
+          self.logger.writeRegularLog(Logs.SEVERITY.ERROR,unknownRinexArg.format(file = self.args.r))
+          toUploadArgs.append(None)
       else:
+        self.logger.writeRegularLog(Logs.SEVERITY.ERROR,noRinexArg)
         toUploadArgs.append(None)
     else:
       toUploadArgs.append(None)
@@ -96,6 +108,10 @@ class ArgumentParser:
         toUploadArgs.append("defines.GIPSYData.KINEMATIC")
     else:
       toUploadArgs.append(None)
+    self.logger.writeRegularLog(
+      Logs.SEVERITY.INFO,
+      uploadArg.format(arg = "processing mode",argValue = self.args.m.rsplit(".",1)[1] if self.args.m else "default")
+    )
     if self.args.p and self.args.p > 0 and self.args.p < 6:
       if self.args.p == 1:
         toUploadArgs.append("defines.OrbitClockProduct.REAL_TIME")
@@ -109,6 +125,10 @@ class ArgumentParser:
         toUploadArgs.append("defines.GIPSYData.BEST")
     else:
       toUploadArgs.append(None)
+    self.logger.writeRegularLog(
+      Logs.SEVERITY.INFO,
+      uploadArg.format(arg = "product",argValue = self.args.p.rsplit(".",1)[1] if self.args.p else "default")
+    )
     if self.args.t and self.args.t > 0 and self.args.t < 4:
       if self.args.t == 1:
         toUploadArgs.append("defines.GIPSYData.TROP_VMF1")
@@ -118,8 +138,20 @@ class ArgumentParser:
         toUploadArgs.append("defines.GIPSYData.TROP_GPT2")
     else:
       toUploadArgs.append(None)
+    self.logger.writeRegularLog(
+      Logs.SEVERITY.INFO,
+      uploadArg.format(arg = "troposphere model",argValue = self.args.t.rsplit(".",1)[1] if self.args.t else "default")
+    )
     toUploadArgs.append(self.args.ocean_loading)
+    self.logger.writeRegularLog(
+      Logs.SEVERITY.INFO,
+      uploadArg.format(arg = "ocean loading",argValue = self.args.ocean_loading)
+    )
     toUploadArgs.append(self.args.model_tides)
+    self.logger.writeRegularLog(
+      Logs.SEVERITY.INFO,
+      uploadArg.format(arg = "model tides",argValue = self.args.model_tides)
+    )
     if self.args.w and self.args.w > 0 and self.args.w < 4:
       if self.args.w == 1:
         toUploadArgs.append("defines.GIPSYData.FLAT")
@@ -129,12 +161,25 @@ class ArgumentParser:
         toUploadArgs.append("defines.GIPSYData.ROOT_SINE")
     else:
       toUploadArgs.append(None)
+    self.logger.writeRegularLog(
+      Logs.SEVERITY.INFO,
+      uploadArg.format(arg = "elevation dep weighting",argValue = self.args.w.rsplit(".",1)[1] if self.args.w else "default")
+    )
     if self.args.a:
       toUploadArgs.append(self.args.a)
     else:
       toUploadArgs.append(None)
+    self.logger.writeRegularLog(
+      Logs.SEVERITY.INFO,
+      uploadArg.format(arg = "elevation angle cutoff",argValue = self.args.a)
+    )
     if self.args.s:
       toUploadArgs.append(self.args.s)
     else:
       toUploadArgs.append(None)
+    self.logger.writeRegularLog(
+      Logs.SEVERITY.INFO,
+      uploadArg.format(arg = "solution period",argValue = self.args.s)
+    )
+    self.logger.writeRoutineLog(getOptions,Logs.ROUTINE_STATUS.END)
     return toUploadArgs

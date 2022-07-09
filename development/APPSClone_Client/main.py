@@ -1,13 +1,16 @@
 from appsclone_client.utils.argumentParser import *
 from appsclone_client.appsCloneClient      import *
 from appsclone_client.utils.config         import *
+from appsclone_client.utils.logs           import *
 import sys
 
 def main():
   # read configuration from config file
   cfg       = Config("config/client.cfg")
+  # initialize logs
+  logger    = Logs(cfg.getLogConfig("LOGS_FILE"),int(cfg.getLogConfig("MAX_NUM_LOGS")))
   # initialize arguments
-  ap        = ArgumentParser()
+  ap        = ArgumentParser(logger)
   # get command-line arguments
   arguments = ap.getOptions(cfg.getLocalConfig("RINEX_DIR"))
   # if the file doesn't exist, exit; if it exists, proceed to the connection
