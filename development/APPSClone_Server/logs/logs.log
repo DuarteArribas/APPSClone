@@ -75,6 +75,99 @@
 2022-07-09 18:25:12.604977 (INFO)     | == Upload on file 'arroz' (END) ==
 2022-07-09 18:25:12.618660 (INFO)     | = Gathering data on uuid '16da2af4-ffac-11ec-a0ef-e0db5501adf2' (START) =
 2022-07-09 18:25:15.980540 (INFO)     | = Gathering data on uuid '16da2af4-ffac-11ec-a0ef-e0db5501adf2' (END) =
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
+2022-07-09 22:38:26.101398 (INFO)     | === State updates (START) ===
+2022-07-09 22:38:26.109266 (INFO)     | === State updates (END) ===
+2022-07-09 22:38:26.113496 (INFO)     | === Upload back of results (START) ===
+2022-07-09 22:38:26.120297 (INFO)     | === Upload back of results (END) ===
+2022-07-09 22:38:26.123089 (INFO)     | === Download of rinex files from source (START) ===
+2022-07-09 22:38:26.129399 (INFO)     | == Upload files check (START) ==
+2022-07-09 22:38:26.137452 (INFO)     | The upload file 'upload1' was validated.
+2022-07-09 22:38:26.143003 (INFO)     | 1 valid upload files were found. Attempting to download corresponding rinex files.
+2022-07-09 22:38:26.148454 (INFO)     | == Upload files check (END) ==
+2022-07-09 22:38:26.155559 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:38:26.828456 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:38:26.834675 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:38:29.209905 (INFO)     | Successfully copied remote file 'arroz' to local directory 'in/to_upload'.
+2022-07-09 22:38:29.217629 (INFO)     | The file 'arroz' was added to the rinex queue.
+2022-07-09 22:38:29.223501 (INFO)     | The upload file 'upload1' was removed.
+2022-07-09 22:38:29.228002 (INFO)     | === Download of rinex files from source (END) ===
+2022-07-09 22:38:29.233266 (INFO)     | === Upload of all Rinex (START) ===
+2022-07-09 22:38:32.618878 (INFO)     | There is enough quota to upload file 'arroz'.
+2022-07-09 22:38:32.625032 (INFO)     | == Upload on file 'arroz' (START) ==
+2022-07-09 22:38:32.706994 (INFO)     | The file 'arroz' was validated and is being considered a valid file for uploading.
+2022-07-09 22:38:40.543643 (INFO)     | Successfully uploaded file 'arroz' to APPS.
+2022-07-09 22:38:40.551020 (INFO)     | Successfully added file 'in/to_upload/arroz' to the apps ID queue.
+2022-07-09 22:38:40.556261 (INFO)     | == Upload on file 'arroz' (END) ==
+2022-07-09 22:38:40.564750 (INFO)     | The file 'arroz' was removed.
+2022-07-09 22:38:40.571256 (INFO)     | === Upload of all Rinex (END) ===
+2022-07-09 22:39:52.797340 (INFO)     | === State updates (START) ===
+2022-07-09 22:40:37.308249 (INFO)     | === State updates (START) ===
+2022-07-09 22:40:37.316681 (INFO)     | = Gathering data on uuid '7f81157c-ffcf-11ec-9cb9-e0db5501adf2' (START) =
+2022-07-09 22:40:42.234667 (INFO)     | = Gathering data on uuid '7f81157c-ffcf-11ec-9cb9-e0db5501adf2' (END) =
+2022-07-09 22:40:42.242955 (INFO)     | == State check (START) ==
+2022-07-09 22:40:42.246992 (INFO)     | = Gathering data on uuid '7f81157c-ffcf-11ec-9cb9-e0db5501adf2' (START) =
+2022-07-09 22:40:43.940609 (INFO)     | = Gathering data on uuid '7f81157c-ffcf-11ec-9cb9-e0db5501adf2' (END) =
+2022-07-09 22:40:43.947105 (INFO)     | Checking file 'arroz'.
+2022-07-09 22:40:43.952592 (INFO)     | The file 'arroz' is in the 'Verified' state.
+2022-07-09 22:40:43.958089 (INFO)     | = Approval on file 'arroz' (START) =
+2022-07-09 22:40:45.577727 (INFO)     | The file 'arroz' has been verified by APPS and is now approved for processing.
+2022-07-09 22:40:45.584056 (INFO)     | = Approval on file 'arroz' (END) =
+2022-07-09 22:40:45.589730 (INFO)     | === State updates (END) ===
+2022-07-09 22:40:45.594863 (INFO)     | === Upload back of results (START) ===
+2022-07-09 22:40:45.602348 (INFO)     | === Upload back of results (END) ===
+2022-07-09 22:40:45.605427 (INFO)     | === Download of rinex files from source (START) ===
+2022-07-09 22:40:45.612987 (INFO)     | == Upload files check (START) ==
+2022-07-09 22:40:45.618615 (INFO)     | No upload files were found.
+2022-07-09 22:40:45.622270 (INFO)     | == Upload files check (END) ==
+2022-07-09 22:40:45.628219 (INFO)     | === Download of rinex files from source (END) ===
+2022-07-09 22:40:45.633591 (INFO)     | === Upload of all Rinex (START) ===
+2022-07-09 22:40:45.640909 (INFO)     | === Upload of all Rinex (END) ===
+2022-07-09 22:40:55.951535 (INFO)     | === State updates (START) ===
+2022-07-09 22:40:55.959796 (INFO)     | = Gathering data on uuid '7f81157c-ffcf-11ec-9cb9-e0db5501adf2' (START) =
+2022-07-09 22:41:00.879553 (INFO)     | = Gathering data on uuid '7f81157c-ffcf-11ec-9cb9-e0db5501adf2' (END) =
+2022-07-09 22:41:00.887733 (INFO)     | == State check (START) ==
+2022-07-09 22:41:00.892673 (INFO)     | = Gathering data on uuid '7f81157c-ffcf-11ec-9cb9-e0db5501adf2' (START) =
+2022-07-09 22:41:02.578075 (INFO)     | = Gathering data on uuid '7f81157c-ffcf-11ec-9cb9-e0db5501adf2' (END) =
+2022-07-09 22:41:02.585734 (INFO)     | Checking file 'arroz'.
+2022-07-09 22:41:02.593091 (INFO)     | The file 'arroz' is in the 'Processing' state.
+2022-07-09 22:41:02.600543 (INFO)     | === State updates (END) ===
+2022-07-09 22:41:02.612826 (INFO)     | === Upload back of results (START) ===
+2022-07-09 22:41:02.625794 (INFO)     | === Upload back of results (END) ===
+2022-07-09 22:41:02.639431 (INFO)     | === Download of rinex files from source (START) ===
+2022-07-09 22:41:02.647958 (INFO)     | == Upload files check (START) ==
+2022-07-09 22:41:02.662365 (INFO)     | No upload files were found.
+2022-07-09 22:41:02.669129 (INFO)     | == Upload files check (END) ==
+2022-07-09 22:41:02.675160 (INFO)     | === Download of rinex files from source (END) ===
+2022-07-09 22:41:02.681654 (INFO)     | === Upload of all Rinex (START) ===
+2022-07-09 22:41:02.691838 (INFO)     | === Upload of all Rinex (END) ===
+2022-07-09 22:42:13.852798 (INFO)     | === State updates (START) ===
+2022-07-09 22:42:13.860764 (INFO)     | = Gathering data on uuid '7f81157c-ffcf-11ec-9cb9-e0db5501adf2' (START) =
+2022-07-09 22:42:18.809750 (INFO)     | = Gathering data on uuid '7f81157c-ffcf-11ec-9cb9-e0db5501adf2' (END) =
+2022-07-09 22:42:18.817691 (INFO)     | == State check (START) ==
+2022-07-09 22:42:18.821864 (INFO)     | = Gathering data on uuid '7f81157c-ffcf-11ec-9cb9-e0db5501adf2' (START) =
+2022-07-09 22:42:20.512618 (INFO)     | = Gathering data on uuid '7f81157c-ffcf-11ec-9cb9-e0db5501adf2' (END) =
+2022-07-09 22:42:20.518968 (INFO)     | Checking file 'arroz'.
+2022-07-09 22:42:20.524641 (INFO)     | The file 'arroz' is in the 'Available' state.
+2022-07-09 22:42:20.530603 (INFO)     | = Data retrieval on file 'arroz' (START) =
+2022-07-09 22:42:25.837025 (INFO)     | The file 'arroz''s processed files have been successfully downloaded.
+2022-07-09 22:42:25.844203 (INFO)     | = Data retrieval on file 'arroz' (END) =
+2022-07-09 22:42:25.850701 (INFO)     | = Data removal of file 'arroz' (START) =
+2022-07-09 22:42:27.645927 (INFO)     | The file 'arroz' has been deleted from APPS.
+2022-07-09 22:42:27.654868 (INFO)     | Successfully removed file 'arroz' from the apps ID queue.
+2022-07-09 22:42:27.658544 (INFO)     | = Data removal of file 'arroz' (END) =
+2022-07-09 22:42:27.664659 (INFO)     | === State updates (END) ===
+2022-07-09 22:42:27.670271 (INFO)     | === Upload back of results (START) ===
+2022-07-09 22:42:27.680156 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (START) ==
+2022-07-09 22:42:28.358469 (INFO)     | Successfully established a connection to the server.
+2022-07-09 22:42:28.366343 (INFO)     | == Connect to '138.68.128.182:22', with user 'root' (END) ==
+2022-07-09 22:42:29.752836 (INFO)     | Successfully copied local file 'arroz_results.tar.gz' to remote directory '~'.
+2022-07-09 22:42:29.759977 (INFO)     | The result file 'arroz_results.tar.gz' was uploaded back to '~' with success.
+2022-07-09 22:42:29.772343 (INFO)     | The result file 'arroz_results.tar.gz' was successfully removed from the rinex queue.
+2022-07-09 22:42:29.780911 (INFO)     | === Upload back of results (END) ===
+2022-07-09 22:42:29.785588 (INFO)     | === Download of rinex files from source (START) ===
+2022-07-09 22:42:29.793552 (INFO)     | == Upload files check (START) ==
+2022-07-09 22:42:29.800143 (INFO)     | No upload files were found.
+2022-07-09 22:42:29.803633 (INFO)     | == Upload files check (END) ==
+2022-07-09 22:42:29.810064 (INFO)     | === Download of rinex files from source (END) ===
+2022-07-09 22:42:29.816600 (INFO)     | === Upload of all Rinex (START) ===
+2022-07-09 22:42:29.825775 (INFO)     | === Upload of all Rinex (END) ===

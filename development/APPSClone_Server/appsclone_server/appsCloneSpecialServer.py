@@ -52,7 +52,7 @@ class APPSCloneSpecialServer:
       uuids = f.readlines()
       uuids = [uuid.split("\n")[0] for uuid in uuids]
       for uuid in uuids:
-        rinexData = conn.getFileData(uuid)
+        rinexData = conn.getFileData(uuid,appsIDQueue)
         if rinexData:
           queueLine = APPSCloneSpecialServer._getResultLineFromRinexQueue(rinexQueue,rinexData["name"])
           if queueLine:

@@ -7,7 +7,7 @@ def main():
   # read configuration from config file
   cfg    = Config("config/appsclone.cfg")
   # initialize logs
-  logger = Logs(cfg.getLogConfig("LOGS_FILE"),int(cfg.getLogConfig("MAX_NUM_LOGS")))
+  logger = Logs(cfg.getLogConfig("LOGS_FILE_SERVER"),int(cfg.getLogConfig("MAX_NUM_LOGS")))
   # initialize connection object
   conn   = Connection_APPS(
     settingsFile      = cfg.getSettingsConfig("APPS_SETTINGS_FILE"),

@@ -15,7 +15,14 @@ def main():
     logger            = logger
   )
   # check for state updates (if any) on APPS' uuid(s) of uploaded files (if any) and handle them
-  APPSCloneSpecialServer.handleAllFileStates(conn,cfg.getQueuesConfig("APPS_IDS"),cfg.getOutConfig("RESULTS_DIR"),logger)
+  APPSCloneSpecialServer.handleAllFileStates(
+    conn,
+    cfg.getQueuesConfig("APPS_IDS"),
+    cfg.getOutConfig("RESULTS_DIR"),
+    cfg.getOutConfig("RESULTS_REGULAR_DIR"),
+    cfg.getQueuesConfig("RINEX"),
+    logger
+  )
   # upload results (if any) to the respective upload directory
   APPSCloneSpecialServer.uploadBackResults(cfg.getQueuesConfig("RINEX"),cfg.getOutConfig("RESULTS_DIR"),logger)
   # check for new upload files (if any)
