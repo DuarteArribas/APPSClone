@@ -54,6 +54,17 @@
 2022-07-07 03:16:24.359986 (INFO)     | == Upload on file 'anUpload' (END) ==
 2022-07-07 03:16:24.374583 (INFO)     | = Gathering data on uuid 'ccfcd9a8-fd9a-11ec-86bf-e0db5501adf2' (START) =
 2022-07-07 03:16:27.778968 (INFO)     | = Gathering data on uuid 'ccfcd9a8-fd9a-11ec-86bf-e0db5501adf2' (END) =
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
-Establishing client interface to https://pppx.gdgps.net//api/user
+2022-07-07 16:16:32.078471 (INFO)     | == Upload on file 'testUpload' (START) ==
+2022-07-07 16:16:32.123116 (INFO)     | The file 'testUpload' was validated and is being considered a valid file for uploading.
+2022-07-07 16:16:41.581347 (INFO)     | Successfully uploaded file 'testUpload' to APPS.
+2022-07-07 16:16:41.589737 (INFO)     | Successfully added file 'in/to_upload_regular/testUpload' to the apps ID queue.
+2022-07-07 16:16:41.595178 (INFO)     | == Upload on file 'testUpload' (END) ==
+2022-07-07 16:16:41.608919 (INFO)     | = Gathering data on uuid 'ce3872c4-fe07-11ec-8d6a-e0db5501adf2' (START) =
+2022-07-07 16:16:44.944855 (INFO)     | = Gathering data on uuid 'ce3872c4-fe07-11ec-8d6a-e0db5501adf2' (END) =
+2022-07-07 16:20:03.470798 (INFO)     | == Upload on file 'testUpload' (START) ==
+2022-07-07 16:20:03.526211 (INFO)     | The file 'testUpload' was validated and is being considered a valid file for uploading.
+2022-07-07 16:20:13.639557 (INFO)     | Successfully uploaded file 'testUpload' to APPS.
+2022-07-07 16:20:13.647236 (INFO)     | Successfully added file 'in/to_upload_regular/testUpload' to the apps ID queue.
+2022-07-07 16:20:13.652463 (INFO)     | == Upload on file 'testUpload' (END) ==
+2022-07-07 16:20:13.671814 (INFO)     | = Gathering data on uuid '4c9df170-fe08-11ec-92fe-e0db5501adf2' (START) =
+2022-07-07 16:20:17.026347 (INFO)     | = Gathering data on uuid '4c9df170-fe08-11ec-92fe-e0db5501adf2' (END) =
