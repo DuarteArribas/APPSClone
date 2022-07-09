@@ -40,7 +40,7 @@ Possible future implementations include:
 
 ## Installation
 
-Setup the project by installing its dependencies and creating initial directories:
+Set up the project by installing its dependencies and creating initial directories:
 
 ```bash
 make setup
