@@ -23,8 +23,8 @@ setup:
 	@mkdir -p $(queuesDir)
 	@mkdir -p $(inDir)/$(toUploadDir)
 	@mkdir -p $(logsDir)
-	@touch $(queuesDir)/$(idQueue)
-	@touch $(logsDir)/$(logs)
+	@touch $(logsPath)
+	@touch $(idQueuePath)
 
 test:
 	$(PYTHON) -m unittest $(testDir)/test_$(tf).py > /dev/null
@@ -38,4 +38,4 @@ testAll:
 testAllPrint:
 	$(PYTHON) -m unittest $(testDir)/test_*
 
-.PHONY: run setup test testPrint testArgs testArgsPrint testAll testAllPrint
+.PHONY: run setup test testPrint testAll testAllPrint
