@@ -1,18 +1,30 @@
 #variables
-PYTHON         := python3
-PIP            := pip3
-MAIN_FILE      := main.py
+PYTHON    := python3
+PIP       := pip3
+MAIN_FILE := runClient.py
+#files
+idQueue     := idQueue
+logs        := logs.log
 #directories
-testDir        := tests
+testDir     := tests
+inDir       := in
+queuesDir   := queues
+toUploadDir := toUploadRinex
+logsDir     := logs
+#paths
+logsPath    := $(logsDir)/$(logs)
+idQueuePath := $(queuesDir)/$(idQueue)
 
 run:
-	$(PYTHON) $(MAIN_FILE)
-
-runArgs:
 	$(PYTHON) $(MAIN_FILE) $(a)
 
 setup:
 	$(PIP) install -r requirements.txt
+	@mkdir -p $(queuesDir)
+	@mkdir -p $(inDir)/$(toUploadDir)
+	@mkdir -p $(logsDir)
+	@touch $(queuesDir)/$(idQueue)
+	@touch $(logsDir)/$(logs)
 
 test:
 	$(PYTHON) -m unittest $(testDir)/test_$(tf).py > /dev/null
@@ -26,4 +38,4 @@ testAll:
 testAllPrint:
 	$(PYTHON) -m unittest $(testDir)/test_*
 
-.PHONY: run runArgs setup test testPrint testArgs testArgsPrint testAll testAllPrint
+.PHONY: run setup test testPrint testArgs testArgsPrint testAll testAllPrint

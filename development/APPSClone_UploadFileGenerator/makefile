@@ -6,16 +6,14 @@ MAIN_FILE      := main.py
 testDir        := tests
 outDir         := out
 uploadFilesDir := uploadFiles
-#paths
-uploadFiles    := $(outDir)/$(uploadFilesDir)
 
 run:
 	$(PYTHON) $(MAIN_FILE)
 
 setup:
 	$(PIP) install -r requirements.txt
-	@mkdir $(outDir)
-	@mkdir $(uploadFiles)
+	@mkdir -p $(outDir)
+	@mkdir -p $(uploadFilesDir)
 
 test:
 	$(PYTHON) -m unittest $(testDir)/test_$(tf).py > /dev/null
