@@ -157,3 +157,5 @@ class APPSCloneClient:
     with open(self.idQueue,"r") as f:
       lines = f.readlines()
       return [line.split("\n")[0] for line in lines]
+      
+# ✓ feature tested

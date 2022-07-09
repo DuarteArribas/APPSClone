@@ -111,6 +111,16 @@ class Logs:
     """
     self.__writeLog(severity,Logs._getLogMsg(Logs.LOG_TYPE.OTHER,message))
 
+  def writeNewRunLog(self,message):
+    """Write a log, which is a new run of the file.
+
+    Parameters
+    ----------
+    message  : str
+      The log message
+    """
+    logging.critical("\n"+message)
+
   def __writeLog(self,severity,message):
     """Write a log to a file, according to its severity. Debug logs are not 
     written, but are the default if the parameter is misspelled.
@@ -158,7 +168,7 @@ class Logs:
     with open(self.loggingFile,"r+") as f:
       lines = f.readlines()
       for line in lines:
-        if re.search("^(\d\d\d\d-\d\d-\d\d)",line):
+        if re.search("^(\d\d\d\d-\d\d-\d\d)",line) or not line or line[:7] == "=======":
           newLoggingFile += line
       logsList = newLoggingFile.split("\n")
       if len(logsList) > self.maxLogs:

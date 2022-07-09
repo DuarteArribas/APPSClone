@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module argumentParser</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>argumentParser</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/mnt/c/Users/duart/Documents/uni/project/APPSClone/development/APPSClone_Client/appsclone_client/utils/argumentParser.py">/mnt/c/Users/duart/Documents/uni/project/APPSClone/development/APPSClone_Client/appsclone_client/utils/argumentParser.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="argparse.html">argparse</a><br>
+<a href="datetime.html">datetime</a><br>
+</td><td width="25%" valign=top><a href="logging.html">logging</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="argumentParser.html#ArgumentParser">ArgumentParser</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ArgumentParser">class <strong>ArgumentParser</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#ArgumentParser">ArgumentParser</a>(logger)<br>
+&nbsp;<br>
+The&nbsp;parser&nbsp;for&nbsp;the&nbsp;command&nbsp;line&nbsp;arguments.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ArgumentParser-__init__"><strong>__init__</strong></a>(self, logger)</dt><dd><tt>Initalize&nbsp;the&nbsp;possible&nbsp;arguments.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+logger&nbsp;&nbsp;&nbsp;:&nbsp;Logs<br>
+&nbsp;&nbsp;The&nbsp;log&nbsp;<a href="builtins.html#object">object</a>&nbsp;to&nbsp;log&nbsp;to</tt></dd></dl>
+
+<dl><dt><a name="ArgumentParser-getOptions"><strong>getOptions</strong></a>(self, to_upload_rinex_dir)</dt><dd><tt>Get&nbsp;the&nbsp;options&nbsp;for&nbsp;each&nbsp;argument.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+to_upload_rinex_dir&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;directory&nbsp;where&nbsp;the&nbsp;rinex&nbsp;files&nbsp;must&nbsp;be&nbsp;put&nbsp;to&nbsp;be&nbsp;uploaded<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+list<br>
+&nbsp;&nbsp;The&nbsp;list&nbsp;of&nbsp;upload&nbsp;arguments&nbsp;for&nbsp;APPS.&nbsp;None&nbsp;means&nbsp;that&nbsp;the&nbsp;argument&nbsp;is&nbsp;not&nbsp;available</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>addToQueueSuccess</strong> = 'The id {id} was added to the queue successfully'<br>
+<strong>clientRun</strong> = 'APPSClone client socket connection'<br>
+<strong>criticalSSHException</strong> = 'Could not establish a connection to the server, because of an unknown reason'<br>
+<strong>criticalSocket</strong> = "Could not connect to socket on '{ip}:{port}'"<br>
+<strong>downloadArg</strong> = 'Download argument recognized'<br>
+<strong>downloadInfoSent</strong> = 'Asking to download results of file with id {id} from APPSClone server'<br>
+<strong>fileRemovedSuccess</strong> = 'The file {file} was removed with success'<br>
+<strong>getOptions</strong> = 'Options for command line-arguments'<br>
+<strong>noIds</strong> = 'There are no ids to check'<br>
+<strong>noRinexArg</strong> = "There isn't an input file in the arguments"<br>
+<strong>removeFromQueueSuccess</strong> = 'The id {id} was removed from the queue successfully'<br>
+<strong>responseError</strong> = "The server responded with an error - '{errorMsg}'"<br>
+<strong>responseReceived</strong> = 'A response has been received from the APPSClone server'<br>
+<strong>responseUploadSuccess</strong> = 'The upload of the file {file} was a success'<br>
+<strong>rinexArg</strong> = "The file to upload is '{file}'"<br>
+<strong>scpGetSuccessful</strong> = "Successfully copied remote file '{file}' to local directory '{df}'"<br>
+<strong>scpGetUnsuccessful</strong> = "Could not copy remote file '{file}' to local directory '{df}'"<br>
+<strong>scpPutSuccessful</strong> = "Successfully copied local file '{file}' to remote directory '{df}'"<br>
+<strong>scpPutUnsuccessful</strong> = "Could not copy local file '{file}' to remote directory '{df}'"<br>
+<strong>someIds</strong> = 'There are {numIds} ids in the queue'<br>
+<strong>sshConnect</strong> = "Connect to '{ip}:{port}', with user '{username}'"<br>
+<strong>sshConnectSuccessful</strong> = 'Successfully established a connection to the server'<br>
+<strong>sshConnectUnsuccessfulBadIP</strong> = "Could not establish a connection to the server, because the ip '{ip}' is not valid or is unavailable"<br>
+<strong>sshConnectUnsuccessfulBadPort</strong> = "Could not establish a connection to the server, ... the port '{port}' is not valid or is unavailable"<br>
+<strong>sshConnectUnsuccessfulBadUser</strong> = "Could not establish a connection to the server, ...rname}' is not valid or the password is incorrect"<br>
+<strong>unknownRinexArg</strong> = "The file '{file}' does not exist. Please move th...rect upload folder (defined in config/client.cfg)"<br>
+<strong>unknownUploadOrDownloadArg</strong> = "The argument '{arg}' is unknown"<br>
+<strong>upArg</strong> = "The value for the argument '{arg}' is '{argValue}'"<br>
+<strong>uploadArg</strong> = 'Upload argument recognized'<br>
+<strong>uploadInfoSent</strong> = 'Upload info of file {file} sent to APPSClone server'</td></tr></table>
+</body></html>
