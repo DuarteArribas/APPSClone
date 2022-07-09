@@ -101,15 +101,4 @@ make testAllPrint
 
 ## Documentation
 
-The documentation for the APPSClone upload file generator can be found [here](https://github.com/DuarteArribas/APPSClone/tree/main/development/APPSClone_UploadFileGenerator/docs).
-
-
-## FAQ
-
-#### Why not write the upload file without this tool?
-
-You can! In fact, if automation is wished, it should be done without this tool. The problem is for people who don't know the exact upload arguments, e.g. and wish to use this tool, not to fail to write them.
-
-## Lessons Learned
-
-Working with [curses](https://docs.python.org/3/howto/curses.html) was a new experienc, and, while using [pick](https://pypi.org/project/pick/), resetting windows were a must. The tool was revealed to be very important in not making mistakes when creating upload files for [APPSClone](https://github.com/DuarteArribas/APPSClone).
+The documentation for the APPSClone upload file generator can be found [here](https://github.com/DuarteArribas/APPSClone/tree/main/development/APPSClone_Client/docs).
