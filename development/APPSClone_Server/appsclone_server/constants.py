@@ -39,9 +39,9 @@ errorFromAPPS                 = "There was an error with the file '{file}' in AP
 checkStateFile                = "Checking file '{file}'"
 state                         = "The file '{file}' is in the '{state}' state"
 # = SSHConnection =
-#routines
+# Routines
 sshConnect                    = "Connect to '{ip}:{port}', with user '{username}'"
-#other
+# Other
 sshConnectSuccessful          = "Successfully established a connection to the server"
 sshConnectUnsuccessfulBadIP   = "Could not establish a connection to the server, because the ip '{ip}' is not valid or is unavailable"
 sshConnectUnsuccessfulBadPort = "Could not establish a connection to the server, because the port '{port}' is not valid or is unavailable"
@@ -52,13 +52,13 @@ scpGetUnsuccessful            = "Could not copy remote file '{file}' to local di
 scpPutSuccessful              = "Successfully copied local file '{file}' to remote directory '{df}'"
 scpPutUnsuccessful            = "Could not copy local file '{file}' to remote directory '{df}'"
 # = APPSCloneServer =
-#routines
+# Routines
 handleAllFilesState           = "State updates"
 uploadBack                    = "Upload back of results"
 downloadRinex                 = "Download of rinex files from source"
 uploadFilesChecking           = "Upload files check"
 uploadAllRinex                = "Upload of all Rinex"
-#other
+# Other
 resultUploadedBack            = "The result file '{file}' was uploaded back to '{uploadDir}' with success"
 resultNotInQueue              = "The result file '{file}' was not in the rinex queue. Removing it"
 removedFromRinexQueue         = "The result file '{file}' was successfully removed from the rinex queue"

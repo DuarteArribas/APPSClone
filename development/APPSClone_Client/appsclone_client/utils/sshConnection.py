@@ -1,11 +1,13 @@
 import paramiko
 import scp
-from appsclone_client.utils.helper import *
+from appsclone_server.utils.helper import *
+from appsclone_server.utils.logs   import *
+from appsclone_server.constants    import *
 
 class SSHConnection:
   """A client connection via ssh."""
   # == Methods ==
-  def __init__(self,ip,port,username,password):
+  def __init__(self,ip,port,username,password,logger):
     """Set the initial connection parameters.
 
     Parameters
@@ -25,6 +27,7 @@ class SSHConnection:
     self.port     = int(port)
     self.username = username
     self.password = password
+    self.logger   = logger
     self.client   = self.__connectViaSSH()
 
   def __connectViaSSH(self):
@@ -35,14 +38,31 @@ class SSHConnection:
     SSHClient:
       An ssh client object
     """
+    self.logger.writeSubroutineLog(
+      sshConnect.format(ip = self.ip,port = self.port,username = self.username),Logs.ROUTINE_STATUS.START
+    )
     try:
       client = paramiko.SSHClient()
       client.load_system_host_keys()
       client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
       client.connect(self.ip,self.port,self.username,self.password)
+      self.logger.writeRegularLog(Logs.SEVERITY.INFO,sshConnectSuccessful)
       return client
+    except paramiko.ssh_exception.BadAuthenticationType:
+      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,sshConnectUnsuccessfulBadIP.format(ip = self.ip))
+      return None
+    except paramiko.ssh_exception.NoValidConnectionsError:
+      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,sshConnectUnsuccessfulBadPort.format(port = self.port))
+      return None
+    except paramiko.ssh_exception.AuthenticationException:
+      self.logger.writeRegularLog(Logs.SEVERITY.ERROR,sshConnectUnsuccessfulBadUser.format(username = self.username))
+      return None
     except:
-      pass
+      self.logger.writeRegularLog(Logs.SEVERITY.CRITICAL,criticalSSHException)
+    finally:
+      self.logger.writeSubroutineLog(
+        sshConnect.format(ip = self.ip,port = self.port,username = self.username),Logs.ROUTINE_STATUS.END
+      )
   
   def getFile(self,pathToDownloadFrom,downloadDir):
     """Download a file from the given path in the server to the given local path.
@@ -59,8 +79,9 @@ class SSHConnection:
         filename = Helper.getFileFromPath(pathToDownloadFrom)
         scpClient = scp.SCPClient(self.client.get_transport())
         scpClient.get(pathToDownloadFrom,downloadDir)
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,scpGetSuccessful.format(file = filename,df = downloadDir))
       except:
-        pass
+        self.logger.writeRegularLog(Logs.SEVERITY.ERROR,scpGetUnsuccessful.format(file = filename,df = downloadDir))
 
   def putFile(self,pathToUpload,uploadDir):
     """Upload the given file to the given upload directory on the server.
@@ -74,11 +95,12 @@ class SSHConnection:
     """
     if self.client != None:
       try:
-        filename  = Helper.getFileFromPath(pathToUpload)
+        filename = Helper.getFileFromPath(pathToUpload)
         scpClient = scp.SCPClient(self.client.get_transport())
         scpClient.put(pathToUpload,uploadDir)
+        self.logger.writeRegularLog(Logs.SEVERITY.INFO,scpPutSuccessful.format(file = filename,df = uploadDir))
       except:
-        pass
+        self.logger.writeRegularLog(Logs.SEVERITY.ERROR,scpPutUnsuccessful.format(file = filename,df = uploadDir))
 
 # ✓    unit tested
 # ✓ feature tested

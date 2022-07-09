@@ -8,7 +8,13 @@ class ArgumentParser:
   """The parser for the command line arguments."""
   # == Methods ==
   def __init__(self,logger):
-    """Initalize the possible arguments."""
+    """Initalize the possible arguments.
+    
+    Parameters
+    ----------
+    logger   : Logs
+      The log object to log to
+    """
     self.logger = logger
     self.parser = argparse.ArgumentParser(
       description="The APPSClone client. Upload RINEX files to the server and download back the results!"
