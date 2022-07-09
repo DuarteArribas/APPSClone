@@ -15,10 +15,10 @@ def main():
   arguments = ap.getOptions(cfg.getLocalConfig("RINEX_DIR"))
   # if the file doesn't exist, exit; if it exists, proceed to the connection
   if not arguments[0]:
-    print("The given option is invalid")
+    print("The given option is invalid! Check logs to learn more.")
   else:
     if arguments[0] == "u" and not arguments[1]:
-      print("Could not find the given RINEX file")
+      print("Could not find the given RINEX file! Check logs to learn more.")
     else:
       client = APPSCloneClient(
         cfg.getConnectionConfig("APPS_IP"),

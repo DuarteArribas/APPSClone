@@ -1,0 +1,11 @@
+2022-07-09 15:49:14.677612 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-09 15:49:14.682593 (INFO)     | Attempting to upload file.
+2022-07-09 15:49:14.685432 (ERROR)    | The file 'arroz' does not exist.
+2022-07-09 15:49:14.688673 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-09 15:49:22.039179 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-09 15:49:22.044824 (INFO)     | Attempting to upload file.
+2022-07-09 15:49:22.047113 (ERROR)    | There isn't an input file in the arguments.
+2022-07-09 15:49:22.051522 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-09 15:49:30.100608 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-09 15:49:30.106283 (ERROR)    | The argument 'uploaad' is unknown.
+2022-07-09 15:49:30.108681 (INFO)     | === Options for command line-arguments (END) ===
