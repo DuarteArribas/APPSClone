@@ -15,7 +15,16 @@ def main():
     logger            = logger
   )
   # run server
-  server = APPSCloneServer(cfg.getServerConfig("IP"),cfg.getServerConfig("PORT"),conn)
+  server = APPSCloneServer(
+    cfg.getServerConfig("IP"),
+    cfg.getServerConfig("PORT"),
+    conn,
+    cfg.getInConfig("TO_UPLOAD_REGULAR_DIR"),
+    cfg.getQueuesConfig("APPS_IDS"),
+    cfg.getQueuesConfig("APPSCLONE_IDS"),
+    cfg.getQueuesConfig("REGULAR_USERS"),
+    cfg.getOutConfig("RESULTS_REGULAR_DIR")
+  )
   server.runServer()
 
 if __name__ == '__main__':

@@ -20,7 +20,7 @@ class APPSCloneServer:
   MAX_TRIES               = 5
   NUMBER_BYTES_TO_RECEIVE = 16384
   # == Methods ==
-  def __init__(self,ip,port,conn):
+  def __init__(self,ip,port,conn,toUploadDir,appsIDQueue,idQueue,regularUsersIdQueue,resultsRegular):
     """Server initialization.
     
     Parameters
@@ -30,9 +30,14 @@ class APPSCloneServer:
     port : int
       The port to open the server on
     """
-    self.ip            = ip
-    self.port          = int(port)
-    self.clientHandler = ClientHandler(conn)
+    self.ip                  = ip
+    self.port                = int(port)
+    self.toUploadDir         = toUploadDir
+    self.appsIDQueue         = appsIDQueue
+    self.idQueue             = idQueue
+    self.regularUsersIdQueue = regularUsersIdQueue
+    self.resultsRegular      = resultsRegular
+    self.clientHandler       = ClientHandler(conn,toUploadDir,appsIDQueue,idQueue,regularUsersIdQueue,resultsRegular)
 
   def runServer(self):
     """Run the server."""

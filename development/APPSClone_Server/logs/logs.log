@@ -171,3 +171,60 @@
 2022-07-09 22:42:29.810064 (INFO)     | === Download of rinex files from source (END) ===
 2022-07-09 22:42:29.816600 (INFO)     | === Upload of all Rinex (START) ===
 2022-07-09 22:42:29.825775 (INFO)     | === Upload of all Rinex (END) ===
+2022-07-10 00:55:39.748796 (INFO)     | === State updates (START) ===
+2022-07-10 00:55:39.756835 (INFO)     | = Gathering data on uuid '5b9fe3e6-ffe2-11ec-9e10-e0db5501adf2' (START) =
+2022-07-10 00:55:44.646834 (INFO)     | = Gathering data on uuid '5b9fe3e6-ffe2-11ec-9e10-e0db5501adf2' (END) =
+2022-07-10 00:55:44.654545 (INFO)     | == State check (START) ==
+2022-07-10 00:55:44.658779 (INFO)     | = Gathering data on uuid '5b9fe3e6-ffe2-11ec-9e10-e0db5501adf2' (START) =
+2022-07-10 00:55:46.349290 (INFO)     | = Gathering data on uuid '5b9fe3e6-ffe2-11ec-9e10-e0db5501adf2' (END) =
+2022-07-10 00:55:46.355740 (INFO)     | Checking file 'massa'.
+2022-07-10 00:55:46.361234 (INFO)     | The file 'massa' is in the 'Verified' state.
+2022-07-10 00:55:46.366464 (INFO)     | = Approval on file 'massa' (START) =
+2022-07-10 00:55:47.993635 (INFO)     | The file 'massa' has been verified by APPS and is now approved for processing.
+2022-07-10 00:55:48.000103 (INFO)     | = Approval on file 'massa' (END) =
+2022-07-10 00:55:48.005729 (INFO)     | === State updates (END) ===
+2022-07-10 00:55:48.011063 (INFO)     | === Upload back of results (START) ===
+2022-07-10 00:55:48.018504 (INFO)     | === Upload back of results (END) ===
+2022-07-10 00:55:48.022425 (INFO)     | === Download of rinex files from source (START) ===
+2022-07-10 00:55:48.029379 (INFO)     | == Upload files check (START) ==
+2022-07-10 00:55:48.034942 (INFO)     | No upload files were found.
+2022-07-10 00:55:48.038476 (INFO)     | == Upload files check (END) ==
+2022-07-10 00:55:48.043902 (INFO)     | === Download of rinex files from source (END) ===
+2022-07-10 00:55:48.049505 (INFO)     | === Upload of all Rinex (START) ===
+2022-07-10 00:55:48.056880 (INFO)     | === Upload of all Rinex (END) ===
+2022-07-10 00:57:56.763422 (INFO)     | === State updates (START) ===
+2022-07-10 00:57:56.771691 (INFO)     | = Gathering data on uuid '5b9fe3e6-ffe2-11ec-9e10-e0db5501adf2' (START) =
+2022-07-10 00:58:02.302627 (INFO)     | = Gathering data on uuid '5b9fe3e6-ffe2-11ec-9e10-e0db5501adf2' (END) =
+2022-07-10 00:58:02.310534 (INFO)     | == State check (START) ==
+2022-07-10 00:58:02.315116 (INFO)     | = Gathering data on uuid '5b9fe3e6-ffe2-11ec-9e10-e0db5501adf2' (START) =
+2022-07-10 00:58:04.203679 (INFO)     | = Gathering data on uuid '5b9fe3e6-ffe2-11ec-9e10-e0db5501adf2' (END) =
+2022-07-10 00:58:04.210075 (INFO)     | Checking file 'massa'.
+2022-07-10 00:58:04.215524 (INFO)     | The file 'massa' is in the 'Available' state.
+2022-07-10 00:58:04.220813 (INFO)     | = Data retrieval on file 'massa' (START) =
+2022-07-10 00:58:09.722004 (INFO)     | The file 'massa''s processed files have been successfully downloaded.
+2022-07-10 00:58:09.728253 (INFO)     | = Data retrieval on file 'massa' (END) =
+2022-07-10 00:58:09.733795 (INFO)     | = Data removal of file 'massa' (START) =
+2022-07-10 00:58:11.512736 (INFO)     | The file 'massa' has been deleted from APPS.
+2022-07-10 00:58:11.521282 (INFO)     | Successfully removed file 'massa' from the apps ID queue.
+2022-07-10 00:58:11.525216 (INFO)     | = Data removal of file 'massa' (END) =
+2022-07-10 00:58:11.530807 (INFO)     | === State updates (END) ===
+2022-07-10 00:58:11.535565 (INFO)     | === Upload back of results (START) ===
+2022-07-10 00:58:11.542756 (INFO)     | === Upload back of results (END) ===
+2022-07-10 00:58:11.546345 (INFO)     | === Download of rinex files from source (START) ===
+2022-07-10 00:58:11.553773 (INFO)     | == Upload files check (START) ==
+2022-07-10 00:58:11.559796 (INFO)     | No upload files were found.
+2022-07-10 00:58:11.563091 (INFO)     | == Upload files check (END) ==
+2022-07-10 00:58:11.568462 (INFO)     | === Download of rinex files from source (END) ===
+2022-07-10 00:58:11.573874 (INFO)     | === Upload of all Rinex (START) ===
+2022-07-10 00:58:11.581076 (INFO)     | === Upload of all Rinex (END) ===
+2022-07-10 00:58:32.035907 (INFO)     | === State updates (START) ===
+2022-07-10 00:58:32.044216 (INFO)     | === State updates (END) ===
+2022-07-10 00:58:32.048071 (INFO)     | === Upload back of results (START) ===
+2022-07-10 00:58:32.055108 (INFO)     | === Upload back of results (END) ===
+2022-07-10 00:58:32.058870 (INFO)     | === Download of rinex files from source (START) ===
+2022-07-10 00:58:32.065566 (INFO)     | == Upload files check (START) ==
+2022-07-10 00:58:32.071792 (INFO)     | No upload files were found.
+2022-07-10 00:58:32.075108 (INFO)     | == Upload files check (END) ==
+2022-07-10 00:58:32.080355 (INFO)     | === Download of rinex files from source (END) ===
+2022-07-10 00:58:32.086060 (INFO)     | === Upload of all Rinex (START) ===
+2022-07-10 00:58:32.093629 (INFO)     | === Upload of all Rinex (END) ===

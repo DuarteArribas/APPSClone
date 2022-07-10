@@ -261,16 +261,19 @@ class Connection_APPS:
     if argName   == "pressure" or argName == "attitude":
       return arg == None or os.path.isfile(arg)
     elif argName == "elev_angle_cutoff":
-      if not isinstance(arg,float) and not isinstance(arg,int):
+      correctDigitsLength = len([digit for digit in str(arg) if digit.isdigit() or digit == "."])
+      if correctDigitsLength != len(str(arg)):
         return False
       else:
         return arg > Connection_APPS.DEFAULT_ARGS[argName][1][0] and arg < Connection_APPS.DEFAULT_ARGS[argName][1][1]
     elif argName == "solution_period":
-      if not isinstance(arg,int):
+      correctDigitsLength = len([digit for digit in str(arg) if digit.isdigit()])
+      if correctDigitsLength != len(str(arg)):
         return False
       else:
         return arg > Connection_APPS.DEFAULT_ARGS[argName][1]
     else:
+
       return arg in Connection_APPS.DEFAULT_ARGS[argName][1]
 
   def __addToIDQueue(self,uuid,filename,appsIDQueue):
