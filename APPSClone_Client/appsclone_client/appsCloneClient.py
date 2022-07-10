@@ -83,7 +83,7 @@ class APPSCloneClient:
       The upload arguments
     """
     if option == "u":
-      sshClient = SSHConnection(self.ip,self.port,self.username,self.password)
+      sshClient = SSHConnection(self.ip,22,self.username,self.password,self.logger)
       sshClient.putFile(Helper.joinPathFile(self.rinexDir,args[0]),self.toUploadDir)
       self.socket.send(pickle.dumps(OptionArgs(1,(args))))
       self.logger.writeRegularLog(Logs.SEVERITY.INFO,uploadInfoSent.format(file = args[0]))
