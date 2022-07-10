@@ -25,10 +25,22 @@ class APPSCloneServer:
     
     Parameters
     ----------
-    ip   : int
+    ip                  : int
       The ip of the server
-    port : int
+    port                : int
       The port to open the server on
+    conn                : Connection_APPS
+      A connection to APPS object
+    toUploadDir         : str
+      The directory to upload to
+    appsIDQueue         : str
+      The queue of APPS ids
+    idQueue             : str
+      The queue of APPSClone ids
+    regularUsersIdQueue : str
+      The regular users id queue
+    resultsRegular      : str
+      The regular results directory
     """
     self.ip                  = ip
     self.port                = int(port)

@@ -38,13 +38,17 @@ class APPSCloneSpecialServer:
 
     Parameters
     ----------
-    conn        : Connection_APPS
+    conn              : Connection_APPS
       A connection to APPS object
-    appsIDQueue : str
+    appsIDQueue       : str
       The file which contains the ids of the files that were uploaded to APPS
-    resultsDir  : str
+    resultsDir        : str
       The directory to which the results should be downloaded to
-    logger      : Logs
+    resultsRegularDir : str
+      The directory of regular results
+    rinexQueue        : str
+      The rinex queue
+    logger            : Logs
       The log object to log to
     """
     logger.writeRoutineLog(handleAllFilesState,Logs.ROUTINE_STATUS.START)

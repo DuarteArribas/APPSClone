@@ -2,7 +2,13 @@ from appsclone_server.connection import *
 import os.path
 
 class ClientHandler:
-  """Handle clients' operations."""
+  """Handle clients' operations.
+  
+  Attributes
+  ----------
+  DEFAULT_UPLOAD_ARGS : dict
+    Default upload arguments of APPS
+  """
   DEFAULT_UPLOAD_ARGS = {
     "processing_mode"    : defines.GIPSYData.PROCESSING_MODE_DEFAULT,
     "product"            : defines.GIPSYData.PRODUCT_DEFAULT,
@@ -14,7 +20,23 @@ class ClientHandler:
     "solution_period"    : 300
   }
   def __init__(self,conn,toUploadDir,appsIDQueue,idQueue,regularUsersIdQueue,resultsRegular):
-    """Initalize handler."""
+    """Initalize handler.
+
+    Parameters
+    ----------
+    conn                : Connection_APPS
+      A connection to APPS object
+    toUploadDir         : str
+      The directory to upload to
+    appsIDQueue         : str
+      The queue of APPS ids
+    idQueue             : str
+      The queue of APPSClone ids
+    regularUsersIdQueue : str
+      The regular users id queue
+    resultsRegular      : str
+      The regular results directory
+    """
     self.CLIENT_HANDLER_METHOD = {
       1: self.requestFileUpload,
       2: self.requestFileDownload,
