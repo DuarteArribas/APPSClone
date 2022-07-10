@@ -75,14 +75,11 @@ make test tf=nameOfTestFile
 
 The `nameOfTestFile` shall not contain `test_` at the start and shall not end in `.py`; the makefile automatically handles that.
 
-
 To run a specific test and print the output, run:
 
 ```bash
 make testPrint tf=nameOfTestFile
 ```
-
-This is the recommended testing type for this project because the GUI will only be shown if printing is active.
 
 To run all tests, run:
 
