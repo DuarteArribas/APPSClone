@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module config</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>config</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/mnt/c/Users/duart/Documents/uni/project/APPSClone/development/APPSClone_Server/appsclone_server/utils/config.py">/mnt/c/Users/duart/Documents/uni/project/APPSClone/development/APPSClone_Server/appsclone_server/utils/config.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="configparser.html">configparser</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="config.html#Config">Config</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Config">class <strong>Config</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Config">Config</a>(configFile)<br>
+&nbsp;<br>
+A&nbsp;config&nbsp;tool,&nbsp;which&nbsp;reads&nbsp;from&nbsp;the&nbsp;given&nbsp;configuration&nbsp;file.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Config-__init__"><strong>__init__</strong></a>(self, configFile)</dt><dd><tt>Set&nbsp;the&nbsp;default&nbsp;configuration&nbsp;of&nbsp;the&nbsp;config&nbsp;reading&nbsp;tool.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+configFile&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;configuration&nbsp;file&nbsp;to&nbsp;read&nbsp;from</tt></dd></dl>
+
+<dl><dt><a name="Config-getInConfig"><strong>getInConfig</strong></a>(self, key)</dt><dd><tt>Get&nbsp;a&nbsp;config&nbsp;from&nbsp;the&nbsp;IN&nbsp;section&nbsp;on&nbsp;the&nbsp;config&nbsp;file.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+key&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;key&nbsp;corresponding&nbsp;to&nbsp;the&nbsp;wanted&nbsp;configuration<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+str<br>
+&nbsp;&nbsp;The&nbsp;corresponding&nbsp;configuration</tt></dd></dl>
+
+<dl><dt><a name="Config-getLogConfig"><strong>getLogConfig</strong></a>(self, key)</dt><dd><tt>Get&nbsp;a&nbsp;config&nbsp;from&nbsp;the&nbsp;LOGS&nbsp;section&nbsp;on&nbsp;the&nbsp;config&nbsp;file.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+key&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;key&nbsp;corresponding&nbsp;to&nbsp;the&nbsp;wanted&nbsp;configuration<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+str<br>
+&nbsp;&nbsp;The&nbsp;corresponding&nbsp;configuration</tt></dd></dl>
+
+<dl><dt><a name="Config-getOutConfig"><strong>getOutConfig</strong></a>(self, key)</dt><dd><tt>Get&nbsp;a&nbsp;config&nbsp;from&nbsp;the&nbsp;OUT&nbsp;section&nbsp;on&nbsp;the&nbsp;config&nbsp;file.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+key&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;key&nbsp;corresponding&nbsp;to&nbsp;the&nbsp;wanted&nbsp;configuration<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+str<br>
+&nbsp;&nbsp;The&nbsp;corresponding&nbsp;configuration</tt></dd></dl>
+
+<dl><dt><a name="Config-getQueuesConfig"><strong>getQueuesConfig</strong></a>(self, key)</dt><dd><tt>Get&nbsp;a&nbsp;config&nbsp;from&nbsp;the&nbsp;QUEUES&nbsp;section&nbsp;on&nbsp;the&nbsp;config&nbsp;file.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+key&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;key&nbsp;corresponding&nbsp;to&nbsp;the&nbsp;wanted&nbsp;configuration<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+str<br>
+&nbsp;&nbsp;The&nbsp;corresponding&nbsp;configuration</tt></dd></dl>
+
+<dl><dt><a name="Config-getServerConfig"><strong>getServerConfig</strong></a>(self, key)</dt><dd><tt>Get&nbsp;a&nbsp;config&nbsp;from&nbsp;the&nbsp;SERVER&nbsp;section&nbsp;on&nbsp;the&nbsp;config&nbsp;file.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+key&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;key&nbsp;corresponding&nbsp;to&nbsp;the&nbsp;wanted&nbsp;configuration<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+str<br>
+&nbsp;&nbsp;The&nbsp;corresponding&nbsp;configuration</tt></dd></dl>
+
+<dl><dt><a name="Config-getSettingsConfig"><strong>getSettingsConfig</strong></a>(self, key)</dt><dd><tt>Get&nbsp;a&nbsp;config&nbsp;from&nbsp;the&nbsp;SETTINGS&nbsp;section&nbsp;on&nbsp;the&nbsp;config&nbsp;file.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+key&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;key&nbsp;corresponding&nbsp;to&nbsp;the&nbsp;wanted&nbsp;configuration<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+str<br>
+&nbsp;&nbsp;The&nbsp;corresponding&nbsp;configuration</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

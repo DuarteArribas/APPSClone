@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module clientHandler</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>clientHandler</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/mnt/c/Users/duart/Documents/uni/project/APPSClone/development/APPSClone_Server/appsclone_server/clientHandler.py">/mnt/c/Users/duart/Documents/uni/project/APPSClone/development/APPSClone_Server/appsclone_server/clientHandler.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="datetime.html">datetime</a><br>
+<a href="gdgps_apps.defines.html">gdgps_apps.defines</a><br>
+</td><td width="25%" valign=top><a href="gzip.html">gzip</a><br>
+<a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="re.html">re</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="clientHandler.html#ClientHandler">ClientHandler</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ClientHandler">class <strong>ClientHandler</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#ClientHandler">ClientHandler</a>(conn,&nbsp;toUploadDir,&nbsp;appsIDQueue,&nbsp;idQueue,&nbsp;regularUsersIdQueue,&nbsp;resultsRegular)<br>
+&nbsp;<br>
+Handle&nbsp;clients'&nbsp;operations.<br>
+&nbsp;<br>
+Attributes<br>
+----------<br>
+DEFAULT_UPLOAD_ARGS&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;Default&nbsp;upload&nbsp;arguments&nbsp;of&nbsp;APPS<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ClientHandler-__init__"><strong>__init__</strong></a>(self, conn, toUploadDir, appsIDQueue, idQueue, regularUsersIdQueue, resultsRegular)</dt><dd><tt>Initalize&nbsp;handler.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+conn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Connection_APPS<br>
+&nbsp;&nbsp;A&nbsp;connection&nbsp;to&nbsp;APPS&nbsp;<a href="builtins.html#object">object</a><br>
+toUploadDir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;directory&nbsp;to&nbsp;upload&nbsp;to<br>
+appsIDQueue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;queue&nbsp;of&nbsp;APPS&nbsp;ids<br>
+idQueue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;queue&nbsp;of&nbsp;APPSClone&nbsp;ids<br>
+regularUsersIdQueue&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;regular&nbsp;users&nbsp;id&nbsp;queue<br>
+resultsRegular&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;regular&nbsp;results&nbsp;directory</tt></dd></dl>
+
+<dl><dt><a name="ClientHandler-process"><strong>process</strong></a>(self, option, args=None)</dt><dd><tt>Process&nbsp;an&nbsp;option&nbsp;received&nbsp;by&nbsp;the&nbsp;client&nbsp;and&nbsp;call&nbsp;the&nbsp;appropriate&nbsp;client&nbsp;handler&nbsp;method.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+option&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;The&nbsp;chosen&nbsp;menu&nbsp;option<br>
+args&nbsp;&nbsp;&nbsp;:&nbsp;tuple<br>
+&nbsp;&nbsp;The&nbsp;arguments&nbsp;sent&nbsp;by&nbsp;the&nbsp;client<br>
+&nbsp;<br>
+Return<br>
+----------<br>
+dict<br>
+&nbsp;&nbsp;The&nbsp;code&nbsp;to&nbsp;be&nbsp;treated&nbsp;by&nbsp;the&nbsp;client&nbsp;and&nbsp;the&nbsp;respective&nbsp;arguments</tt></dd></dl>
+
+<dl><dt><a name="ClientHandler-requestFileDownload"><strong>requestFileDownload</strong></a>(self, args)</dt><dd><tt>Called&nbsp;by&nbsp;the&nbsp;client&nbsp;to&nbsp;request&nbsp;a&nbsp;file&nbsp;download.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+args&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;args[0]&nbsp;is&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;file<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+dict<br>
+&nbsp;&nbsp;The&nbsp;code&nbsp;is&nbsp;either&nbsp;0&nbsp;on&nbsp;success&nbsp;or&nbsp;-1&nbsp;in&nbsp;case&nbsp;of&nbsp;error.&nbsp;The&nbsp;args&nbsp;defines&nbsp;the&nbsp;error&nbsp;that&nbsp;happened</tt></dd></dl>
+
+<dl><dt><a name="ClientHandler-requestFileUpload"><strong>requestFileUpload</strong></a>(self, args)</dt><dd><tt>Called&nbsp;by&nbsp;the&nbsp;client&nbsp;to&nbsp;request&nbsp;a&nbsp;file&nbsp;upload.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+args&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;The&nbsp;list&nbsp;of&nbsp;upload&nbsp;arguments,&nbsp;where&nbsp;args[0]&nbsp;is&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;file<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+dict<br>
+&nbsp;&nbsp;The&nbsp;code&nbsp;is&nbsp;either&nbsp;the&nbsp;new&nbsp;APPSClone&nbsp;id&nbsp;or&nbsp;-1&nbsp;in&nbsp;case&nbsp;of&nbsp;error.&nbsp;The&nbsp;args&nbsp;defines&nbsp;the&nbsp;error&nbsp;that&nbsp;happened</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DEFAULT_UPLOAD_ARGS</strong> = {'elev_angle_cutoff': 7.5, 'elev_dep_weighting': 'SQRTSIN', 'model_tides': True, 'ocean_loading': True, 'processing_mode': 'S', 'product': 'B', 'solution_period': 300, 'troposphere_model': 'GMF'}</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>addedToQueueSuccess</strong> = "Successfully added file '{file}' to the apps ID queue"<br>
+<strong>alreadyUploaded</strong> = "The file '{file}' is already uploaded"<br>
+<strong>antennas</strong> = {'3S-02-TSADM     NONE', '3S-02-TSATE     NONE', 'AERAT1675_120   SPKE', 'AERAT1675_542E  NEVE', 'AERAT2775_43    NONE', 'AERAT2775_43    SPKE', ...}<br>
+<strong>antennasList</strong> = ['BLOCK IIA', 'BLOCK IIA', 'BLOCK IIR-M', 'BLOCK IIA', 'BLOCK IIF', 'BLOCK II', 'BLOCK IIR-B', 'BLOCK I', 'BLOCK IIA', 'BLOCK IIA', 'BLOCK IIF', 'BLOCK I', 'BLOCK IIA', 'BLOCK IIR-M', 'BLOCK IIA', 'BLOCK IIA', 'BLOCK IIR-M', 'BLOCK IIA', 'BLOCK IIA', 'BLOCK IIR-M', ...]<br>
+<strong>approveFile</strong> = "Approval on file '{file}'"<br>
+<strong>approveSuccessful</strong> = "The file '{file}' has been verified by APPS and is now approved for processing"<br>
+<strong>approveUnsuccessful</strong> = "The file '{file}' could not be approved for processing"<br>
+<strong>canUploadQuota</strong> = "There is enough quota to upload file '{file}'"<br>
+<strong>cannotUploadQuota</strong> = "There isn't enough quota to upload file '{file}'"<br>
+<strong>checkState</strong> = 'State check'<br>
+<strong>checkStateFile</strong> = "Checking file '{file}'"<br>
+<strong>connectionFailed</strong> = 'The connection with APPS failed'<br>
+<strong>connectionSuccess</strong> = 'The connection with APPS was successful'<br>
+<strong>connectionTest</strong> = 'Connection test'<br>
+<strong>criticalException</strong> = "Something, that wasn't accounted for, happened. ...to check what happened to file with uuid '{uuid}'"<br>
+<strong>criticalSSHException</strong> = 'Could not establish a connection to the server, because of an unknown reason'<br>
+<strong>dataDeletedSuccessful</strong> = "The file '{file}' has been deleted from APPS"<br>
+<strong>dataDeletedUnsuccessful</strong> = "Could not delete file '{file}' from APPS"<br>
+<strong>dataDownloadedSuccessful</strong> = "The file '{file}''s processed files have been successfully downloaded"<br>
+<strong>dataDownloadedUnsuccessful</strong> = "The file '{file}''s processed files could not be downloaded"<br>
+<strong>dataNotFound</strong> = "The file with uuid '{uuid}' was not found on APPS"<br>
+<strong>downloadRinex</strong> = 'Download of rinex files from source'<br>
+<strong>errorFromAPPS</strong> = "There was an error with the file '{file}' in APPS"<br>
+<strong>fileAddedToRinexQueue</strong> = "The file '{file}' was added to the rinex queue"<br>
+<strong>fileDataGathering</strong> = "Gathering data on uuid '{uuid}'"<br>
+<strong>fileNotValidated</strong> = "The file '{file}' is invalid - {validity}"<br>
+<strong>fileValidated</strong> = "The file '{file}' was validated and is being considered a valid file for uploading"<br>
+<strong>handleAllFilesState</strong> = 'State updates'<br>
+<strong>idNotInQueue</strong> = "The file '{file}' was not in the apps ID queue, so cannot be removed from it"<br>
+<strong>invalidArg</strong> = "The value '{arg}' is invalid for argument '{argName}'. Using default value '{defaultValue}'"<br>
+<strong>invalidIdentifier</strong> = "The uuid '{uuid}' is not valid"<br>
+<strong>invalidUploadFileFields</strong> = "The upload file '{file}' is invalid, because it contains invalid fields or there are missing fields"<br>
+<strong>invalidUploadFileIP</strong> = "The upload file '{file}' is invalid, because its ip '{ip}' is invalid"<br>
+<strong>invalidUploadFileNotAFile</strong> = "'{file}' is not a file; thus, is invalid"<br>
+<strong>noUploadFiles</strong> = 'No upload files were found'<br>
+<strong>receivers</strong> = {'4000SSI', '5700', 'ALERTGEO RESOLUTE', 'AOA BENCHMARK ACT', 'AOA ICS-4000Z', 'AOA ICS-4000Z ACT', ...}<br>
+<strong>receiversList</strong> = ['ALERTGEO RESOLUTE', 'AOA BENCHMARK ACT', 'AOA ICS-4000Z', 'AOA ICS-4000Z ACT', 'AOA RASCAL-12', 'AOA RASCAL-8', 'AOA SNR-12 ACT', 'AOA SNR-8000 ACT', 'AOA SNR-8100 ACT', 'AOA TTR-12', 'AOA TTR-4P', 'ASHTECH', 'ASHTECH 3DF-XXIV', 'ASHTECH D-XII', 'ASHTECH GG24C', 'ASHTECH G-XII', 'ASHTECH LCS-XII', 'ASHTECH LM-XII3', 'ASHTECH L-XII', 'ASHTECH MICROZ', ...]<br>
+<strong>removeData</strong> = "Data removal of file '{file}'"<br>
+<strong>removedFromQueueSuccess</strong> = "Successfully removed file '{file}' from the apps ID queue"<br>
+<strong>removedFromRinexQueue</strong> = "The result file '{file}' was successfully removed from the rinex queue"<br>
+<strong>removedRinex</strong> = "The file '{file}' was removed"<br>
+<strong>removedUploadFile</strong> = "The upload file '{file}' was removed"<br>
+<strong>resultNotInQueue</strong> = "The result file '{file}' was not in the rinex queue. Removing it"<br>
+<strong>resultUploadedBack</strong> = "The result file '{file}' was uploaded back to '{uploadDir}' with success"<br>
+<strong>retrieveData</strong> = "Data retrieval on file '{file}'"<br>
+<strong>rinexUpload</strong> = "Upload on file '{file}'"<br>
+<strong>scpGetSuccessful</strong> = "Successfully copied remote file '{file}' to local directory '{df}'"<br>
+<strong>scpGetUnsuccessful</strong> = "Could not copy remote file '{file}' to local directory '{df}'"<br>
+<strong>scpPutSuccessful</strong> = "Successfully copied local file '{file}' to remote directory '{df}'"<br>
+<strong>scpPutUnsuccessful</strong> = "Could not copy local file '{file}' to remote directory '{df}'"<br>
+<strong>sshConnect</strong> = "Connect to '{ip}:{port}', with user '{username}'"<br>
+<strong>sshConnectSuccessful</strong> = 'Successfully established a connection to the server'<br>
+<strong>sshConnectUnsuccessfulBadIP</strong> = "Could not establish a connection to the server, because the ip '{ip}' is not valid or is unavailable"<br>
+<strong>sshConnectUnsuccessfulBadPort</strong> = "Could not establish a connection to the server, ... the port '{port}' is not valid or is unavailable"<br>
+<strong>sshConnectUnsuccessfulBadUser</strong> = "Could not establish a connection to the server, ...name}' is not valid, or the password is incorrect"<br>
+<strong>state</strong> = "The file '{file}' is in the '{state}' state"<br>
+<strong>uploadAllRinex</strong> = 'Upload of all Rinex'<br>
+<strong>uploadBack</strong> = 'Upload back of results'<br>
+<strong>uploadFilesChecking</strong> = 'Upload files check'<br>
+<strong>uploadFilesExist</strong> = '{numOfUploadFiles} valid upload files were found. Attempting to download corresponding rinex files'<br>
+<strong>uploadSuccess</strong> = "Successfully uploaded file '{file}' to APPS"<br>
+<strong>validUploadFile</strong> = "The upload file '{file}' was validated"</td></tr></table>
+</body></html>

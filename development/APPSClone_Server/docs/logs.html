@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module logs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>logs</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/mnt/c/Users/duart/Documents/uni/project/APPSClone/development/APPSClone_Server/appsclone_server/utils/logs.py">/mnt/c/Users/duart/Documents/uni/project/APPSClone/development/APPSClone_Server/appsclone_server/utils/logs.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="datetime.html">datetime</a><br>
+</td><td width="25%" valign=top><a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="logs.html#Logs">Logs</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Logs">class <strong>Logs</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Logs">Logs</a>(loggingFile,&nbsp;maxLogs)<br>
+&nbsp;<br>
+A&nbsp;logging&nbsp;system,&nbsp;that&nbsp;formats&nbsp;logs&nbsp;according&nbsp;to&nbsp;their&nbsp;severity.<br>
+&nbsp;<br>
+Attributes<br>
+----------<br>
+SEVERITY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;enum<br>
+&nbsp;&nbsp;The&nbsp;logs&nbsp;severity&nbsp;in&nbsp;an&nbsp;easier&nbsp;to&nbsp;write&nbsp;way<br>
+MIN_NUM_LOGS&nbsp;&nbsp;&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;The&nbsp;minimum&nbsp;number&nbsp;of&nbsp;logs&nbsp;allowed<br>
+MAX_NUM_LOGS&nbsp;&nbsp;&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;The&nbsp;maximum&nbsp;number&nbsp;of&nbsp;logs&nbsp;allowed&nbsp;<br>
+LOG_TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;enum<br>
+&nbsp;&nbsp;The&nbsp;type&nbsp;of&nbsp;log.&nbsp;ROUTINE_START&nbsp;and&nbsp;ROUTINE_END&nbsp;mean&nbsp;that&nbsp;the&nbsp;log&nbsp;delimits&nbsp;the&nbsp;start&nbsp;and&nbsp;end<br>
+&nbsp;&nbsp;of&nbsp;a&nbsp;routine.&nbsp;SUBROUTINE_START&nbsp;and&nbsp;SUBROUTINE_END&nbsp;mean&nbsp;that&nbsp;the&nbsp;log&nbsp;delimits&nbsp;the&nbsp;start&nbsp;and&nbsp;end<br>
+&nbsp;&nbsp;of&nbsp;a&nbsp;subroutine.&nbsp;OTHER&nbsp;means&nbsp;it's&nbsp;a&nbsp;regular&nbsp;log<br>
+ROUTINE_STATUS&nbsp;:&nbsp;enum<br>
+&nbsp;&nbsp;START&nbsp;means&nbsp;the&nbsp;start&nbsp;of&nbsp;a&nbsp;routine&nbsp;(or&nbsp;subroutine)&nbsp;and&nbsp;END&nbsp;means&nbsp;the&nbsp;end&nbsp;of&nbsp;a&nbsp;routine&nbsp;(or&nbsp;subroutine)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Logs-__init__"><strong>__init__</strong></a>(self, loggingFile, maxLogs)</dt><dd><tt>Set&nbsp;the&nbsp;default&nbsp;configuration&nbsp;of&nbsp;the&nbsp;logging&nbsp;tool&nbsp;to&nbsp;write&nbsp;to&nbsp;a&nbsp;specific&nbsp;file&nbsp;with&nbsp;a&nbsp;specific&nbsp;format.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+loggingFile&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;file&nbsp;to&nbsp;log&nbsp;to<br>
+maxLogs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;The&nbsp;max&nbsp;quantity&nbsp;of&nbsp;allowed&nbsp;logs.&nbsp;Older&nbsp;logs&nbsp;will&nbsp;be&nbsp;deleted&nbsp;if&nbsp;this&nbsp;number&nbsp;is&nbsp;surpassed,&nbsp;so&nbsp;<br>
+&nbsp;&nbsp;that&nbsp;the&nbsp;number&nbsp;of&nbsp;logs&nbsp;will&nbsp;not&nbsp;be&nbsp;more&nbsp;than&nbsp;maxLogs</tt></dd></dl>
+
+<dl><dt><a name="Logs-writeNewRunLog"><strong>writeNewRunLog</strong></a>(self, message)</dt><dd><tt>Write&nbsp;a&nbsp;log,&nbsp;which&nbsp;is&nbsp;a&nbsp;new&nbsp;run&nbsp;of&nbsp;the&nbsp;file.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+message&nbsp;&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;log&nbsp;message</tt></dd></dl>
+
+<dl><dt><a name="Logs-writeRegularLog"><strong>writeRegularLog</strong></a>(self, severity, message)</dt><dd><tt>Write&nbsp;a&nbsp;regular&nbsp;log&nbsp;to&nbsp;a&nbsp;file,&nbsp;according&nbsp;to&nbsp;its&nbsp;severity.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+severity&nbsp;:&nbsp;enum<br>
+&nbsp;&nbsp;The&nbsp;severity&nbsp;of&nbsp;the&nbsp;log<br>
+message&nbsp;&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;log&nbsp;message</tt></dd></dl>
+
+<dl><dt><a name="Logs-writeRoutineLog"><strong>writeRoutineLog</strong></a>(self, message, routineStatus)</dt><dd><tt>Write&nbsp;a&nbsp;routine&nbsp;log&nbsp;to&nbsp;a&nbsp;file,&nbsp;according&nbsp;to&nbsp;its&nbsp;routine&nbsp;status.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;log&nbsp;message<br>
+routineStatus&nbsp;:&nbsp;enum<br>
+&nbsp;&nbsp;START&nbsp;means&nbsp;the&nbsp;start&nbsp;of&nbsp;a&nbsp;routine&nbsp;and&nbsp;END&nbsp;means&nbsp;the&nbsp;end&nbsp;of&nbsp;a&nbsp;routine</tt></dd></dl>
+
+<dl><dt><a name="Logs-writeSubroutineLog"><strong>writeSubroutineLog</strong></a>(self, message, routineStatus)</dt><dd><tt>Write&nbsp;a&nbsp;subroutine&nbsp;log&nbsp;to&nbsp;a&nbsp;file,&nbsp;according&nbsp;to&nbsp;its&nbsp;routine&nbsp;status.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;log&nbsp;message<br>
+routineStatus&nbsp;:&nbsp;enum<br>
+&nbsp;&nbsp;START&nbsp;means&nbsp;the&nbsp;start&nbsp;of&nbsp;a&nbsp;subroutine&nbsp;and&nbsp;END&nbsp;means&nbsp;the&nbsp;end&nbsp;of&nbsp;a&nbsp;subroutine</tt></dd></dl>
+
+<dl><dt><a name="Logs-writeSubsubroutineLog"><strong>writeSubsubroutineLog</strong></a>(self, message, routineStatus)</dt><dd><tt>Write&nbsp;a&nbsp;subsubroutine&nbsp;log&nbsp;to&nbsp;a&nbsp;file,&nbsp;according&nbsp;to&nbsp;its&nbsp;routine&nbsp;status.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;log&nbsp;message<br>
+routineStatus&nbsp;:&nbsp;enum<br>
+&nbsp;&nbsp;START&nbsp;means&nbsp;the&nbsp;start&nbsp;of&nbsp;a&nbsp;subroutine&nbsp;and&nbsp;END&nbsp;means&nbsp;the&nbsp;end&nbsp;of&nbsp;a&nbsp;subroutine</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>LOG_TYPE</strong> = &lt;enum 'LOG_TYPE'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>MAX_NUM_LOGS</strong> = 100000</dl>
+
+<dl><dt><strong>MIN_NUM_LOGS</strong> = 100</dl>
+
+<dl><dt><strong>ROUTINE_STATUS</strong> = &lt;enum 'ROUTINE_STATUS'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+<dl><dt><strong>SEVERITY</strong> = &lt;enum 'SEVERITY'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module helper</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>helper</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/mnt/c/Users/duart/Documents/uni/project/APPSClone/development/APPSClone_Server/appsclone_server/utils/helper.py">/mnt/c/Users/duart/Documents/uni/project/APPSClone/development/APPSClone_Server/appsclone_server/utils/helper.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="gzip.html">gzip</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="helper.html#Helper">Helper</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Helper">class <strong>Helper</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Helper">Helper</a>&nbsp;methods&nbsp;to&nbsp;other&nbsp;classes.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Static methods defined here:<br>
+<dl><dt><a name="Helper-bytesToMB"><strong>bytesToMB</strong></a>(by)</dt><dd><tt>Convert&nbsp;bytes&nbsp;to&nbsp;mebibytes.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+by&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;The&nbsp;value&nbsp;in&nbsp;bytes&nbsp;to&nbsp;convert<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+int<br>
+&nbsp;&nbsp;The&nbsp;given&nbsp;value&nbsp;in&nbsp;mebibytes&nbsp;with&nbsp;five&nbsp;decimal&nbsp;places</tt></dd></dl>
+
+<dl><dt><a name="Helper-cleanEmptyFieldsInList"><strong>cleanEmptyFieldsInList</strong></a>(lst)</dt><dd><tt>Clean&nbsp;the&nbsp;empty&nbsp;(stripped)&nbsp;fields&nbsp;in&nbsp;a&nbsp;list.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+lst&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;The&nbsp;list&nbsp;to&nbsp;cleanup<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+list<br>
+&nbsp;&nbsp;The&nbsp;list&nbsp;without&nbsp;any&nbsp;empty&nbsp;(stripped)&nbsp;fields</tt></dd></dl>
+
+<dl><dt><a name="Helper-compressUncompressGzip"><strong>compressUncompressGzip</strong></a>(filePath, isCompress)</dt><dd><tt>Compress&nbsp;or&nbsp;uncompress&nbsp;a&nbsp;file&nbsp;with&nbsp;gzip.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+filePath&nbsp;&nbsp;&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;path&nbsp;of&nbsp;the&nbsp;file<br>
+isCompress&nbsp;:&nbsp;bool<br>
+&nbsp;&nbsp;True&nbsp;to&nbsp;compress&nbsp;and&nbsp;False&nbsp;to&nbsp;uncompress<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+str<br>
+&nbsp;&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;compressed&nbsp;or&nbsp;uncompressed&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="Helper-getFileFromPath"><strong>getFileFromPath</strong></a>(path)</dt><dd><tt>Get&nbsp;a&nbsp;file,&nbsp;given&nbsp;its&nbsp;path.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+path&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;path&nbsp;to&nbsp;gather&nbsp;the&nbsp;file&nbsp;from<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+str<br>
+&nbsp;&nbsp;The&nbsp;file&nbsp;from&nbsp;the&nbsp;file&nbsp;path</tt></dd></dl>
+
+<dl><dt><a name="Helper-getUncompressedFile"><strong>getUncompressedFile</strong></a>(filePath)</dt><dd><tt>Uncompress&nbsp;and&nbsp;delete&nbsp;original&nbsp;file&nbsp;with&nbsp;gzip.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+filePath&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;path&nbsp;of&nbsp;the&nbsp;file<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+str<br>
+&nbsp;&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;uncompressed&nbsp;file&nbsp;or&nbsp;the&nbsp;given&nbsp;file&nbsp;if&nbsp;the&nbsp;file&nbsp;was&nbsp;already&nbsp;uncompressed</tt></dd></dl>
+
+<dl><dt><a name="Helper-isValidIpv4"><strong>isValidIpv4</strong></a>(address)</dt><dd><tt>Check&nbsp;if&nbsp;an&nbsp;IPV4&nbsp;address&nbsp;is&nbsp;valid.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+address&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;ipv4&nbsp;address&nbsp;to&nbsp;check<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+bool<br>
+&nbsp;&nbsp;True&nbsp;if&nbsp;the&nbsp;IPV4&nbsp;address&nbsp;is&nbsp;valid&nbsp;and&nbsp;False&nbsp;otherwise</tt></dd></dl>
+
+<dl><dt><a name="Helper-joinPathFile"><strong>joinPathFile</strong></a>(path, file)</dt><dd><tt>Concatenate&nbsp;a&nbsp;file&nbsp;to&nbsp;a&nbsp;filepath,&nbsp;separating&nbsp;them&nbsp;by&nbsp;/<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+path&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;path&nbsp;to&nbsp;concatenate&nbsp;the&nbsp;file&nbsp;to<br>
+file&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;file&nbsp;to&nbsp;concatenate&nbsp;to&nbsp;the&nbsp;file&nbsp;path<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+str<br>
+&nbsp;&nbsp;The&nbsp;file&nbsp;path,&nbsp;with&nbsp;the&nbsp;file&nbsp;included</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

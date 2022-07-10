@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module rinexHeader</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>rinexHeader</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/mnt/c/Users/duart/Documents/uni/project/APPSClone/development/APPSClone_Server/appsclone_server/rinexHeader.py">/mnt/c/Users/duart/Documents/uni/project/APPSClone/development/APPSClone_Server/appsclone_server/rinexHeader.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="rinexHeader.html#RinexHeader">RinexHeader</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RinexHeader">class <strong>RinexHeader</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;rinex&nbsp;header.&nbsp;It's&nbsp;constituted&nbsp;by&nbsp;several&nbsp;mandatory&nbsp;header&nbsp;lines&nbsp;and&nbsp;several&nbsp;optional&nbsp;header&nbsp;lines.<br>
+It's&nbsp;used&nbsp;to&nbsp;display&nbsp;metadata&nbsp;about&nbsp;a&nbsp;RINEX&nbsp;file.<br>
+&nbsp;<br>
+Attributes<br>
+----------<br>
+HEADER_START&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;Rinex&nbsp;headers&nbsp;start&nbsp;at&nbsp;column&nbsp;61&nbsp;(python&nbsp;strings&nbsp;start&nbsp;counting&nbsp;at&nbsp;0,&nbsp;so&nbsp;we&nbsp;subtract&nbsp;1)<br>
+HEADER_END&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;Rinex&nbsp;headers&nbsp;end&nbsp;at&nbsp;column&nbsp;80<br>
+ALLOWED_VERSIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;The&nbsp;allowed&nbsp;RINEX&nbsp;versions.&nbsp;ALL&nbsp;is&nbsp;included&nbsp;to&nbsp;represent&nbsp;mandatory&nbsp;headers&nbsp;to&nbsp;all&nbsp;versions<br>
+VALIDITY_ERRORS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;enum<br>
+&nbsp;&nbsp;The&nbsp;error&nbsp;messages&nbsp;for&nbsp;when&nbsp;the&nbsp;file&nbsp;is&nbsp;not&nbsp;valid<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="RinexHeader-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Reset&nbsp;all&nbsp;mandatory&nbsp;header&nbsp;lines&nbsp;of&nbsp;the&nbsp;RINEX&nbsp;file&nbsp;being&nbsp;<br>
+read&nbsp;and&nbsp;its&nbsp;version,&nbsp;so&nbsp;that&nbsp;new&nbsp;data&nbsp;can&nbsp;be&nbsp;appended.</tt></dd></dl>
+
+<dl><dt><a name="RinexHeader-isValidHeader"><strong>isValidHeader</strong></a>(self)</dt><dd><tt>Check&nbsp;if&nbsp;a&nbsp;RINEX&nbsp;header&nbsp;is&nbsp;valid.<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+tuple(bool,tuple(enum,str))<br>
+&nbsp;&nbsp;The&nbsp;bool&nbsp;is&nbsp;True&nbsp;if&nbsp;the&nbsp;header&nbsp;is&nbsp;valid&nbsp;and&nbsp;False&nbsp;otherwise<br>
+&nbsp;&nbsp;The&nbsp;enum&nbsp;is&nbsp;the&nbsp;message,&nbsp;which&nbsp;indicates&nbsp;why&nbsp;the&nbsp;header&nbsp;is&nbsp;not&nbsp;valid<br>
+&nbsp;&nbsp;The&nbsp;string&nbsp;is&nbsp;the&nbsp;string&nbsp;that&nbsp;denotes&nbsp;what&nbsp;went&nbsp;wrong&nbsp;or&nbsp;`OK`&nbsp;if&nbsp;nothing&nbsp;is&nbsp;wrong&nbsp;with&nbsp;the&nbsp;header</tt></dd></dl>
+
+<dl><dt><a name="RinexHeader-readMandatoryHeader"><strong>readMandatoryHeader</strong></a>(self, rinexFile)</dt><dd><tt>Read&nbsp;a&nbsp;rinex&nbsp;file's&nbsp;mandatory&nbsp;header&nbsp;lines.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+rinexFile&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;rinex&nbsp;file&nbsp;to&nbsp;read&nbsp;the&nbsp;header&nbsp;from</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="RinexHeader-validityErrorToString"><strong>validityErrorToString</strong></a>(validityError, errorArg)</dt><dd><tt>Transform&nbsp;the&nbsp;validity&nbsp;error&nbsp;into&nbsp;a&nbsp;string&nbsp;error&nbsp;message.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+validityError&nbsp;:&nbsp;enum<br>
+&nbsp;&nbsp;The&nbsp;validity&nbsp;error<br>
+errorArg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;The&nbsp;argument&nbsp;of&nbsp;the&nbsp;error.&nbsp;E.G.:&nbsp;if&nbsp;the&nbsp;error&nbsp;is&nbsp;invalid&nbsp;receiver,&nbsp;errorArg&nbsp;will&nbsp;be&nbsp;the&nbsp;name&nbsp;of&nbsp;that&nbsp;receiver<br>
+&nbsp;<br>
+Returns<br>
+----------<br>
+string<br>
+&nbsp;&nbsp;A&nbsp;validity&nbsp;error&nbsp;message</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>ALLOWED_VERSIONS</strong> = ['ALL', '2.11', '3.02']</dl>
+
+<dl><dt><strong>HEADER_END</strong> = 80</dl>
+
+<dl><dt><strong>HEADER_START</strong> = 60</dl>
+
+<dl><dt><strong>VALIDITY_ERRORS</strong> = &lt;enum 'VALIDITY_ERRORS'&gt;<dd><tt>An&nbsp;enumeration.</tt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>addedToQueueSuccess</strong> = "Successfully added file '{file}' to the apps ID queue"<br>
+<strong>alreadyUploaded</strong> = "The file '{file}' is already uploaded"<br>
+<strong>antennas</strong> = {'3S-02-TSADM     NONE', '3S-02-TSATE     NONE', 'AERAT1675_120   SPKE', 'AERAT1675_542E  NEVE', 'AERAT2775_43    NONE', 'AERAT2775_43    SPKE', ...}<br>
+<strong>antennasList</strong> = ['BLOCK IIA', 'BLOCK IIA', 'BLOCK IIR-M', 'BLOCK IIA', 'BLOCK IIF', 'BLOCK II', 'BLOCK IIR-B', 'BLOCK I', 'BLOCK IIA', 'BLOCK IIA', 'BLOCK IIF', 'BLOCK I', 'BLOCK IIA', 'BLOCK IIR-M', 'BLOCK IIA', 'BLOCK IIA', 'BLOCK IIR-M', 'BLOCK IIA', 'BLOCK IIA', 'BLOCK IIR-M', ...]<br>
+<strong>approveFile</strong> = "Approval on file '{file}'"<br>
+<strong>approveSuccessful</strong> = "The file '{file}' has been verified by APPS and is now approved for processing"<br>
+<strong>approveUnsuccessful</strong> = "The file '{file}' could not be approved for processing"<br>
+<strong>canUploadQuota</strong> = "There is enough quota to upload file '{file}'"<br>
+<strong>cannotUploadQuota</strong> = "There isn't enough quota to upload file '{file}'"<br>
+<strong>checkState</strong> = 'State check'<br>
+<strong>checkStateFile</strong> = "Checking file '{file}'"<br>
+<strong>connectionFailed</strong> = 'The connection with APPS failed'<br>
+<strong>connectionSuccess</strong> = 'The connection with APPS was successful'<br>
+<strong>connectionTest</strong> = 'Connection test'<br>
+<strong>criticalException</strong> = "Something, that wasn't accounted for, happened. ...to check what happened to file with uuid '{uuid}'"<br>
+<strong>criticalSSHException</strong> = 'Could not establish a connection to the server, because of an unknown reason'<br>
+<strong>dataDeletedSuccessful</strong> = "The file '{file}' has been deleted from APPS"<br>
+<strong>dataDeletedUnsuccessful</strong> = "Could not delete file '{file}' from APPS"<br>
+<strong>dataDownloadedSuccessful</strong> = "The file '{file}''s processed files have been successfully downloaded"<br>
+<strong>dataDownloadedUnsuccessful</strong> = "The file '{file}''s processed files could not be downloaded"<br>
+<strong>dataNotFound</strong> = "The file with uuid '{uuid}' was not found on APPS"<br>
+<strong>downloadRinex</strong> = 'Download of rinex files from source'<br>
+<strong>errorFromAPPS</strong> = "There was an error with the file '{file}' in APPS"<br>
+<strong>fileAddedToRinexQueue</strong> = "The file '{file}' was added to the rinex queue"<br>
+<strong>fileDataGathering</strong> = "Gathering data on uuid '{uuid}'"<br>
+<strong>fileNotValidated</strong> = "The file '{file}' is invalid - {validity}"<br>
+<strong>fileValidated</strong> = "The file '{file}' was validated and is being considered a valid file for uploading"<br>
+<strong>handleAllFilesState</strong> = 'State updates'<br>
+<strong>idNotInQueue</strong> = "The file '{file}' was not in the apps ID queue, so cannot be removed from it"<br>
+<strong>invalidArg</strong> = "The value '{arg}' is invalid for argument '{argName}'. Using default value '{defaultValue}'"<br>
+<strong>invalidIdentifier</strong> = "The uuid '{uuid}' is not valid"<br>
+<strong>invalidUploadFileFields</strong> = "The upload file '{file}' is invalid, because it contains invalid fields or there are missing fields"<br>
+<strong>invalidUploadFileIP</strong> = "The upload file '{file}' is invalid, because its ip '{ip}' is invalid"<br>
+<strong>invalidUploadFileNotAFile</strong> = "'{file}' is not a file; thus, is invalid"<br>
+<strong>noUploadFiles</strong> = 'No upload files were found'<br>
+<strong>receivers</strong> = {'4000SSI', '5700', 'ALERTGEO RESOLUTE', 'AOA BENCHMARK ACT', 'AOA ICS-4000Z', 'AOA ICS-4000Z ACT', ...}<br>
+<strong>receiversList</strong> = ['ALERTGEO RESOLUTE', 'AOA BENCHMARK ACT', 'AOA ICS-4000Z', 'AOA ICS-4000Z ACT', 'AOA RASCAL-12', 'AOA RASCAL-8', 'AOA SNR-12 ACT', 'AOA SNR-8000 ACT', 'AOA SNR-8100 ACT', 'AOA TTR-12', 'AOA TTR-4P', 'ASHTECH', 'ASHTECH 3DF-XXIV', 'ASHTECH D-XII', 'ASHTECH GG24C', 'ASHTECH G-XII', 'ASHTECH LCS-XII', 'ASHTECH LM-XII3', 'ASHTECH L-XII', 'ASHTECH MICROZ', ...]<br>
+<strong>removeData</strong> = "Data removal of file '{file}'"<br>
+<strong>removedFromQueueSuccess</strong> = "Successfully removed file '{file}' from the apps ID queue"<br>
+<strong>removedFromRinexQueue</strong> = "The result file '{file}' was successfully removed from the rinex queue"<br>
+<strong>removedRinex</strong> = "The file '{file}' was removed"<br>
+<strong>removedUploadFile</strong> = "The upload file '{file}' was removed"<br>
+<strong>resultNotInQueue</strong> = "The result file '{file}' was not in the rinex queue. Removing it"<br>
+<strong>resultUploadedBack</strong> = "The result file '{file}' was uploaded back to '{uploadDir}' with success"<br>
+<strong>retrieveData</strong> = "Data retrieval on file '{file}'"<br>
+<strong>rinexUpload</strong> = "Upload on file '{file}'"<br>
+<strong>scpGetSuccessful</strong> = "Successfully copied remote file '{file}' to local directory '{df}'"<br>
+<strong>scpGetUnsuccessful</strong> = "Could not copy remote file '{file}' to local directory '{df}'"<br>
+<strong>scpPutSuccessful</strong> = "Successfully copied local file '{file}' to remote directory '{df}'"<br>
+<strong>scpPutUnsuccessful</strong> = "Could not copy local file '{file}' to remote directory '{df}'"<br>
+<strong>sshConnect</strong> = "Connect to '{ip}:{port}', with user '{username}'"<br>
+<strong>sshConnectSuccessful</strong> = 'Successfully established a connection to the server'<br>
+<strong>sshConnectUnsuccessfulBadIP</strong> = "Could not establish a connection to the server, because the ip '{ip}' is not valid or is unavailable"<br>
+<strong>sshConnectUnsuccessfulBadPort</strong> = "Could not establish a connection to the server, ... the port '{port}' is not valid or is unavailable"<br>
+<strong>sshConnectUnsuccessfulBadUser</strong> = "Could not establish a connection to the server, ...name}' is not valid, or the password is incorrect"<br>
+<strong>state</strong> = "The file '{file}' is in the '{state}' state"<br>
+<strong>uploadAllRinex</strong> = 'Upload of all Rinex'<br>
+<strong>uploadBack</strong> = 'Upload back of results'<br>
+<strong>uploadFilesChecking</strong> = 'Upload files check'<br>
+<strong>uploadFilesExist</strong> = '{numOfUploadFiles} valid upload files were found. Attempting to download corresponding rinex files'<br>
+<strong>uploadSuccess</strong> = "Successfully uploaded file '{file}' to APPS"<br>
+<strong>validUploadFile</strong> = "The upload file '{file}' was validated"</td></tr></table>
+</body></html>
