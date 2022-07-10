@@ -228,3 +228,14 @@
 2022-07-10 00:58:32.080355 (INFO)     | === Download of rinex files from source (END) ===
 2022-07-10 00:58:32.086060 (INFO)     | === Upload of all Rinex (START) ===
 2022-07-10 00:58:32.093629 (INFO)     | === Upload of all Rinex (END) ===
+2022-07-10 03:20:02.769983 (INFO)     | === State updates (START) ===
+2022-07-10 03:20:02.777147 (INFO)     | === State updates (END) ===
+2022-07-10 03:20:02.781473 (INFO)     | === Upload back of results (START) ===
+2022-07-10 03:20:02.788453 (INFO)     | === Upload back of results (END) ===
+2022-07-10 03:20:02.792648 (INFO)     | === Download of rinex files from source (START) ===
+2022-07-10 03:20:02.798786 (INFO)     | == Upload files check (START) ==
+2022-07-10 03:20:02.804532 (INFO)     | No upload files were found.
+2022-07-10 03:20:02.808341 (INFO)     | == Upload files check (END) ==
+2022-07-10 03:20:02.813554 (INFO)     | === Download of rinex files from source (END) ===
+2022-07-10 03:20:02.819045 (INFO)     | === Upload of all Rinex (START) ===
+2022-07-10 03:20:02.825532 (INFO)     | === Upload of all Rinex (END) ===

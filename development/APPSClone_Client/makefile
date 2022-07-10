@@ -20,6 +20,7 @@ run:
 
 setup:
 	$(PIP) install -r requirements.txt
+	pip3 install https://pppx.gdgps.net/static/lib/gdgps-apps-1.0.0b2.tar.gz
 	@mkdir -p $(queuesDir)
 	@mkdir -p $(inDir)/$(toUploadDir)
 	@mkdir -p $(logsDir)
