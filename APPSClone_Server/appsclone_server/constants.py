@@ -74,3 +74,7 @@ removedUploadFile             = "The upload file '{file}' was removed"
 canUploadQuota                = "There is enough quota to upload file '{file}'"
 cannotUploadQuota             = "There isn't enough quota to upload file '{file}'"
 removedRinex                  = "The file '{file}' was removed"
+# = APPSClone server =
+# Routines
+serverRun                     = "APPSClone server socket connection"
+# Other

@@ -53,12 +53,14 @@ class APPSCloneServer:
 
   def runServer(self):
     """Run the server."""
+    self.logger.writeRoutineLog(serverRun,Logs.ROUTINE_STATUS.START)
     with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as s:
       s.bind((self.ip,self.port))
       s.listen(APPSCloneServer.MAX_TRIES)
       while True:
         client,clientAddress   = s.accept()
         start_new_thread(self.clientThread,(client,))
+    self.logger.writeRoutineLog(serverRun,Logs.ROUTINE_STATUS.END)
 
   def clientThread(self,client):
     """Thread to handle the clients' operations.
