@@ -94,4 +94,4 @@ make testAllPrint
 
 ## Documentation
 
-The documentation for the APPSClone client can be found [here](https://github.com/DuarteArribas/APPSClone/tree/main/development/APPSClone_Client/docs).
+The documentation for the APPSClone client can be found [here](https://github.com/DuarteArribas/APPSClone/tree/main/APPSClone_Client/docs).
