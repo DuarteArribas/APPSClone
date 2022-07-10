@@ -89,4 +89,4 @@ make testAllPrint
 
 ## Documentation
 
-The documentation for the APPSClone upload file generator can be found [here](https://github.com/DuarteArribas/APPSClone/tree/main/development/APPSClone_UploadFileGenerator/docs).
+The documentation for the APPSClone server can be found [here](https://github.com/DuarteArribas/APPSClone/tree/main/development/APPSClone_UploadFileGenerator/docs).
