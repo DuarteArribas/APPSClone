@@ -1,0 +1,34 @@
+======= RUN ON APPSClone CLIENT =======
+======= RUN ON APPSClone CLIENT =======
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 04:34:52.652343 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 04:34:52.657730 (INFO)     | Upload argument recognized.
+2022-07-10 04:34:52.663359 (INFO)     | The file to upload is 'arroz'.
+2022-07-10 04:34:52.666285 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 04:34:52.670783 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 04:34:52.675218 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 04:34:52.679564 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 04:34:52.683731 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 04:34:52.688036 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 04:34:52.692279 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 04:34:52.696629 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 04:34:52.700778 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 04:34:52.705133 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 04:35:33.579643 (CRITICAL) | Could not connect to socket on '10.0.7.162:12346'.
+2022-07-10 04:35:33.585511 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 04:36:16.670791 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 04:36:16.676647 (INFO)     | Upload argument recognized.
+2022-07-10 04:36:16.682150 (INFO)     | The file to upload is 'arroz'.
+2022-07-10 04:36:16.685859 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 04:36:16.689425 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 04:36:16.694997 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 04:36:16.699286 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 04:36:16.703681 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 04:36:16.708108 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 04:36:16.712510 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 04:36:16.716771 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 04:36:16.721066 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 04:36:16.725436 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 04:36:16.787157 (CRITICAL) | Could not connect to socket on '138.68.128.182:12346'.
+2022-07-10 04:36:16.792813 (INFO)     | === APPSClone client socket connection (END) ===
