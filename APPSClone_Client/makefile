@@ -1,7 +1,7 @@
 #variables
-PYTHON    := python3
-PIP       := pip3
-MAIN_FILE := runClient.py
+PYTHON      := python3
+PIP         := pip3
+MAIN_FILE   := runClient.py
 #files
 idQueue     := idQueue
 logs        := logs.log

@@ -1,0 +1,587 @@
+======= RUN ON APPSClone CLIENT =======
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 12:41:00.875170 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 12:41:00.881352 (INFO)     | Upload argument recognized.
+2022-07-10 12:41:00.887433 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 12:41:00.890566 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 12:41:00.894769 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 12:41:00.898942 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 12:41:00.903222 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 12:41:00.907753 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 12:41:00.912450 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 12:41:00.916749 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 12:41:00.920683 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 12:41:00.924567 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 12:41:00.928624 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 12:41:00.965774 (CRITICAL) | Could not connect to socket on '10.0.7.162:12346'.
+2022-07-10 12:41:00.970949 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 12:42:22.618911 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 12:42:22.625898 (INFO)     | Upload argument recognized.
+2022-07-10 12:42:22.633025 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 12:42:22.636366 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 12:42:22.641451 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 12:42:22.646902 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 12:42:22.652069 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 12:42:22.656957 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 12:42:22.661972 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 12:42:22.667312 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 12:42:22.672830 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 12:42:22.678042 (INFO)     | === Options for command line-arguments (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 12:43:20.129820 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 12:43:20.135705 (INFO)     | Upload argument recognized.
+2022-07-10 12:43:20.140909 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 12:43:20.144191 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 12:43:20.148291 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 12:43:20.152391 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 12:43:20.156568 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 12:43:20.160768 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 12:43:20.164840 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 12:43:20.168934 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 12:43:20.172885 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 12:43:20.176977 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 12:43:20.181084 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 12:43:20.217243 (INFO)     | == Connect to '10.0.7.162:22', with user 'appscloneuser' (START) ==
+2022-07-10 12:43:20.704628 (INFO)     | Successfully established a connection to the server.
+2022-07-10 12:43:20.710085 (INFO)     | == Connect to '10.0.7.162:22', with user 'appscloneuser' (END) ==
+2022-07-10 12:43:21.116247 (ERROR)    | Could not copy local file 'myArroz' to remote directory '/APPSClone/APPSClone_Server/in/to_upload_regular'.
+2022-07-10 12:43:21.122152 (INFO)     | Upload info of file myArroz sent to APPSClone server.
+2022-07-10 12:43:21.159424 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 12:43:21.164911 (ERROR)    | The server responded with an error - 'An unknown error happened'.
+2022-07-10 12:43:21.166960 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 12:47:01.060706 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 12:47:01.067494 (INFO)     | Upload argument recognized.
+2022-07-10 12:47:01.073786 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 12:47:01.077336 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 12:47:01.082508 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 12:47:01.087621 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 12:47:01.092567 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 12:47:01.097328 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 12:47:01.102076 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 12:47:01.106882 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 12:47:01.111598 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 12:47:01.116648 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 12:47:01.121549 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 12:47:01.169657 (INFO)     | == Connect to '10.0.7.162:22', with user 'appscloneuser' (START) ==
+2022-07-10 12:47:01.676071 (INFO)     | Successfully established a connection to the server.
+2022-07-10 12:47:01.681909 (INFO)     | == Connect to '10.0.7.162:22', with user 'appscloneuser' (END) ==
+2022-07-10 12:47:03.721072 (INFO)     | Successfully copied local file 'myArroz' to remote directory '/APPSClone/APPSClone_Server/in/to_upload_regular'.
+2022-07-10 12:47:03.727118 (INFO)     | Upload info of file myArroz sent to APPSClone server.
+2022-07-10 12:48:05.799765 (CRITICAL) | Could not connect to socket on '10.0.7.162:12346'.
+2022-07-10 12:48:05.807199 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 12:56:22.714770 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 12:56:22.721081 (INFO)     | Upload argument recognized.
+2022-07-10 12:56:22.727905 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 12:56:22.731557 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 12:56:22.736545 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 12:56:22.741619 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 12:56:22.746677 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 12:56:22.751767 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 12:56:22.756604 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 12:56:22.761732 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 12:56:22.766981 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 12:56:22.772422 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 12:56:22.777549 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 12:56:22.850830 (CRITICAL) | Could not connect to socket on '138.68.128.182:12346'.
+2022-07-10 12:56:22.856865 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 12:57:38.739532 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 12:57:38.747134 (INFO)     | Upload argument recognized.
+2022-07-10 12:57:38.754706 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 12:57:38.759278 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 12:57:38.764949 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 12:57:38.770723 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 12:57:38.776592 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 12:57:38.782306 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 12:57:38.788143 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 12:57:38.793948 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 12:57:38.799966 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 12:57:38.805682 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 12:57:38.811302 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 12:57:38.874998 (CRITICAL) | Could not connect to socket on '138.68.128.182:12346'.
+2022-07-10 12:57:38.881625 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 12:58:06.032825 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 12:58:06.038935 (INFO)     | Upload argument recognized.
+2022-07-10 12:58:06.045710 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 12:58:06.049569 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 12:58:06.055096 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 12:58:06.060174 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 12:58:06.065640 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 12:58:06.070844 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 12:58:06.076187 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 12:58:06.081838 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 12:58:06.087097 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 12:58:06.092062 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 12:58:06.097674 (INFO)     | === APPSClone client socket connection (START) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 12:58:44.528898 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 12:58:44.535761 (INFO)     | Upload argument recognized.
+2022-07-10 12:58:44.542890 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 12:58:44.546584 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 12:58:44.552183 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 12:58:44.558303 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 12:58:44.564716 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 12:58:44.572018 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 12:58:44.580852 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 12:58:44.589107 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 12:58:44.596142 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 12:58:44.602336 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 12:58:44.608452 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 12:58:44.681666 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (START) ==
+2022-07-10 12:58:45.342047 (INFO)     | Successfully established a connection to the server.
+2022-07-10 12:58:45.348549 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (END) ==
+2022-07-10 12:58:48.206565 (INFO)     | Successfully copied local file 'myArroz' to remote directory '/APPSClone/APPSClone_Server/in/to_upload_regular'.
+2022-07-10 12:58:48.213494 (INFO)     | Upload info of file myArroz sent to APPSClone server.
+2022-07-10 12:59:00.297872 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 12:59:00.304399 (INFO)     | The upload of the file myArroz was a success.
+2022-07-10 12:59:00.311785 (INFO)     | The id 1 was added to the queue successfully.
+2022-07-10 12:59:00.317696 (INFO)     | The file myArroz was removed with success.
+2022-07-10 12:59:00.321527 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 12:59:28.935520 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 12:59:28.942263 (INFO)     | Download argument recognized.
+2022-07-10 12:59:28.947888 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 12:59:28.953736 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 12:59:28.959311 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 12:59:28.964702 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 12:59:28.970273 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 12:59:28.976057 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 12:59:28.981578 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 12:59:28.987040 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 12:59:28.992504 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 12:59:28.997959 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 12:59:29.071225 (INFO)     | There are 1 ids in the queue.
+2022-07-10 12:59:29.079532 (INFO)     | Asking to download results of file with id 1 from APPSClone server.
+2022-07-10 12:59:29.145436 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 12:59:29.151998 (ERROR)    | The server responded with an error - 'There isn't yet a result for that file'.
+2022-07-10 12:59:29.157498 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:01:27.784617 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:01:27.790990 (INFO)     | Download argument recognized.
+2022-07-10 13:01:27.797028 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:01:27.802652 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:01:27.808144 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:01:27.814032 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:01:27.819448 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:01:27.824955 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:01:27.830690 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:01:27.836047 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:01:27.841244 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:01:27.847106 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 13:01:27.915436 (INFO)     | There are 1 ids in the queue.
+2022-07-10 13:01:27.923611 (INFO)     | Asking to download results of file with id 1 from APPSClone server.
+2022-07-10 13:01:27.987041 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:01:27.997416 (INFO)     | The id 1 was removed from the queue successfully.
+2022-07-10 13:01:28.003950 (CRITICAL) | Could not connect to socket on '138.68.128.182:12346'.
+2022-07-10 13:01:28.009633 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:02:46.217838 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:02:46.225421 (INFO)     | Download argument recognized.
+2022-07-10 13:02:46.231315 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:02:46.237226 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:02:46.243074 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:02:46.248849 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:02:46.254527 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:02:46.260235 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:02:46.266149 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:02:46.271799 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:02:46.277583 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:02:46.352473 (INFO)     | There are 1 ids in the queue.
+2022-07-10 13:02:46.361291 (INFO)     | Asking to download results of file with id 1 from APPSClone server.
+2022-07-10 13:02:46.426043 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:02:46.433046 (ERROR)    | The server responded with an error - 'There isn't any uploaded file with that id!'.
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:04:28.445648 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:04:28.451954 (INFO)     | Download argument recognized.
+2022-07-10 13:04:28.457195 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:04:28.462579 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:04:28.467963 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:04:28.473096 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:04:28.478526 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:04:28.484217 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:04:28.489472 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:04:28.495117 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:04:28.500699 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:04:28.506163 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 13:04:28.576123 (INFO)     | There are 1 ids in the queue.
+2022-07-10 13:04:28.583806 (INFO)     | Asking to download results of file with id 1 from APPSClone server.
+2022-07-10 13:04:28.648464 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:04:28.655072 (ERROR)    | The server responded with an error - 'There isn't any uploaded file with that id!'.
+2022-07-10 13:04:28.660897 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:06:28.387509 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:06:28.394574 (INFO)     | Upload argument recognized.
+2022-07-10 13:06:28.402358 (ERROR)    | The file 'myArroz' does not exist. Please move the file to the correct upload folder (defined in config/client.cfg).
+2022-07-10 13:06:28.407851 (INFO)     | === Options for command line-arguments (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:06:51.405875 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:06:51.414214 (INFO)     | Upload argument recognized.
+2022-07-10 13:06:51.422477 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 13:06:51.426818 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:06:51.432841 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:06:51.438844 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:06:51.445129 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:06:51.451123 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:06:51.456885 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:06:51.463396 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:06:51.470223 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:06:51.476509 (INFO)     | === Options for command line-arguments (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:08:02.650396 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:08:02.657971 (INFO)     | Upload argument recognized.
+2022-07-10 13:08:02.665577 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 13:08:02.670197 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:08:02.676422 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:08:02.682512 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:08:02.688408 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:08:02.694559 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:08:02.700517 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:08:02.706239 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:08:02.712409 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:08:02.718385 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:08:02.783307 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (START) ==
+2022-07-10 13:08:03.422556 (INFO)     | Successfully established a connection to the server.
+2022-07-10 13:08:03.429548 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (END) ==
+2022-07-10 13:08:06.160473 (INFO)     | Successfully copied local file 'myArroz' to remote directory '/APPSClone/APPSClone_Server/in/to_upload_regular'.
+2022-07-10 13:08:06.167390 (INFO)     | Upload info of file myArroz sent to APPSClone server.
+2022-07-10 13:08:18.187668 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:08:18.194216 (INFO)     | The upload of the file myArroz was a success.
+2022-07-10 13:08:18.201715 (INFO)     | The id 2 was added to the queue successfully.
+2022-07-10 13:08:18.207073 (INFO)     | The file myArroz was removed with success.
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:10:06.113110 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:10:06.120865 (INFO)     | Download argument recognized.
+2022-07-10 13:10:06.129491 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:10:06.139041 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:10:06.146675 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:10:06.153985 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:10:06.160753 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:10:06.167223 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:10:06.173600 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:10:06.179834 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:10:06.186118 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:10:06.256803 (INFO)     | There are 1 ids in the queue.
+2022-07-10 13:10:06.265984 (INFO)     | Asking to download results of file with id 2 from APPSClone server.
+2022-07-10 13:10:06.331289 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:10:06.342197 (INFO)     | The id 2 was removed from the queue successfully.
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:12:20.029757 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:12:20.037473 (INFO)     | Upload argument recognized.
+2022-07-10 13:12:20.045674 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 13:12:20.050590 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:12:20.056745 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:12:20.063286 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:12:20.069537 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:12:20.075875 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:12:20.082412 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:12:20.088588 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:12:20.094784 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:12:20.100852 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:12:20.106961 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 13:12:20.184333 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (START) ==
+2022-07-10 13:12:20.846932 (INFO)     | Successfully established a connection to the server.
+2022-07-10 13:12:20.855187 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (END) ==
+2022-07-10 13:12:23.532255 (INFO)     | Successfully copied local file 'myArroz' to remote directory '/APPSClone/APPSClone_Server/in/to_upload_regular'.
+2022-07-10 13:12:23.538987 (INFO)     | Upload info of file myArroz sent to APPSClone server.
+2022-07-10 13:12:35.642022 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:12:35.649279 (INFO)     | The upload of the file myArroz was a success.
+2022-07-10 13:12:35.657535 (INFO)     | The id 3 was added to the queue successfully.
+2022-07-10 13:12:35.664126 (INFO)     | The file myArroz was removed with success.
+2022-07-10 13:12:35.668788 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:13:57.294680 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:13:57.301545 (INFO)     | Download argument recognized.
+2022-07-10 13:13:57.307642 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:13:57.313685 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:13:57.319415 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:13:57.325392 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:13:57.331483 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:13:57.337078 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:13:57.343176 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:13:57.348815 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:13:57.354521 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:13:57.360439 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 13:13:57.427789 (CRITICAL) | Could not connect to socket on '138.68.128.182:12346'.
+2022-07-10 13:13:57.434811 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:14:09.222624 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:14:09.230624 (INFO)     | Download argument recognized.
+2022-07-10 13:14:09.237408 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:14:09.243199 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:14:09.248993 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:14:09.254848 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:14:09.260529 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:14:09.266488 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:14:09.272140 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:14:09.277873 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:14:09.283696 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:14:09.289389 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 13:14:09.368850 (INFO)     | There are 1 ids in the queue.
+2022-07-10 13:14:09.377279 (INFO)     | Asking to download results of file with id 3 from APPSClone server.
+2022-07-10 13:14:09.449664 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:14:09.460992 (INFO)     | The id 3 was removed from the queue successfully.
+2022-07-10 13:14:09.463799 (INFO)     | == Connect to '138.68.128.182:12346', with user 'appscloneuser' (START) ==
+2022-07-10 13:14:24.560123 (CRITICAL) | Could not establish a connection to the server, because of an unknown reason.
+2022-07-10 13:14:24.568564 (INFO)     | == Connect to '138.68.128.182:12346', with user 'appscloneuser' (END) ==
+2022-07-10 13:14:24.575456 (CRITICAL) | Could not connect to socket on '138.68.128.182:12346'.
+2022-07-10 13:14:24.582127 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:16:31.002879 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:16:31.010567 (INFO)     | Upload argument recognized.
+2022-07-10 13:16:31.018408 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 13:16:31.023362 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:16:31.029484 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:16:31.035138 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:16:31.040516 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:16:31.045967 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:16:31.051452 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:16:31.056874 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:16:31.062465 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:16:31.068332 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:16:31.073947 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 13:16:31.146413 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (START) ==
+2022-07-10 13:16:31.718345 (INFO)     | Successfully established a connection to the server.
+2022-07-10 13:16:31.724760 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (END) ==
+2022-07-10 13:16:34.364951 (INFO)     | Successfully copied local file 'myArroz' to remote directory '/APPSClone/APPSClone_Server/in/to_upload_regular'.
+2022-07-10 13:16:34.371260 (INFO)     | Upload info of file myArroz sent to APPSClone server.
+2022-07-10 13:16:46.052239 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:16:46.060874 (INFO)     | The upload of the file myArroz was a success.
+2022-07-10 13:16:46.068831 (INFO)     | The id 4 was added to the queue successfully.
+2022-07-10 13:16:46.075630 (INFO)     | The file myArroz was removed with success.
+2022-07-10 13:16:46.080470 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:16:58.873173 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:16:58.881086 (INFO)     | Upload argument recognized.
+2022-07-10 13:16:58.889183 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 13:16:58.894363 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:16:58.901002 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:16:58.907718 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:16:58.914393 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:16:58.920903 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:16:58.927649 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:16:58.934309 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:16:58.942640 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:16:58.951181 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:16:58.959308 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 13:16:59.044579 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (START) ==
+2022-07-10 13:16:59.696188 (INFO)     | Successfully established a connection to the server.
+2022-07-10 13:16:59.703503 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (END) ==
+2022-07-10 13:17:02.740204 (INFO)     | Successfully copied local file 'myArroz' to remote directory '/APPSClone/APPSClone_Server/in/to_upload_regular'.
+2022-07-10 13:17:02.749328 (INFO)     | Upload info of file myArroz sent to APPSClone server.
+2022-07-10 13:17:14.742604 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:17:14.751904 (INFO)     | The upload of the file myArroz was a success.
+2022-07-10 13:17:14.762137 (INFO)     | The id 5 was added to the queue successfully.
+2022-07-10 13:17:14.770863 (INFO)     | The file myArroz was removed with success.
+2022-07-10 13:17:14.778312 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:19:32.231360 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:19:32.240992 (INFO)     | Download argument recognized.
+2022-07-10 13:19:32.249499 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:19:32.258331 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:19:32.266821 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:19:32.275218 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:19:32.283475 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:19:32.291916 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:19:32.300487 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:19:32.309904 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:19:32.319036 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:19:32.326106 (INFO)     | === APPSClone client socket connection (START) ===
+2022-07-10 13:19:32.399841 (INFO)     | There are 2 ids in the queue.
+2022-07-10 13:19:32.409243 (INFO)     | Asking to download results of file with id 4 from APPSClone server.
+2022-07-10 13:19:32.472836 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:19:32.484593 (INFO)     | The id 4 was removed from the queue successfully.
+2022-07-10 13:19:32.487512 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (START) ==
+2022-07-10 13:19:33.137901 (INFO)     | Successfully established a connection to the server.
+2022-07-10 13:19:33.145794 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (END) ==
+2022-07-10 13:19:33.152673 (CRITICAL) | Could not connect to socket on '138.68.128.182:12346'.
+2022-07-10 13:19:33.158725 (INFO)     | === APPSClone client socket connection (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:23:49.551936 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:23:49.560023 (INFO)     | Upload argument recognized.
+2022-07-10 13:23:49.568295 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 13:23:49.573321 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:23:49.579881 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:23:49.587386 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:23:49.594134 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:23:49.600897 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:23:49.611443 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:23:49.621638 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:23:49.631862 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:23:49.638510 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:23:49.705330 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (START) ==
+2022-07-10 13:23:50.323996 (INFO)     | Successfully established a connection to the server.
+2022-07-10 13:23:50.333802 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (END) ==
+2022-07-10 13:23:53.023878 (INFO)     | Successfully copied local file 'myArroz' to remote directory '/APPSClone/APPSClone_Server/in/to_upload_regular'.
+2022-07-10 13:23:53.031583 (INFO)     | Upload info of file myArroz sent to APPSClone server.
+2022-07-10 13:24:04.999456 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:24:05.010032 (INFO)     | The upload of the file myArroz was a success.
+2022-07-10 13:24:05.021082 (INFO)     | The id 6 was added to the queue successfully.
+2022-07-10 13:24:05.027750 (INFO)     | The file myArroz was removed with success.
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:25:33.615526 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:25:33.625291 (ERROR)    | The argument 'downlaod' is unknown.
+2022-07-10 13:25:33.633900 (INFO)     | === Options for command line-arguments (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:25:39.222180 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:25:39.231064 (INFO)     | Download argument recognized.
+2022-07-10 13:25:39.239586 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:25:39.248097 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:25:39.254112 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:25:39.259923 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:25:39.265697 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:25:39.272317 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:25:39.278675 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:25:39.285083 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:25:39.291314 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:25:39.365845 (INFO)     | There are 2 ids in the queue.
+2022-07-10 13:25:39.374235 (INFO)     | Asking to download results of file with id 5 from APPSClone server.
+2022-07-10 13:25:39.441763 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:25:39.449837 (ERROR)    | The server responded with an error - 'There isn't any uploaded file with that id!'.
+2022-07-10 13:25:39.456546 (INFO)     | Asking to download results of file with id 6 from APPSClone server.
+2022-07-10 13:25:39.520309 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:25:39.527919 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (START) ==
+2022-07-10 13:25:40.196829 (INFO)     | Successfully established a connection to the server.
+2022-07-10 13:25:40.207140 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (END) ==
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:30:30.598150 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:30:30.605846 (INFO)     | Upload argument recognized.
+2022-07-10 13:30:30.614554 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 13:30:30.620324 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:30:30.627167 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:30:30.633907 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:30:30.640736 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:30:30.647655 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:30:30.653593 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:30:30.660114 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:30:30.666657 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:30:30.673071 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:30:30.744663 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (START) ==
+2022-07-10 13:30:31.410679 (INFO)     | Successfully established a connection to the server.
+2022-07-10 13:30:31.418012 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (END) ==
+2022-07-10 13:30:34.092766 (INFO)     | Successfully copied local file 'myArroz' to remote directory '/APPSClone/APPSClone_Server/in/to_upload_regular'.
+2022-07-10 13:30:34.100041 (INFO)     | Upload info of file myArroz sent to APPSClone server.
+2022-07-10 13:30:46.390742 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:30:46.398661 (INFO)     | The upload of the file myArroz was a success.
+2022-07-10 13:30:46.407435 (INFO)     | The id 7 was added to the queue successfully.
+2022-07-10 13:30:46.414713 (INFO)     | The file myArroz was removed with success.
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:32:03.359237 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:32:03.367828 (INFO)     | Download argument recognized.
+2022-07-10 13:32:03.374627 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:32:03.381461 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:32:03.388077 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:32:03.395196 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:32:03.401827 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:32:03.408548 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:32:03.415043 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:32:03.421504 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:32:03.428695 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:32:03.507805 (INFO)     | There are 1 ids in the queue.
+2022-07-10 13:32:03.517208 (INFO)     | Asking to download results of file with id 7 from APPSClone server.
+2022-07-10 13:32:03.582407 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:32:03.590371 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (START) ==
+2022-07-10 13:32:04.252265 (INFO)     | Successfully established a connection to the server.
+2022-07-10 13:32:04.260418 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (END) ==
+2022-07-10 13:32:05.329279 (ERROR)    | Could not copy remote file 'myArroz' to local directory 'out/results'.
+2022-07-10 13:32:05.340784 (INFO)     | The id 7 was removed from the queue successfully.
+======= RUN ON APPSClone CLIENT =======
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:34:33.295540 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:34:33.303676 (INFO)     | Upload argument recognized.
+2022-07-10 13:34:33.312564 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 13:34:33.318675 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:34:33.325903 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:34:33.333185 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:34:33.340563 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:34:33.347738 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:34:33.355005 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:34:33.362105 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:34:33.369335 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:34:33.376895 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:34:33.447793 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (START) ==
+2022-07-10 13:34:34.096500 (INFO)     | Successfully established a connection to the server.
+2022-07-10 13:34:34.104550 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (END) ==
+2022-07-10 13:34:36.784176 (INFO)     | Successfully copied local file 'myArroz' to remote directory '/APPSClone/APPSClone_Server/in/to_upload_regular'.
+2022-07-10 13:34:36.792491 (INFO)     | Upload info of file myArroz sent to APPSClone server.
+2022-07-10 13:34:49.131323 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:34:49.140724 (INFO)     | The upload of the file myArroz was a success.
+2022-07-10 13:34:49.150499 (INFO)     | The id 8 was added to the queue successfully.
+2022-07-10 13:34:49.160712 (INFO)     | The file myArroz was removed with success.
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:36:18.615467 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:36:18.623710 (INFO)     | Download argument recognized.
+2022-07-10 13:36:18.630351 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:36:18.637836 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:36:18.645863 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:36:18.652587 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:36:18.661825 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:36:18.671513 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:36:18.678633 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:36:18.685440 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:36:18.692719 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:36:18.768899 (INFO)     | There are 1 ids in the queue.
+2022-07-10 13:36:18.778808 (INFO)     | Asking to download results of file with id 8 from APPSClone server.
+2022-07-10 13:36:18.848421 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:36:18.856261 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (START) ==
+2022-07-10 13:36:19.517086 (INFO)     | Successfully established a connection to the server.
+2022-07-10 13:36:19.525285 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (END) ==
+2022-07-10 13:36:20.568539 (ERROR)    | Could not copy remote file 'myArroz' to local directory 'out/results'.
+2022-07-10 13:36:20.580621 (INFO)     | The id 8 was removed from the queue successfully.
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:39:34.687349 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:39:34.695178 (INFO)     | Upload argument recognized.
+2022-07-10 13:39:34.703312 (INFO)     | The file to upload is 'myArroz'.
+2022-07-10 13:39:34.709012 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:39:34.715779 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:39:34.722532 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:39:34.729708 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:39:34.736554 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:39:34.743463 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:39:34.750727 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:39:34.757425 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:39:34.764636 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:39:34.844128 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (START) ==
+2022-07-10 13:39:35.501835 (INFO)     | Successfully established a connection to the server.
+2022-07-10 13:39:35.510935 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (END) ==
+2022-07-10 13:39:38.453033 (INFO)     | Successfully copied local file 'myArroz' to remote directory '/APPSClone/APPSClone_Server/in/to_upload_regular'.
+2022-07-10 13:39:38.461142 (INFO)     | Upload info of file myArroz sent to APPSClone server.
+2022-07-10 13:39:50.214225 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:39:50.221924 (INFO)     | The upload of the file myArroz was a success.
+2022-07-10 13:39:50.229879 (INFO)     | The id 9 was added to the queue successfully.
+2022-07-10 13:39:50.236237 (INFO)     | The file myArroz was removed with success.
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:41:11.348283 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:41:11.357621 (INFO)     | Download argument recognized.
+2022-07-10 13:41:11.365412 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:41:11.372578 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:41:11.380475 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:41:11.388059 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:41:11.395663 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:41:11.403175 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:41:11.410677 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:41:11.418180 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:41:11.425840 (INFO)     | === Options for command line-arguments (END) ===
+======= RUN ON APPSClone CLIENT =======
+2022-07-10 13:41:20.533141 (INFO)     | === Options for command line-arguments (START) ===
+2022-07-10 13:41:20.540790 (INFO)     | Download argument recognized.
+2022-07-10 13:41:20.547737 (INFO)     | The value for the argument 'processing mode' is 'default'.
+2022-07-10 13:41:20.555227 (INFO)     | The value for the argument 'product' is 'default'.
+2022-07-10 13:41:20.562830 (INFO)     | The value for the argument 'troposphere model' is 'default'.
+2022-07-10 13:41:20.570056 (INFO)     | The value for the argument 'ocean loading' is 'False'.
+2022-07-10 13:41:20.577547 (INFO)     | The value for the argument 'model tides' is 'False'.
+2022-07-10 13:41:20.585248 (INFO)     | The value for the argument 'elevation dep weighting' is 'default'.
+2022-07-10 13:41:20.592646 (INFO)     | The value for the argument 'elevation angle cutoff' is 'None'.
+2022-07-10 13:41:20.600140 (INFO)     | The value for the argument 'solution period' is 'None'.
+2022-07-10 13:41:20.607341 (INFO)     | === Options for command line-arguments (END) ===
+2022-07-10 13:41:20.683297 (INFO)     | There are 1 ids in the queue.
+2022-07-10 13:41:20.695078 (INFO)     | Asking to download results of file with id 9 from APPSClone server.
+2022-07-10 13:41:20.761327 (INFO)     | A response has been received from the APPSClone server.
+2022-07-10 13:41:20.769901 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (START) ==
+2022-07-10 13:41:21.428943 (INFO)     | Successfully established a connection to the server.
+2022-07-10 13:41:21.437157 (INFO)     | == Connect to '138.68.128.182:22', with user 'appscloneuser' (END) ==
+2022-07-10 13:41:22.977754 (INFO)     | Successfully copied remote file 'myArroz_results.tar.gz' to local directory 'out/results'.
+2022-07-10 13:41:22.992437 (INFO)     | The id 9 was removed from the queue successfully.

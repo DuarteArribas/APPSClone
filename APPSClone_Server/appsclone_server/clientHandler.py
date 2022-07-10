@@ -187,7 +187,7 @@ class ClientHandler:
                 newLines += line
           with open(self.regularUsersIdQueue,"w") as f:
             f.writelines(newLines)
-          return {"code":0,"args":(f"Results downloaded successfully",)}
+          return {"code":result,"args":(f"Results downloaded successfully",)}
       return {"code":-1,"args":(f"There isn't yet a result for that file",)}
     else:
       return {"code":-1,"args":(f"There isn't any uploaded file with that id!",)}

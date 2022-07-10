@@ -46,7 +46,7 @@ class APPSCloneClient:
     self.username      = username
     self.password      = password
     self.toUploadDir   = toUploadDir
-    self.toDownloadDir = toUploadDir
+    self.toDownloadDir = toDownloadDir
     self.resultsDir    = resultsDir
     self.rinexDir      = rinexDir
     self.idQueue       = idQueue
@@ -60,17 +60,10 @@ class APPSCloneClient:
     arguments : list
       The list of command-line arguments. arguments[0] is the option
     """
-    self.logger.writeRoutineLog(clientRun,Logs.ROUTINE_STATUS.START)
-    try:
-      with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as s:
-        self.socket = s
-        s.connect((self.ip,self.port))
-        self.__handleClientActions(arguments[0],arguments[1:])
-    except:
-      self.logger.writeRegularLog(Logs.SEVERITY.CRITICAL,criticalSocket.format(ip = self.ip,port = self.port))
-      return
-    finally:
-      self.logger.writeRoutineLog(clientRun,Logs.ROUTINE_STATUS.END)
+    with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as s:
+      self.socket = s
+      s.connect((self.ip,self.port))
+      self.__handleClientActions(arguments[0],arguments[1:])
 
   def __handleClientActions(self,option,args):
     """Handle client actions.
@@ -115,9 +108,10 @@ class APPSCloneClient:
           self.logger.writeRegularLog(Logs.SEVERITY.ERROR,responseError.format(errorMsg = respondeArgs[0]))
           errorOcurred = True
         else:
+          print(Helper.joinPathFile(self.toDownloadDir,respondeCode))
+          sshClient = SSHConnection(self.ip,22,self.username,self.password,self.logger)
+          sshClient.getFile(Helper.joinPathFile(self.toDownloadDir,respondeCode),self.resultsDir)
           self.__removeIdFromQueue(rinexId)
-          sshClient = SSHConnection(self.ip,self.port,self.username,self.password)
-          sshClient.getFile(Helper.joinPathFile(self.toDownloadDir,self.rinexFile),self.resultsDir)
       if errorOcurred:
         print("An error ocurred. Check logs to learn more.")
 
