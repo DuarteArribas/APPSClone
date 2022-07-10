@@ -15,36 +15,42 @@ class APPSCloneClient:
   # == Attributes ==
   NUMBER_BYTES_TO_RECEIVE = 16384
   # == Methods ==
-  def __init__(self,ip,port,username,password,toUploadDir,rinexDir,idQueue,logger):
+  def __init__(self,ip,port,username,password,toUploadDir,toDownloadDir,resultsDir,rinexDir,idQueue,logger):
     """Initialize a socket connection with the APPSClone server.
 
     Parameters
     ----------
-    ip          : str
+    ip            : str
       The ip of the server
-    port        : int
+    port          : int
       The port of the server
-    username    : str
+    username      : str
       The username to connect to the server with
-    password    : str
+    password      : str
       The password of the user
-    toUploadDir : str
-      The directory of the server to upload with
-    rinexDir    : str
+    toUploadDir   : str
+      The directory of the server to upload to
+    toDownloadDir : str
+      The directory of the server to download from
+    resultsDir    : str
+      The directory, which will contain the results of the post-processed files
+    rinexDir      : str
       The directory where the rinex files must be put to be uploaded
-    idQueue     : str
+    idQueue       : str
       The queue of the uploaded ids.
-    logger      : Logs
+    logger        : Logs
       The log object to log to
     """
-    self.ip          = ip
-    self.port        = int(port)
-    self.username    = username
-    self.password    = password
-    self.toUploadDir = toUploadDir
-    self.rinexDir    = rinexDir
-    self.idQueue     = idQueue
-    self.logger      = logger
+    self.ip            = ip
+    self.port          = int(port)
+    self.username      = username
+    self.password      = password
+    self.toUploadDir   = toUploadDir
+    self.toDownloadDir = toUploadDir
+    self.resultsDir    = resultsDir
+    self.rinexDir      = rinexDir
+    self.idQueue       = idQueue
+    self.logger        = logger
 
   def runClient(self,arguments):
     """Run the client.
@@ -77,8 +83,8 @@ class APPSCloneClient:
       The upload arguments
     """
     if option == "u":
-      # sshClient = SSHConnection(self.ip,self.port,self.username,self.password)
-      # sshClient.putFile(Helper.joinPathFile(self.rinexDir,self.rinexFile),self.toUploadDir)
+      sshClient = SSHConnection(self.ip,self.port,self.username,self.password)
+      sshClient.putFile(Helper.joinPathFile(self.rinexDir,args[0]),self.toUploadDir)
       self.socket.send(pickle.dumps(OptionArgs(1,(args))))
       self.logger.writeRegularLog(Logs.SEVERITY.INFO,uploadInfoSent.format(file = args[0]))
       response = pickle.loads(self.socket.recv(APPSCloneClient.NUMBER_BYTES_TO_RECEIVE))
@@ -110,8 +116,8 @@ class APPSCloneClient:
           errorOcurred = True
         else:
           self.__removeIdFromQueue(rinexId)
-          # sshClient = SSHConnection(self.ip,self.port,self.username,self.password)
-          # sshClient.putFile(Helper.joinPathFile(self.rinexDir,self.rinexFile),self.toUploadDir)
+          sshClient = SSHConnection(self.ip,self.port,self.username,self.password)
+          sshClient.getFile(Helper.joinPathFile(self.toDownloadDir,self.rinexFile),self.resultsDir)
       if errorOcurred:
         print("An error ocurred. Check logs to learn more.")
 

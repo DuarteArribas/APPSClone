@@ -27,6 +27,8 @@ def main():
         cfg.getConnectionConfig("USERNAME"),
         cfg.getConnectionConfig("PASSWORD"),
         cfg.getConnectionConfig("TO_UPLOAD_DIR"),
+        cfg.getConnectionConfig("TO_DOWNLOAD_DIR"),
+        cfg.getLocalConfig("RESULTS_DIR"),
         cfg.getLocalConfig("RINEX_DIR"),
         cfg.getLocalConfig("ID_QUEUE"),
         logger
