@@ -5,14 +5,14 @@ This subproject corresponds **APPSClone** client, which is able to handle two ty
 * Automatic RINEX download, post-process and, consequent, result upload;
 * Manual RINEX download with automatic post-process and, consequent, manual result upload.
 
-The program can be run as a server, where the client (https://github.com/DuarteArribas/APPSClone/blob/main/development/APPSClone_Client) can upload RINEX files or download their results.
+The program can be run as a server, where the client (https://github.com/DuarteArribas/APPSClone/tree/main/APPSClone_Client) can upload RINEX files or download their results.
 
 The program can be run as a script (e.g., in crontab), where it will:
 
 * Check for state changes on already uploaded files;
 * Handle new states of uploaded files (e.g., if a file changes from the state submitted to the state verified, the program will approve it for processing);
 * Upload back any results downloaded in the previous point (if the file state was available);
-* Download new upload files (which contain information as in (https://github.com/DuarteArribas/APPSClone/tree/main/development/APPSClone_UploadFileGenerator));
+* Download new upload files (which contain information as in (https://github.com/DuarteArribas/APPSClone/tree/main/APPSClone_UploadFileGenerator));
 * Upload new files downloaded in the last step to APPS.
 
 ## Features
@@ -89,4 +89,4 @@ make testAllPrint
 
 ## Documentation
 
-The documentation for the APPSClone server can be found [here](https://github.com/DuarteArribas/APPSClone/tree/main/development/APPSClone_Server/docs).
+The documentation for the APPSClone server can be found [here](https://github.com/DuarteArribas/APPSClone/tree/main/APPSClone_Server/docs).
