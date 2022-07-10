@@ -92,10 +92,6 @@ To run all tests and print the output, run:
 make testAllPrint
 ```
 
-## Demo
-
-![APPSClone upload file generator demo](https://user-images.githubusercontent.com/61360702/177223633-9581f65f-6a6e-40a3-a6ad-e1ed74700f12.gif)
-
 ## Documentation
 
 The documentation for the APPSClone upload file generator can be found [here](https://github.com/DuarteArribas/APPSClone/tree/main/development/APPSClone_Client/docs).
